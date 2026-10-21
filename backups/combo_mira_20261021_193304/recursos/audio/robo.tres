@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=13 format=3]
+
+[ext_resource type="Script" path="res://scripts/audio/perfil_sonoro.gd" id="1"]
+[ext_resource type="AudioStream" path="res://assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactPlate_light_000.ogg" id="2"]
+[ext_resource type="AudioStream" path="res://assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactPlate_light_001.ogg" id="3"]
+[ext_resource type="AudioStream" path="res://assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactPlate_light_002.ogg" id="4"]
+[ext_resource type="AudioStream" path="res://assets/SONS/INTERFACE/OUTROS/KENNEY_INTERFACE_SOUNDS/glitch_001.ogg" id="5"]
+[ext_resource type="AudioStream" path="res://assets/SONS/INTERFACE/OUTROS/KENNEY_INTERFACE_SOUNDS/glitch_002.ogg" id="6"]
+[ext_resource type="AudioStream" path="res://assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactMetal_light_003.ogg" id="7"]
+[ext_resource type="AudioStream" path="res://assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactMetal_light_004.ogg" id="8"]
+[ext_resource type="AudioStream" path="res://assets/SONS/INTERFACE/OUTROS/KENNEY_INTERFACE_SOUNDS/glitch_003.ogg" id="9"]
+[ext_resource type="AudioStream" path="res://assets/SONS/INTERFACE/OUTROS/KENNEY_INTERFACE_SOUNDS/glitch_004.ogg" id="10"]
+[ext_resource type="AudioStream" path="res://assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactMetal_light_001.ogg" id="11"]
+[ext_resource type="AudioStream" path="res://assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactMetal_light_002.ogg" id="12"]
+
+[resource]
+script = ExtResource("1")
+passos = Array[AudioStream]([ExtResource("2"), ExtResource("3"), ExtResource("4")])
+ataque = Array[AudioStream]([ExtResource("5"), ExtResource("6")])
+acerto = Array[AudioStream]([ExtResource("7"), ExtResource("8")])
+dano = Array[AudioStream]([ExtResource("9")])
+morte = Array[AudioStream]([ExtResource("10")])
+ricochete = Array[AudioStream]([ExtResource("11"), ExtResource("12")])
+distancia_entre_passos = 24.0
+tom_base = 1.1
+volume_passos_db = -24.0
+volume_acoes_db = -17.0
+volume_impactos_db = -17.0

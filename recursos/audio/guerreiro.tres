@@ -1,0 +1,34 @@
+[gd_resource type="Resource" load_steps=18 format=3]
+
+[ext_resource type="Script" path="res://scripts/audio/perfil_sonoro.gd" id="1"]
+[ext_resource type="AudioStream" path="res://assets/SONS/PASSOS/GERAIS/KENNEY_RPG_AUDIO/footstep00.ogg" id="2"]
+[ext_resource type="AudioStream" path="res://assets/SONS/PASSOS/GERAIS/KENNEY_RPG_AUDIO/footstep01.ogg" id="3"]
+[ext_resource type="AudioStream" path="res://assets/SONS/PASSOS/GERAIS/KENNEY_RPG_AUDIO/footstep02.ogg" id="4"]
+[ext_resource type="AudioStream" path="res://assets/SONS/PASSOS/GERAIS/KENNEY_RPG_AUDIO/footstep03.ogg" id="5"]
+[ext_resource type="AudioStream" path="res://assets/SONS/COMBATE/ARMAS/KENNEY_RPG_AUDIO/knifeSlice.ogg" id="6"]
+[ext_resource type="AudioStream" path="res://assets/SONS/COMBATE/ARMAS/KENNEY_RPG_AUDIO/knifeSlice2.ogg" id="7"]
+[ext_resource type="AudioStream" path="res://assets/SONS/IMPACTOS/GERAIS/KENNEY_IMPACT_SOUNDS/impactGeneric_light_000.ogg" id="8"]
+[ext_resource type="AudioStream" path="res://assets/SONS/IMPACTOS/GERAIS/KENNEY_IMPACT_SOUNDS/impactGeneric_light_001.ogg" id="9"]
+[ext_resource type="AudioStream" path="res://assets/SONS/IMPACTOS/SOCOS_DANO/KENNEY_IMPACT_SOUNDS/impactPunch_medium_001.ogg" id="10"]
+[ext_resource type="AudioStream" path="res://assets/SONS/IMPACTOS/SOCOS_DANO/KENNEY_IMPACT_SOUNDS/impactPunch_medium_002.ogg" id="11"]
+[ext_resource type="AudioStream" path="res://assets/SONS/IMPACTOS/SUAVES/KENNEY_IMPACT_SOUNDS/impactSoft_heavy_000.ogg" id="12"]
+[ext_resource type="AudioStream" path="res://assets/SONS/IMPACTOS/SUAVES/KENNEY_IMPACT_SOUNDS/impactSoft_heavy_001.ogg" id="13"]
+[ext_resource type="AudioStream" path="res://assets/SONS/COMBATE/ARMAS/KENNEY_RPG_AUDIO/drawKnife1.ogg" id="14"]
+[ext_resource type="AudioStream" path="res://assets/SONS/COMBATE/ARMAS/KENNEY_RPG_AUDIO/drawKnife2.ogg" id="15"]
+[ext_resource type="AudioStream" path="res://assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactMetal_medium_001.ogg" id="16"]
+[ext_resource type="AudioStream" path="res://assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactMetal_medium_002.ogg" id="17"]
+
+[resource]
+script = ExtResource("1")
+passos = Array[AudioStream]([ExtResource("2"), ExtResource("3"), ExtResource("4"), ExtResource("5")])
+ataque = Array[AudioStream]([ExtResource("6"), ExtResource("7")])
+acerto = Array[AudioStream]([ExtResource("8"), ExtResource("9")])
+dano = Array[AudioStream]([ExtResource("10"), ExtResource("11")])
+morte = Array[AudioStream]([ExtResource("12"), ExtResource("13")])
+defesa = Array[AudioStream]([ExtResource("14"), ExtResource("15")])
+bloqueio = Array[AudioStream]([ExtResource("16"), ExtResource("17")])
+distancia_entre_passos = 23.0
+tom_base = 1.0
+volume_passos_db = -19.0
+volume_acoes_db = -11.0
+volume_impactos_db = -12.0
