@@ -1,0 +1,27 @@
+[gd_resource type="Resource" load_steps=13 format=3]
+
+[ext_resource type="Script" path="res://scripts/audio/perfil_sonoro.gd" id="1"]
+[ext_resource type="AudioStream" path="res://assets/SONS/PASSOS/GRAMA/KENNEY_IMPACT_SOUNDS/footstep_grass_000.ogg" id="2"]
+[ext_resource type="AudioStream" path="res://assets/SONS/PASSOS/GRAMA/KENNEY_IMPACT_SOUNDS/footstep_grass_001.ogg" id="3"]
+[ext_resource type="AudioStream" path="res://assets/SONS/PASSOS/GRAMA/KENNEY_IMPACT_SOUNDS/footstep_grass_002.ogg" id="4"]
+[ext_resource type="AudioStream" path="res://assets/SONS/ITENS/ROUPAS_E_COURO/KENNEY_RPG_AUDIO/cloth1.ogg" id="5"]
+[ext_resource type="AudioStream" path="res://assets/SONS/ITENS/ROUPAS_E_COURO/KENNEY_RPG_AUDIO/cloth2.ogg" id="6"]
+[ext_resource type="AudioStream" path="res://assets/SONS/IMPACTOS/SOCOS_DANO/KENNEY_IMPACT_SOUNDS/impactPunch_medium_000.ogg" id="7"]
+[ext_resource type="AudioStream" path="res://assets/SONS/IMPACTOS/SOCOS_DANO/KENNEY_IMPACT_SOUNDS/impactPunch_medium_002.ogg" id="8"]
+[ext_resource type="AudioStream" path="res://assets/SONS/IMPACTOS/SUAVES/KENNEY_IMPACT_SOUNDS/impactSoft_medium_000.ogg" id="9"]
+[ext_resource type="AudioStream" path="res://assets/SONS/IMPACTOS/SUAVES/KENNEY_IMPACT_SOUNDS/impactSoft_medium_001.ogg" id="10"]
+[ext_resource type="AudioStream" path="res://assets/SONS/IMPACTOS/SUAVES/KENNEY_IMPACT_SOUNDS/impactSoft_heavy_002.ogg" id="11"]
+[ext_resource type="AudioStream" path="res://assets/SONS/IMPACTOS/SUAVES/KENNEY_IMPACT_SOUNDS/impactSoft_heavy_003.ogg" id="12"]
+
+[resource]
+script = ExtResource("1")
+passos = Array[AudioStream]([ExtResource("2"), ExtResource("3"), ExtResource("4")])
+ataque = Array[AudioStream]([ExtResource("5"), ExtResource("6")])
+acerto = Array[AudioStream]([ExtResource("7"), ExtResource("8")])
+dano = Array[AudioStream]([ExtResource("9"), ExtResource("10")])
+morte = Array[AudioStream]([ExtResource("11"), ExtResource("12")])
+distancia_entre_passos = 20.0
+tom_base = 0.8
+volume_passos_db = -18.0
+volume_acoes_db = -12.0
+volume_impactos_db = -12.0

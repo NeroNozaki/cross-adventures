@@ -1,0 +1,113 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
+[application]
+
+config/name="Cross Adventures"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+run/main_scene="res://cenas/testes/arena_teste.tscn"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.09, 0.14, 0.16, 1)
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=400
+window/size/window_width_override=1280
+window/size/window_height_override=800
+window/stretch/mode="canvas_items"
+
+[layer_names]
+
+2d_physics/layer_1="Cenario"
+2d_physics/layer_2="Herois"
+2d_physics/layer_3="Viloes"
+2d_physics/layer_4="DanoHerois"
+2d_physics/layer_5="DanoViloes"
+
+[input]
+guerreiro_esquerda={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"physical_keycode":65)]
+}
+
+guerreiro_direita={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"physical_keycode":68)]
+}
+
+guerreiro_cima={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"physical_keycode":87)]
+}
+
+guerreiro_baixo={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"physical_keycode":83)]
+}
+
+guerreiro_atacar={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"physical_keycode":32), Object(InputEventKey,"physical_keycode":74)]
+}
+
+guerreiro_defender={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"physical_keycode":4194325)]
+}
+
+robo_esquerda={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"physical_keycode":4194319)]
+}
+
+robo_direita={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"physical_keycode":4194321)]
+}
+
+robo_cima={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"physical_keycode":4194320)]
+}
+
+robo_baixo={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"physical_keycode":4194322)]
+}
+
+robo_atacar={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"physical_keycode":4194309)]
+}
+
+reiniciar={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"physical_keycode":82)]
+}
+
+alternar_audio={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"physical_keycode":77)]
+}
+
+[audio]
+
+buses/default_bus_layout="res://default_bus_layout.tres"

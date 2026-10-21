@@ -1,0 +1,146 @@
+{
+  "guerreiro": {
+    "nome": "Lucas",
+    "eventos": {
+      "passos": [
+        "assets/SONS/PASSOS/GERAIS/KENNEY_RPG_AUDIO/footstep00.ogg",
+        "assets/SONS/PASSOS/GERAIS/KENNEY_RPG_AUDIO/footstep01.ogg",
+        "assets/SONS/PASSOS/GERAIS/KENNEY_RPG_AUDIO/footstep02.ogg",
+        "assets/SONS/PASSOS/GERAIS/KENNEY_RPG_AUDIO/footstep03.ogg"
+      ],
+      "ataque": [
+        "assets/SONS/COMBATE/ARMAS/KENNEY_RPG_AUDIO/knifeSlice.ogg",
+        "assets/SONS/COMBATE/ARMAS/KENNEY_RPG_AUDIO/knifeSlice2.ogg"
+      ],
+      "acerto": [
+        "assets/SONS/IMPACTOS/GERAIS/KENNEY_IMPACT_SOUNDS/impactGeneric_light_000.ogg",
+        "assets/SONS/IMPACTOS/GERAIS/KENNEY_IMPACT_SOUNDS/impactGeneric_light_001.ogg"
+      ],
+      "dano": [
+        "assets/SONS/IMPACTOS/SOCOS_DANO/KENNEY_IMPACT_SOUNDS/impactPunch_medium_001.ogg",
+        "assets/SONS/IMPACTOS/SOCOS_DANO/KENNEY_IMPACT_SOUNDS/impactPunch_medium_002.ogg"
+      ],
+      "morte": [
+        "assets/SONS/IMPACTOS/SUAVES/KENNEY_IMPACT_SOUNDS/impactSoft_heavy_000.ogg",
+        "assets/SONS/IMPACTOS/SUAVES/KENNEY_IMPACT_SOUNDS/impactSoft_heavy_001.ogg"
+      ],
+      "defesa": [
+        "assets/SONS/COMBATE/ARMAS/KENNEY_RPG_AUDIO/drawKnife1.ogg",
+        "assets/SONS/COMBATE/ARMAS/KENNEY_RPG_AUDIO/drawKnife2.ogg"
+      ],
+      "bloqueio": [
+        "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactMetal_medium_001.ogg",
+        "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactMetal_medium_002.ogg"
+      ]
+    },
+    "ajustes": {
+      "distancia_entre_passos": 23.0,
+      "tom_base": 1.0,
+      "volume_passos_db": -19.0,
+      "volume_acoes_db": -11.0,
+      "volume_impactos_db": -12.0
+    }
+  },
+  "robo": {
+    "nome": "Otto",
+    "eventos": {
+      "passos": [
+        "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactPlate_light_000.ogg",
+        "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactPlate_light_001.ogg",
+        "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactPlate_light_002.ogg"
+      ],
+      "ataque": [
+        "assets/SONS/INTERFACE/OUTROS/KENNEY_INTERFACE_SOUNDS/glitch_001.ogg",
+        "assets/SONS/INTERFACE/OUTROS/KENNEY_INTERFACE_SOUNDS/glitch_002.ogg"
+      ],
+      "acerto": [
+        "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactMetal_light_003.ogg",
+        "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactMetal_light_004.ogg"
+      ],
+      "dano": [
+        "assets/SONS/INTERFACE/OUTROS/KENNEY_INTERFACE_SOUNDS/glitch_003.ogg"
+      ],
+      "morte": [
+        "assets/SONS/INTERFACE/OUTROS/KENNEY_INTERFACE_SOUNDS/glitch_004.ogg"
+      ],
+      "ricochete": [
+        "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactMetal_light_001.ogg",
+        "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactMetal_light_002.ogg"
+      ]
+    },
+    "ajustes": {
+      "distancia_entre_passos": 24.0,
+      "tom_base": 1.1,
+      "volume_passos_db": -24.0,
+      "volume_acoes_db": -17.0,
+      "volume_impactos_db": -17.0
+    }
+  },
+  "cavaleiro_azul": {
+    "nome": "Cavaleiro Azul",
+    "eventos": {
+      "passos": [
+        "assets/SONS/PASSOS/PEDRA_CONCRETO/KENNEY_IMPACT_SOUNDS/footstep_concrete_000.ogg",
+        "assets/SONS/PASSOS/PEDRA_CONCRETO/KENNEY_IMPACT_SOUNDS/footstep_concrete_001.ogg",
+        "assets/SONS/PASSOS/PEDRA_CONCRETO/KENNEY_IMPACT_SOUNDS/footstep_concrete_002.ogg"
+      ],
+      "ataque": [
+        "assets/SONS/COMBATE/ARMAS/KENNEY_RPG_AUDIO/chop.ogg",
+        "assets/SONS/COMBATE/ARMAS/KENNEY_RPG_AUDIO/knifeSlice2.ogg"
+      ],
+      "acerto": [
+        "assets/SONS/IMPACTOS/GERAIS/KENNEY_IMPACT_SOUNDS/impactGeneric_light_002.ogg",
+        "assets/SONS/IMPACTOS/GERAIS/KENNEY_IMPACT_SOUNDS/impactGeneric_light_003.ogg"
+      ],
+      "dano": [
+        "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactMetal_medium_000.ogg",
+        "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactMetal_medium_003.ogg"
+      ],
+      "morte": [
+        "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactPlate_heavy_000.ogg",
+        "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactPlate_heavy_001.ogg"
+      ]
+    },
+    "ajustes": {
+      "distancia_entre_passos": 19.0,
+      "tom_base": 0.88,
+      "volume_passos_db": -19.0,
+      "volume_acoes_db": -13.0,
+      "volume_impactos_db": -13.0,
+      "atraso_morte": 0.25
+    }
+  },
+  "zumbi": {
+    "nome": "Zumbi",
+    "eventos": {
+      "passos": [
+        "assets/SONS/PASSOS/GRAMA/KENNEY_IMPACT_SOUNDS/footstep_grass_000.ogg",
+        "assets/SONS/PASSOS/GRAMA/KENNEY_IMPACT_SOUNDS/footstep_grass_001.ogg",
+        "assets/SONS/PASSOS/GRAMA/KENNEY_IMPACT_SOUNDS/footstep_grass_002.ogg"
+      ],
+      "ataque": [
+        "assets/SONS/ITENS/ROUPAS_E_COURO/KENNEY_RPG_AUDIO/cloth1.ogg",
+        "assets/SONS/ITENS/ROUPAS_E_COURO/KENNEY_RPG_AUDIO/cloth2.ogg"
+      ],
+      "acerto": [
+        "assets/SONS/IMPACTOS/SOCOS_DANO/KENNEY_IMPACT_SOUNDS/impactPunch_medium_000.ogg",
+        "assets/SONS/IMPACTOS/SOCOS_DANO/KENNEY_IMPACT_SOUNDS/impactPunch_medium_002.ogg"
+      ],
+      "dano": [
+        "assets/SONS/IMPACTOS/SUAVES/KENNEY_IMPACT_SOUNDS/impactSoft_medium_000.ogg",
+        "assets/SONS/IMPACTOS/SUAVES/KENNEY_IMPACT_SOUNDS/impactSoft_medium_001.ogg"
+      ],
+      "morte": [
+        "assets/SONS/IMPACTOS/SUAVES/KENNEY_IMPACT_SOUNDS/impactSoft_heavy_002.ogg",
+        "assets/SONS/IMPACTOS/SUAVES/KENNEY_IMPACT_SOUNDS/impactSoft_heavy_003.ogg"
+      ]
+    },
+    "ajustes": {
+      "distancia_entre_passos": 20.0,
+      "tom_base": 0.8,
+      "volume_passos_db": -18.0,
+      "volume_acoes_db": -12.0,
+      "volume_impactos_db": -12.0
+    }
+  }
+}

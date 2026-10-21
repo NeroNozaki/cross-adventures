@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3]
+[ext_resource type="Script" path="res://scripts/efeitos/armadura_caida.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/VILOES/CAVALEIROS_DG/AZUL/SPRITESHEETS/PARADO/Blue Knight idle Sprite-sheet 16x16.png" id="2"]
+
+[sub_resource type="AtlasTexture" id="Helmet"]
+atlas = ExtResource("2")
+region = Rect2(0, 0, 16, 8)
+[sub_resource type="AtlasTexture" id="Chest"]
+atlas = ExtResource("2")
+region = Rect2(0, 8, 16, 5)
+[sub_resource type="AtlasTexture" id="Boots"]
+atlas = ExtResource("2")
+region = Rect2(0, 13, 16, 3)
+
+[node name="ArmaduraCaida" type="Node2D"]
+visible = false
+z_index = 0
+texture_filter = 1
+script = ExtResource("1")
+[node name="Elmo" type="Sprite2D" parent="."]
+position = Vector2(0, -24)
+scale = Vector2(2, 2)
+texture = SubResource("Helmet")
+[node name="Peitoral" type="Sprite2D" parent="."]
+position = Vector2(0, -11)
+scale = Vector2(2, 2)
+texture = SubResource("Chest")
+[node name="Botas" type="Sprite2D" parent="."]
+position = Vector2(0, -3)
+scale = Vector2(2, 2)
+texture = SubResource("Boots")

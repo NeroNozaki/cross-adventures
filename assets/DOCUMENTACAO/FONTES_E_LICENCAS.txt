@@ -1,0 +1,31 @@
+﻿FONTES ADICIONADAS - 19/10/2026
+
+Kenney - rpg-audio
+Pagina oficial: https://kenney.nl/assets/rpg-audio
+Licenca: Creative Commons CC0 1.0. Texto original na subpasta KENNEY correspondente.
+
+Kenney - impact-sounds
+Pagina oficial: https://kenney.nl/assets/impact-sounds
+Licenca: Creative Commons CC0 1.0. Texto original na subpasta KENNEY correspondente.
+
+Kenney - interface-sounds
+Pagina oficial: https://kenney.nl/assets/interface-sounds
+Licenca: Creative Commons CC0 1.0. Texto original na subpasta KENNEY correspondente.
+
+Kenney - tiny-dungeon
+Pagina oficial: https://kenney.nl/assets/tiny-dungeon
+Licenca: Creative Commons CC0 1.0. Texto original na subpasta KENNEY correspondente.
+
+Kenney - tiny-town
+Pagina oficial: https://kenney.nl/assets/tiny-town
+Licenca: Creative Commons CC0 1.0. Texto original na subpasta KENNEY correspondente.
+
+ARQUIVOS DO USUARIO
+DG Knight Expansion Pack Free Ver.rar e Zombies Free ver.rar: SnowHex.
+As licencas originais estao nas pastas CAVALEIROS_DG e ZUMBIS_DG.
+
+Cavaleiros: a licenca exige credito a SnowHex. Permite uso comercial e nao comercial; a permissao expressa de alteracao e para projetos nao comerciais. Sprites preservados sem alteracoes.
+Zumbis: a licenca permite uso comercial e nao comercial e solicita credito como opcional.
+Ambos proíbem revenda ou redistribuicao dos assets como pacote de recursos. Esta pasta e sua biblioteca pessoal para desenvolvimento.
+
+Credito sugerido: Cavaleiros e zumbis por SnowHex. Cenarios e efeitos sonoros por Kenney (CC0).
