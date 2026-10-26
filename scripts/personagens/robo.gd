@@ -1,4 +1,4 @@
-extends "res://scripts/personagens/heroi.gd"
+extends Hero
 
 const PROJETIL: PackedScene = preload("res://cenas/combate/projetil.tscn")
 @export var tempo_carga_total: float = 0.85
@@ -88,7 +88,7 @@ func _origem_segura(raio: float) -> Vector2:
 	forma.radius = raio + 0.7
 	var consulta: PhysicsShapeQueryParameters2D = PhysicsShapeQueryParameters2D.new()
 	consulta.shape = forma
-	consulta.collision_mask = 1
+	consulta.collision_mask = PhysicsLayers.ENVIRONMENT
 	consulta.collide_with_areas = false
 	var espaco: PhysicsDirectSpaceState2D = get_world_2d().direct_space_state
 	var candidatos: Array[Vector2] = [global_position + Vector2(0, -15), global_position]

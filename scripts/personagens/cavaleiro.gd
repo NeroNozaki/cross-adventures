@@ -1,4 +1,4 @@
-extends "res://scripts/personagens/vilao.gd"
+extends Villain
 
 func _morrer() -> void:
 	super._morrer()

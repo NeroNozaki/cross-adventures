@@ -1,5 +1,7 @@
-extends "res://scripts/personagens/personagem_base.gd"
+extends BaseCharacter
 ## Dois controles independentes: cada instancia usa seu proprio prefixo de acoes.
+
+class_name Hero
 
 @export var controlado: bool = true
 @export var prefixo_controle: String = "guerreiro"

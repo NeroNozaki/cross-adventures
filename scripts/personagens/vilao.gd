@@ -1,5 +1,7 @@
-extends "res://scripts/personagens/personagem_base.gd"
+extends BaseCharacter
 ## IA simples: espera, persegue o heroi mais proximo e ataca ao se aproximar.
+
+class_name Villain
 
 @export_category("Inteligencia artificial")
 @export var raio_deteccao: float = 180.0

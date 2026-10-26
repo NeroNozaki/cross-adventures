@@ -1,4 +1,4 @@
-extends "res://scripts/personagens/heroi.gd"
+extends Hero
 ## Cada comando aceito avanca um golpe; um unico comando pode aguardar o fim do atual.
 
 @export var janela_combo: float = 1.1

@@ -1,6 +1,8 @@
 extends CharacterBody2D
 ## Base de combate compartilhada. O ponto (0, 0) fica nos pes do personagem.
 
+class_name BaseCharacter
+
 signal vida_alterada(atual: int, maxima: int)
 signal morreu(personagem: CharacterBody2D)
 signal bloqueou
@@ -36,14 +38,14 @@ var tempo_ataque: float = 0.0
 var tempo_dano: float = 0.0
 var visual_offset: Vector2
 
-@onready var animacao: AnimatedSprite2D = $Visual/AnimatedSprite2D
+@onready var animacao: AnimatedSprite2D = $Visual/animation
 @onready var barra_vida: ProgressBar = $BarraVida
 @onready var nome_label: Label = $Nome
 @onready var recarga: Timer = $RecargaAtaque
 @onready var preparo: Timer = $PreparoAtaque
 @onready var invulnerabilidade: Timer = $Invulnerabilidade
-@onready var area_ataque: Area2D = $PivoAtaque/AreaAtaque
-@onready var area_dano: Area2D = $AreaDano
+@onready var area_ataque: Area2D = $PivoAtaque/hitbox
+@onready var area_dano: Area2D = $hurtbox
 @onready var efeitos: Node2D = $EfeitosCombate
 @onready var audio: Node2D = $AudioPersonagem
 
@@ -58,8 +60,8 @@ func _ready() -> void:
 	nome_label.text = nome_personagem
 	add_to_group("combatentes")
 	add_to_group("herois" if equipe == 0 else "viloes")
-	area_dano.collision_layer = 8 if equipe == 0 else 16
-	area_ataque.collision_mask = 16 if equipe == 0 else 8
+	area_dano.collision_layer = PhysicsLayers.HERO_HURTBOX if equipe == 0 else PhysicsLayers.ENEMY_HURTBOX
+	area_ataque.collision_mask = PhysicsLayers.ENEMY_HURTBOX if equipe == 0 else PhysicsLayers.HERO_HURTBOX
 	preparo.timeout.connect(_aplicar_ataque)
 	vida_alterada.emit(vida_atual, vida_maxima)
 	_reproduzir("idle")

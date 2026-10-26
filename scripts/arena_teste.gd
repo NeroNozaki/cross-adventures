@@ -26,7 +26,7 @@ func _process(_delta: float) -> void:
 		estado = "Equipe derrotada"
 	elif vivos == 0:
 		estado = "Vitoria!"
-	texto.text = "Lucas %d/%d PV  |  Otto %d/%d PV  |  %s\nLucas: WASD | Direito/Espaco/J: combo | Shift: escudo\nOtto: Setas | Mouse: mira | Esq/Enter: tiro (segure: carga) | R: reiniciar | M: som" % [guerreiro.vida_atual, guerreiro.vida_maxima, robo.vida_atual, robo.vida_maxima, estado]
+	texto.text = "Lucas %d/%d PV  |  Otto %d/%d PV  |  %s\nLucas: WASD | J: Ataque | K: Escudo\nOtto: Setas | Mouse: mira | Mouse Esquerdo: tiro (Segure para carregar) | R: Reiniciar | M: Mutar o som" % [guerreiro.vida_atual, guerreiro.vida_maxima, robo.vida_atual, robo.vida_maxima, estado]
 	$Marcador.position = guerreiro.position + Vector2(0, 8)
 	$Marcador.visible = not guerreiro.esta_morto
 	$MarcadorRobo.position = robo.position + Vector2(0, 8)
