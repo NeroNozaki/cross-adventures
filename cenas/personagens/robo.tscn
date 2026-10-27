@@ -47,7 +47,7 @@ possui_morte_animada = false
 [node name="Visual" type="Node2D" parent="." unique_id=781890124]
 
 [node name="animation" type="AnimatedSprite2D" parent="Visual" unique_id=952466489]
-scale = Vector2(1.1, 1.1)
+scale = Vector2(0.7, 0.7)
 sprite_frames = ExtResource("2_frames")
 animation = &"idle_down"
 offset = Vector2(0, -15)
@@ -80,11 +80,13 @@ shape = SubResource("Shape_attack")
 visible = false
 color = Color(1, 0.88, 0.5, 0.8)
 polygon = PackedVector2Array(4, -17, 14, -12, 19, 0, 14, 12, 4, 17, 10, 0)
+uv = PackedVector2Array(4, -17, 14, -12, 19, 0, 14, 12, 4, 17, 10, 0)
 
 [node name="RecargaAtaque" type="Timer" parent="." unique_id=1297714087]
 one_shot = true
 
 [node name="PreparoAtaque" type="Timer" parent="." unique_id=1866664751]
+wait_time = 0.5
 one_shot = true
 
 [node name="Invulnerabilidade" type="Timer" parent="." unique_id=2075865526]

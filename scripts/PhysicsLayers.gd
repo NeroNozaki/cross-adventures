@@ -6,4 +6,5 @@ enum {
 	ENEMY = 3,
 	HERO_HURTBOX = 4,
 	ENEMY_HURTBOX = 5,
+	BUTTON = 6,
 }

@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dabnusi6k2rco"]
+
+[ext_resource type="Script" uid="uid://qvjqdyl2xxo3" path="res://scripts/interactables/button.gd" id="1_1v2ee"]
+[ext_resource type="Texture2D" uid="uid://dhgbpwwpdn5lc" path="res://assets/Dungeon Gathering Free Version/Button.png" id="1_85stp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1v2ee"]
+atlas = ExtResource("1_85stp")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_escj3"]
+atlas = ExtResource("1_85stp")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5pa6"]
+atlas = ExtResource("1_85stp")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nqwk7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1v2ee")
+}],
+"loop": 1,
+"name": &"1-not_pressed",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_escj3")
+}],
+"loop": 1,
+"name": &"2-transition",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5pa6")
+}],
+"loop": 1,
+"name": &"3-pressed",
+"speed": 0.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b6daa"]
+size = Vector2(12, 13)
+
+[node name="button" type="Area2D" unique_id=2079836377]
+script = ExtResource("1_1v2ee")
+
+[node name="animation" type="AnimatedSprite2D" parent="." unique_id=1356618486]
+sprite_frames = SubResource("SpriteFrames_nqwk7")
+animation = &"1-not_pressed"
+
+[node name="hitbox" type="CollisionShape2D" parent="." unique_id=1908964629]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_b6daa")
