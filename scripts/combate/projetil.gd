@@ -7,6 +7,8 @@ const IMPACTO: PackedScene = preload("res://cenas/combate/impacto_projetil.tscn"
 @export var tempo_de_vida: float = 12.0
 var emissor: CharacterBody2D
 var direcao: Vector2 = Vector2.RIGHT
+var altura_nivel: int = 0
+var elemento: String = "normal"
 var carregado: bool = false
 var dano: int = 18
 var raio: float = 4.0
@@ -54,9 +56,24 @@ func _physics_process(delta: float) -> void:
 		restante *= 1.0 - fracao
 		var colisor: Object = varredura.get_collider(0)
 		var normal: Vector2 = varredura.get_collision_normal(0)
+		var inteligente: Object = colisor.get_parent() if colisor is Area2D else colisor
+		if inteligente != null and inteligente.has_method("tipo") and inteligente.tipo() == "espelho":
+			normal = inteligente.global_transform.y.normalized()
+			if direcao.dot(normal) > 0: normal = -normal
+		if inteligente != null and inteligente.has_method("receber_projetil"):
+			var resultado: String = inteligente.receber_projetil(self)
+			if resultado == "consumir":
+				_encerrar(true)
+				break
+			if resultado == "ignorar":
+				varredura.add_exception_rid(colisor.get_rid())
+				continue
+		if colisor.has_meta("altura") and int(colisor.get_meta("altura")) >= 0 and int(colisor.get_meta("altura")) != altura_nivel:
+			varredura.add_exception_rid(colisor.get_rid())
+			continue
 		if colisor is Area2D:
 			var alvo: Node = colisor.get_parent()
-			if alvo.has_method("receber_dano") and alvo.equipe != emissor.equipe and not alvo.esta_morto:
+			if alvo.has_method("receber_dano") and alvo.equipe != emissor.equipe and not alvo.esta_morto and int(alvo.get("altura_nivel")) == altura_nivel and alvo.get("pulando") != true:
 				var antes: int = alvo.vida_atual
 				alvo.receber_dano(dano, global_position - direcao * 8.0)
 				if alvo.vida_atual < antes and is_instance_valid(emissor):
@@ -87,7 +104,7 @@ func _criar_impacto(com_som: bool) -> void:
 	efeito.cor = Color("ffce65") if carregado else Color("79eaff")
 	efeito.som = som_ricochete if com_som else null
 	get_parent().add_child(efeito)
-	efeito.global_position = global_position
+	efeito.global_position = global_position - Vector2(0, 16 * altura_nivel)
 
 func _encerrar(com_efeito: bool) -> void:
 	if encerrado:
@@ -100,7 +117,11 @@ func _encerrar(com_efeito: bool) -> void:
 	queue_free()
 
 func _draw() -> void:
-	var cor: Color = Color("ffce65") if carregado else Color("79eaff")
+	var paleta: Dictionary = {"normal": Color("79eaff"), "fogo": Color("ff9a61"), "gelo": Color("83e2ff"), "choque": Color("cfabff"), "onda": Color("6af3c0")}
+	var cor: Color = paleta.get(elemento, Color("79eaff"))
+	if carregado:
+		cor = cor.lightened(0.25)
+	draw_set_transform(Vector2(0, -16 * altura_nivel))
 	for i in range(1, rastro.size()):
 		var alfa: float = float(i) / float(rastro.size()) * 0.45
 		draw_line(to_local(rastro[i - 1]), to_local(rastro[i]), Color(cor, alfa), raio * 1.1, true)

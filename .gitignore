@@ -1,3 +1,9 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Cópias locais preservadas antes de alterações
+backups/
+
+# Atalhos locais com caminhos específicos deste computador
+*.lnk
