@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cgb0isylprtkf"]
+
+[ext_resource type="Texture2D" uid="uid://d3606jq1byqa7" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetDungeon.png" id="1_5jguo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jbwo"]
+atlas = ExtResource("1_5jguo")
+region = Rect2(64, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02hnb"]
+atlas = ExtResource("1_5jguo")
+region = Rect2(96, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nqwk7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jbwo")
+}],
+"loop": 1,
+"name": &"blue",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_02hnb")
+}],
+"loop": 1,
+"name": &"red",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b6daa"]
+size = Vector2(14, 16)
+
+[node name="switch" type="Node2D" unique_id=1157250919]
+
+[node name="animation" type="AnimatedSprite2D" parent="." unique_id=45442348]
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_nqwk7")
+animation = &"red"
+
+[node name="hitbox" type="Area2D" parent="." unique_id=1772471265]
+position = Vector2(0, -8)
+
+[node name="shape" type="CollisionShape2D" parent="hitbox" unique_id=428193835]
+shape = SubResource("RectangleShape2D_b6daa")

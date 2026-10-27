@@ -45,13 +45,15 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b6daa"]
 size = Vector2(12, 13)
 
-[node name="button" type="Area2D" unique_id=2079836377]
+[node name="button" type="Node2D" unique_id=1975652764]
 script = ExtResource("1_1v2ee")
 
 [node name="animation" type="AnimatedSprite2D" parent="." unique_id=1356618486]
 sprite_frames = SubResource("SpriteFrames_nqwk7")
 animation = &"1-not_pressed"
 
-[node name="hitbox" type="CollisionShape2D" parent="." unique_id=1908964629]
+[node name="hitbox" type="Area2D" parent="." unique_id=745234588]
+
+[node name="shape" type="CollisionShape2D" parent="hitbox" unique_id=1908964629]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_b6daa")
