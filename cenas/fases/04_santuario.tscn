@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d00aqfrq7pvxi" path="res://scripts/fases/fase.gd" id="1_vh8a7"]
 [ext_resource type="Script" uid="uid://cthy5820e8oqv" path="res://scripts/visual/agua_cenario.gd" id="2_l0k8c"]
-[ext_resource type="TileSet" path="res://recursos/fases/tileset_cross.tres" id="3_gd60j"]
+[ext_resource type="TileSet" uid="uid://bkqu180axl8u7" path="res://recursos/fases/tileset_cross.tres" id="3_gd60j"]
 [ext_resource type="Texture2D" uid="uid://2eob158137a5" path="res://assets/mapa/CRAFTPIX_DUNGEON/walls_floor.png" id="4_yjw1d"]
 [ext_resource type="Texture2D" uid="uid://6gbvauuk8gap" path="res://assets/mapa/CRAFTPIX_DUNGEON/fire_animation.png" id="5_ylx83"]
 [ext_resource type="Texture2D" uid="uid://b4v06cnladb60" path="res://assets/mapa/CRAFTPIX_DUNGEON/Objects.png" id="6_xciqb"]
