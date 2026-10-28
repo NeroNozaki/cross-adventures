@@ -1,0 +1,2110 @@
+{
+  "root": "C:\\Users\\finan\\OneDrive\\Documentos\\cross-adventures",
+  "created": "2026-10-27T16:02:47.816801",
+  "archive": "C:\\Users\\finan\\OneDrive\\Documentos\\cross-adventures-arquivo\\limpeza_20261027_160417",
+  "summary": {
+    "assets_before": 2312,
+    "assets_bytes_before": 15428979,
+    "assets_used": 257,
+    "legal_kept": 32,
+    "assets_kept": 289,
+    "assets_bytes_after": 1212732,
+    "archive": {
+      "asset": {
+        "files": 2023,
+        "bytes": 14216247
+      },
+      "import": {
+        "files": 1953,
+        "bytes": 1848719
+      },
+      "cache": {
+        "files": 3906,
+        "bytes": 9694641
+      }
+    },
+    "total_files_to_move": 7882,
+    "total_bytes_to_move": 25759607
+  },
+  "retained": [
+    {
+      "path": "assets/DOCUMENTACAO/CAVALEIROS_DG/FreeLicense.txt",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/FONTES_E_LICENCAS.txt",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/GUERREIRO_COMPLETO/LICENSE.txt",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/GUERREIRO_COMPLETO/README.txt",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/GUERREIRO_CORPO/LICENSE.txt",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/GUERREIRO_CORPO/README.txt",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/KENNEY_IMPACT_SOUNDS/Kenney.url",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/KENNEY_IMPACT_SOUNDS/License.txt",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/KENNEY_IMPACT_SOUNDS/Patreon.url",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/KENNEY_INTERFACE_SOUNDS/Kenney.url",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/KENNEY_INTERFACE_SOUNDS/License.txt",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/KENNEY_INTERFACE_SOUNDS/Patreon.url",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/KENNEY_RPG_AUDIO/License.txt",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/KENNEY_RPG_AUDIO/Visit Kenney.url",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/KENNEY_RPG_AUDIO/Visit Patreon.url",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/KENNEY_TINY_DUNGEON/License.txt",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/KENNEY_TINY_DUNGEON/Tilesheet.txt",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/KENNEY_TINY_DUNGEON/Visit Kenney.url",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/KENNEY_TINY_DUNGEON/Visit Patreon.url",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/KENNEY_TINY_TOWN/License.txt",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/KENNEY_TINY_TOWN/Tilesheet.txt",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/KENNEY_TINY_TOWN/Tiny Dungeon (base pack).url",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/KENNEY_TINY_TOWN/Visit Kenney.url",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/KENNEY_TINY_TOWN/Visit Patreon.url",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/ROBO/Free asset license.txt",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/DOCUMENTACAO/ZUMBIS_DG/License.txt",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/INTERFACE/FONTES/TINY5/FONTE.md",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/INTERFACE/FONTES/TINY5/OFL.txt",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/INTERFACE/FONTES/TINY5/Tiny5.ttf",
+      "reason": [
+        "scripts/visual/tema_pixel.gd"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_down_stay/attack_down_stay1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_down_stay/attack_down_stay10.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_down_stay/attack_down_stay11.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_down_stay/attack_down_stay12.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_down_stay/attack_down_stay13.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_down_stay/attack_down_stay14.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_down_stay/attack_down_stay15.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_down_stay/attack_down_stay16.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_down_stay/attack_down_stay17.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_down_stay/attack_down_stay18.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_down_stay/attack_down_stay19.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_down_stay/attack_down_stay2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_down_stay/attack_down_stay20.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_down_stay/attack_down_stay3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_down_stay/attack_down_stay4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_down_stay/attack_down_stay5.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_down_stay/attack_down_stay6.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_down_stay/attack_down_stay7.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_down_stay/attack_down_stay8.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_down_stay/attack_down_stay9.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_left_stay/attack_left_stay1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_left_stay/attack_left_stay10.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_left_stay/attack_left_stay11.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_left_stay/attack_left_stay12.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_left_stay/attack_left_stay13.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_left_stay/attack_left_stay14.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_left_stay/attack_left_stay15.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_left_stay/attack_left_stay16.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_left_stay/attack_left_stay17.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_left_stay/attack_left_stay18.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_left_stay/attack_left_stay2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_left_stay/attack_left_stay3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_left_stay/attack_left_stay4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_left_stay/attack_left_stay5.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_left_stay/attack_left_stay6.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_left_stay/attack_left_stay7.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_left_stay/attack_left_stay8.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_left_stay/attack_left_stay9.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_right_stay/attack_right_stay1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_right_stay/attack_right_stay10.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_right_stay/attack_right_stay11.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_right_stay/attack_right_stay12.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_right_stay/attack_right_stay13.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_right_stay/attack_right_stay14.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_right_stay/attack_right_stay15.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_right_stay/attack_right_stay16.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_right_stay/attack_right_stay17.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_right_stay/attack_right_stay18.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_right_stay/attack_right_stay2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_right_stay/attack_right_stay3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_right_stay/attack_right_stay4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_right_stay/attack_right_stay5.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_right_stay/attack_right_stay6.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_right_stay/attack_right_stay7.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_right_stay/attack_right_stay8.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_right_stay/attack_right_stay9.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_up_stay/attack_up_stay1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_up_stay/attack_up_stay10.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_up_stay/attack_up_stay11.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_up_stay/attack_up_stay12.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_up_stay/attack_up_stay13.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_up_stay/attack_up_stay14.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_up_stay/attack_up_stay15.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_up_stay/attack_up_stay16.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_up_stay/attack_up_stay17.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_up_stay/attack_up_stay18.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_up_stay/attack_up_stay19.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_up_stay/attack_up_stay2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_up_stay/attack_up_stay20.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_up_stay/attack_up_stay3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_up_stay/attack_up_stay4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_up_stay/attack_up_stay5.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_up_stay/attack_up_stay6.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_up_stay/attack_up_stay7.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_up_stay/attack_up_stay8.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/ATAQUE/attack_up_stay/attack_up_stay9.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/CAMINHADA/walk/down/down1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/CAMINHADA/walk/down/down2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/CAMINHADA/walk/down/down3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/CAMINHADA/walk/down/down4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/CAMINHADA/walk/left/left1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/CAMINHADA/walk/left/left2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/CAMINHADA/walk/left/left3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/CAMINHADA/walk/left/left4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/CAMINHADA/walk/right/right1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/CAMINHADA/walk/right/right2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/CAMINHADA/walk/right/right3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/CAMINHADA/walk/right/right4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/CAMINHADA/walk/up/up1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/CAMINHADA/walk/up/up2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/CAMINHADA/walk/up/up3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/CAMINHADA/walk/up/up4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/DANO/hit/hit1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/DANO/hit/hit2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/MORTE/die_no_shadow/die1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/MORTE/die_no_shadow/die10.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/MORTE/die_no_shadow/die2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/MORTE/die_no_shadow/die3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/MORTE/die_no_shadow/die4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/MORTE/die_no_shadow/die5.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/MORTE/die_no_shadow/die6.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/MORTE/die_no_shadow/die7.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/MORTE/die_no_shadow/die8.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/MORTE/die_no_shadow/die9.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/PARADO/idle/down/down1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/PARADO/idle/down/down2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/PARADO/idle/down/down3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/PARADO/idle/down/down4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/PARADO/idle/down/down5.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/PARADO/idle/up/up1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/PARADO/idle/up/up2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/PARADO/idle/up/up3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/PARADO/idle/up/up4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/GUERREIRO_COMPLETO/FRAMES_PNG/PARADO/idle/up/up5.png",
+      "reason": [
+        "Godot: res://recursos/personagens/guerreiro.tres",
+        "recursos/personagens/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/COSTAS/EM_PE/ATAQUE/Back_Standing_Atk_1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/COSTAS/EM_PE/ATAQUE/Back_Standing_Atk_2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/COSTAS/EM_PE/ATAQUE/Back_Standing_Atk_3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/COSTAS/EM_PE/ATAQUE/Back_Standing_Atk_4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/COSTAS/EM_PE/CAMINHADA/Back_Standing_Walk_1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/COSTAS/EM_PE/CAMINHADA/Back_Standing_Walk_2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/COSTAS/EM_PE/CAMINHADA/Back_Standing_Walk_3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/COSTAS/EM_PE/CAMINHADA/Back_Standing_Walk_4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/COSTAS/EM_PE/CAMINHADA/Back_Standing_Walk_5.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/COSTAS/EM_PE/DANO/Back_Standing_Hurt_1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/COSTAS/EM_PE/DANO/Back_Standing_Hurt_2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/COSTAS/EM_PE/DANO/Back_Standing_Hurt_3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/COSTAS/EM_PE/DANO/Back_Standing_Hurt_4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/COSTAS/EM_PE/DANO/Back_Standing_Hurt_5.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/COSTAS/EM_PE/PARADO/Back_Standing_Idle_1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/COSTAS/EM_PE/PARADO/Back_Standing_Idle_2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/COSTAS/EM_PE/PARADO/Back_Standing_Idle_3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/COSTAS/EM_PE/PARADO/Back_Standing_Idle_4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/COSTAS/EM_PE/PARADO/Back_Standing_Idle_5.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/DIREITA/EM_PE/ATAQUE/Right_Standing_Attack_1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/DIREITA/EM_PE/ATAQUE/Right_Standing_Attack_2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/DIREITA/EM_PE/ATAQUE/Right_Standing_Attack_3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/DIREITA/EM_PE/ATAQUE/Right_Standing_Attack_4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/DIREITA/EM_PE/CAMINHADA/Right_Standing_Walk_1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/DIREITA/EM_PE/CAMINHADA/Right_Standing_Walk_2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/DIREITA/EM_PE/CAMINHADA/Right_Standing_Walk_3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/DIREITA/EM_PE/CAMINHADA/Right_Standing_Walk_4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/DIREITA/EM_PE/CAMINHADA/Right_Standing_Walk_5.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/DIREITA/EM_PE/DANO/Right_Standing_Hurt_1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/DIREITA/EM_PE/DANO/Right_Standing_Hurt_2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/DIREITA/EM_PE/DANO/Right_Standing_Hurt_3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/DIREITA/EM_PE/DANO/Right_Standing_Hurt_4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/DIREITA/EM_PE/DANO/Right_Standing_Hurt_5.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/DIREITA/EM_PE/PARADO/Right_Standing_Idle_1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/DIREITA/EM_PE/PARADO/Right_Standing_Idle_2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/DIREITA/EM_PE/PARADO/Right_Standing_Idle_3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/DIREITA/EM_PE/PARADO/Right_Standing_Idle_4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/DIREITA/EM_PE/PARADO/Right_Standing_Idle_5.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/ESQUERDA/EM_PE/ATAQUE/Left_Standing_Attack_1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/ESQUERDA/EM_PE/ATAQUE/Left_Standing_Attack_2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/ESQUERDA/EM_PE/ATAQUE/Left_Standing_Attack_3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/ESQUERDA/EM_PE/ATAQUE/Left_Standing_Attack_4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/ESQUERDA/EM_PE/CAMINHADA/Left_Standing_Walk_1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/ESQUERDA/EM_PE/CAMINHADA/Left_Standing_Walk_2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/ESQUERDA/EM_PE/CAMINHADA/Left_Standing_Walk_3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/ESQUERDA/EM_PE/CAMINHADA/Left_Standing_Walk_4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/ESQUERDA/EM_PE/CAMINHADA/Left_Standing_Walk_5.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/ESQUERDA/EM_PE/DANO/Left_Standing_Hurt_1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/ESQUERDA/EM_PE/DANO/Left_Standing_Hurt_2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/ESQUERDA/EM_PE/DANO/Left_Standing_Hurt_3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/ESQUERDA/EM_PE/DANO/Left_Standing_Hurt_4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/ESQUERDA/EM_PE/PARADO/Left_Standing_Idle_1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/ESQUERDA/EM_PE/PARADO/Left_Standing_Idle_2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/ESQUERDA/EM_PE/PARADO/Left_Standing_Idle_3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/ESQUERDA/EM_PE/PARADO/Left_Standing_Idle_4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/ESQUERDA/EM_PE/PARADO/Left_Standing_Idle_5.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/FRENTE/EM_PE/ATAQUE/Front_Standing_Attack_1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/FRENTE/EM_PE/ATAQUE/Front_Standing_Attack_2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/FRENTE/EM_PE/ATAQUE/Front_Standing_Attack_3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/FRENTE/EM_PE/ATAQUE/Front_Standing_Attack_4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/FRENTE/EM_PE/CAMINHADA/Front_Standing_Walk_1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/FRENTE/EM_PE/CAMINHADA/Front_Standing_Walk_2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/FRENTE/EM_PE/CAMINHADA/Front_Standing_Walk_3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/FRENTE/EM_PE/CAMINHADA/Front_Standing_Walk_4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/FRENTE/EM_PE/CAMINHADA/Front_Standing_Walk_5.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/FRENTE/EM_PE/DANO/Front_Standing_Hurt_1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/FRENTE/EM_PE/DANO/Front_Standing_Hurt_2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/FRENTE/EM_PE/DANO/Front_Standing_Hurt_3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/FRENTE/EM_PE/DANO/Front_Standing_Hurt_4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/FRENTE/EM_PE/DANO/Front_Standing_Hurt_5.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/FRENTE/EM_PE/PARADO/Front_Standing_Idle_1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/FRENTE/EM_PE/PARADO/Front_Standing_Idle_2.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/FRENTE/EM_PE/PARADO/Front_Standing_Idle_3.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/PERSONAGENS/ROBO/FRAMES_PNG/FRENTE/EM_PE/PARADO/Front_Standing_Idle_4.png",
+      "reason": [
+        "Godot: res://recursos/personagens/robo.tres",
+        "recursos/personagens/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/COMBATE/ARMAS/KENNEY_RPG_AUDIO/chop.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/cavaleiro_azul.tres",
+        "recursos/audio/cavaleiro_azul.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/COMBATE/ARMAS/KENNEY_RPG_AUDIO/drawKnife1.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/guerreiro.tres",
+        "recursos/audio/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/COMBATE/ARMAS/KENNEY_RPG_AUDIO/drawKnife2.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/guerreiro.tres",
+        "recursos/audio/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/COMBATE/ARMAS/KENNEY_RPG_AUDIO/knifeSlice.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/guerreiro.tres",
+        "recursos/audio/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/COMBATE/ARMAS/KENNEY_RPG_AUDIO/knifeSlice2.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/cavaleiro_azul.tres",
+        "Godot: res://recursos/audio/guerreiro.tres",
+        "recursos/audio/cavaleiro_azul.tres",
+        "recursos/audio/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/GERAIS/KENNEY_IMPACT_SOUNDS/impactGeneric_light_000.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/guerreiro.tres",
+        "recursos/audio/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/GERAIS/KENNEY_IMPACT_SOUNDS/impactGeneric_light_001.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/guerreiro.tres",
+        "recursos/audio/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/GERAIS/KENNEY_IMPACT_SOUNDS/impactGeneric_light_002.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/cavaleiro_azul.tres",
+        "recursos/audio/cavaleiro_azul.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/GERAIS/KENNEY_IMPACT_SOUNDS/impactGeneric_light_003.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/cavaleiro_azul.tres",
+        "recursos/audio/cavaleiro_azul.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactMetal_light_001.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/robo.tres",
+        "recursos/audio/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactMetal_light_002.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/robo.tres",
+        "recursos/audio/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactMetal_light_003.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/robo.tres",
+        "recursos/audio/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactMetal_light_004.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/robo.tres",
+        "recursos/audio/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactMetal_medium_000.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/cavaleiro_azul.tres",
+        "recursos/audio/cavaleiro_azul.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactMetal_medium_001.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/guerreiro.tres",
+        "recursos/audio/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactMetal_medium_002.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/guerreiro.tres",
+        "recursos/audio/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactMetal_medium_003.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/cavaleiro_azul.tres",
+        "recursos/audio/cavaleiro_azul.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactPlate_heavy_000.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/cavaleiro_azul.tres",
+        "recursos/audio/cavaleiro_azul.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactPlate_heavy_001.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/cavaleiro_azul.tres",
+        "recursos/audio/cavaleiro_azul.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactPlate_light_000.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/robo.tres",
+        "recursos/audio/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactPlate_light_001.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/robo.tres",
+        "recursos/audio/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/METAL/KENNEY_IMPACT_SOUNDS/impactPlate_light_002.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/robo.tres",
+        "recursos/audio/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/SOCOS_DANO/KENNEY_IMPACT_SOUNDS/impactPunch_medium_000.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/zumbi.tres",
+        "recursos/audio/zumbi.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/SOCOS_DANO/KENNEY_IMPACT_SOUNDS/impactPunch_medium_001.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/guerreiro.tres",
+        "recursos/audio/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/SOCOS_DANO/KENNEY_IMPACT_SOUNDS/impactPunch_medium_002.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/guerreiro.tres",
+        "Godot: res://recursos/audio/zumbi.tres",
+        "recursos/audio/guerreiro.tres",
+        "recursos/audio/zumbi.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/SUAVES/KENNEY_IMPACT_SOUNDS/impactSoft_heavy_000.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/guerreiro.tres",
+        "recursos/audio/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/SUAVES/KENNEY_IMPACT_SOUNDS/impactSoft_heavy_001.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/guerreiro.tres",
+        "recursos/audio/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/SUAVES/KENNEY_IMPACT_SOUNDS/impactSoft_heavy_002.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/zumbi.tres",
+        "recursos/audio/zumbi.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/SUAVES/KENNEY_IMPACT_SOUNDS/impactSoft_heavy_003.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/zumbi.tres",
+        "recursos/audio/zumbi.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/SUAVES/KENNEY_IMPACT_SOUNDS/impactSoft_medium_000.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/zumbi.tres",
+        "recursos/audio/zumbi.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/IMPACTOS/SUAVES/KENNEY_IMPACT_SOUNDS/impactSoft_medium_001.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/zumbi.tres",
+        "recursos/audio/zumbi.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/INTERFACE/ABRIR_FECHAR/KENNEY_INTERFACE_SOUNDS/close_001.ogg",
+      "reason": [
+        "scripts/audio/audio_interface.gd (prefixo BASE)"
+      ]
+    },
+    {
+      "path": "assets/SONS/INTERFACE/ABRIR_FECHAR/KENNEY_INTERFACE_SOUNDS/open_001.ogg",
+      "reason": [
+        "scripts/audio/audio_interface.gd (prefixo BASE)"
+      ]
+    },
+    {
+      "path": "assets/SONS/INTERFACE/CONFIRMACAO/KENNEY_INTERFACE_SOUNDS/confirmation_001.ogg",
+      "reason": [
+        "scripts/audio/audio_interface.gd (prefixo BASE)"
+      ]
+    },
+    {
+      "path": "assets/SONS/INTERFACE/CONFIRMACAO/KENNEY_INTERFACE_SOUNDS/confirmation_002.ogg",
+      "reason": [
+        "scripts/audio/audio_interface.gd (prefixo BASE)"
+      ]
+    },
+    {
+      "path": "assets/SONS/INTERFACE/OUTROS/KENNEY_INTERFACE_SOUNDS/glitch_001.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/robo.tres",
+        "recursos/audio/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/INTERFACE/OUTROS/KENNEY_INTERFACE_SOUNDS/glitch_002.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/robo.tres",
+        "recursos/audio/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/INTERFACE/OUTROS/KENNEY_INTERFACE_SOUNDS/glitch_003.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/robo.tres",
+        "recursos/audio/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/INTERFACE/OUTROS/KENNEY_INTERFACE_SOUNDS/glitch_004.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/robo.tres",
+        "recursos/audio/robo.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/INTERFACE/OUTROS/KENNEY_INTERFACE_SOUNDS/pluck_001.ogg",
+      "reason": [
+        "scripts/audio/audio_interface.gd (prefixo BASE)"
+      ]
+    },
+    {
+      "path": "assets/SONS/INTERFACE/OUTROS/KENNEY_INTERFACE_SOUNDS/tick_001.ogg",
+      "reason": [
+        "scripts/audio/audio_interface.gd (prefixo BASE)"
+      ]
+    },
+    {
+      "path": "assets/SONS/INTERFACE/SELECAO/KENNEY_INTERFACE_SOUNDS/select_001.ogg",
+      "reason": [
+        "scripts/audio/audio_interface.gd (prefixo BASE)"
+      ]
+    },
+    {
+      "path": "assets/SONS/ITENS/ROUPAS_E_COURO/KENNEY_RPG_AUDIO/cloth1.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/zumbi.tres",
+        "recursos/audio/zumbi.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/ITENS/ROUPAS_E_COURO/KENNEY_RPG_AUDIO/cloth2.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/zumbi.tres",
+        "recursos/audio/zumbi.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/PASSOS/GERAIS/KENNEY_RPG_AUDIO/footstep00.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/guerreiro.tres",
+        "recursos/audio/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/PASSOS/GERAIS/KENNEY_RPG_AUDIO/footstep01.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/guerreiro.tres",
+        "recursos/audio/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/PASSOS/GERAIS/KENNEY_RPG_AUDIO/footstep02.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/guerreiro.tres",
+        "recursos/audio/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/PASSOS/GERAIS/KENNEY_RPG_AUDIO/footstep03.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/guerreiro.tres",
+        "recursos/audio/guerreiro.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/PASSOS/GRAMA/KENNEY_IMPACT_SOUNDS/footstep_grass_000.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/zumbi.tres",
+        "recursos/audio/zumbi.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/PASSOS/GRAMA/KENNEY_IMPACT_SOUNDS/footstep_grass_001.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/zumbi.tres",
+        "recursos/audio/zumbi.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/PASSOS/GRAMA/KENNEY_IMPACT_SOUNDS/footstep_grass_002.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/zumbi.tres",
+        "recursos/audio/zumbi.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/PASSOS/PEDRA_CONCRETO/KENNEY_IMPACT_SOUNDS/footstep_concrete_000.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/cavaleiro_azul.tres",
+        "recursos/audio/cavaleiro_azul.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/PASSOS/PEDRA_CONCRETO/KENNEY_IMPACT_SOUNDS/footstep_concrete_001.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/cavaleiro_azul.tres",
+        "recursos/audio/cavaleiro_azul.tres"
+      ]
+    },
+    {
+      "path": "assets/SONS/PASSOS/PEDRA_CONCRETO/KENNEY_IMPACT_SOUNDS/footstep_concrete_002.ogg",
+      "reason": [
+        "Godot: res://recursos/audio/cavaleiro_azul.tres",
+        "recursos/audio/cavaleiro_azul.tres"
+      ]
+    },
+    {
+      "path": "assets/VILOES/CAVALEIROS_DG/AZUL/SPRITESHEETS/CORRIDA/Blue Knight run Sprite-sheet 16x17.png",
+      "reason": [
+        "Godot: res://recursos/personagens/cavaleiro_azul.tres",
+        "recursos/personagens/cavaleiro_azul.tres"
+      ]
+    },
+    {
+      "path": "assets/VILOES/CAVALEIROS_DG/AZUL/SPRITESHEETS/PARADO/Blue Knight idle Sprite-sheet 16x16.png",
+      "reason": [
+        "Godot: res://cenas/efeitos/armadura_caida.tscn",
+        "Godot: res://recursos/personagens/cavaleiro_azul.tres",
+        "cenas/efeitos/armadura_caida.tscn",
+        "recursos/personagens/cavaleiro_azul.tres"
+      ]
+    },
+    {
+      "path": "assets/VILOES/ZUMBIS_DG/SPRITESHEETS/CORRIDA/1Zombie-Run.png",
+      "reason": [
+        "Godot: res://recursos/personagens/zumbi.tres",
+        "recursos/personagens/zumbi.tres"
+      ]
+    },
+    {
+      "path": "assets/VILOES/ZUMBIS_DG/SPRITESHEETS/DANO/1Zombie-Hurt.png",
+      "reason": [
+        "Godot: res://recursos/personagens/zumbi.tres",
+        "recursos/personagens/zumbi.tres"
+      ]
+    },
+    {
+      "path": "assets/VILOES/ZUMBIS_DG/SPRITESHEETS/MORTE/1Zombie-Death1.png",
+      "reason": [
+        "Godot: res://recursos/personagens/zumbi.tres",
+        "recursos/personagens/zumbi.tres"
+      ]
+    },
+    {
+      "path": "assets/VILOES/ZUMBIS_DG/SPRITESHEETS/PARADO/1Zombie-Idle.png",
+      "reason": [
+        "Godot: res://recursos/personagens/zumbi.tres",
+        "recursos/personagens/zumbi.tres"
+      ]
+    },
+    {
+      "path": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/npc_merchant.png",
+      "reason": [
+        "Godot: res://cenas/fases/01_jardim.tscn",
+        "Godot: res://cenas/fases/03_oficina.tscn",
+        "cenas/fases/01_jardim.tscn",
+        "cenas/fases/03_oficina.tscn",
+        "ferramentas/reconstruir_fases.gd"
+      ]
+    },
+    {
+      "path": "assets/mapa/CRAFTPIX_DUNGEON/FONTE.md",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/mapa/CRAFTPIX_DUNGEON/Objects.png",
+      "reason": [
+        "Gerador: recorte/sprite com nome dinâmico auditado",
+        "Godot: res://cenas/fases/01_jardim.tscn",
+        "Godot: res://cenas/fases/02_galeria.tscn",
+        "Godot: res://cenas/fases/03_oficina.tscn",
+        "Godot: res://cenas/fases/04_santuario.tscn",
+        "cenas/fases/01_jardim.tscn",
+        "cenas/fases/02_galeria.tscn",
+        "cenas/fases/03_oficina.tscn",
+        "cenas/fases/04_santuario.tscn"
+      ]
+    },
+    {
+      "path": "assets/mapa/CRAFTPIX_DUNGEON/Water_coasts_animation.png",
+      "reason": [
+        "scripts/visual/agua_cenario.gd"
+      ]
+    },
+    {
+      "path": "assets/mapa/CRAFTPIX_DUNGEON/doors_lever_chest_animation.png",
+      "reason": [
+        "Godot: res://recursos/visual/porta_dungeon.tres",
+        "recursos/visual/porta_dungeon.tres"
+      ]
+    },
+    {
+      "path": "assets/mapa/CRAFTPIX_DUNGEON/fire_animation.png",
+      "reason": [
+        "Gerador: recorte/sprite com nome dinâmico auditado",
+        "Godot: res://cenas/fases/01_jardim.tscn",
+        "Godot: res://cenas/fases/02_galeria.tscn",
+        "Godot: res://cenas/fases/03_oficina.tscn",
+        "Godot: res://cenas/fases/04_santuario.tscn",
+        "cenas/fases/01_jardim.tscn",
+        "cenas/fases/02_galeria.tscn",
+        "cenas/fases/03_oficina.tscn",
+        "cenas/fases/04_santuario.tscn"
+      ]
+    },
+    {
+      "path": "assets/mapa/CRAFTPIX_DUNGEON/license.txt",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/mapa/CRAFTPIX_DUNGEON/walls_floor.png",
+      "reason": [
+        "Gerador: recorte/sprite com nome dinâmico auditado",
+        "Godot: res://cenas/fases/01_jardim.tscn",
+        "Godot: res://cenas/fases/02_galeria.tscn",
+        "Godot: res://cenas/fases/03_oficina.tscn",
+        "Godot: res://cenas/fases/04_santuario.tscn",
+        "Godot: res://recursos/fases/tileset_cross.tres",
+        "cenas/fases/01_jardim.tscn",
+        "cenas/fases/02_galeria.tscn",
+        "cenas/fases/03_oficina.tscn",
+        "cenas/fases/04_santuario.tscn",
+        "ferramentas/reconstruir_fases.gd (prefixo PACOTE)",
+        "recursos/fases/tileset_cross.tres",
+        "scripts/fases/fase.gd",
+        "scripts/visual/agua_cenario.gd",
+        "scripts/visual/menu.gd"
+      ]
+    },
+    {
+      "path": "assets/mapa/CRAFTPIX_DUNGEON/water_details_animation.png",
+      "reason": [
+        "scripts/visual/agua_cenario.gd"
+      ]
+    },
+    {
+      "path": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Others/HUD.png",
+      "reason": [
+        "scripts/visual/tema_pixel.gd"
+      ]
+    },
+    {
+      "path": "assets/mapa/free-fantasy-map-icons-sampler/LICENSE.txt",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    },
+    {
+      "path": "assets/mapa/free-fantasy-map-icons-sampler/README.txt",
+      "reason": [
+        "Licença/origem preservada"
+      ]
+    }
+  ],
+  "dynamic_review": [
+    {
+      "source": "ferramentas/reconstruir_fases.gd",
+      "line": "atlas.texture=load(PACOTE+\"walls_floor.png\")"
+    },
+    {
+      "source": "ferramentas/reconstruir_fases.gd",
+      "line": "if not texturas.has(nome): texturas[nome]=load(PACOTE+nome+\".png\")"
+    },
+    {
+      "source": "ferramentas/reconstruir_fases.gd",
+      "line": "var ator: CharacterBody2D = load(\"res://cenas/personagens/\" + (\"guerreiro\" if j == 0 else \"robo\") + \".tscn\").instantiate()"
+    },
+    {
+      "source": "ferramentas/reconstruir_fases.gd",
+      "line": "var ator: CharacterBody2D = load(\"res://cenas/personagens/\" + arquivo + \".tscn\").instantiate()"
+    },
+    {
+      "source": "testes/verificar_acabamento.gd",
+      "line": "var f: Node2D=load(\"res://cenas/fases/\"+nome+\".tscn\").instantiate()"
+    },
+    {
+      "source": "testes/verificar_cenarios.gd",
+      "line": "var f: Node2D=load(\"res://cenas/fases/\"+nome+\".tscn\").instantiate()"
+    },
+    {
+      "source": "testes/verificar_fases.gd",
+      "line": "var fase: Node2D = load(\"res://cenas/fases/\" + NOMES[i] + \".tscn\").instantiate()"
+    },
+    {
+      "source": "scripts/audio/audio_interface.gd",
+      "line": "\"mover\":preload(BASE+\"SELECAO/KENNEY_INTERFACE_SOUNDS/select_001.ogg\"),"
+    },
+    {
+      "source": "scripts/audio/audio_interface.gd",
+      "line": "\"confirmar\":preload(BASE+\"CONFIRMACAO/KENNEY_INTERFACE_SOUNDS/confirmation_001.ogg\"),"
+    },
+    {
+      "source": "scripts/audio/audio_interface.gd",
+      "line": "\"abrir\":preload(BASE+\"ABRIR_FECHAR/KENNEY_INTERFACE_SOUNDS/open_001.ogg\"),"
+    },
+    {
+      "source": "scripts/audio/audio_interface.gd",
+      "line": "\"fechar\":preload(BASE+\"ABRIR_FECHAR/KENNEY_INTERFACE_SOUNDS/close_001.ogg\"),"
+    },
+    {
+      "source": "scripts/audio/audio_interface.gd",
+      "line": "\"aviso\":preload(BASE+\"OUTROS/KENNEY_INTERFACE_SOUNDS/pluck_001.ogg\"),"
+    },
+    {
+      "source": "scripts/audio/audio_interface.gd",
+      "line": "\"objetivo\":preload(BASE+\"CONFIRMACAO/KENNEY_INTERFACE_SOUNDS/confirmation_002.ogg\"),"
+    },
+    {
+      "source": "scripts/audio/audio_interface.gd",
+      "line": "\"letra\":preload(BASE+\"OUTROS/KENNEY_INTERFACE_SOUNDS/tick_001.ogg\")}"
+    },
+    {
+      "source": "scripts/visual/menu.gd",
+      "line": "var ator: CharacterBody2D=load(\"res://cenas/personagens/\"+(\"guerreiro\" if i==0 else \"robo\")+\".tscn\").instantiate()"
+    }
+  ],
+  "missing": []
+}

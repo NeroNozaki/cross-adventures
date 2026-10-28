@@ -27,6 +27,12 @@ signal bloqueou
 @export_category("Visual")
 @export var possui_morte_animada: bool = true
 
+@export var altura_nivel: int = 0
+var pulando: bool = false
+var altura_salto: float = 0.0
+var tempo_salto: float = 0.0
+var salto_origem: Vector2
+var salto_destino: Vector2
 var vida_atual: int = 0
 var esta_morto: bool = false
 var atacando: bool = false
@@ -90,7 +96,11 @@ func mover(vetor: Vector2, delta: float) -> void:
 	velocity = (Vector2.ZERO if atacando else vetor.limit_length() * velocidade * fator) + impulso
 	efeitos.atualizar_escudo(defendendo, frente)
 	var posicao_anterior: Vector2 = global_position
-	move_and_slide()
+	var fase: Node = get_tree().get_first_node_in_group("fase_atual")
+	if fase != null:
+		fase.mover_personagem(self, delta)
+	else:
+		move_and_slide()
 	audio.registrar_movimento(global_position.distance_to(posicao_anterior), vetor.length_squared() > 0.01 and not atacando)
 	if defendendo:
 		_reproduzir("idle")
@@ -111,13 +121,13 @@ func olhar_para(vetor: Vector2) -> void:
 
 func definir_defesa(ativa: bool) -> void:
 	var ja_defendia: bool = defendendo
-	defendendo = ativa and pode_usar_escudo and not esta_morto and not atacando and tempo_dano <= 0.0
+	defendendo = ativa and pode_usar_escudo and not esta_morto and not pulando and not atacando and tempo_dano <= 0.0
 	efeitos.atualizar_escudo(defendendo, frente)
 	if defendendo and not ja_defendia:
 		audio.tocar(&"defesa")
 
 func iniciar_ataque() -> bool:
-	if esta_morto or atacando or defendendo or tempo_dano > 0.0 or not recarga.is_stopped():
+	if esta_morto or pulando or atacando or defendendo or tempo_dano > 0.0 or not recarga.is_stopped():
 		return false
 	atacando = true
 	tempo_ataque = duracao_ataque
@@ -138,8 +148,10 @@ func _esconder_golpe() -> void:
 func obter_dano_ataque() -> int:
 	return dano_ataque
 
-func _tem_linha_de_visao(alvo: Vector2) -> bool:
+func _tem_linha_de_visao(alvo: Vector2, ignorar: CollisionObject2D = null) -> bool:
 	var consulta: PhysicsRayQueryParameters2D = PhysicsRayQueryParameters2D.create(global_position, alvo, 1)
+	if ignorar != null:
+		consulta.exclude = [ignorar.get_rid()]
 	return get_world_2d().direct_space_state.intersect_ray(consulta).is_empty()
 
 func _aplicar_ataque() -> void:
@@ -152,12 +164,12 @@ func _aplicar_ataque() -> void:
 		var alvo: Node = area.get_parent()
 		if alvo == self or atingidos.has(alvo) or not alvo.has_method("receber_dano"):
 			continue
-		if alvo.equipe == equipe:
+		if alvo.equipe == equipe or int(alvo.get("altura_nivel")) != altura_nivel or alvo.get("pulando") == true:
 			continue
 		var ate_alvo: Vector2 = alvo.global_position - global_position
 		if ate_alvo.length_squared() > 0.01 and ate_alvo.normalized().dot(frente) < 0.15:
 			continue
-		if not _tem_linha_de_visao(alvo.global_position):
+		if not _tem_linha_de_visao(alvo.global_position, alvo as CollisionObject2D):
 			continue
 		atingidos.append(alvo)
 		var vida_anterior: int = alvo.vida_atual

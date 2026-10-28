@@ -12,13 +12,13 @@ func _physics_process(delta: float) -> void:
 	restante_combo = maxf(0.0, restante_combo - delta)
 	buffer_ataque = maxf(0.0, buffer_ataque - delta)
 	super._physics_process(delta)
-	if esta_morto or defendendo or tempo_dano > 0.0:
+	if esta_morto or pulando or defendendo or tempo_dano > 0.0:
 		buffer_ataque = 0.0
 	elif buffer_ataque > 0.0 and not atacando and recarga.is_stopped():
 		iniciar_ataque()
 
 func iniciar_ataque() -> bool:
-	if esta_morto or defendendo or tempo_dano > 0.0:
+	if esta_morto or pulando or defendendo or tempo_dano > 0.0:
 		buffer_ataque = 0.0
 		return false
 	if atacando or not recarga.is_stopped():
