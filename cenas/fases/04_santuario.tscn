@@ -1,20 +1,18 @@
-[gd_scene format=4]
+[gd_scene format=4 uid="uid://b14f50kdytcyy"]
 
-[ext_resource type="Script" path="res://scripts/fases/fase.gd" id="1_vh8a7"]
-[ext_resource type="Script" path="res://scripts/visual/agua_cenario.gd" id="2_l0k8c"]
+[ext_resource type="Script" uid="uid://d00aqfrq7pvxi" path="res://scripts/fases/fase.gd" id="1_vh8a7"]
+[ext_resource type="Script" uid="uid://cthy5820e8oqv" path="res://scripts/visual/agua_cenario.gd" id="2_l0k8c"]
 [ext_resource type="TileSet" path="res://recursos/fases/tileset_cross.tres" id="3_gd60j"]
-[ext_resource type="Texture2D" path="res://assets/mapa/CRAFTPIX_DUNGEON/walls_floor.png" id="4_yjw1d"]
-[ext_resource type="Texture2D" path="res://assets/mapa/CRAFTPIX_DUNGEON/fire_animation.png" id="5_ylx83"]
-[ext_resource type="Texture2D" path="res://assets/mapa/CRAFTPIX_DUNGEON/Objects.png" id="6_xciqb"]
-[ext_resource type="Script" path="res://scripts/visual/ambiente.gd" id="7_rvv87"]
-[ext_resource type="Script" path="res://scripts/fases/objeto_puzzle.gd" id="8_fx4b0"]
+[ext_resource type="Texture2D" uid="uid://2eob158137a5" path="res://assets/mapa/CRAFTPIX_DUNGEON/walls_floor.png" id="4_yjw1d"]
+[ext_resource type="Texture2D" uid="uid://6gbvauuk8gap" path="res://assets/mapa/CRAFTPIX_DUNGEON/fire_animation.png" id="5_ylx83"]
+[ext_resource type="Texture2D" uid="uid://b4v06cnladb60" path="res://assets/mapa/CRAFTPIX_DUNGEON/Objects.png" id="6_xciqb"]
+[ext_resource type="Script" uid="uid://hgxrnsj3mx4o" path="res://scripts/visual/ambiente.gd" id="7_rvv87"]
+[ext_resource type="Script" uid="uid://c86ahmlyt7x7b" path="res://scripts/fases/objeto_puzzle.gd" id="8_fx4b0"]
 [ext_resource type="PackedScene" path="res://cenas/personagens/guerreiro.tscn" id="9_m0pf0"]
-[ext_resource type="Script" path="res://scripts/personagens/guerreiro.gd" id="10_nmpi6"]
 [ext_resource type="PackedScene" path="res://cenas/personagens/robo.tscn" id="11_lse3g"]
-[ext_resource type="Script" path="res://scripts/personagens/robo.gd" id="12_tjaed"]
 [ext_resource type="PackedScene" path="res://cenas/personagens/cavaleiro_azul.tscn" id="13_vnodi"]
-[ext_resource type="Script" path="res://scripts/fases/guardiao.gd" id="14_ryx58"]
-[ext_resource type="Script" path="res://scripts/visual/camera_coop.gd" id="15_8qwkt"]
+[ext_resource type="Script" uid="uid://y3c0xy4rs6ub" path="res://scripts/fases/guardiao.gd" id="14_ryx58"]
+[ext_resource type="Script" uid="uid://b31w6b1yu4uvf" path="res://scripts/visual/camera_coop.gd" id="15_8qwkt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vk451"]
 size = Vector2(32, 32)
@@ -2747,57 +2745,22 @@ texture = SubResource("AtlasTexture_igv5v")
 [node name="Personagens" type="Node2D" parent="." unique_id=1958072466]
 y_sort_enabled = true
 
-[node name="Guerreiro" type="CharacterBody2D" parent="Personagens" unique_id=1715721797 instance=ExtResource("9_m0pf0")]
-texture_filter = 1
+[node name="Guerreiro" parent="Personagens" unique_id=1715721797 instance=ExtResource("9_m0pf0")]
 position = Vector2(144, 720)
-collision_layer = 2
-collision_mask = 5
-motion_mode = 1
-script = ExtResource("10_nmpi6")
-nome_personagem = "Lucas"
-vida_maxima = 120
-velocidade = 92.0
-dano_ataque = 23
-defesa = 4
-alcance_ataque = 30.0
-intervalo_ataque = 0.82
-preparo_ataque = 0.22
-duracao_ataque = 0.65
-pode_usar_escudo = true
 
 [node name="Sombra" type="Polygon2D" parent="Personagens/Guerreiro" unique_id=1739997709]
 color = Color(0.03, 0.05, 0.08, 0.28)
 polygon = PackedVector2Array(9, 0, 7.7942286, 2, 4.5, 3.4641016, 5.5107286e-16, 4, -4.5, 3.4641016, -7.7942286, 2, -9, 4.8984254e-16, -7.7942286, -2, -4.5, -3.4641016, -1.6532186e-15, -4, 4.5, -3.4641016, 7.7942286, -2)
 
-[node name="Robo" type="CharacterBody2D" parent="Personagens" unique_id=2089452591 instance=ExtResource("11_lse3g")]
-texture_filter = 1
+[node name="Robo" parent="Personagens" unique_id=2089452591 instance=ExtResource("11_lse3g")]
 position = Vector2(208, 720)
-collision_layer = 2
-collision_mask = 5
-motion_mode = 1
-script = ExtResource("12_tjaed")
-prefixo_controle = "robo"
-nome_personagem = "Otto"
-vida_maxima = 95
-velocidade = 112.0
-orientar_pelo_movimento = false
-dano_ataque = 18
-alcance_ataque = 27.0
-intervalo_ataque = 0.58
-preparo_ataque = 0.14
-duracao_ataque = 0.43
-possui_morte_animada = false
 
 [node name="Sombra" type="Polygon2D" parent="Personagens/Robo" unique_id=1126996632]
 color = Color(0.03, 0.05, 0.08, 0.28)
 polygon = PackedVector2Array(9, 0, 7.7942286, 2, 4.5, 3.4641016, 5.5107286e-16, 4, -4.5, 3.4641016, -7.7942286, 2, -9, 4.8984254e-16, -7.7942286, -2, -4.5, -3.4641016, -1.6532186e-15, -4, 4.5, -3.4641016, 7.7942286, -2)
 
-[node name="Guardiao" type="CharacterBody2D" parent="Personagens" unique_id=206521938 instance=ExtResource("13_vnodi")]
-texture_filter = 1
+[node name="Guardiao" parent="Personagens" unique_id=206521938 instance=ExtResource("13_vnodi")]
 position = Vector2(624, 560)
-collision_layer = 4
-collision_mask = 7
-motion_mode = 1
 script = ExtResource("14_ryx58")
 nome_personagem = "Guardião da Provação"
 vida_maxima = 260

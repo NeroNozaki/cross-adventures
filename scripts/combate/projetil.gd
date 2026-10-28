@@ -3,9 +3,9 @@ extends Node2D
 ## Ignora os herois e desaparece no quinto contato com o cenario.
 
 const IMPACTO: PackedScene = preload("res://cenas/combate/impacto_projetil.tscn")
-const LIMITE_RICOCHETES: int = 5
+const LIMITE_RICOCHETES: int = 4
 const VELOCIDADE_SIMPLES: float = 340.0
-const VELOCIDADE_CARREGADA: float = 270.0
+const VELOCIDADE_CARREGADA: float = 340.0
 const VIDA_PADRAO: float = 12.0
 @export var max_ricochetes: int = LIMITE_RICOCHETES
 @export var tempo_de_vida: float = VIDA_PADRAO
@@ -26,6 +26,8 @@ signal ricocheteou(total: int)
 signal atingiu(alvo: Node)
 
 func _ready() -> void:
+	if not carregado:
+		max_ricochetes = 0
 	add_to_group("projeteis")
 	top_level = true
 	direcao = direcao.normalized() if direcao.length_squared() > 0.001 else Vector2.RIGHT
@@ -97,7 +99,7 @@ func _physics_process(delta: float) -> void:
 			ricochetes += 1
 			_criar_impacto(true)
 			ricocheteou.emit(ricochetes)
-			if ricochetes >= max_ricochetes:
+			if ricochetes > max_ricochetes:
 				_encerrar(false)
 				break
 			global_position += normal * 0.6
