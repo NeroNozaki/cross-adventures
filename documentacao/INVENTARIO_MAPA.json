@@ -1,0 +1,3656 @@
+{
+  "total": 523,
+  "pacotes": {
+    "0x72_16x16DungeonTileset.v5": 249,
+    "2D Pixel Dungeon Asset Pack v2.0": 184,
+    "Dungeon assets pack": 26,
+    "free-fantasy-map-icons-sampler": 64
+  },
+  "arquivos": [
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/.DS_Store",
+      "bytes": 6148,
+      "sha256": "e515f72c3c28e6b1439d447c62c909ea98573eae5f2df48d269b337410a3df3d"
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5.json",
+      "bytes": 32613,
+      "sha256": "b373677fcb95d53f85d90a19bc5ebff928d8a266e6352377725c097af2d69730"
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5.png",
+      "bytes": 26827,
+      "sha256": "a6efc63a71709d70ffd22ec58c92a8b2ccc53e2d3fa7696667a7a22b1d80ab88",
+      "largura": 512,
+      "altura": 256
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/.DS_Store",
+      "bytes": 6148,
+      "sha256": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3"
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/black.png",
+      "bytes": 99,
+      "sha256": "d5bf5c776495528af0e27fe2f8f5617ff5f442db941faf75c6273cbb8e593119",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/box.png",
+      "bytes": 231,
+      "sha256": "4bdd95b084d744e276ed9629317a8c973c72d3904a1f3abe81f5bc6ac5478118",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/boxes_stacked.png",
+      "bytes": 242,
+      "sha256": "6adedd6b089bfbed4802ce27fd3041acfbba75258cb743bd7ca5b11dbbc68cf7",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/chest_closed.png",
+      "bytes": 388,
+      "sha256": "53a89a5af48e7df2736b0e4a8d70fa69bab395d407ef121bf8fac27ab45b8683",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/chest_golden_closed.png",
+      "bytes": 383,
+      "sha256": "c106f12935eb53c697414ef86499b3d7071de8191f16653b6172c72290b19492",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/chest_golden_open_empty.png",
+      "bytes": 356,
+      "sha256": "a06ca632efebbddd2203c2d1d4a8399296f459a1bd97c8eac82e5b6ee404031c",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/chest_golden_open_full.png",
+      "bytes": 438,
+      "sha256": "eb36bd0aeeff1655148741d34710f79f1ac9dbf706484ab15275ae4e72979076",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/chest_open_empty.png",
+      "bytes": 357,
+      "sha256": "9879d72b7274d7c5254b7fb5e51e9b9f7c590766739ece212f0fa5360cf25d15",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/chest_open_full.png",
+      "bytes": 442,
+      "sha256": "5608fe08129d6a3a161adf5e878ddefb3cf7a528c5f8c5a0caa3b10289588a30",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/column.png",
+      "bytes": 551,
+      "sha256": "7bc42d8d6a9155e06b94b06942e3914ec52bdc36c4b18765017f9c71d91ce9ae",
+      "largura": 16,
+      "altura": 48
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/column_wall.png",
+      "bytes": 670,
+      "sha256": "578dcae520605e718ba7e5add9035bc4ac6e89a9b8e54f56c6a59b48eef9ce71",
+      "largura": 16,
+      "altura": 48
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/darkness_bottom.png",
+      "bytes": 307,
+      "sha256": "0d3e465dd4f9b2cc0febeb5b5539cf60b72241e929667a9252746fb804d68e12",
+      "largura": 32,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/darkness_left.png",
+      "bytes": 345,
+      "sha256": "d63ea054a60942b9254539e3cf7609421b7c5aaf81982b08d651f44d61e88304",
+      "largura": 32,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/darkness_right.png",
+      "bytes": 353,
+      "sha256": "be71e38e786b86de53145dfd15ac830343fca815c37c6336b8e2a38b7d86c4c8",
+      "largura": 32,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/darkness_top.png",
+      "bytes": 307,
+      "sha256": "8480311de97e1b6d89907dbe7bf49437c939506d219b03949959b1703704614b",
+      "largura": 32,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/door_closed.png",
+      "bytes": 899,
+      "sha256": "de986c055f0384773cea9362b54a82baf5921200d80dfc639c6a96d8a33f952e",
+      "largura": 32,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/door_left.png",
+      "bytes": 320,
+      "sha256": "7472200f206bce558a30dba12217308da6e22b1a9fec3e087c3ee4d55be5c716",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/door_open.png",
+      "bytes": 622,
+      "sha256": "b0775bc47b5f1f8e136e9c2e08cb1501af2cf1055bf4685a80c69a8fba1f3cad",
+      "largura": 32,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/door_right.png",
+      "bytes": 340,
+      "sha256": "2068253633ae9dd093fac5c05348235170d2ff21871fde9a00882348e35c1626",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Edge_bricks.png",
+      "bytes": 138,
+      "sha256": "d55b50a420b195d0e99e32d87b1f10334f533836e03d35c33b857584868c8593",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Edge_e.png",
+      "bytes": 104,
+      "sha256": "1072edfc7da3750165d396ce0dc187d9cdb306a4768d899a703e4b248e4dfbfd",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Edge_n.png",
+      "bytes": 106,
+      "sha256": "8d8fdfb3746cdbd7a45b3427e93ac7312bbc74d3a5f8a29356ba387a01a29853",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Edge_ne.png",
+      "bytes": 112,
+      "sha256": "673e1ff59a47594e57aac1a201c8019aec79ce2164664c551f172e5179b3e6e7",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Edge_ns.png",
+      "bytes": 112,
+      "sha256": "d637799fa0d63cfa30901cdacbe91fd72308d07a1d85b305573e908f0ae6ac0f",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Edge_nse.png",
+      "bytes": 118,
+      "sha256": "18d6b8767946a1a43a4c6b25a13a71b6c96d00299c383c004a748d96c1648120",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Edge_nsw.png",
+      "bytes": 119,
+      "sha256": "367b7891b84ca820a8237cb5d16679376bcd12c06695e8f486ec68bffec9410d",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Edge_nw.png",
+      "bytes": 109,
+      "sha256": "c2450121ece148224466637d27822be06c896b144fe51e2c553d143b518c8a9e",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Edge_nwe.png",
+      "bytes": 116,
+      "sha256": "f855abb0cae4ad1e9734700d8c8c1ffedaaa54859de2af1a094ecd582ae301b6",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Edge_s.png",
+      "bytes": 105,
+      "sha256": "1454b4ae2a74414643a3c564e612d0b6a867da284a7106ccd701ad80b0e2ee6d",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Edge_se.png",
+      "bytes": 110,
+      "sha256": "6ba61bdf10bad741dec54e09c820f8136f545949cdbcf80b0c7d326d29900aa9",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Edge_single.png",
+      "bytes": 123,
+      "sha256": "3d3cc6c554aa8248f907f84903bb108691649a6f866a0c5adb36bcfcb298fdd7",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Edge_single_crack.png",
+      "bytes": 191,
+      "sha256": "b5b0103e41608d1f378fc8c82ec443fbf3cdaab9dd74ab4c1d0a33f64d3ce047",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Edge_sw.png",
+      "bytes": 112,
+      "sha256": "df96fdd7c17c3c232ef2fd2fdfb8b86ac9488310fd250e3bf74abd2abbc0b9c6",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Edge_swe.png",
+      "bytes": 115,
+      "sha256": "d32edb6d57b71dbc00902cff3274f05dbb9b264010581b641034737169d2ba0f",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Edge_w.png",
+      "bytes": 102,
+      "sha256": "a048b4a24a41f088a533d0299073bd2d36af02c4cfabda796588a4d812ceb4ae",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Edge_we.png",
+      "bytes": 108,
+      "sha256": "9d2b89d19ff8b9c6015dd3a7371ead02c9f89e4736aab6f1af2499019caa44b4",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/flask_big_blue.png",
+      "bytes": 239,
+      "sha256": "4ae4808732e398074bc435802d526125fdaa63a172b505b2da9a75d6fd615c9e",
+      "largura": 9,
+      "altura": 11
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/flask_big_green.png",
+      "bytes": 254,
+      "sha256": "998511b7ad9cbba52373288ee95f65f48b6c886474a724d3568fbb91f5eaa8ff",
+      "largura": 9,
+      "altura": 11
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/flask_big_red.png",
+      "bytes": 239,
+      "sha256": "3a349062de4f5bb318e55bcf7a48de8db4b5bdedb8066426bac1f74a6fb40450",
+      "largura": 9,
+      "altura": 11
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/flask_big_yellow.png",
+      "bytes": 239,
+      "sha256": "d467b15593f145587719a7a01b2c8f13b7c853829661e6310c3ef511dcb8ec3c",
+      "largura": 9,
+      "altura": 11
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/flask_blue.png",
+      "bytes": 223,
+      "sha256": "29434ec2d925b542fa9d1d6a4e4ef6324fbb631ee9e730908dd4b838bc5d87dc",
+      "largura": 9,
+      "altura": 11
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/flask_green.png",
+      "bytes": 223,
+      "sha256": "3e222182f479d7d6623fedd50ef4169025a5fbf18280740f8c65e8b12931d474",
+      "largura": 9,
+      "altura": 11
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/flask_red.png",
+      "bytes": 219,
+      "sha256": "dca3056a60775f45e28b57c475dca210685392eff5ea9ad2ce3e363db7a5031f",
+      "largura": 9,
+      "altura": 11
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/flask_yellow.png",
+      "bytes": 220,
+      "sha256": "eba379bee0b55956a706af7ecf1475ee9ac0655aa05a31e4536478ac66421f3d",
+      "largura": 9,
+      "altura": 11
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_edge_1.png",
+      "bytes": 131,
+      "sha256": "1424e6560d62819d9b4f71bdc3a7831c0e4fb2258f08742e5f012c0e8577b291",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_edge_2.png",
+      "bytes": 129,
+      "sha256": "32d20883d35590dbe95a6cf35f7a63d6243550de61497d2dbace30d14f91a751",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_edge_3.png",
+      "bytes": 115,
+      "sha256": "482df2765c485ef0ed17f45c094b36de5bbd78e01031343520eea5af00c60352",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_gargoyle_blue_basin.png",
+      "bytes": 268,
+      "sha256": "4528b8d4b9ae0431da637cf90edac0aee3bacfa8695db47b04a5a9c78045a0c2",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_gargoyle_blue_puddle.png",
+      "bytes": 199,
+      "sha256": "4fbdfb1a5b3d539f6d05e720247c0100126d0810ddcc5b950a326746e969554b",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_gargoyle_green_basin.png",
+      "bytes": 261,
+      "sha256": "b95b19e7f007d20fb38b946c11f3feebb8e04a8c1799d8e6e1e624f70089fcaa",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_gargoyle_green_puddle.png",
+      "bytes": 199,
+      "sha256": "eda8ce371dff74db518e530f4399c1e1e8d034a40f219834c27d3cd9198f5703",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_gargoyle_mid_blue_left.png",
+      "bytes": 185,
+      "sha256": "59fced29396d9f5f6d1b288962cc9556e6bed1c4de3e45239277723c45d48e15",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_gargoyle_mid_blue_right.png",
+      "bytes": 182,
+      "sha256": "7457f45cd55b9cb60bfb5a3fb1c8db91cb03ac6b146815716760df673d5cb9ca",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_gargoyle_mid_green_left.png",
+      "bytes": 185,
+      "sha256": "1e221829411ecdc0ed2067d894e88a07761aa4e373a8fb664ead73d6a2075753",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_gargoyle_mid_green_right.png",
+      "bytes": 171,
+      "sha256": "7a4dd43225e1b41e5e8a52d88e271953209fd29551661f3611221b71cfaf778d",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_gargoyle_mid_red_left.png",
+      "bytes": 185,
+      "sha256": "e41fb92edbb14373d66b0070b022268c43f2ec7ca84e48b302b2c4093369915b",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_gargoyle_mid_red_right.png",
+      "bytes": 177,
+      "sha256": "4f0c576420e19939e1c158f6b31de518f66e0bf3d244938de4de4f821aa721bb",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_gargoyle_red_basin.png",
+      "bytes": 260,
+      "sha256": "e403a30dbacca22f5d522ebc1a8fe7b5fdb2ba4dc669853e6a59e6d8c5ae23ef",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_gargoyle_red_puddle.png",
+      "bytes": 197,
+      "sha256": "750b81e6e5e54c604ce379e148b84f29d6a297aece38768069b0e2868ffdb994",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Floor_ladder.png",
+      "bytes": 280,
+      "sha256": "b36c302f30a009796ffdf0ceeafae672f42ec6ebdfd17da794e89708168bbc00",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_light.png",
+      "bytes": 99,
+      "sha256": "8f9e5b7b11e5e1fef065cb9f1ccc30801e8ac0279cc440d72cff36ef9613c71e",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_mud_e.png",
+      "bytes": 222,
+      "sha256": "66474383fb838c996ed209b754666919c12cc9f89759e4f6770dc3a3ad8ec4e1",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_mud_mid_1.png",
+      "bytes": 173,
+      "sha256": "433522cbc4cebe3b6d44c3d02765bc47aeed8eac2d556aaf51f226edd0ab5e1e",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_mud_mid_2.png",
+      "bytes": 181,
+      "sha256": "0059b41a54cf8e9738eb20f213dc799d08fee96460b1f32e154efd4cbe7815fe",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_mud_ne.png",
+      "bytes": 202,
+      "sha256": "ab5b6e39629d383a9d424a0c3c1bf053759e35102577882cde7767dd1c8fed5b",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_mud_nw.png",
+      "bytes": 186,
+      "sha256": "cc78a3f5b0c2fbe1cc008f860022709726c7f66246db6b0b31d56e2a3d803d8e",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_mud_n_1.png",
+      "bytes": 251,
+      "sha256": "e3f24594a9fc1c3fe157658eef2c2479d8273de69eb11898f74b672c9d5e5aee",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_mud_n_2.png",
+      "bytes": 229,
+      "sha256": "e343f2e4946097380d317462eead215df9d0e346fc0a23bcef8d2541d0accc97",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_mud_se.png",
+      "bytes": 152,
+      "sha256": "49eec85515c487682546ccd3c4c4ab42839400e278505cab6d963515850cfa62",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_mud_sw.png",
+      "bytes": 149,
+      "sha256": "47a7102b75682f2cb765f4673a8378424774f3ab34b84b8fb47e61c13afac8b9",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_mud_s_1.png",
+      "bytes": 178,
+      "sha256": "8593d089afe2a3fdada7f2b9543401a6830334e14323897be3a4397f6db506d9",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_mud_s_2.png",
+      "bytes": 172,
+      "sha256": "09c47a384c508806c7d9bf63cbf0bf4ec82f37ab4f69bb4ff6367b3a1c795980",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_mud_w.png",
+      "bytes": 235,
+      "sha256": "1eb346bf83c9b5fe850eb5ada6d8b0ec4889314e6028da8dac09e8556c3cdeee",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_plain.png",
+      "bytes": 99,
+      "sha256": "15a72f9e7109999b388ec4f9eb09c308a6648f99e1b3c55a5e74b4f05eadc25e",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_stain_1.png",
+      "bytes": 159,
+      "sha256": "d475428ba383be5197097aadacab7c3222d801b7455742e0b55f23a42e7e35a5",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_stain_2.png",
+      "bytes": 150,
+      "sha256": "5305474ebe52cbf0a5e2d2ef39885041b76e7b7b168f890ceacacdeab1245a93",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_stain_3.png",
+      "bytes": 154,
+      "sha256": "c4e97fe60bedf2b91482c9f6adb504ee462fd10ece1b97274eefa50b7fe11683",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Floor_stain_e.png",
+      "bytes": 151,
+      "sha256": "efd4b6493165b8736c19f3b978f370d6e4f4d1bf5f8e9eabf6fb29cf8b24a5b9",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/floor_stain_goo.png",
+      "bytes": 194,
+      "sha256": "1bf45e7aa68a32c64f8570b1605f7f430fb6e1f76f55192d2ad949c0d0ae55b3",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Floor_stain_n.png",
+      "bytes": 137,
+      "sha256": "e6776fbc42258f7b56ec6f416d913f85d1e2d729bee05dfd2d309496a1a4d2af",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Floor_stain_ne.png",
+      "bytes": 157,
+      "sha256": "17c90974d5c08aa09f905762ff020d54bd25be569c863b2d7d00f9128fc92629",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Floor_stain_nw.png",
+      "bytes": 161,
+      "sha256": "efe1107122198081fef117025ae48db41581e8356c1f7022edfc539f096b8380",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Floor_stain_w.png",
+      "bytes": 149,
+      "sha256": "e225169f35fb1f3db8d1c2557211471d1f5a7b201b9336c39d5541d17fe1ea09",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/gargoyle_mid_top_left.png",
+      "bytes": 202,
+      "sha256": "317581e0ef0e17f11921b8c9540fcf75a3c37d72919b523b93aa5f5389e1483c",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/gargoyle_mid_top_right.png",
+      "bytes": 200,
+      "sha256": "959fe9d509b8682da1e48250a90e8415677d99f435b4a7e9e9ec5fa79d11b323",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/gargoyle_top_1.png",
+      "bytes": 216,
+      "sha256": "97a2993aa30cbb25eda3e3ad7c54f4173729e5f7ebb71990d2dcb88de64317d9",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/gargoyle_top_2.png",
+      "bytes": 184,
+      "sha256": "649c90c85b38b24505e2f6ffeeb41eedb73344a9f191f79bac2a72b2d1318df8",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/hand.png",
+      "bytes": 105,
+      "sha256": "74f2f8eaf7a520f429c207083da6cc2abae825aca4db60aaab25d18e2f13fbb2",
+      "largura": 4,
+      "altura": 4
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/hand_big.png",
+      "bytes": 111,
+      "sha256": "da2dbf8beebb431437cda3c85c2a35aa6069dc67bb5f5458dca68839976fe071",
+      "largura": 5,
+      "altura": 5
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/hand_small.png",
+      "bytes": 102,
+      "sha256": "98646e0648a0f19f73df1e12c0b7f1d10812f3d231c73ff9dc95fc4607957f3b",
+      "largura": 3,
+      "altura": 3
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/hero_basic.png",
+      "bytes": 208,
+      "sha256": "8a92aa35e8bad8da2f2e2947901f17db5bff14fead6e630cdf6f7742822f4dd9",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_bat.png",
+      "bytes": 269,
+      "sha256": "8bf190def2661b23899ae814fae580db2c37507f6aeb297c91ef3fa59c36b4af",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_bies.png",
+      "bytes": 311,
+      "sha256": "3dab8f4691e83db00eb0ea09df8a60a36938fe96b99079e4ad00ae78eecf9053",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_chort.png",
+      "bytes": 274,
+      "sha256": "c8335e7be4ece75d1f15e4bb04e41371487e2abd3c7e975887490e15e1cdd3b6",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_dark_knight.png",
+      "bytes": 345,
+      "sha256": "f073f678789d5f80e1f0d82d6cf263f5a1c8ed09a81359d9560cd40a42f6b852",
+      "largura": 16,
+      "altura": 21
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_demon.png",
+      "bytes": 509,
+      "sha256": "9f5c707f8a1517d5e3a21cda965a0e0c79c7969c03304e574c8637c04e14bc6c",
+      "largura": 32,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_demonolog.png",
+      "bytes": 249,
+      "sha256": "08275af45ec07f89f025869f110d12a319c66fc038407d9da7c87f542b7aa03c",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_elemental_air.png",
+      "bytes": 287,
+      "sha256": "ee042aeb3f566435c0863cc4db69b732fe09e3621d1a0fcd97a6259df3de1d1b",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_elemental_air_small.png",
+      "bytes": 246,
+      "sha256": "9d55c6f7860fad480a1d7f0ed40c7938578cdf8a73b33207fc9a313e44f6d9fd",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_elemental_earth.png",
+      "bytes": 368,
+      "sha256": "5c6748761305cc46009c0fb246aa9a34780beb3e657d792a65c495f43646fcb1",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_elemental_earth_small.png",
+      "bytes": 265,
+      "sha256": "1c079a4eda9b7adf3ebac33803b012fb69df1faf1c8e6d50a966b5ee4f827a77",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_elemental_fire.png",
+      "bytes": 315,
+      "sha256": "31872e33c42f4dd8c67373e9f77bb1967cd58d76ee89eef512e930876e697c4b",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_elemental_fire_small.png",
+      "bytes": 243,
+      "sha256": "50a7cf0d64c934058cef56129621cfb7145bed34dfd9191f65440e97e1dce0d2",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_elemental_gold_short.png",
+      "bytes": 212,
+      "sha256": "b3a493a25eafa9f641c0cc274c3716424fc6ac30ab935d049223997d80c7341c",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_elemental_gold_tall.png",
+      "bytes": 227,
+      "sha256": "423552bca390367e5a971e4a5df9e230a55e6c60de1ed65435360cd95cdb5f6a",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_elemental_goo.png",
+      "bytes": 283,
+      "sha256": "1a6038f1fd96ba3cfefc8564da95ba797c90af6ec238fe0d91bacf832a7d63c4",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_elemental_goo_small.png",
+      "bytes": 262,
+      "sha256": "804e70071cb0aebd3ff141b0cde47670b4c86f78f7af6654d19ac60cb6cd25f5",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_elemental_plant.png",
+      "bytes": 276,
+      "sha256": "443164879a679fd3fe18d269c5a6dfc8178056fde3b56c1ce246dc2c93e45fab",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_elemental_plant_small.png",
+      "bytes": 203,
+      "sha256": "2f08c56d0b5ba5b790f4eb4460c767d3f9bc679b10b34a41a9e6cd2ff3d35f3f",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_elemental_water.png",
+      "bytes": 282,
+      "sha256": "3d5149d1a996e52cd70a27b0b527b677cdba46be64ab7bbe55778e861d5d23c4",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_elemental_water_small.png",
+      "bytes": 262,
+      "sha256": "7a52e83427d6f77a4ac279bd40e42efb4a11854fc5ff10aab3735c01462b548e",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_goblin.png",
+      "bytes": 211,
+      "sha256": "d7500e48941235cbe8ac3a6272352e3702c90bb0383ebf2d917b595f75afb812",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_imp.png",
+      "bytes": 210,
+      "sha256": "cad740cd9cc51967434350c62b771e46d26d84a07162d690aacbe86280c444f6",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_necromancer.png",
+      "bytes": 249,
+      "sha256": "712812930e91c6673bbe225483ec600f3a768eb595f8f2a25af990481a08f466",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_ogre.png",
+      "bytes": 469,
+      "sha256": "ed74ff7070860d115ff0bbe3c7255c0a30bf947b3142e95039b669c5b9c02a19",
+      "largura": 32,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_orc.png",
+      "bytes": 251,
+      "sha256": "16c277c5a781091e72981a9c98afdb6d30191dbf90af68c1e2380bace1423e11",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_orc_armored.png",
+      "bytes": 300,
+      "sha256": "ff7b95ab50973635a10d9300582798bedddb4b9a9ee24b4d32966e3b697cecce",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_orc_masked.png",
+      "bytes": 280,
+      "sha256": "9660e8627aa817972971d72dda5365629a2d4bf507e49abc827747f66971fe03",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_orc_shaman.png",
+      "bytes": 326,
+      "sha256": "ea5e59ee0ec20eee0b37351bee1267eb8ce83699c9cf2aa04d4c8c12bf579eba",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_orc_veteran.png",
+      "bytes": 320,
+      "sha256": "ad06bb8806e4bebab8f817e4f42cf9d4bc5b7b06228e7457ef1a1da95b713c9d",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_rokita.png",
+      "bytes": 275,
+      "sha256": "623813e8a81eec2315ea9a7a6d7b91fff2cd7d0d274245ebb1ce72c9cb94bc4a",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_skelet.png",
+      "bytes": 230,
+      "sha256": "ac46f41aab1c1403b2419c7a3b99ea509f21278d4b841a1147226112705f8f44",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_tentackle.png",
+      "bytes": 750,
+      "sha256": "20ba15b2c94d3c1337584e10e9617d1935ca5dab80c67a7a1bbfb7f5ddf3ed74",
+      "largura": 32,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_wogol.png",
+      "bytes": 230,
+      "sha256": "f3fc540381bf9c60e045451d1071ee92d077de2d5445b893aed3fc61a6eceefd",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_zombie.png",
+      "bytes": 236,
+      "sha256": "9eb0d5bd028c9cf0f80b2211b9d936c4699037d44c613ace8aa001a388afaf0b",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_zombie_green.png",
+      "bytes": 294,
+      "sha256": "2e37a31213edfcc63b750662115c7ad967a56c59e6f9e31d26ba510c8b35d819",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_zombie_short.png",
+      "bytes": 261,
+      "sha256": "cda56cce3bda31964aec3328bc108dca3102c4a0b9920c366eca1fe4a39c0fae",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_zombie_small.png",
+      "bytes": 179,
+      "sha256": "b7d22041a6c96d0a2fe587c7e704548fdd980d99400af65359ef74eef79d19ab",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/monster_zombie_tall.png",
+      "bytes": 247,
+      "sha256": "aa06769932c6a1840fb1d53e22c37189cee55835d263cace674be92db230b526",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/npc_barbarian.png",
+      "bytes": 227,
+      "sha256": "eb1a4131b19e300254e123574c2b1467a7a02e5d703f4e2ab6bc22ee98060164",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/npc_dwarf.png",
+      "bytes": 354,
+      "sha256": "e62384ddbb3d1967ea49aeefbe4324b986a3ebe384612299f251b1222d771a81",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/npc_dwarf_2.png",
+      "bytes": 366,
+      "sha256": "40f11a47c204587510d13380d258815836962a2301ec764a492bdd1e4caf0b61",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/npc_elf.png",
+      "bytes": 346,
+      "sha256": "598f542efc73b61105d625ae82fef79917483794209ae05472096ac6e3e6f906",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/npc_elf_2.png",
+      "bytes": 347,
+      "sha256": "aa2b348159e7e326433d470eb95cf21d9aff6957b157f6801b7c6e353a3453dc",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/npc_knight_blue.png",
+      "bytes": 334,
+      "sha256": "e90f2109517c9c485b1705ef1e60b80d30155d8c72f6e317e16f8153963b96a0",
+      "largura": 16,
+      "altura": 20
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/npc_knight_green.png",
+      "bytes": 328,
+      "sha256": "e48f111092390502888b003b6555243f863b8297e23598fdb81e9a5a2ea38d4f",
+      "largura": 16,
+      "altura": 20
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/npc_knight_yellow.png",
+      "bytes": 328,
+      "sha256": "c5aa5b710216ab642c5af8ca7b4120c78c2b255b12bc7c87f363964ab3cb5362",
+      "largura": 16,
+      "altura": 20
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/npc_mage.png",
+      "bytes": 365,
+      "sha256": "ac84fa07655f8b9333a8c52bc651d643ce199798b9f6395214dd90214ce3a807",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/npc_merchant.png",
+      "bytes": 363,
+      "sha256": "43a4285a629f684909b610ba5f5b17e9da02a0ce82156eab299ef4361f025858",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/npc_merchant_2.png",
+      "bytes": 328,
+      "sha256": "9b2d1a566d79065792d6a8c79545525d51c2fe7984321f83ff028e34f7f16c80",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/npc_paladin.png",
+      "bytes": 323,
+      "sha256": "396a92de16bf3e70ba44d15654f9ae151befb225a4af7d8115f7dc7db342be00",
+      "largura": 16,
+      "altura": 20
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/npc_sage.png",
+      "bytes": 312,
+      "sha256": "4d747cff5cb6447a009527ebb8e7b265daac7b5da73aa06c37896f3c24baa632",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/npc_trickster.png",
+      "bytes": 278,
+      "sha256": "9b30279011e3e7cfb14196687ca2ed41cf31ab8363677b8ccd69bdaa80c85b12",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/npc_wizzard.png",
+      "bytes": 364,
+      "sha256": "6716636f2a63a46891f9074e7a4712596a61723ca7b301838ef1595e52d95657",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/npc_wrestler.png",
+      "bytes": 234,
+      "sha256": "3ddfafd7321b92fec59ea4e9e0173fe03c8a9728441bfc491e4aa32f4b7ea8fa",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Pit_e.png",
+      "bytes": 103,
+      "sha256": "b429457c75a91f23005c76e7afb61909738c94395e09a27130386f71e266106f",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Pit_n.png",
+      "bytes": 148,
+      "sha256": "b33727bd127846dc248774990acf775505d38e7da1636a0cb8a7643229721fbc",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Pit_ne.png",
+      "bytes": 168,
+      "sha256": "3a70f8fb6c97fd737742b7da73b2cfa5a872d9ac7df4459e70b564565294f1b1",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Pit_nw.png",
+      "bytes": 160,
+      "sha256": "168eabc50ee01887a9f3c2f8232911735e71aaaf27ed80b424212d09002807d3",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Pit_s.png",
+      "bytes": 94,
+      "sha256": "7a60d0bbba839b3b78f62c36bcb80e591c45069c7a1e0433dddc53f616e08650",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Pit_se.png",
+      "bytes": 110,
+      "sha256": "3a58e7b5b63dba57dd1b1fef184402ce6cd0eeb6f5353b49aedce4c800e353db",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Pit_sw.png",
+      "bytes": 102,
+      "sha256": "73a558ae41d594ca06422117dcc8f96002601262c9ca8bc63b4b06dbc0411ae1",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Pit_w.png",
+      "bytes": 99,
+      "sha256": "afda41b50597dd38d0acfe83cf201588ee8b2055b1077cf2b4db6d2e290f80c6",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/skull.png",
+      "bytes": 180,
+      "sha256": "981bbb41a308fe3980e96cd6ab9017b5c07b916867af3b509e27f1dcd82681e9",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/stairs_bottom.png",
+      "bytes": 196,
+      "sha256": "cff1e85cfb8fa72b794b91459abb77f61b4316f231f43b299b01c53c118864e6",
+      "largura": 32,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/stairs_mid.png",
+      "bytes": 146,
+      "sha256": "1add469dc6e476099a448f755749c8b59fe0286726c87ef4a70f3f9a476c0d76",
+      "largura": 32,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/stairs_top.png",
+      "bytes": 128,
+      "sha256": "d17ef30f5ec8ddc487393a199797e73c6dc55ff0b6c3304e10ad81e10188765f",
+      "largura": 32,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/torch_1.png",
+      "bytes": 244,
+      "sha256": "3e953616ff0f8dfb56865dea62a3989c928340c2f5b4486d7771cd52b2f29d0c",
+      "largura": 14,
+      "altura": 23
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/torch_2.png",
+      "bytes": 238,
+      "sha256": "655ef1bb4a2a30626d35dec5bf557d3dff15d85f43c2b563df0dcf98887ae154",
+      "largura": 14,
+      "altura": 23
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/torch_3.png",
+      "bytes": 230,
+      "sha256": "17ca1c4b6a2ae5e301b657583dfca80e4ddaf9f525d7ab19f8fc88e85f1a0775",
+      "largura": 14,
+      "altura": 23
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/torch_4.png",
+      "bytes": 240,
+      "sha256": "e4e9ea086b75379826764f68b2acd80f746fa7a4c498b479ec7538fca02ee6e3",
+      "largura": 14,
+      "altura": 23
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/torch_5.png",
+      "bytes": 232,
+      "sha256": "c83ddc7b8087c4401a7c8f224ac3d258005275c1c6c0ca861a846df779d8e989",
+      "largura": 14,
+      "altura": 23
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/torch_6.png",
+      "bytes": 248,
+      "sha256": "fd44d2eae0c51d4e6c5bad2e320f38a47038d62326560a6e1d9d4ed291c92554",
+      "largura": 14,
+      "altura": 23
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/torch_7.png",
+      "bytes": 225,
+      "sha256": "4087e92867fac8fe0272a79960ab5ba63f87e4863ad3a7812c8037b3b9a35453",
+      "largura": 14,
+      "altura": 23
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/torch_8.png",
+      "bytes": 212,
+      "sha256": "e96875119a67486a27756b9c45448f3ea903ea2d81482bb91ba77aaebff64dff",
+      "largura": 14,
+      "altura": 23
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/torch_no_flame.png",
+      "bytes": 167,
+      "sha256": "a079b61fa32902c63f804f8985b1df2ac325af296105c47fe65d05a9d3c7f74e",
+      "largura": 14,
+      "altura": 23
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/waepon_katana.png",
+      "bytes": 208,
+      "sha256": "c14c7060fa018ca465c224942a3c29653cc13fb2148b1aa030d961b306b8d7db",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_center.png",
+      "bytes": 218,
+      "sha256": "f76a4ce52e5958ce36a616e502c5a8ee3bfdd2c3fdb973c04ddd6aea3564e0fd",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_drain_gate.png",
+      "bytes": 281,
+      "sha256": "15d8f810b98061d07ef35df077f3f7052a15316f56d3d268cf504b4b7934d5fb",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_flag_blue.png",
+      "bytes": 396,
+      "sha256": "8c9fbb0ff0e29dc89a74873afb34ce9c6b74a9b43e37d26f4aa39168181bbb6e",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_flag_green.png",
+      "bytes": 388,
+      "sha256": "1ab69079f9a49751417fa82ebe9c8c461d96fa1fdd5fe854a13b6b8bbb1059fa",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_flag_red.png",
+      "bytes": 416,
+      "sha256": "4b7e7d0c83b995fe6182ef79bb37506c8c3db3338e0af503a3d24f55ddad8393",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_flag_yellow.png",
+      "bytes": 401,
+      "sha256": "0e36d5beb64dc0ee2a8a3a5da91d6065108f8fc8893d203d535bcc558d66db2f",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Wall_front.png",
+      "bytes": 266,
+      "sha256": "bd37aefd38e13e95f5409b092c43995705bde91bae358902552bdccf5da4bb9f",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Wall_front_left.png",
+      "bytes": 261,
+      "sha256": "4850df3130bfb78374c9ecca745f64ddf87da63f8224e6011e86170e575df1df",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Wall_front_right.png",
+      "bytes": 253,
+      "sha256": "23ad33a898f5ce7138436eb2980fbc06f1c83d5f881d42e0b0f295d7676f8881",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_gargoyle_blue_1.png",
+      "bytes": 483,
+      "sha256": "b623dd2bbb4a0694dabd533455e7b13f5e1bc62891b44b204153eaa0b54da51b",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_gargoyle_blue_2.png",
+      "bytes": 383,
+      "sha256": "eb3a3d32bb23dbd0e7a84329431494291f5aac003459125205944acf8783112f",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_gargoyle_green_1.png",
+      "bytes": 455,
+      "sha256": "d19ce43a83d4e36da6e00e4bce4469393127239d85c5a09ab8f5e5e44f38163c",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_gargoyle_green_2.png",
+      "bytes": 372,
+      "sha256": "28ac834a03f815889c887981bec1ef49aa059c4b21ac3bce6b839b4dff278578",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_gargoyle_mid_blue_left.png",
+      "bytes": 331,
+      "sha256": "4f3d2aeed8c366644a65a578117c5fb403865ec6c6be4a176101ac7d645b5a77",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_gargoyle_mid_blue_right.png",
+      "bytes": 345,
+      "sha256": "18d8e07666609788a8b4fa62ef09b84beaab1283177e3cf35b21bb2e20374bf5",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_gargoyle_mid_green_left.png",
+      "bytes": 322,
+      "sha256": "cd89574ba15e9340ba6812b708f9838831b32678d7606b9af151ab8a830a2b44",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_gargoyle_mid_green_right.png",
+      "bytes": 337,
+      "sha256": "bfe089965d8f7ff599fc4da2371af8ff94382ac3ea795847064897c3dcb8a8d0",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_gargoyle_mid_red_left.png",
+      "bytes": 327,
+      "sha256": "676b20fe8b6e539546d70553674752158d5771bb32222e473a6be187bb148304",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_gargoyle_mid_red_right.png",
+      "bytes": 348,
+      "sha256": "a948e0318e805ae342621048c8a119c4c023032f42b27e56e8dc57ca2c56d051",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_gargoyle_red_1.png",
+      "bytes": 450,
+      "sha256": "754ce650cb38862aaae69a7664733c66e44919ba00a89e9ecdf2d338fba86d23",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_gargoyle_red_2.png",
+      "bytes": 393,
+      "sha256": "5cdf5f3b4a525d508714383493e53f64f07cc2fa476966cc5b1bb0b5398af1b2",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_goo.png",
+      "bytes": 362,
+      "sha256": "6136b32dc1228334ed1def7e48e1ac5b889064c15d061ff03604b0f06d8d5e2d",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_gratings.png",
+      "bytes": 279,
+      "sha256": "34d71e25f4a34c0e9a16e5080dc99a439fdbb2fc9ca87b362d50706c15831e52",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Wall_inner_e.png",
+      "bytes": 316,
+      "sha256": "b57fd29517e57a564fbe3dde989f8d4b48a06cc97e863ee19c78f31baa2c2b0a",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Wall_inner_ne.png",
+      "bytes": 139,
+      "sha256": "cf0205bd09bc1acd8381be4afcc993c0f9ef5dd4fe51097a416c5ca8788a655d",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Wall_inner_nw.png",
+      "bytes": 147,
+      "sha256": "cf62050858740c377077c95634a9c2f572aee3ed97bd9a238982bee7a32ddeac",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Wall_inner_se.png",
+      "bytes": 181,
+      "sha256": "fd738585d8365e068249b650e9d42ace53655cd9924ad2ce20496033db3b6fce",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Wall_inner_sw.png",
+      "bytes": 209,
+      "sha256": "4c1721bcbca0e0468c572a640279d8c8276afe3448f09ffb977abc293f59fb75",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Wall_inner_w.png",
+      "bytes": 298,
+      "sha256": "0765fbc20a10df59f5c6d438f0c95d2b240b6b5c0c517355ddc4f8c9882d4f58",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_left.png",
+      "bytes": 224,
+      "sha256": "8115704b313de57f3e929254bae1099d356192da744e4819bd4526b2bc75b8ff",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_missing_brick_1.png",
+      "bytes": 256,
+      "sha256": "bdf5ad5d4729c5ab26fb7cdc73d34b4c91885dbdce62f5ac396b9ef7b071ae90",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_missing_brick_2.png",
+      "bytes": 239,
+      "sha256": "0e181c118e0d8ab9728ab54fbd618ec1c3eaf16af46659064507cb81e79c379e",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Wall_outer_e.png",
+      "bytes": 152,
+      "sha256": "f575c1f07169553244ba3e3ca83b2418076a09913fdc6f28a21d4593aed7f645",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Wall_outer_e2.png",
+      "bytes": 178,
+      "sha256": "e1bdf82c92636f32fe15dba5ed56518a43225e52a2213286e2ff5ca5fe572667",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Wall_outer_n.png",
+      "bytes": 138,
+      "sha256": "86e5192b8772b04c9073640d39f3899d15f0aa4f15cda68f410acaa21c5e1f13",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Wall_outer_ne.png",
+      "bytes": 125,
+      "sha256": "a47ae93a4b1de3d5b9bc383de19e4fb668022443d49962b3c46c78db36fe4e00",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Wall_outer_nw.png",
+      "bytes": 118,
+      "sha256": "8e89b0a69752d0f9524467526583a008fb8b547d644d2b71301290ac284a6fd5",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Wall_outer_se.png",
+      "bytes": 191,
+      "sha256": "d389318f163d7b065e1c38d36fd68ead597012bd542591f6835a2d1970f4fcd1",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Wall_outer_sw.png",
+      "bytes": 170,
+      "sha256": "fd75a4858e1b0407b6504ad1217fdca5b4074fc5306dd78e652a965c93d55165",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Wall_outer_w.png",
+      "bytes": 144,
+      "sha256": "931f0ea6e0a2f30d9fcde3a2c8f34452ac25ca53e0f8c06aeb4a4504a1f91e52",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Wall_outer_w2.png",
+      "bytes": 153,
+      "sha256": "a59cd13da4aee27b4b1a8ca2eb9fbf596bc38add7e489ac7aaad0f11f8504c8f",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Wall_outline_1.png",
+      "bytes": 192,
+      "sha256": "f22b0f973685a84f6d51444100366f85732c8232b5c17d4a6824244052795592",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Wall_outline_2.png",
+      "bytes": 205,
+      "sha256": "2ec5dae82fe92048a8e719456728580dc3e63534b667d6757d34a807c26ccb02",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Wall_outline_left.png",
+      "bytes": 168,
+      "sha256": "e40489e0358a40974d1f56b168f156e7b6d32ee364b3b2c7b88705dff7b73bab",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/Wall_outline_right.png",
+      "bytes": 157,
+      "sha256": "c8b25f37baf02ed6870a76e4484dc331f91fb3b8642a3828896870fc499b13af",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_pipe_1.png",
+      "bytes": 379,
+      "sha256": "18c7c6275a078a9202beede95551f1bb1b97f2e97410608bfbd08ebf4921fe92",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_pipe_2.png",
+      "bytes": 387,
+      "sha256": "875c495730917c2e192234a530b08baef1f932f25962dd116a8cd904b8c69dc6",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_pipe_small.png",
+      "bytes": 343,
+      "sha256": "f539cfa443f03ba9da632fdcaf7ae97ed4fd03a0a6f1392016a146a1b86ed8ff",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_right.png",
+      "bytes": 220,
+      "sha256": "2b6c7d3bf9ccdfd7832a37f30495f473963759bb9691930abf91380a8f1884ec",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_top_center.png",
+      "bytes": 158,
+      "sha256": "62d5b50e6d04ce5b2af1d7a9470896bce74d1ec4fb577c5c2424013c86e474e3",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_top_left.png",
+      "bytes": 157,
+      "sha256": "5becfc3f6449670ea64a695feb519ad8b50e0f8f234ca70fde61f831bf4c1cd0",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/wall_top_right.png",
+      "bytes": 166,
+      "sha256": "8ab5ae119fa5c7204214561982a6800d56278bc09919580ba30ff8d97da3438b",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_bomb.png",
+      "bytes": 247,
+      "sha256": "bdda151464ae696794ffd04ec289b283ceca234af3c2acced381c1a1c70b950f",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_chopper.png",
+      "bytes": 207,
+      "sha256": "6f2d79217fbb9169206d4a090198772224110cf1439f526bcec28f84d7c74760",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_dagger_golden.png",
+      "bytes": 171,
+      "sha256": "918267fd145114bb54c7dd73cef040b2a814d2b43188bdfe630d55a5f8182bee",
+      "largura": 8,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_dagger_long.png",
+      "bytes": 157,
+      "sha256": "961586d4020ba1c823fd58dc3166ab22abcd0fa0e3d983e57424147341d9e3e8",
+      "largura": 7,
+      "altura": 19
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_dagger_silver.png",
+      "bytes": 166,
+      "sha256": "c635df6f5facd6567a9269b72dd1d6a947e423c2faa69fc156322729b796a02f",
+      "largura": 8,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_dagger_small.png",
+      "bytes": 160,
+      "sha256": "d6d08753c6a2757b27871f9c000bc26e994dc3b27866c63aa6dcf8ba39f2a024",
+      "largura": 8,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_dagger_steel.png",
+      "bytes": 166,
+      "sha256": "6449674538e1522379f838cc976d572d2b667821e5155db4d66f6de5af3b1244",
+      "largura": 8,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_hammer.png",
+      "bytes": 175,
+      "sha256": "b918990b9cbc5d17f5a4c154ffe17304cdc94885531cc915e12d9e2189abace8",
+      "largura": 8,
+      "altura": 19
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_katana_silver.png",
+      "bytes": 190,
+      "sha256": "069288b56f101974a5f031c2694949ab229588b2d8eddd00ea9c59eb1ad71226",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_silver_topaz.png",
+      "bytes": 234,
+      "sha256": "554b09364b90b9aff83efb02bb9402a4887a62a1785f8dbaea585bc1979d9c26",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_sledgehammer.png",
+      "bytes": 196,
+      "sha256": "55c2ccdc9594418cba107508e607ce431453419c5b2eff6afcd9fc48e8981ce3",
+      "largura": 16,
+      "altura": 48
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_sword_big.png",
+      "bytes": 274,
+      "sha256": "a950befef3ed963baf6c6666fc9406f5d66a3e67c5fb7df58d06865c99be4c12",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_sword_black.png",
+      "bytes": 232,
+      "sha256": "886270d227d7e3a6a4abf182979857b7ee5da6d1dbab466b8fe78d0c2de996d8",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_sword_emerald.png",
+      "bytes": 280,
+      "sha256": "f7d2f6a9c2129408bf4588f4f95216a31314d447d12ccd235eb0551901c2bf1b",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_sword_golden.png",
+      "bytes": 226,
+      "sha256": "24a5755ea06985337e6dfc85e9e6f04516b4f39b3951699d3c9549e52255502e",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_sword_green.png",
+      "bytes": 239,
+      "sha256": "20cdb13ddc4160315bd1ae7627c65e10fd86bcefc29b6d844af643efa9be7bf0",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_sword_red.png",
+      "bytes": 232,
+      "sha256": "ccb4c0fab0e835214db553bcfa515362c1389c292e0c89fc591fa80a5d773983",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_sword_ruby.png",
+      "bytes": 246,
+      "sha256": "64b34a3ab16a9e545bfd537a52c588e104d9c09bc1688bd388d7073d10f67c6a",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_sword_rusty.png",
+      "bytes": 289,
+      "sha256": "5614947ac27a44d4100ea0f6004db7c9bca33e0b033f0dd81539f05843388c08",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_sword_silver.png",
+      "bytes": 215,
+      "sha256": "d38ddb11c6b1f6710867fb5666ebc9c44d64db1a0c3dcea7bf3bb839566cc5e0",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_sword_small.png",
+      "bytes": 202,
+      "sha256": "18ae03842bbe8b7094e507505467a82ae34c4b86c0048dc1f433da4f45952e61",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_sword_steel.png",
+      "bytes": 211,
+      "sha256": "62f12f080df5d3ada0e39d02bb23b98712c3ba671394273f4248126298fa0148",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_sword_topaz.png",
+      "bytes": 240,
+      "sha256": "affc982f076e080a7a28da1723760710d9cef66f3ded4ad2917971598d34a66a",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/weapon_sword_wooden.png",
+      "bytes": 206,
+      "sha256": "644a188434af6027c4cc8cdff3c38d561c52dbb533c9adfb934aaa7de25fc2fb",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/__MACOSX/0x72_16x16DungeonTileset.v5/._.DS_Store",
+      "bytes": 120,
+      "sha256": "2f380f4a3d05a8d90c2106f50da75064e9ce57a598599dc5404f8f69a0223aa9"
+    },
+    {
+      "arquivo": "assets/mapa/0x72_16x16DungeonTileset.v5/__MACOSX/0x72_16x16DungeonTileset.v5/items/._.DS_Store",
+      "bytes": 120,
+      "sha256": "2f380f4a3d05a8d90c2106f50da75064e9ce57a598599dc5404f8f69a0223aa9"
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/character and tileset/demonstration.png",
+      "bytes": 12303,
+      "sha256": "ae0bcffa3cee0d0616294c20ae54d4766da4774549f3b479ba7560b3f0ca95d9",
+      "largura": 256,
+      "altura": 256
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Character.png",
+      "bytes": 2503,
+      "sha256": "e51a3833e3ac0af2ee0891dd3767fd92f6ddf0d2754b38bfc50ddb308e4ac877",
+      "largura": 112,
+      "altura": 64
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Character_2.png",
+      "bytes": 2054,
+      "sha256": "e9d3b457640ef646b2f3aea5ad8265c61d777fdb9a597fdec5b611b826e6d039",
+      "largura": 112,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/character and tileset/Dungeon_Tileset.png",
+      "bytes": 6326,
+      "sha256": "b0da342a01f0e67fb57c095e2199b5e8935a836d65bc9c1af87163c40ce16a74",
+      "largura": 160,
+      "altura": 160
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skeleton1/v1/skeleton_v1_1.png",
+      "bytes": 525,
+      "sha256": "512cb71e60892a66fed47ef6ab58db79e039aa69e2aaf89b6271bda01227bfe7",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skeleton1/v1/skeleton_v1_2.png",
+      "bytes": 525,
+      "sha256": "9728a8b4a188cc4cd33289993f6f9901d3e58633572d68fb6f4d93453f3028a6",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skeleton1/v1/skeleton_v1_3.png",
+      "bytes": 571,
+      "sha256": "71a7c819ef94b538572ff0c312189685437ce88adcb3f222c6efb087d8dbf47d",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skeleton1/v1/skeleton_v1_4.png",
+      "bytes": 578,
+      "sha256": "c3dc416a6ea1b1456cfe7bca48cdf7ba00ab8eaaf3911be4b014734f1bbf5d1a",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skeleton1/v2/skeleton_v2_1.png",
+      "bytes": 512,
+      "sha256": "f2daec798ab154432ba23ba366e6ca690d1565ceacdce7f5ad2da0c9cfe56089",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skeleton1/v2/skeleton_v2_2.png",
+      "bytes": 514,
+      "sha256": "233383462b097ae6410cb8000825bd578cf9624cbe61663cec49b8a169ab1ffa",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skeleton1/v2/skeleton_v2_3.png",
+      "bytes": 565,
+      "sha256": "63c2f06f5e0de3f091d7805c15b3b8b8eb8d2509357a07df87392510d54b2b10",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skeleton1/v2/skeleton_v2_4.png",
+      "bytes": 569,
+      "sha256": "33d9935536d3e7f60454e6bb3428a889d1f18d821d34c89c502c6e945d435b26",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skeleton2/v1/skeleton2_v1_1.png",
+      "bytes": 550,
+      "sha256": "65369c8812af46c4f394c8dcc8bed5c60c85f9063911777d6999f9fc7f2708f2",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skeleton2/v1/skeleton2_v1_2.png",
+      "bytes": 522,
+      "sha256": "72f44e381500ccabd5a81e1bf261c6e8daaa16fb45251626c2b4edfcb4d32f4c",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skeleton2/v1/skeleton2_v1_3.png",
+      "bytes": 508,
+      "sha256": "59a174404e936738b77473efc1cca9eaa12a36cd8cb0f1ebcc5800d85790a028",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skeleton2/v1/skeleton2_v1_4.png",
+      "bytes": 537,
+      "sha256": "fc2cbc241fd15115438027cfe9916125217a7953ef3a24ef6799c236dc5283bf",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skeleton2/v2/skeleton2_v2_1.png",
+      "bytes": 512,
+      "sha256": "06ad1dfd57d5e7db51d2664f99218d1ef367e5d36f99dae106dbe3a4b4762e5d",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skeleton2/v2/skeleton2_v2_2.png",
+      "bytes": 496,
+      "sha256": "d4e446be2ab45ce23c66283c4abd33e7778d9eb14e652df33ff596d65dd8019a",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skeleton2/v2/skeleton2_v2_3.png",
+      "bytes": 479,
+      "sha256": "a95662ebfe3c5704348cf4ef2231b29de933a16a14bc2365a34d6dedba472ff7",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skeleton2/v2/skeleton2_v2_4.png",
+      "bytes": 520,
+      "sha256": "ccf7cb597a565d5c33e901c503196fb7ccf66d4dc004789959ea78d05ec1ca9a",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skull/v1/skull_v1_1.png",
+      "bytes": 474,
+      "sha256": "3afab6ddad11223f3c2d542c3e9cd3b6af6ac55a49cf4a2a9ca081cd40bee84a",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skull/v1/skull_v1_2.png",
+      "bytes": 449,
+      "sha256": "803643e24e730ea4978e4b0f9979e96a5cd1dcc03afeef886e9cac92f5237f83",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skull/v1/skull_v1_3.png",
+      "bytes": 454,
+      "sha256": "92564cc182099b382a9b6cc00d618a3825753208ebfb6f8bbe801d1812fd72fa",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skull/v1/skull_v1_4.png",
+      "bytes": 443,
+      "sha256": "d56f8c0b9d6f62df37dd9b1084254bd2700faef56378017fd0db8d8b2018b5cc",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skull/v2/skull_v2_1.png",
+      "bytes": 409,
+      "sha256": "01e0faab84c338bfe4a032e9c8b1c42cf72b801078c5a27e7ffc818d1e91e4cd",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skull/v2/skull_v2_2.png",
+      "bytes": 386,
+      "sha256": "65abf07e73118b7eab30d2c6dd69e814f938aaeaf991dc238e6e55e50cc908b3",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skull/v2/skull_v2_3.png",
+      "bytes": 411,
+      "sha256": "03404811350588740dada80b5603abb006e93a6d3b010d3986f7ed6c9774c7fd",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/skull/v2/skull_v2_4.png",
+      "bytes": 385,
+      "sha256": "68154b1cf6d33f3da712aa1aa9016bca9d83ef4315c80dc8ac3770df9a017961",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/vampire/v1/vampire_v1_1.png",
+      "bytes": 534,
+      "sha256": "4dc61640289179e5fa82d00686d0c28353c06a9507b14a65147bcc4111b65c63",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/vampire/v1/vampire_v1_2.png",
+      "bytes": 542,
+      "sha256": "c748aecf1f33cd08f4e05341be1a4523af99cb313b8ca317be084b398e18f02b",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/vampire/v1/vampire_v1_3.png",
+      "bytes": 520,
+      "sha256": "638bfbefad944bc2b033d46b3fb18dea5c0ad4be583d8092ad834ef1d480054a",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/vampire/v1/vampire_v1_4.png",
+      "bytes": 543,
+      "sha256": "13ddc63327b4dd71f40780108957480e55bfe18a4fc1b9ef93d7228bddc6556e",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/vampire/v2/vampire_v2_1.png",
+      "bytes": 437,
+      "sha256": "e8078967f115f96780f454cab6f058d8f03d78205f5ee55f8fb11085f1b879ae",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/vampire/v2/vampire_v2_2.png",
+      "bytes": 455,
+      "sha256": "67be3e29d2d5b5dcac2e2403e1f32b7f458f00ed1cc9e04c735974571005e3d0",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/vampire/v2/vampire_v2_3.png",
+      "bytes": 450,
+      "sha256": "ceeaa24919bbb25ab0bcf89942e697a9403654b70302db47b24e0493905dfabd",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/monsters_idle/vampire/v2/vampire_v2_4.png",
+      "bytes": 485,
+      "sha256": "b45db0c1bcc63b471c5f6a810b042ac1bc6b654978bfe4e1ed8930befdf07cb5",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest1/v1/priest1_v1_1.png",
+      "bytes": 350,
+      "sha256": "75146af0df7d428c1d7ba8b3c40f780c7f776610112db1926f5b024357c8a879",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest1/v1/priest1_v1_2.png",
+      "bytes": 385,
+      "sha256": "8ba5463c4e582077bc9ec3703fc4c477e3c04a59cdb8af0961cbe6ba77c281c6",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest1/v1/priest1_v1_3.png",
+      "bytes": 386,
+      "sha256": "01cdcf16eeae0e9b2a901fac119ae6876fdbfef92fbdd2adf048f9d38f7eea0e",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest1/v1/priest1_v1_4.png",
+      "bytes": 386,
+      "sha256": "bf984d7d7df3f1614c1b34dc30cbb7bbd61eeab02e87be13eff193de4fce0878",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest1/v2/priest1_v2_1.png",
+      "bytes": 379,
+      "sha256": "03d345d13c6d01bb98ec0f19f566313fbcf266de6ad03643f73f4ab5203bba71",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest1/v2/priest1_v2_2.png",
+      "bytes": 410,
+      "sha256": "1686ee9c2a6e50b7ecc589efd622a32eb45a5a292d16a91fb050f23f151881be",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest1/v2/priest1_v2_3.png",
+      "bytes": 405,
+      "sha256": "864e24951c3b1472f42b0ebb20813093c1b548ea766f7daa126c3951c627bc63",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest1/v2/priest1_v2_4.png",
+      "bytes": 406,
+      "sha256": "1f68cb7c7bc162e11a08edf8e055673e384e2a46cca262aa9fd1a695c68706b7",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest2/v1/priest2_v1_1.png",
+      "bytes": 317,
+      "sha256": "4595861e90709318c2aa4f970e6896c0c9bb5cbe08af81af77aa5318814191d2",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest2/v1/priest2_v1_2.png",
+      "bytes": 375,
+      "sha256": "0fd0b46ea215178b307310ed3d2c78a6fbb6e36da00f32d6edb7e45597a058f3",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest2/v1/priest2_v1_3.png",
+      "bytes": 334,
+      "sha256": "3fa32a41defdf29093d26c40c4e23e7884013c472be70ef9943887963297fea1",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest2/v1/priest2_v1_4.png",
+      "bytes": 310,
+      "sha256": "66515735ef26fdd582c01d96ed59ea0df093b6b1a86e65fb807710e14e226ca7",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest2/v2/priest2_v2_1.png",
+      "bytes": 345,
+      "sha256": "166a1824bfc8273f6a3930296589984e40c8361e003e7dedfe3c67315a02b25d",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest2/v2/priest2_v2_2.png",
+      "bytes": 400,
+      "sha256": "08daa9daa155dc37534a18705f8b2450a1d1c383a8ca8b89c4121d443483685b",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest2/v2/priest2_v2_3.png",
+      "bytes": 351,
+      "sha256": "279e861d38f8e7baeb8099beda173476e37eb42f2bf60dcc5915482078ededfe",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest2/v2/priest2_v2_4.png",
+      "bytes": 331,
+      "sha256": "2c06e94f08aa801273ae41b26d3f26f502c3feddf7d7566afbd26bf0516bccb0",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest3/v1/priest3_v1_1.png",
+      "bytes": 331,
+      "sha256": "eb6506b908e87c8a3b2b3c0b572bd450049758d771908ade8b2d65fcfbb1f64d",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest3/v1/priest3_v1_2.png",
+      "bytes": 353,
+      "sha256": "6d03cbb7c25487b01f517d2df650ec42bde158bea735911b04e25fa533d6b923",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest3/v1/priest3_v1_3.png",
+      "bytes": 348,
+      "sha256": "a599abefd50a661dca9c2709d22299db2c4a6d84f9a0295f73e628761aec2619",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest3/v1/priest3_v1_4.png",
+      "bytes": 359,
+      "sha256": "55f3d2f9b45abc8b02b03e722127e93106fdf1c723c43f0fe2a4b7c8a58f97cc",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest3/v2/priest3_v2_1.png",
+      "bytes": 354,
+      "sha256": "022d66c17b63684b95c8fd1db3746af9408ed37ee737366b386f41c12fe475be",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest3/v2/priest3_v2_2.png",
+      "bytes": 378,
+      "sha256": "51aac80f3d4b7b0768f1eb23adea95251c632c4ff371c59f1e37f22f42e9f317",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest3/v2/priest3_v2_3.png",
+      "bytes": 367,
+      "sha256": "dff59fa7c2ad53ceded60a0670fe237e99975fc77474d66e7f4ca78d4ce7a345",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Character_animation/priests_idle/priest3/v2/priest3_v2_4.png",
+      "bytes": 380,
+      "sha256": "18d3390a6c9aca443d3b029e2dd8f02a472f3e521ac52e694686305bd9d2168e",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Dungeon_Character_at.png",
+      "bytes": 7471,
+      "sha256": "d158e84bfdbe271cf158ee3ab1973980a750dfb073dba03cc735228090e6223d",
+      "largura": 512,
+      "altura": 512
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Dungeon_gif.gif",
+      "bytes": 122073,
+      "sha256": "7dbfec4d39fb14f10eef1c24318b614f8bc9ad4e3ee60dfc637c852edc075a3e"
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/Dungeon_Tileset_at.png",
+      "bytes": 14693,
+      "sha256": "4b4e8bf881cba60632ecefa1d102b76630bce0340f79759932efa332c421f3b6",
+      "largura": 512,
+      "altura": 512
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/arrow_1.png",
+      "bytes": 164,
+      "sha256": "8a583f72631b0ddcb0647da8617994d661e8c270c55436c73d400018a5bd36ce",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/arrow_2.png",
+      "bytes": 174,
+      "sha256": "9766304392ddb2a098ca46c6f4f139be46a6501dd650e9b9d7716a19eb59b740",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/arrow_3.png",
+      "bytes": 160,
+      "sha256": "af76bd244490a1d571a34b5a34ed4fea26c01f948a1ee2d43013ec1a86b9b7b1",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/arrow_4.png",
+      "bytes": 174,
+      "sha256": "9766304392ddb2a098ca46c6f4f139be46a6501dd650e9b9d7716a19eb59b740",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/square_left_1.png",
+      "bytes": 202,
+      "sha256": "aa5e1bdcdb27a09df4af490b0c4d9a8d007c7055ca1148add8a09c130750db21",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/square_left_2.png",
+      "bytes": 208,
+      "sha256": "23c0bf721efe696aa1c9afcdf780aeb5a40561c041393db4422198c96e5592d1",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/square_left_2_1.png",
+      "bytes": 209,
+      "sha256": "ebfc34fbdbf89e97335a9cc2f0dd27cf4309477d8820fa3d418c77163a64e728",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/square_left_2_2.png",
+      "bytes": 215,
+      "sha256": "3b35bff78b3126eb26ed303152d08bb93dbe9b9a2e48c82b20435890aef5a20a",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/square_left_2_3.png",
+      "bytes": 203,
+      "sha256": "889b42a850391657e661b529bb948a282369fc8976873ce2815158be367409d8",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/square_left_2_4.png",
+      "bytes": 150,
+      "sha256": "1f1b1e50775baa84b670c88e32a1aed55a085fd756d8a4358c4370ea7a91f44a",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/square_left_3.png",
+      "bytes": 192,
+      "sha256": "8dcdcfcaf2fcf8bdd5498066cf1bcfb0026f4211ed70efb0bd8f43bed952cff5",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/square_left_4.png",
+      "bytes": 150,
+      "sha256": "1f1b1e50775baa84b670c88e32a1aed55a085fd756d8a4358c4370ea7a91f44a",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/square_right_1.png",
+      "bytes": 217,
+      "sha256": "803c0c2c3ed6782a1b9695e45c232f9b0bc25573ae8e6c419a90131748177ad2",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/square_right_2.png",
+      "bytes": 215,
+      "sha256": "0579a57d14e8d75190293dc2419944be75ac836dbc875a5f13800332913847e1",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/square_right_2_1.png",
+      "bytes": 209,
+      "sha256": "c7664b44aec05f3fa30ade382ed2620968d97aa0e2e909b2d5d42b82ae98e5e8",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/square_right_2_2.png",
+      "bytes": 208,
+      "sha256": "870f0f1b908d5e0b4abb5f1347ed2a6b95b06febf5373773bdfa78b360664ac4",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/square_right_2_3.png",
+      "bytes": 194,
+      "sha256": "0593c322da6b8bed138628b8187c7eace8226061848a119e1f229b3b09e805d6",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/square_right_2_4.png",
+      "bytes": 150,
+      "sha256": "1f1b1e50775baa84b670c88e32a1aed55a085fd756d8a4358c4370ea7a91f44a",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/square_right_3.png",
+      "bytes": 198,
+      "sha256": "cc8c34bc939cd6ea2ebce05dd81ed780ea6bd1b2e8741b1ede8938f9ce029831",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/square_right_4.png",
+      "bytes": 150,
+      "sha256": "1f1b1e50775baa84b670c88e32a1aed55a085fd756d8a4358c4370ea7a91f44a",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/square_up_down_1.png",
+      "bytes": 165,
+      "sha256": "b08909101c21133034ff725d93c263ef9c30d2ea85fb446fdcacdef44bff303a",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/square_up_down_2.png",
+      "bytes": 197,
+      "sha256": "7d84a8e0ce43b1f27b7ba4a6bb8da97ff950a0706f87c9c6f0cf82881c93a752",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/square_up_down_3.png",
+      "bytes": 182,
+      "sha256": "7af44e9057b0f559a82f61b9f195262e8829b04c89a88039268fd528aeb5d957",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/interface/square_up_down_4.png",
+      "bytes": 150,
+      "sha256": "1f1b1e50775baa84b670c88e32a1aed55a085fd756d8a4358c4370ea7a91f44a",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/arrow/arrow_1.png",
+      "bytes": 241,
+      "sha256": "6f3066b2c1ef2de0ded5024b9dcc0bd9d191a0703b6496d750180a8a9cf8fd2e",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/arrow/arrow_2.png",
+      "bytes": 156,
+      "sha256": "6d656069e39fb5fc78a3cd2ddff49773ab2d33e5ec960c1aaead537e058148cf",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/arrow/arrow_3.png",
+      "bytes": 215,
+      "sha256": "0d671c3a614171372d4a102f9c6287442a70f9c4fdbda3e1800e18a848abf7fc",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/arrow/arrow_4.png",
+      "bytes": 275,
+      "sha256": "6580ecd6675b30390821fe2bcd50dd2d66d44ffcabdfd860a31e866e66530200",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/arrow/Just_arrow.png",
+      "bytes": 215,
+      "sha256": "ed664b18ec78c39e79ace9df52a737d24c5afbe6856bdfe471b83874ef6f58c1",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/box_1/box_1_1.png",
+      "bytes": 281,
+      "sha256": "1a44acb5f0f696178eaf996ccc8623bda5a4938f5dd2ad02a6195e8977f91b57",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/box_1/box_1_2.png",
+      "bytes": 279,
+      "sha256": "f479925f17dbdc343a8e6b740bc2939df0c486299c880adf2a623a3c14c5aaf3",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/box_1/box_1_3.png",
+      "bytes": 287,
+      "sha256": "d72ce06c7d844bc5ffca3d682d2e75000abe54278c6f5c66d2750a83ecf229ab",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/box_1/box_1_4.png",
+      "bytes": 270,
+      "sha256": "47aa93ab811a147d1dc4b94c9a61e38a1b4916e7b98d0e9cc7437a80c0543b64",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/box_2/box_2_1.png",
+      "bytes": 230,
+      "sha256": "f0345f2a3e90ce207425efc5fb35ec9c7b3c1270fd809851ad07d0de3a0cd18b",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/box_2/box_2_2.png",
+      "bytes": 227,
+      "sha256": "b732c2b923cd9d73a6e338e9487d9d16fb0b8dc5e6e932f1c3b4ba3930b58668",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/box_2/box_2_3.png",
+      "bytes": 208,
+      "sha256": "6ca41fc0f0b79b3520ef1e9b9718504bffe4e4de757c480ca3eb202ac2c74e9c",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/box_2/box_2_4.png",
+      "bytes": 209,
+      "sha256": "d4060328dee25a8d450e29425a500f61033305623101582159a187a2b405f41b",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_1.png",
+      "bytes": 332,
+      "sha256": "4c8ef8f968cf9df56bd8b911dd83d49cfdcc04072988307d92d7c4329af358ad",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_2.png",
+      "bytes": 339,
+      "sha256": "98b27ab9c0f5bfc48087d7bbd3f91428e7a6ea3cf0b1c0857b0424e61a6c5b3e",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_3.png",
+      "bytes": 339,
+      "sha256": "87daa60c9f73305aee21d15425a0f839d3a5810db847e3f5bcfe2d8276dbf0fd",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_4.png",
+      "bytes": 334,
+      "sha256": "541278f2bdb89b9870e3afe05c00173e373d6eed767154c0328568995867025c",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_open_1.png",
+      "bytes": 345,
+      "sha256": "c7f35f7e31f1c610b32802555d4ec5bfe5574fdebde9192ac1749b1d6602402f",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_open_2.png",
+      "bytes": 337,
+      "sha256": "b90c2f60caf28cbebef137e0358144fa7742cb00f0b3d0f990f2842d7b5e942a",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_open_3.png",
+      "bytes": 333,
+      "sha256": "1bca175e573a8920dc820a0aa7693d65de7c776f589574361f2fc30a0e58830f",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/chest/chest_open_4.png",
+      "bytes": 328,
+      "sha256": "9f1bd64a5c1168573318530c41988d9672133173446be625d8cf34226e6f43e5",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/coin/coin_1.png",
+      "bytes": 283,
+      "sha256": "7e5956295c3b484f1d8dc3cc4d620538fe666bd23492a329e485c2a634df5989",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/coin/coin_2.png",
+      "bytes": 255,
+      "sha256": "7bfb1fe833ae9da9097edf914fd78a43f72421fb633913020f41bf9286025755",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/coin/coin_3.png",
+      "bytes": 137,
+      "sha256": "0f54e2f2b5a71b6a03a61addf7aa0752bddc2abb50c8d24b5b4ece77d1de2370",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/coin/coin_4.png",
+      "bytes": 255,
+      "sha256": "7bfb1fe833ae9da9097edf914fd78a43f72421fb633913020f41bf9286025755",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flag/flag_1.png",
+      "bytes": 364,
+      "sha256": "d7b4c8eaf38b3a7cdac452235fe312a8aef5751e3ccd796a58fa9e315ae6e82e",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flag/flag_2.png",
+      "bytes": 372,
+      "sha256": "87e0975adc3e97b5b5ea7665dfbfb7149e837eeb361f91be04e03c47c9306601",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flag/flag_3.png",
+      "bytes": 342,
+      "sha256": "d304adca142eaa5d95fa4e2bfe7d0fb7889a34c8edea98eef1bd67dae5a815d9",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flag/flag_4.png",
+      "bytes": 347,
+      "sha256": "5955c55a3693e51ff8ab35627650d9f02e597c9d97afc226582d568a1c0b3c37",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flamethrower_1_1.png",
+      "bytes": 214,
+      "sha256": "2a9587b4d9a3711c10ab69cb43728695208508f7b82324aa33805e6f1f7ec375",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flamethrower_1_2.png",
+      "bytes": 316,
+      "sha256": "31fbe3fa6ed2668b6d7d3ddfa3174f5fbc6113157883e457cb63272d08add348",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flamethrower_1_3.png",
+      "bytes": 228,
+      "sha256": "3be2f76a91c19af14f9c6872b354ce615a205efa051bf1f6b14915a3406fe0a1",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flamethrower_1_4.png",
+      "bytes": 112,
+      "sha256": "28a3ae680d0604ab46c017208fc3e09e2f0f9a65e86337f985aea91a48871953",
+      "largura": 16,
+      "altura": 32
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flamethrower_2_1.png",
+      "bytes": 212,
+      "sha256": "e61094f797d3c2fe5b2df3e567ae335b524535aa4f85ecbf623eb178dc559bd8",
+      "largura": 32,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flamethrower_2_2.png",
+      "bytes": 253,
+      "sha256": "ec73992843d749e7634aa9bff1172e2f812db1f83a8538a31ebe586cc8ec2d99",
+      "largura": 32,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flamethrower_2_3.png",
+      "bytes": 190,
+      "sha256": "cc8484bef2a07c516821d1ce59ce9cf7a63921a332451d01d88d5763c02cc8d4",
+      "largura": 32,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flamethrower/flamethrower_2_4.png",
+      "bytes": 80,
+      "sha256": "ea89535d93bc269d700093d8bd9d51f2f0dbb6f29db999d7588ade5c91873a9d",
+      "largura": 32,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/flasks_1_1.png",
+      "bytes": 239,
+      "sha256": "0765ce56baa31b4ff05bceb6f0ab1e4e5ed2ee908ab71aac852389d8e4bbaf34",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/flasks_1_2.png",
+      "bytes": 240,
+      "sha256": "12ad5c626e9cce4e2daca5319bbe84c2b5ff03a05b75ff0f176aa8c22c1b83fe",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/flasks_1_3.png",
+      "bytes": 240,
+      "sha256": "f90d608d68c6d7aaefbb2fe47b3d296a2cdb9953ce622e0fae84330fd73b2a2d",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/flasks_1_4.png",
+      "bytes": 240,
+      "sha256": "12ad5c626e9cce4e2daca5319bbe84c2b5ff03a05b75ff0f176aa8c22c1b83fe",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/flasks_2_1.png",
+      "bytes": 238,
+      "sha256": "f4f9f9755cf54ee3d65f344d4810603192b91f1b241971b8bc1abccead85fcdf",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/flasks_2_2.png",
+      "bytes": 239,
+      "sha256": "292feb8d28dbe6e060be92174ff21dfd5cc055ae3d016f1bfe998873173bd4a4",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/flasks_2_3.png",
+      "bytes": 240,
+      "sha256": "e4f6cedd270b2f23a02d5023b0437f69c83aef774d9a37cad4be1fda5ad48f7c",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/flasks_2_4.png",
+      "bytes": 239,
+      "sha256": "292feb8d28dbe6e060be92174ff21dfd5cc055ae3d016f1bfe998873173bd4a4",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/flasks_3_1.png",
+      "bytes": 244,
+      "sha256": "a056e4019b34e83b24bd0229cd9ed1af64d72d65c89a504611e559be6430c186",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/flasks_3_2.png",
+      "bytes": 244,
+      "sha256": "5f1a0549c3d9381a5cd94e71439729e540268da0d21f60712b0453561ab8374e",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/flasks_3_3.png",
+      "bytes": 245,
+      "sha256": "13e4d446ad035f7fb62573ef3605b57a7c883f766a4784c445e9f4b1c1effa24",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/flasks_3_4.png",
+      "bytes": 244,
+      "sha256": "5f1a0549c3d9381a5cd94e71439729e540268da0d21f60712b0453561ab8374e",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/flasks_4_1.png",
+      "bytes": 237,
+      "sha256": "6a7003b1e2dcab5ea4c1db94504c0eeb400e608fa28b2d213e48286df788ec28",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/flasks_4_2.png",
+      "bytes": 238,
+      "sha256": "d51ea93778fad690e7026f6abc34f4b4213565480c999bf9ca4eca7ae516e6e6",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/flasks_4_3.png",
+      "bytes": 238,
+      "sha256": "3f22e9f11f246f853fe694fab2057c4a120f7b341ac156cf230f14b583a03185",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/flasks/flasks_4_4.png",
+      "bytes": 238,
+      "sha256": "d51ea93778fad690e7026f6abc34f4b4213565480c999bf9ca4eca7ae516e6e6",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/keys/keys_1_1.png",
+      "bytes": 288,
+      "sha256": "af89a597bdd91751da949fe891a71d19d6a44bcad3047a3fc934cc170deed1d9",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/keys/keys_1_2.png",
+      "bytes": 234,
+      "sha256": "76fbcfb6a30103c0092fcb984f8d0127a3e63a13f1328df7bf55942871e3d746",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/keys/keys_1_3.png",
+      "bytes": 302,
+      "sha256": "7ebf7d6b7954c8e2e16e9d34464a6e2fd6d6c1386fb158c844abd501a398ca82",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/keys/keys_1_4.png",
+      "bytes": 264,
+      "sha256": "48f95069bfee5b81a1780bfabe0853614bcb3ceda9fb0836967843db74e50943",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/keys/keys_2_1.png",
+      "bytes": 268,
+      "sha256": "b3315fdb2f896d73ef0d94031338fcb17bf88db7a9483096cc8e303aa027c8a2",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/keys/keys_2_2.png",
+      "bytes": 218,
+      "sha256": "55340b28ca6bda401a629f3c172aee4a1149f75edf37c80cb291a1656bf38b0f",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/keys/keys_2_3.png",
+      "bytes": 272,
+      "sha256": "89d4824cff92afcb5935d27f04175021680359b18ad3fcb8dbbf84eb23fef8c3",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/keys/keys_2_4.png",
+      "bytes": 231,
+      "sha256": "68fed5986b6c8a4aac1840ea0d242d0bd21215bdbc1a1bfe9f7fb4940bc7b4b0",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/mini_box_1/mini_box_1_1.png",
+      "bytes": 236,
+      "sha256": "54ce7af621d48c50cb907318dd42f6f343f65df5b50dce3d920efdd38cf699c0",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/mini_box_1/mini_box_1_2.png",
+      "bytes": 239,
+      "sha256": "002cde4e4b1e76fac5eb3ff998b7081665ba887fc82b34c238a68013224522b3",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/mini_box_1/mini_box_1_3.png",
+      "bytes": 210,
+      "sha256": "2d529b71644868cb97857d25f91adbf9a1f068bb28524721d7e034f61bccb036",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/mini_box_1/mini_box_1_4.png",
+      "bytes": 211,
+      "sha256": "3044618d9e59db21aa3449259535f4bdff785dae9decf3b1251e2b469f08b4b6",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/mini_box_2/mini_box_2_1.png",
+      "bytes": 200,
+      "sha256": "6b79ffea2f8244e2f7ae3a1194d2ae412abfc4bff458ca71c82a2c7050dea39a",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/mini_box_2/mini_box_2_2.png",
+      "bytes": 202,
+      "sha256": "394492016daa1e28e44c670d9c6caad958866321f90162abd970f64a7c19b82d",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/mini_box_2/mini_box_2_3.png",
+      "bytes": 186,
+      "sha256": "6f572100867a2c43f3c9774d586ce1f5817d72a3a79ff4eb24569817554e2957",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/mini_box_2/mini_box_2_4.png",
+      "bytes": 202,
+      "sha256": "c82a1725de54d80bfb02b224d3a5070708a9c6d753a106a63aa748d1cfb14e9b",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/mini_chest/mini_chest_1.png",
+      "bytes": 250,
+      "sha256": "8d839f0c82758a99ba03e45814ae99ecb6882f67797ae9da4711fb5e6293fa00",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/mini_chest/mini_chest_2.png",
+      "bytes": 252,
+      "sha256": "193a83d08faceccea372b5baedb88985ed5d0ee62cce1b192023bfb0563309c2",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/mini_chest/mini_chest_3.png",
+      "bytes": 250,
+      "sha256": "5212453daf0c31174bcd707eff20f229f153ded94b2582ec940f8cf644f1fed2",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/mini_chest/mini_chest_4.png",
+      "bytes": 253,
+      "sha256": "5a516f0c1bcd19c0a3de62e5e80d5578a5528014cfc647d154c75e694c5f0d8e",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/mini_chest/mini_chest_open_1.png",
+      "bytes": 252,
+      "sha256": "193a83d08faceccea372b5baedb88985ed5d0ee62cce1b192023bfb0563309c2",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/mini_chest/mini_chest_open_2.png",
+      "bytes": 253,
+      "sha256": "a393ae8aa15d90912f523f524091be4f49a2909c8a420734e3c397728a7abfd4",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/mini_chest/mini_chest_open_3.png",
+      "bytes": 287,
+      "sha256": "beda8ca68e9a95b6ab6e580e1d9add60d3fb49afb9df2cc5b63270e2c0c55506",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/mini_chest/mini_chest_open_4.png",
+      "bytes": 259,
+      "sha256": "92baf500057dfdd4a36637ee35b51e3c613ab535513f528f203e11ed4189ea03",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/peaks/peaks_1.png",
+      "bytes": 239,
+      "sha256": "fb533481b3f69266f93c3b9af5ff9f5e61503ce4b2cbb3bb9e5468d63bc1ab7f",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/peaks/peaks_2.png",
+      "bytes": 180,
+      "sha256": "266e18aef1c348b806f40e34d555f2fcf9488b395b62054b61cbb2a94c306f13",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/peaks/peaks_3.png",
+      "bytes": 144,
+      "sha256": "5c17d29182b3cb0a3ebe6be953c14c6796022c678f880fef767be89dfc17f338",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/peaks/peaks_4.png",
+      "bytes": 163,
+      "sha256": "b2552ae814b6a57588f29f9b4a7611d03de4720273b36c1a424a71f3ee759ee5",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/candlestick_1_1.png",
+      "bytes": 361,
+      "sha256": "f959e571e0bb19e76cfac1c8a2f3861f1cf687fdd17cfa1a6e3c0ad7312928c2",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/candlestick_1_2.png",
+      "bytes": 408,
+      "sha256": "eb20e49125e31eec36c6261b2ba4651b885a791ac475abe0b43046e97e57b4e8",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/candlestick_1_3.png",
+      "bytes": 404,
+      "sha256": "7dc1ba0ebf7550035988091743f6ed4510c55592bef786e63e5b5b686bd65748",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/candlestick_1_4.png",
+      "bytes": 407,
+      "sha256": "b4a916ee285b5ef79162ea5b08a14ad9be3e70b1233e258f12cfb7db13f69920",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/candlestick_2_1.png",
+      "bytes": 357,
+      "sha256": "43e30397bc527a80f102b7e63b63170ae9cba61af980adf482538ef696b2db86",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/candlestick_2_2.png",
+      "bytes": 412,
+      "sha256": "55e300372743e3a254b7a37e6b920835682beae01769566166f5b060d860f73e",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/candlestick_2_3.png",
+      "bytes": 421,
+      "sha256": "b22e40ee4b0a78f097b04cc092b7dde894b4f2019011e9b0232ffeebdf92283f",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/candlestick_2_4.png",
+      "bytes": 412,
+      "sha256": "a1c9f8df0fec61a823e20373972feffa5f90086a968963d483f2a804259af3ec",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/side_torch_1.png",
+      "bytes": 267,
+      "sha256": "973b24936e6c047399baae348dd204c813915009f717c2521eadb73668fb7056",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/side_torch_2.png",
+      "bytes": 255,
+      "sha256": "6ed27a982d7606185304a87dc088afe48b8c644088ecbfeaefb02f532fdc2eee",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/side_torch_3.png",
+      "bytes": 258,
+      "sha256": "4718a83b403b48c453a31afc8dd9fa8ee253fe9da6db8c3c73ae716292e980cf",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/side_torch_4.png",
+      "bytes": 248,
+      "sha256": "6096a81e239e299a0d8e99d61cd0bf7dbbf9aa74d556841b2c511d925f447fc9",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/torch_1.png",
+      "bytes": 348,
+      "sha256": "18e004c138bae4eaf94304dcb45d0633246d98c1c486679dd6abc67d3a298b24",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/torch_2.png",
+      "bytes": 343,
+      "sha256": "5db76717d3e4baf80625c473de9a91b2a935dac2d2b5119b23be79da38e54820",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/torch_3.png",
+      "bytes": 354,
+      "sha256": "b78197a896743f5361ad271a4cbc58fcdf78bd0691ba9a9d2c8375a388d03e95",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/2D Pixel Dungeon Asset Pack v2.0/2D Pixel Dungeon Asset Pack/items and trap_animation/torch/torch_4.png",
+      "bytes": 352,
+      "sha256": "011363570a0de8d802eb765bc59f963de49db773617c06ac604bee6e6ae1bf14",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Characters/Monster/Monster_walk_back.png",
+      "bytes": 429,
+      "sha256": "d4eecb2fdafa0f1cbdb83d79c0f054161965c8ed70f430aa359f435439e5470c",
+      "largura": 16,
+      "altura": 64
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Characters/Monster/Monster_walk_front.png",
+      "bytes": 669,
+      "sha256": "c73b10fc5a92596db56aa1844a41a09282d2ea149a2796abe9fd6044bb33880b",
+      "largura": 16,
+      "altura": 64
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Characters/Monster/Monster_walk_left.png",
+      "bytes": 642,
+      "sha256": "97d6806143ed9f1ae3376223c03033080c776957c07b445ad3e1c8c67a02dd38",
+      "largura": 16,
+      "altura": 64
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Characters/Monster/Monster_walk_right.png",
+      "bytes": 601,
+      "sha256": "b133653642e351b4a09ebfcfafedad484dde6cafdf76985e01623539ee9af4f8",
+      "largura": 16,
+      "altura": 64
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Characters/Player/Player.png",
+      "bytes": 339,
+      "sha256": "a7388d67b22e6227d3849bdd9789cf8d3cfb8cdcef82a765f4a2c64b4d6769a6",
+      "largura": 17,
+      "altura": 17
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Characters/Player/Player_idle.png",
+      "bytes": 537,
+      "sha256": "e8435302fafc1b7a32af36936ab98cd8ce9ce94d25f39cd4faf0a0891ef43b4d",
+      "largura": 17,
+      "altura": 85
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Characters/Player/Player_walk_behind.png",
+      "bytes": 609,
+      "sha256": "37141faf2b6a210aec11d38ef26873950abebaa407e8015eaa2b103d2ce20561",
+      "largura": 17,
+      "altura": 136
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Characters/Player/Player_walk_front.png",
+      "bytes": 831,
+      "sha256": "84bd606d68a4709b1b0a2a5ab45115c878580acb80cb2740fbe7656f6fdddc5b",
+      "largura": 17,
+      "altura": 119
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Characters/Player/Player_walk_left.png",
+      "bytes": 741,
+      "sha256": "e9e74c5f588dc3a33ff7352497a3402e690914fb6d648803a2372c8fecfa31c9",
+      "largura": 17,
+      "altura": 136
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Characters/Player/Player_walk_right.png",
+      "bytes": 729,
+      "sha256": "b3aa6206180599e763852283753e633f3bc8e6f8556a2b2c4630a41d83bd542c",
+      "largura": 17,
+      "altura": 136
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Characters/Warrior/warrior_walk_behind.png",
+      "bytes": 1089,
+      "sha256": "4a9960b9958ee5bfe428daad67037679b832f62e6179a58f382315c7d755c0b6",
+      "largura": 22,
+      "altura": 264
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Characters/Warrior/warrior_walk_front.png",
+      "bytes": 1260,
+      "sha256": "587dad8e66a984a043acc7d5867bd629c92786023822c097789ede9e76d9e345",
+      "largura": 22,
+      "altura": 264
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Characters/Warrior/warrior_walk_left.png",
+      "bytes": 1119,
+      "sha256": "090f1d016ffd24f151c267e5a8722fe60baa8958dcb9ad2f97e100c05b3176d8",
+      "largura": 22,
+      "altura": 176
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Characters/Warrior/warrior_walk_right.png",
+      "bytes": 1089,
+      "sha256": "6db60c973cab04903e259bbff17c8ee0c91defa12ff19ded948a4511929483c2",
+      "largura": 22,
+      "altura": 176
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Map/Decorations_tileset.png",
+      "bytes": 4376,
+      "sha256": "198fd9917ee156ef112be796aac1c13bf06676b7ed24d0d3e216f9361d7ad5c6",
+      "largura": 160,
+      "altura": 160
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Map/Map_tileset.png",
+      "bytes": 5886,
+      "sha256": "ba5fecdac4f5b5784684536003cbc3be1fef076728a687f1aac83fccf3416c23",
+      "largura": 288,
+      "altura": 160
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Map/Spike.png",
+      "bytes": 261,
+      "sha256": "96123b6abc77137cba65cb52ef7a4d41491c96ed1f438bbb97fd33ca53d40f18",
+      "largura": 16,
+      "altura": 64
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Map/Torch.png",
+      "bytes": 345,
+      "sha256": "c455e9fe4cc0d8c873fc6a9e5b172e6ffa8972cf90dd7475ac41feb3adb3e7d0",
+      "largura": 16,
+      "altura": 48
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Map/Torch_left.png",
+      "bytes": 652,
+      "sha256": "c68b73d8c6e6a2fee4204f1ceb94617f75059892c8541d918c551f35d07b4160",
+      "largura": 32,
+      "altura": 48
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Map/Torch_right.png",
+      "bytes": 640,
+      "sha256": "b64e65a7312c75407d3532a4366e029770a47e2d9e6eddbf3057be61883a4ceb",
+      "largura": 32,
+      "altura": 48
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Others/Coin.png",
+      "bytes": 417,
+      "sha256": "402cb0f65fda141956d05ffe093dbcbbaedd150048cac55b005040764459fd0b",
+      "largura": 16,
+      "altura": 96
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Others/DamagedSheet.png",
+      "bytes": 1046,
+      "sha256": "016b7f28ec07c9292ec1154e5a68185eb9f4d78e845e1e7df901dea8684e5fc6",
+      "largura": 64,
+      "altura": 64
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Others/HUD.png",
+      "bytes": 2079,
+      "sha256": "bc4516bbb04b78ec4f4d9f3325b2da28df2d80b7e99308d1cc15453f51cea080",
+      "largura": 80,
+      "altura": 80
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Others/Others.png",
+      "bytes": 1673,
+      "sha256": "aeba9b261986c2c06cf44b03ddeabf28f2061424ed8dcb2c8cbedaf89bf323d7",
+      "largura": 64,
+      "altura": 64
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Others/Sheet.png",
+      "bytes": 827,
+      "sha256": "850a83f7295c04a254fe51300e20a1d460f2c49ac236ca9b3ceb5a3fff5ffad2",
+      "largura": 64,
+      "altura": 64
+    },
+    {
+      "arquivo": "assets/mapa/Dungeon assets pack/Dungeon assets pack/Others/Weapons.png",
+      "bytes": 1098,
+      "sha256": "bd0366c97935bbf521be5c862681584417f1ff6c07add6b3a68535177076b0c7",
+      "largura": 64,
+      "altura": 80
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/LICENSE.txt",
+      "bytes": 395,
+      "sha256": "2748bbdc0b125b9465686e9faa9d61adb5bcc9a3e36fa93cb79f5125af0204ae"
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_128/active_volcano.png",
+      "bytes": 18660,
+      "sha256": "5ee682110b20fa5a9e3ec3cf8cb1e3b9676d6172f1ba8edb63a79adaea254b31",
+      "largura": 128,
+      "altura": 128
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_128/blacksmith_forge.png",
+      "bytes": 21664,
+      "sha256": "0282e2326a439ca3bae9a59eb160f9e65c84384dd1689cc9180240a8629de9fe",
+      "largura": 128,
+      "altura": 128
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_128/city_gate.png",
+      "bytes": 20869,
+      "sha256": "0b78e2ed3e533af73caf940dce42f2c9c8a1e8cc2ce9ff6b63a4143d2ac7f3ad",
+      "largura": 128,
+      "altura": 128
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_128/dragon_lair.png",
+      "bytes": 30183,
+      "sha256": "4f3740fda95d3b251bf082f4b37e4070f37e98e581560145db568bc2eac71952",
+      "largura": 128,
+      "altura": 128
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_128/grand_castle.png",
+      "bytes": 22667,
+      "sha256": "da2935ec5926c4557751a5bc5edbfdfcf564b8518252ba53a671ac1e49fc1f7d",
+      "largura": 128,
+      "altura": 128
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_128/kraken.png",
+      "bytes": 29174,
+      "sha256": "a52a0eb2721e7fb1d7b5d7bcbe49a863e85b32f49cf06123e9501a9e27fc4eda",
+      "largura": 128,
+      "altura": 128
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_128/lighthouse.png",
+      "bytes": 23268,
+      "sha256": "a7e8037cbecf2e6c9f3776c33374464ab9169afb8b4c40a1194474f817061645",
+      "largura": 128,
+      "altura": 128
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_128/lighthouse_2.png",
+      "bytes": 19352,
+      "sha256": "7c971ef9cd35f37bbde12af5945b75de61c5928bb5dc025c71dbbce64f718037",
+      "largura": 128,
+      "altura": 128
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_128/mage_tower.png",
+      "bytes": 10651,
+      "sha256": "30a1e4c0120c06ebdf38aa4489d4e3454f27ed1f7f25d3b1956ca3922e97f3f2",
+      "largura": 128,
+      "altura": 128
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_128/magic_portal.png",
+      "bytes": 30590,
+      "sha256": "a9f9e202a64a7ec5ba2c3463cac4050342c9a991eaec73bc53e57b987f1db9f4",
+      "largura": 128,
+      "altura": 128
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_128/pine_forest.png",
+      "bytes": 30954,
+      "sha256": "55eb74202a207403e664b0aa89d0984ee7f193f8c5fcbb1c33fa0b9147373d1d",
+      "largura": 128,
+      "altura": 128
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_128/pirate_ship.png",
+      "bytes": 22531,
+      "sha256": "569f85e6bcbae3f8d3d7cecca66586b84ee080e07bd26239f3b0b0e544755d89",
+      "largura": 128,
+      "altura": 128
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_128/snowy_peaks.png",
+      "bytes": 15703,
+      "sha256": "0e3e1b8cd1e3d2d3366192f49890e1258bb678b3658109ecaa2e56583adc55d7",
+      "largura": 128,
+      "altura": 128
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_128/spike_trap_pit.png",
+      "bytes": 22593,
+      "sha256": "46688fe7636d755b548acbf92651ecb86166e9a0b010f662c63d8d782aff25aa",
+      "largura": 128,
+      "altura": 128
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_128/stairs_down.png",
+      "bytes": 21412,
+      "sha256": "cde95958a2e684d94c3ebda1c51078ac2a25aef9be2a57d0f86feb78c40697ee",
+      "largura": 128,
+      "altura": 128
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_128/tavern.png",
+      "bytes": 26173,
+      "sha256": "e94c443a857e8006582d8bbd2b4c8b0597ab336606f3c004df6e73f3694de2a8",
+      "largura": 128,
+      "altura": 128
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_128/throne_room.png",
+      "bytes": 14400,
+      "sha256": "b90eae2d6bcefa3747b55291a311250ac75296cacb4b0d238efaaf697bbbbcd2",
+      "largura": 128,
+      "altura": 128
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_128/treasure_vault.png",
+      "bytes": 23437,
+      "sha256": "2e154b805f26c6317272af3954abaaa0ce26777dbacd549e003d232cc22ae07b",
+      "largura": 128,
+      "altura": 128
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_128/winding_river.png",
+      "bytes": 29903,
+      "sha256": "0766caba4135f7a4208d41343052217d3170abe385bb43fe0e017ad3f1d110f1",
+      "largura": 128,
+      "altura": 128
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_128/x_marks_spot.png",
+      "bytes": 22043,
+      "sha256": "c552286efd1e8bbb55dba456e3c03643dc3aa1f18fa82e45ea5b5d2994254dd4",
+      "largura": 128,
+      "altura": 128
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_256/active_volcano.png",
+      "bytes": 62569,
+      "sha256": "b0387587e21ccea9a00c75572ff2f7384101d7eebe53c1ef74035f338c1b5fb1",
+      "largura": 256,
+      "altura": 256
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_256/blacksmith_forge.png",
+      "bytes": 75124,
+      "sha256": "eb3cac5cc1de09fd2849cceb2b7109cdb85b0214c086b26561ee21732214181f",
+      "largura": 256,
+      "altura": 256
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_256/city_gate.png",
+      "bytes": 74882,
+      "sha256": "5a4d1e39027d588b942dc0e943a8147aa16074cce520bac73803fa02f3ca37f6",
+      "largura": 256,
+      "altura": 256
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_256/dragon_lair.png",
+      "bytes": 107880,
+      "sha256": "8b2cb1acec47531e7eedf8b53490024327ac35640c1d5629ef472cc88d10ce92",
+      "largura": 256,
+      "altura": 256
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_256/grand_castle.png",
+      "bytes": 77740,
+      "sha256": "fd816d3a546d3f7f09da06717b50b22e20e6b5f35b8a5453dfca923977d13c70",
+      "largura": 256,
+      "altura": 256
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_256/kraken.png",
+      "bytes": 94731,
+      "sha256": "710de081a490fe1179746ea396fba289fdad34d0cb1c6e1a54e6003b2d2afb4f",
+      "largura": 256,
+      "altura": 256
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_256/lighthouse.png",
+      "bytes": 79924,
+      "sha256": "ead370c0e86e8f56cff1e249ecd4309c70901b3c3f016e62a078b55d8d0c55df",
+      "largura": 256,
+      "altura": 256
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_256/lighthouse_2.png",
+      "bytes": 65937,
+      "sha256": "ae0ba6f8afe0d5e1f5da00fdbc03b2de2996376811a17b8191036369671e2711",
+      "largura": 256,
+      "altura": 256
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_256/mage_tower.png",
+      "bytes": 37464,
+      "sha256": "8eaecc5e7404cc8ecdcae552d8df895fedfda90ad90bd31f5477c158876329ad",
+      "largura": 256,
+      "altura": 256
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_256/magic_portal.png",
+      "bytes": 105454,
+      "sha256": "ed132a6eaa6b7a95f22585842d9c93bb95e0603c6e5502dfac4044fa3e7a55b4",
+      "largura": 256,
+      "altura": 256
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_256/pine_forest.png",
+      "bytes": 112559,
+      "sha256": "3b2c0fc701a46cb1ca2679034741329cf4f82b9b8605984e250d6d0b1db2baaf",
+      "largura": 256,
+      "altura": 256
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_256/pirate_ship.png",
+      "bytes": 77264,
+      "sha256": "2869753d9ed7af54beeda954c3413b8b97702ea0fa1eb0528cc962324956e154",
+      "largura": 256,
+      "altura": 256
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_256/snowy_peaks.png",
+      "bytes": 54554,
+      "sha256": "c34011515aa0982010e625be8c54c4d874c5699051413b773a48ca52ce6b3ead",
+      "largura": 256,
+      "altura": 256
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_256/spike_trap_pit.png",
+      "bytes": 77206,
+      "sha256": "a4e19ede061cb23c1299e4e3d2d91e78569e2693b4c28a827a3fb2fb382ba107",
+      "largura": 256,
+      "altura": 256
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_256/stairs_down.png",
+      "bytes": 73646,
+      "sha256": "0c43e39fd937fe662cefe3d74ae481578e1f1485bda6030375059e2ddc6ce8f5",
+      "largura": 256,
+      "altura": 256
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_256/tavern.png",
+      "bytes": 94533,
+      "sha256": "b850a986813f57cbcb95a8980888e5cc6666914652c6896a5e9aa602a3c79590",
+      "largura": 256,
+      "altura": 256
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_256/throne_room.png",
+      "bytes": 49982,
+      "sha256": "a13b76564495daef4ef823fba5b61327dbef9f14f24833679f7dc04fcf1ff5da",
+      "largura": 256,
+      "altura": 256
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_256/treasure_vault.png",
+      "bytes": 90087,
+      "sha256": "33bf7b394fadc49062657ec96aa30e13cf298bf14005e80d7ca8014f92c06d33",
+      "largura": 256,
+      "altura": 256
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_256/winding_river.png",
+      "bytes": 108410,
+      "sha256": "4b8ff6945d4644f41a895ea328e191732d11a0dd44ffacb976a0749755852798",
+      "largura": 256,
+      "altura": 256
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_256/x_marks_spot.png",
+      "bytes": 74538,
+      "sha256": "31aa048e4324723ae5141ae82b66f7eb34c67aeab7931b633798655adf9d8b48",
+      "largura": 256,
+      "altura": 256
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_512/active_volcano.png",
+      "bytes": 206391,
+      "sha256": "242a45b11158a62ca66f3acb52737b7c2a4f3922f94cd4cb8ee54a2747f78bf1",
+      "largura": 512,
+      "altura": 512
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_512/blacksmith_forge.png",
+      "bytes": 258192,
+      "sha256": "c5f9f99840872051cf65081fa7454dc711382255f3aec17ee1b9ac94acda5865",
+      "largura": 512,
+      "altura": 512
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_512/city_gate.png",
+      "bytes": 257832,
+      "sha256": "830d96be688745a6c87d1f4ceb94a0c240dd911803e25ddb1e98a002099aea7b",
+      "largura": 512,
+      "altura": 512
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_512/dragon_lair.png",
+      "bytes": 377209,
+      "sha256": "3f4cfd36f03d4420a91d38aa8a47c177a3af32925d99444090606c7fbffdf323",
+      "largura": 512,
+      "altura": 512
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_512/grand_castle.png",
+      "bytes": 266497,
+      "sha256": "33367e48a991ceecb39f91b98962420a868cd7b7a02bac08709a5af44fc58ea3",
+      "largura": 512,
+      "altura": 512
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_512/kraken.png",
+      "bytes": 292468,
+      "sha256": "461be7120ad9993cadcaf790efd00f31e99942a6cb67e30876b2dcdf861805ea",
+      "largura": 512,
+      "altura": 512
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_512/lighthouse.png",
+      "bytes": 274465,
+      "sha256": "50c9be5b11058ee2e874897f1a9b79ccc9ffaac93a5a999cdb903489c140c9e6",
+      "largura": 512,
+      "altura": 512
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_512/lighthouse_2.png",
+      "bytes": 223831,
+      "sha256": "5958d92b84a4e77e5d6a395cab49ef6688662caa17fc77658f58e3732086238e",
+      "largura": 512,
+      "altura": 512
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_512/mage_tower.png",
+      "bytes": 129499,
+      "sha256": "48ca61cf12a52d7894c500837967bc83f8e4f3922b39429e483f8d68c36f1f50",
+      "largura": 512,
+      "altura": 512
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_512/magic_portal.png",
+      "bytes": 358708,
+      "sha256": "73516ae4203b8549cd160e9615cda30a4a5ddbbd513ce9e3fcdb6c7d98459a9d",
+      "largura": 512,
+      "altura": 512
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_512/pine_forest.png",
+      "bytes": 398815,
+      "sha256": "820b607ccfee9ac25486cf905cd054f04674b23a20a2c83d1337d288761f66a9",
+      "largura": 512,
+      "altura": 512
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_512/pirate_ship.png",
+      "bytes": 240199,
+      "sha256": "2183cf320e7d470848f806da8254b5a9f6c25572f366700d147c7516599a9ef2",
+      "largura": 512,
+      "altura": 512
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_512/snowy_peaks.png",
+      "bytes": 184928,
+      "sha256": "c961ee04371a879863d5fdfa38f2ad5c85d1174669c5661db9c1e9cc2f34cd51",
+      "largura": 512,
+      "altura": 512
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_512/spike_trap_pit.png",
+      "bytes": 230238,
+      "sha256": "dc9ae73c4eda10eb7432a7ea06c16cba506f9b749373641acd77be44c841a9bf",
+      "largura": 512,
+      "altura": 512
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_512/stairs_down.png",
+      "bytes": 225141,
+      "sha256": "b1fe1895712792c66bdf224f4ab5f800a7a6dbe458d754a7582a06abd5f0d5a4",
+      "largura": 512,
+      "altura": 512
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_512/tavern.png",
+      "bytes": 318717,
+      "sha256": "f010de914c5cb596c6685ea0da12f56311b0e40f69938575fab37d31af8af2f0",
+      "largura": 512,
+      "altura": 512
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_512/throne_room.png",
+      "bytes": 174984,
+      "sha256": "5c58a65b1c48d2811fb469ca77a4da2af1267a690af914c87afd0f971005efb7",
+      "largura": 512,
+      "altura": 512
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_512/treasure_vault.png",
+      "bytes": 324570,
+      "sha256": "ad772670c146881dd241eac3095538a12ae0714aced64ea38d6b3a589debd7e2",
+      "largura": 512,
+      "altura": 512
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_512/winding_river.png",
+      "bytes": 383811,
+      "sha256": "4b03b1a3ddd51d435040288c84a5520b392ada26c26b688b4bae35065680be86",
+      "largura": 512,
+      "altura": 512
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/png_512/x_marks_spot.png",
+      "bytes": 251518,
+      "sha256": "7436b41e17bf30f98484594a1402c62dc2fb3f1b20ee1ced1962f2e8d2939363",
+      "largura": 512,
+      "altura": 512
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/preview/fmi_all.png",
+      "bytes": 558858,
+      "sha256": "8a9c8484880c1a1f4a3d65d4a0b6a5a4d811283e0ae113c0130c0fd6ae14e6df",
+      "largura": 1220,
+      "altura": 990
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/preview/fmi_cover.png",
+      "bytes": 518907,
+      "sha256": "84aae9cc2676ed6654f5cb16c8832f4046d12378eb9ad8d9e9185c8904ead27a",
+      "largura": 1260,
+      "altura": 1000
+    },
+    {
+      "arquivo": "assets/mapa/free-fantasy-map-icons-sampler/README.txt",
+      "bytes": 527,
+      "sha256": "e27c8a95fc12219854d29c078c8a7f390a9fa7ca29d14a1224c960c1aa596a4c"
+    }
+  ]
+}

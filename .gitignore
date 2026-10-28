@@ -1,7 +1,9 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
-assets/Dungeon\ Gathering\ Free\ Version
-assets/Ninja Adventure - Asset Pack
-assets/Tiny Swords (Free Pack)
-assets/tiny-questers-warrior-free
+
+# Cópias locais preservadas antes de alterações
+backups/
+
+# Atalhos locais com caminhos específicos deste computador
+*.lnk

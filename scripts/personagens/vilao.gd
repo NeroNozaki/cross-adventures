@@ -23,9 +23,11 @@ func _physics_process(delta: float) -> void:
 			if ate_alvo.length() <= alcance_ataque:
 				iniciar_ataque()
 			else:
-				movimento = ate_alvo.normalized()
+				var fase: Node=get_tree().get_first_node_in_group("fase_atual")
+				movimento = fase.direcao_ia(self,alvo.global_position) if fase!=null else ate_alvo.normalized()
 		elif global_position.distance_to(ponto_inicial) > 5.0:
-			movimento = global_position.direction_to(ponto_inicial)
+			var fase: Node=get_tree().get_first_node_in_group("fase_atual")
+			movimento = fase.direcao_ia(self,ponto_inicial) if fase!=null else global_position.direction_to(ponto_inicial)
 	mover(movimento, delta)
 
 func _procurar_alvo() -> CharacterBody2D:

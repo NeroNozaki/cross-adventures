@@ -3,6 +3,7 @@ extends Hero
 const PROJETIL: PackedScene = preload("res://cenas/combate/projetil.tscn")
 @export var tempo_carga_total: float = 0.85
 @export var dano_carregado: int = 38
+var elemento: String = "normal"
 var carregando: bool = false
 var tempo_carga: float = 0.0
 @onready var mira: Node2D = $Mira360
@@ -28,7 +29,7 @@ func _physics_process(delta: float) -> void:
 	mover(movimento, delta)
 
 func iniciar_carga() -> bool:
-	if esta_morto or not controlado or not recarga.is_stopped() or tempo_dano > 0.0 or carregando:
+	if esta_morto or pulando or not controlado or not recarga.is_stopped() or tempo_dano > 0.0 or carregando:
 		return false
 	carregando = true
 	tempo_carga = 0.0
@@ -51,10 +52,12 @@ func iniciar_ataque() -> bool:
 	return disparar(false) != null
 
 func disparar(carregado: bool = false) -> Node2D:
-	if esta_morto or not controlado or not recarga.is_stopped() or tempo_dano > 0.0:
+	if esta_morto or pulando or not controlado or not recarga.is_stopped() or tempo_dano > 0.0:
 		return null
 	var tiro: Node2D = PROJETIL.instantiate()
 	tiro.emissor = self
+	tiro.altura_nivel = altura_nivel
+	tiro.elemento = elemento
 	tiro.direcao = mira.direcao
 	tiro.carregado = carregado
 	tiro.dano = dano_carregado if carregado else dano_ataque
