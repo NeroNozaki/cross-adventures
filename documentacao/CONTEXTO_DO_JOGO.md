@@ -100,3 +100,19 @@ Jardim, Galeria, Oficina e Santuário foram renderizados individualmente com o H
 ## Limpeza de assets — 27/10/2026
 
 A pedido explícito do usuário, foram arquivados fora da pasta do jogo 2.023 arquivos de assets sem referência, suas importações e caches órfãos. Permanecem 257 recursos usados e 32 arquivos de licença/origem. Os inventários anteriores descrevem o acervo histórico, não a lista atual de arquivos presentes. Originais, hashes e restauração estão registrados em LIMPEZA_ASSETS.md e LIMPEZA_ASSETS.json. Essa limpeza reduz tamanho/importação; não representa ganho garantido de RAM ou desempenho da partida.
+
+## Revisão da primeira fase — 28/10/2026
+
+O usuário pediu evoluir fase por fase usando o vídeo de Grand Krys’kajo (CrossCode) como referência visual/mecânica. Trechos foram analisados; não foi assistido integralmente. A primeira fase recebeu puzzle inicial na mesma sala, objetivo por etapas, baú interativo de cura única, prompts E/I, pedra/musgo, marcos de travessia e salto. Heróis têm aceleração curta, parada imediata, caminhada por deslocamento real e Otto atira em movimento. Interações respeitam altura e paredes; elevação e câmera ficaram mais suaves. Ver REVISAO_JARDIM_2026-10-28.md. O teste verificar_jardim tem 27 verificações de percurso por comandos e projéteis reais, com IA pausada para isolar navegação. As outras três cenas não foram regeneradas nem receberam essa revisão individual.
+
+## Ambientação viva — 28/10/2026
+
+A pedido do usuário, Jardim recebeu gotas/impactos, ondulações aleatórias e seis peixes submersos com rotas apenas na água; limites de partículas evitam crescimento de memória. A placa ganhou pedra/bronze e pressão animada, cristais e itens receberam acabamento, baú usa dez quadros nativos de abertura, plantas têm movimento discreto. Personagens têm respiração de um pixel só em repouso, sem mover pés/colisões. Zumbi e Cavaleiro patrulham devagar com pausas apenas na primeira fase, retomando combate ao detectar os heróis. Ver AMBIENTACAO_VIVA_2026-10-28.md e verificar_ambiente.gd (24 verificações), além das oito suítes anteriores aprovadas. Prévia é demonstração de ambientação com HUD oculto somente na captura.
+
+## Estado atual: ponte, puzzle e cinco ricochetes — 28/10/2026
+
+O usuário pediu explicitamente mais desafio e separação dos mecanismos. O limite anterior de quatro foi substituído por CINCO ricochetes para tiros simples/carregados em toda a campanha, inclusive previsão. No Jardim, a placa (4,18) e o cristal (9,18) ficam separados por uma mureta; Otto usa o EspelhoJardim (9,21) para um tiro refletido enquanto Lucas segura a placa. O acerto fica travado. A ponte sobe em três partes com som próprio e só libera a passagem após 1,8 s, por ponte_pronta. Esse desenho substitui a versão de tiro direto com mecanismos próximos. Ver PONTE_PUZZLE_2026-10-28.md. Dez suítes aprovadas; novo teste de ponte com 20 verificações e percurso do Jardim com 28.
+
+## Decisão mais recente: cristal ao norte — 28/10/2026
+
+O usuário pediu explicitamente o cristal na parte de cima, em sala separada da placa. Implementado: Lucas na placa inferior (4,18), Otto percorre o corredor até a sala norte e usa o espelho (9,8) para atingir o cristal (9,5), disparando da região (5,8). O acerto fica travado; Otto volta à ponte para atravessarem juntos. A mureta inferior foi removida e o cabo de energia segue o corredor. Baú, barril e rota do explorador foram afastados dos mecanismos superiores. Ver CRISTAL_NORTE_2026-10-28.md; substitui o layout anterior com mecanismos na mesma sala. Percurso real e câmera com os dois heróis em salas distintas foram verificados.

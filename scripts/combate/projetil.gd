@@ -1,10 +1,14 @@
 extends Node2D
 ## Varredura circular continua contra paredes e areas de dano dos inimigos.
-## Ignora os herois e desaparece no quarto contato com o cenario.
+## Ignora os herois e desaparece no quinto contato com o cenario.
 
 const IMPACTO: PackedScene = preload("res://cenas/combate/impacto_projetil.tscn")
-@export var max_ricochetes: int = 4
-@export var tempo_de_vida: float = 12.0
+const LIMITE_RICOCHETES: int = 5
+const VELOCIDADE_SIMPLES: float = 340.0
+const VELOCIDADE_CARREGADA: float = 270.0
+const VIDA_PADRAO: float = 12.0
+@export var max_ricochetes: int = LIMITE_RICOCHETES
+@export var tempo_de_vida: float = VIDA_PADRAO
 var emissor: CharacterBody2D
 var direcao: Vector2 = Vector2.RIGHT
 var altura_nivel: int = 0
@@ -12,7 +16,7 @@ var elemento: String = "normal"
 var carregado: bool = false
 var dano: int = 18
 var raio: float = 4.0
-var velocidade: float = 340.0
+var velocidade: float = VELOCIDADE_SIMPLES
 var ricochetes: int = 0
 var encerrado: bool = false
 var som_ricochete: AudioStream
@@ -128,6 +132,6 @@ func _draw() -> void:
 	draw_circle(Vector2.ZERO, raio * 1.7, Color(cor, 0.15))
 	draw_circle(Vector2.ZERO, raio, cor)
 	draw_circle(Vector2(-raio * 0.25, -raio * 0.25), raio * 0.45, Color("f3ffff"))
-	# Quatro pequenos pontos indicam os contatos com parede restantes.
+	# Os pontos indicam os contatos com parede restantes.
 	for i in range(max_ricochetes - ricochetes):
-		draw_circle(Vector2(float(i) * 3.0 - 4.5, raio + 4.0), 0.8, Color(cor, 0.8))
+		draw_circle(Vector2(float(i) * 3.0 - float(max_ricochetes-ricochetes-1)*1.5, raio + 4.0), 0.8, Color(cor, 0.8))

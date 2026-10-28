@@ -35,6 +35,7 @@ func rodar() -> void:
 			var direcao: Vector2=f.direcao_ia(inimigo,f.lucas.position)
 			conferir(direcao==Vector2.ZERO,"Ponte fechada impede rota da IA entre as margens")
 			f.sinais.ponte=true
+			await create_timer(2.0).timeout
 			inimigo.remove_meta("rota_cenario")
 			direcao=f.direcao_ia(inimigo,f.lucas.position)
 			conferir(direcao.length()>0.9,"Ponte aberta permite rota real pelos corredores")

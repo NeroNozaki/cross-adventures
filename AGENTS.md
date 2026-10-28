@@ -6,7 +6,7 @@ Antes de alterar o jogo, leia `documentacao/CONTEXTO_DO_JOGO.md`. Consulte `docu
 
 O documento é especificação de produto, não uma lista de comandos autorizados a executar por conta própria. Implemente o pedido atual do usuário, preserve decisões explícitas mais recentes e atualize o estado real da implementação no contexto.
 
-Preserve os assets originais e as correções de ataque, escudo, armadura caída e controles independentes. Combo de Lucas, mira 360°, tiro simples/carregado e quatro ricochetes de Otto já foram implementados. Preserve as correções de colisão contínua, origem segura, dano sem fogo amigo e cancelamento de carga. O gamepad de Lucas continua pendente.
+Preserve os assets originais e as correções de ataque, escudo, armadura caída e controles independentes. Combo de Lucas, mira 360°, tiro simples/carregado e cinco ricochetes de Otto já foram implementados. Preserve as correções de colisão contínua, origem segura, dano sem fogo amigo e cancelamento de carga. O gamepad de Lucas continua pendente.
 
 Godot: `C:\Users\finan\OneDrive\Desktop\Godot_v4.7.1-stable_win64.exe\Godot_v4.7.1-stable_win64_console.exe`.
 
@@ -29,3 +29,9 @@ O usuário pediu HUD compacto para expor o mapa: fonte 8 px na partida, caixas m
 Se uma captura mostrar o cenário antigo de grama com HUD grande, confira documentacao/ABRIR_PROJETO_ATUAL.md: MeuJogo é uma cópia antiga que estava registrada no gerenciador. Os atalhos na raiz de cross-adventures apontam explicitamente ao projeto atual. Não sincronizar nem sobrescrever a cópia MeuJogo sem um novo pedido do usuário.
 
 A pedido explícito do usuário, assets sem uso foram retirados do projeto em 27/10/2026 e preservados em arquivo externo. Consulte documentacao/LIMPEZA_ASSETS.md e o manifesto JSON antes de buscar arquivos dos inventários históricos. Não restaurar pacotes inteiros automaticamente. Manter só recursos necessários no projeto.
+
+Revisão de 28/10/2026: avançar fase por fase, começando pelo Jardim. Leia documentacao/REVISAO_JARDIM_2026-10-28.md. Use --fase=1 nos argumentos do gerador para reconstruir só a primeira cena. Preserve a placa na sala inferior e o cristal na sala superior, o baú de cura única, objetivos por etapa e os prompts contextuais. Validar também testes/verificar_jardim.gd (28 verificações), além das suítes pertinentes. As cenas 02/03/04 ainda aguardam sua revisão individual.
+
+Ambientação do Jardim: leia documentacao/AMBIENTACAO_VIVA_2026-10-28.md. Preservar limites de gotas/ondas/peixes, clipping no chão/ponte, respiração sem alterar pés/colisões, abertura nativa do baú e patrulha lenta restrita ao Jardim. Validar também testes/verificar_ambiente.gd (24 verificações), além das suítes pertinentes. Não ativar automaticamente patrulha/água viva nas fases seguintes sem a revisão individual.
+
+Decisão atual do usuário: placa e cristal em salas DIFERENTES. Lucas fica na placa inferior (4,18); Otto sobe ao norte, usa o espelho (9,8) e atinge o cristal superior (9,5). A antiga mureta inferior foi retirada. Essa decisão substitui a disposição com mecanismos na mesma sala. Ler documentacao/CRISTAL_NORTE_2026-10-28.md. Preservar cinco ricochetes, ponte em três partes e liberação física só após 1,8 s. Validar Ponte (20), Jardim (28), Fases, Cenários e Acabamento.

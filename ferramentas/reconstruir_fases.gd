@@ -14,6 +14,13 @@ func guardar(p: String) -> void:
 func construir() -> void:
 	backup="res://backups/dungeon_"+str(Time.get_unix_time_from_system()).replace(".","_")
 	for pasta in ["res://cenas/fases","res://recursos/fases","res://recursos/visual"]: DirAccess.make_dir_recursive_absolute(pasta)
+	var parcial: bool = "--fase=1" in OS.get_cmdline_user_args()
+	if parcial:
+		tiles=load("res://recursos/fases/tileset_cross.tres")
+		_fase(0)
+		print("JARDIM_BUILD_OK: somente a primeira fase foi reconstruida.")
+		quit()
+		return
 	tiles=TileSet.new()
 	tiles.tile_size=Vector2i(16,16)
 	var atlas: TileSetAtlasSource=TileSetAtlasSource.new()
@@ -94,6 +101,9 @@ func _fase(i: int) -> void:
 		elif sul and leste: tile=Vector2i(3,9)
 		if not norte and not sul and not oeste and not leste and absi(hash(str(c.x)+":"+str(c.y)+":"+str(i)))%8==0:
 			tile=Vector2i(7+absi(c.x+c.y)%2,13)
+		if i == 0 and not norte and not sul and not oeste and not leste:
+			# Ladrilhos nativos de pedra: variação contida, preservando o caminho visual.
+			if posmod(c.x*17+c.y*31,13)<2: tile=Vector2i(7+posmod(c.x+c.y,2),13)
 		pisos[h].set_cell(c,0,tile)
 		pisos[h].modulate=[Color(0.94,1.0,0.95),Color(0.92,0.97,1.03),Color(1.03,0.99,0.94),Color(0.98,0.96,1.04)][i]
 		if h==0:
@@ -152,7 +162,7 @@ func _fase(i: int) -> void:
 			fogo.sprite_frames=quadros
 			fogo.autoplay="default"
 			fogo.position=Vector2(x*32+16,r[1]*32-12)
-			fogo.scale=Vector2(1.2,1.2)
+			fogo.scale=Vector2.ONE if i == 0 else Vector2(1.2,1.2)
 			filho(raiz,detalhes,fogo,"Tocha"+str(j)+"_"+str(x))
 			var luz: PointLight2D=PointLight2D.new()
 			luz.texture=luztext
@@ -163,10 +173,11 @@ func _fase(i: int) -> void:
 		for ax in [int(r[0]+r[2]/2),r[0]+1,r[0]+r[2]-2]:
 			var apoio: Vector2i=Vector2i(ax,r[1]-1)
 			if grade.has(apoio) or grade.has(apoio+Vector2i.RIGHT) or molhado(dados,apoio) or molhado(dados,apoio+Vector2i.RIGHT): continue
-			sprite(raiz,detalhes,"Arco"+str(j),"walls_floor",Rect2(0,416,32,48),Vector2((ax+0.5)*32,r[1]*32-16),Vector2(1.3,1.3))
+			sprite(raiz,detalhes,"Arco"+str(j),"walls_floor",Rect2(0,416,32,48),Vector2((ax+0.5)*32,r[1]*32-16),Vector2.ONE if i == 0 else Vector2(1.3,1.3))
 			break
 		var candidatos: Array[Vector2i]=[Vector2i(r[0]+1,r[1]+1),Vector2i(r[0]+r[2]-2,r[1]+1),Vector2i(r[0]+1,r[1]+r[3]-2),Vector2i(r[0]+r[2]-2,r[1]+r[3]-2),Vector2i(r[0]+r[2]/2,r[1]+1)]
 		for item in range(2):
+			if i == 0 and item == 0: continue # Baús da primeira fase são objetos interativos reais.
 			for c: Vector2i in candidatos:
 				if not decoracao_livre(dados,c,grade,usados_decoracao): continue
 				usados_decoracao.append(c)
@@ -181,7 +192,15 @@ func _fase(i: int) -> void:
 				var decor: Sprite2D=sprite(raiz,detalhes,("Tesouro" if item==0 else "Urna")+str(j),"Objects",regiao,centro-Vector2(0,16),Vector2(2,2))
 				decor.set_meta("celula",c)
 				decor.set_meta("altura",h)
+				if i == 0 and item == 1:
+					var suporte: Node2D=Node2D.new()
+					suporte.set_script(preload("res://scripts/visual/prop_decorado.gd"))
+					filho(raiz,decor,suporte,"SuporteDePedra")
 				break
+	if i == 0:
+		var jardim: Node2D=Node2D.new()
+		jardim.set_script(load("res://scripts/visual/jardim.gd"))
+		filho(raiz,raiz,jardim,"AcabamentoJardim")
 	var ambiente: Node2D=Node2D.new()
 	ambiente.set_script(load("res://scripts/visual/ambiente.gd"))
 	ambiente.set("indice",i)
@@ -298,6 +317,9 @@ func _sombra(raiz: Node, ator: CharacterBody2D) -> void:
 
 func decoracao_livre(dados: Dictionary,c: Vector2i,grade: Dictionary,usados: Array[Vector2i]) -> bool:
 	if not grade.has(c): return false
+	if dados.numero==1 and c.x>=6 and c.x<=8 and c.y in [10,17,18]: return false
+	for parede in dados.paredes:
+		if Rect2i(parede[0],parede[1],parede[2],parede[3]).has_point(c): return false
 	for usado: Vector2i in usados:
 		if Vector2(c).distance_to(Vector2(usado))<2.0: return false
 	for obj in dados.objetos:

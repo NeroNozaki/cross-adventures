@@ -27,6 +27,10 @@ func _executar() -> void:
 	var arena: Node2D = load("res://cenas/testes/arena_teste.tscn").instantiate()
 	root.add_child(arena)
 	current_scene = arena
+	# A primeira carga pode consumir o delta do frame de inicialização.
+	# Só medir os comandos depois que os atores participaram da física.
+	await physics_frame
+	await physics_frame
 	await process_frame
 	var g: CharacterBody2D = arena.get_node("Personagens/Guerreiro")
 	var r: CharacterBody2D = arena.get_node("Personagens/Robo")
@@ -49,7 +53,9 @@ func _executar() -> void:
 	r.position = Vector2(150, 300)
 	Input.action_press("guerreiro_direita")
 	Input.action_press("robo_direita")
-	await create_timer(0.38).timeout
+	# Os passos dependem da distância simulada, não do custo de um frame de renderização.
+	for quadro in range(30):
+		await physics_frame
 	Input.action_release("guerreiro_direita")
 	Input.action_release("robo_direita")
 	await physics_frame

@@ -49,3 +49,19 @@ O HUD da partida usa fonte 8 px e retratos de 16×16; cartões de vida de 122×3
 ## Disponibilidade após limpeza — 27/10/2026
 
 Os pacotes de reserva e imagens sem referência foram arquivados fora do jogo a pedido do usuário. Os atlas efetivamente usados pelas quatro fases, NPC, HUD, animações e gerador continuam presentes, junto às licenças. Inventários anteriores são históricos. Consulte LIMPEZA_ASSETS.md para recuperação seletiva, sem recarregar todo o acervo.
+
+## Jardim — revisão incremental de 28/10/2026
+
+A primeira fase passa a apresentar o puzzle na sala de entrada, com ligação visual entre placa/cristal e baú opcional funcional na sala norte. Textura de pedra, juntas e musgo foram refinados; tochas/arcos dessa fase usam escala inteira. Câmera, marcos de travessia e indicação de salto favorecem a leitura. Ver REVISAO_JARDIM_2026-10-28.md. Os mapas seguintes não receberam essa revisão individual.
+
+## Água viva e itens — 28/10/2026
+
+O Jardim ganhou água com gotas, ondas aleatórias e peixes discretos; placa com pressão/relevo, cristais suspensos, baú animado e detalhes nos materiais dos props. Respiração preserva pés e pixel art. Urnas usam suporte sob os recortes originais. Referência técnica: AMBIENTACAO_VIVA_2026-10-28.md. O acabamento foi renderizado e os nove testes passaram.
+
+## Ponte e puzzle atualizados — 28/10/2026
+
+Ponte do Jardim com três trechos eleváveis, lajes intercaladas, chanfros, bronze e encontros de pedra; emissão sonora própria e piso liberado após encaixe. Placa e cristal agora ficam separados por uma mureta e exigem reflexão em espelho. Decoração não pode ser gerada sobre paredes. Ver PONTE_PUZZLE_2026-10-28.md. Essa disposição substitui o puzzle direto da revisão anterior.
+
+## Cristal na parte superior — decisão mais recente
+
+O puzzle agora separa Lucas, na placa da sala inferior, de Otto, no espelho/cristal da sala norte. A mureta inferior foi removida. Cabo visual, sinalização e posições de baú/barril/explorador foram atualizados; entradas do corredor ficam livres. Referência atual: CRISTAL_NORTE_2026-10-28.md.

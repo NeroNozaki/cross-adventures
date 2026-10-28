@@ -22,11 +22,11 @@ func _process(delta: float) -> void:
 		var b: Vector2=fase.otto.global_position-Vector2(0,16*fase.otto.altura_nivel)
 		destino=(a+b)*0.5
 		var distancia: Vector2=(a-b).abs()+Vector2(260,240)
-		escala=clampf(minf((tela.x-60)/distancia.x,(tela.y-110)/distancia.y),0.27,0.9)
+		escala=clampf(minf((tela.x-60)/distancia.x,(tela.y-110)/distancia.y),0.27,1.0 if fase.dados.numero == 1 else 0.9)
 	if not inicializada:
 		global_position=destino
 		zoom=Vector2.ONE*escala
 		inicializada=true
 	else:
-		global_position=global_position.lerp(destino,minf(1,delta*7))
-		zoom=zoom.lerp(Vector2.ONE*escala,minf(1,delta*5))
+		global_position=global_position.lerp(destino,minf(1,1.0-exp(-delta*7)))
+		zoom=zoom.lerp(Vector2.ONE*escala,minf(1,1.0-exp(-delta*5)))

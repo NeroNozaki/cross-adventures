@@ -3119,7 +3119,7 @@
     {
       "id": "PlacaA",
       "tipo": "placa",
-      "x": 6,
+      "x": 4,
       "y": 18,
       "z": 0,
       "sinal": "placa_a",
@@ -3128,13 +3128,14 @@
     {
       "id": "Cristal",
       "tipo": "receptor",
-      "x": 10,
-      "y": 7,
+      "x": 9,
+      "y": 5,
       "z": 0,
       "sinal": "cristal",
       "depende": [
         "placa_a"
-      ]
+      ],
+      "ricochetes": 1
     },
     {
       "id": "Saida",
@@ -3146,10 +3147,10 @@
     {
       "id": "PlacaInicio",
       "tipo": "placa_texto",
-      "x": 4,
-      "y": 19,
+      "x": 3,
+      "y": 20,
       "z": 0,
-      "texto": "F1 mostra os controles. Tab trava a mira. V mostra o mapa completo."
+      "texto": "Lucas fica na placa desta sala. Otto segue pelo corredor ao norte e usa o espelho da sala de cima para atingir o cristal."
     },
     {
       "id": "PlacaRampa",
@@ -3157,7 +3158,7 @@
       "x": 29,
       "y": 13,
       "z": 0,
-      "texto": "As escadas mudam a altura. Saltem a fenda do terraço para alcançar a porta."
+      "texto": "Subam pela escada de pedra. No terraço, usem F (Lucas) ou P (Otto) com direção para saltar a fenda."
     },
     {
       "id": "DecorInterativa0",
@@ -3170,14 +3171,14 @@
       "id": "DecorInterativa1",
       "tipo": "barril",
       "x": 10,
-      "y": 4,
+      "y": 10,
       "z": 0
     },
     {
       "id": "DecorInterativa2",
       "tipo": "planta",
       "x": 10,
-      "y": 22,
+      "y": 23,
       "z": 0
     },
     {
@@ -3214,6 +3215,29 @@
       "x": 34,
       "y": 20,
       "z": 0
+    },
+    {
+      "id": "BauJardim",
+      "tipo": "bau",
+      "x": 3,
+      "y": 8,
+      "z": 0
+    },
+    {
+      "id": "PlacaCombate",
+      "tipo": "placa_texto",
+      "x": 16,
+      "y": 22,
+      "z": 0,
+      "texto": "Lucas: três cliques encadeiam o combo; Shift bloqueia pela frente. Otto: segure o tiro para carregar."
+    },
+    {
+      "id": "EspelhoJardim",
+      "tipo": "espelho",
+      "x": 9,
+      "y": 8,
+      "z": 0,
+      "rot": -45
     }
   ],
   "inimigos": [
@@ -3261,11 +3285,11 @@
         4
       ],
       [
-        8,
+        6,
         4
       ],
       [
-        8,
+        6,
         6
       ],
       [
@@ -3275,6 +3299,6 @@
     ]
   ],
   "proxima": "res://cenas/fases/02_galeria.tscn",
-  "objetivo": "Lucas na placa; Otto no cristal. Atravessem a ponte e as ruínas.",
-  "introducao": "Explorem as câmaras. Lucas mantém a placa dourada pressionada; Otto acerta o cristal azul na sala norte."
+  "objetivo": "Lucas na placa embaixo; Otto no cristal da sala ao norte.",
+  "introducao": "Lucas mantém a placa na sala de entrada. Otto explora a sala ao norte e reflete o tiro no espelho para ativar o cristal distante."
 }

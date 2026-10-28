@@ -11,6 +11,7 @@ var otto: CharacterBody2D
 var saida: Node2D
 var aviso: String = ""
 var aviso_t: float = 0.0
+var etapa_jardim: int = -1
 var concluida: bool = false
 var mortes: Dictionary = {}
 var hud: Label
@@ -33,15 +34,28 @@ func _ready() -> void:
 	otto = $Personagens/Robo
 	for ator in $Personagens.get_children():
 		atores.append(ator)
+		if dados.numero == 1 and ator.equipe == 1:
+			ator.patrulha_ativa=true
 		ator.nome_label.add_theme_font_override("font",TEMA_UI.fonte())
 		ator.nome_label.add_theme_font_size_override("font_size",8)
 		ator.altura_nivel = int(grade.get(celula(ator.global_position), 0))
 	saida = $Objetos.get_node("Saida")
+	if dados.numero == 1:
+		var ponte: Node2D=Node2D.new()
+		ponte.name="PonteAnimada"
+		ponte.set_script(preload("res://scripts/visual/ponte_animada.gd"))
+		add_child(ponte)
+		move_child(ponte,$Personagens.get_index())
 	_criar_interface()
 	avisar(str(dados["introducao"]), 9.0)
 
 func celula(p: Vector2) -> Vector2i:
 	return Vector2i(floori(p.x / TAM), floori(p.y / TAM))
+
+func ponte_pronta(chave: String) -> bool:
+	if not sinais.get(chave,false): return false
+	if chave=="ponte" and has_node("PonteAnimada"): return $PonteAnimada.pronta
+	return true
 
 func altura_em(p: Vector2) -> int:
 	for plataforma in $Plataformas.get_children():
@@ -50,7 +64,7 @@ func altura_em(p: Vector2) -> int:
 	var c: Vector2i = celula(p)
 	for ponte in dados.get("pontes", []):
 		var r: Rect2 = Rect2(ponte[0] * TAM, ponte[1] * TAM, ponte[2] * TAM, ponte[3] * TAM)
-		if r.has_point(p) and sinais.get(str(ponte[5]), false):
+		if r.has_point(p) and ponte_pronta(str(ponte[5])):
 			return int(ponte[4])
 	return int(grade.get(c, -1))
 
@@ -63,7 +77,7 @@ func mover_personagem(ator: CharacterBody2D, delta: float) -> void:
 		if p >= 1.0:
 			ator.pulando = false
 			ator.altura_salto = 0.0
-		_atualizar_visual(ator)
+		_atualizar_visual(ator, delta)
 		return
 	var proximo: Vector2 = ator.global_position + ator.velocity * delta
 	var h: int = altura_em(proximo)
@@ -78,17 +92,20 @@ func mover_personagem(ator: CharacterBody2D, delta: float) -> void:
 	elif h != ator.altura_nivel:
 		ator.altura_nivel = h
 	ator.move_and_slide()
-	_atualizar_visual(ator)
+	_atualizar_visual(ator, delta)
 
-func _atualizar_visual(ator: CharacterBody2D) -> void:
-	var elevacao: float = -16.0 * ator.altura_nivel - ator.altura_salto
+func _atualizar_visual(ator: CharacterBody2D, delta: float = 1.0) -> void:
+	var destino: float = -16.0 * ator.altura_nivel
+	var nivel_visual: float = move_toward(float(ator.get_meta("elevacao_suave",destino)), destino, 120.0 * delta)
+	ator.set_meta("elevacao_suave",nivel_visual)
+	var elevacao: float = nivel_visual - ator.altura_salto
 	for nome in ["Visual", "Sombra", "Nome", "BarraVida", "EfeitosCombate", "Mira360", "ArmaduraCaida"]:
 		if not ator.has_node(nome):
 			continue
 		var no: CanvasItem = ator.get_node(nome)
 		if not no.has_meta("base_y"):
 			no.set_meta("base_y", no.position.y)
-		no.position.y = float(no.get_meta("base_y")) + (-16.0 * ator.altura_nivel if nome == "Sombra" else elevacao)
+		no.position.y = float(no.get_meta("base_y")) + (nivel_visual if nome == "Sombra" else elevacao)
 
 func tentar_salto(ator: CharacterBody2D, vetor: Vector2 = Vector2.ZERO) -> bool:
 	if ator.esta_morto or ator.pulando or ator.atacando or ator.tempo_dano > 0.0:
@@ -119,15 +136,30 @@ func tentar_salto(ator: CharacterBody2D, vetor: Vector2 = Vector2.ZERO) -> bool:
 	ator.salto_destino = destino
 	return true
 
-func interagir(ator: CharacterBody2D) -> bool:
+func alvo_interacao(ator: CharacterBody2D) -> Node2D:
+	if ator.esta_morto or ator.pulando or ator.atacando or ator.tempo_dano > 0.0:
+		return null
 	var melhor: Node2D
 	var distancia: float = 54.0
 	for obj in $Objetos.get_children():
+		if obj.esta_morto or obj.altura_nivel != ator.altura_nivel:
+			continue
+		if obj.tipo() not in ["caixa", "gelo", "placa_texto", "estacao", "bau"] or (obj.tipo() == "bau" and obj.ativo):
+			continue
 		var d: float = ator.global_position.distance_to(obj.global_position)
-		if d < distancia and obj.tipo() in ["caixa", "gelo", "placa_texto", "estacao"]:
-			distancia = d
-			melhor = obj
-	return melhor.interagir(ator) if melhor != null else false
+		if d >= distancia:
+			continue
+		var q: PhysicsRayQueryParameters2D = PhysicsRayQueryParameters2D.create(ator.global_position,obj.global_position,1)
+		q.exclude = [ator.get_rid(),obj.get_rid()]
+		if not get_world_2d().direct_space_state.intersect_ray(q).is_empty():
+			continue
+		distancia = d
+		melhor = obj
+	return melhor
+
+func interagir(ator: CharacterBody2D) -> bool:
+	var alvo: Node2D = alvo_interacao(ator)
+	return alvo.interagir(ator) if alvo != null else false
 
 func pode_colocar_caixa(p: Vector2, z: int, ignorar: Node) -> bool:
 	if altura_em(p) != z:
@@ -146,7 +178,7 @@ func sinalizar(chave: String, valor: bool) -> void:
 	if sinais.get(chave, false) == valor:
 		return
 	sinais[chave] = valor
-	if valor and chave not in ["placa_a", "peso"]:
+	if valor and chave not in ["placa_a", "peso"] and dados.get("numero",0) != 1:
 		avisar("Mecanismo ativado: " + chave.replace("_", " ") + ".")
 	queue_redraw()
 
@@ -192,8 +224,16 @@ func _physics_process(delta: float) -> void:
 			todos_derrotados = false
 		if ator.has_method("_draw") and ator.get_script().resource_path.ends_with("guardiao.gd"):
 			ator.protegido = not condicoes(dados.get("selos", []))
-	var pronto: bool = condicoes(dados.get("objetivos", [])) and todos_derrotados
+	var pronto: bool = condicoes(dados.get("objetivos", [])) and todos_derrotados and (dados.numero!=1 or ponte_pronta("ponte"))
 	saida.definir_ativo(pronto)
+	if dados.numero == 1:
+		var etapa: int=0 if not sinais.get("ponte",false) else (1 if not ponte_pronta("ponte") else (2 if not todos_derrotados else 3))
+		dados.objetivo=["Lucas na placa embaixo. Otto: espelho e cristal na sala ao norte.","A ponte está subindo. Aguardem o encaixe das três partes.","Ponte pronta. Atravessem e derrotem os dois guardas.","Subam a escada e saltem a fenda. Reúnam a equipe na porta."][etapa]
+		if etapa!=etapa_jardim:
+			if etapa==1: avisar("O cristal destravou o mecanismo. A ponte sobe em três trechos; aguardem o último encaixe.")
+			elif etapa==2: avisar("A ponte encaixou e permanecerá aberta. Atravessem juntos.")
+			elif etapa==3: avisar("Os guardas caíram. Sigam até a escada; F e P saltam a fenda no terraço.")
+			etapa_jardim=etapa
 	for ator in atores:
 		for outro in atores:
 			if ator != outro:
@@ -230,6 +270,8 @@ func restaurar(heroi: CharacterBody2D) -> void:
 	heroi.tempo_salto = 0
 	heroi.tempo_dano = 0
 	heroi.impulso = Vector2.ZERO
+	heroi.velocidade_controle = Vector2.ZERO
+	heroi.set_meta("elevacao_suave",0.0)
 	heroi.invulnerabilidade.stop()
 	heroi.efeitos.parar()
 	heroi.atacando = false
@@ -309,6 +351,7 @@ func _draw() -> void:
 	if dados.is_empty(): return
 	draw_rect(Rect2(-256,-256,dados.largura*32+512,dados.altura*32+512),Color(dados.fundo))
 	for ponte in dados.pontes:
+		if dados.numero==1: continue
 		if sinais.get(str(ponte[5]),false):
 			for y in range(ponte[1],ponte[1]+ponte[3]):
 				for x in range(ponte[0],ponte[0]+ponte[2]):

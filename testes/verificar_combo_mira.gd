@@ -180,7 +180,7 @@ func _executar() -> void:
 	var bala: Node2D = tiro_para(c.get_node("AreaDano").global_position)
 	await create_timer(0.48).timeout
 	verificar(c.vida_atual < vida_c and g.vida_atual == vida_g and not is_instance_valid(bala), "Tiro acerta inimigo, ignora aliado e desaparece no acerto.")
-	# Quatro ricochetes reais; quarto encerra a esfera.
+	# Cinco ricochetes reais; quinto encerra a esfera.
 	c.get_node("AreaDano").collision_layer = 0
 	z.get_node("AreaDano").collision_layer = 0
 	r.position = Vector2(300, 230)
@@ -189,7 +189,7 @@ func _executar() -> void:
 	var ricochetes: Array[int] = []
 	rebatida.ricocheteou.connect(func(n: int): ricochetes.append(n))
 	await create_timer(1.6).timeout
-	verificar(ricochetes == [1, 2, 3, 4] and not is_instance_valid(rebatida), "Exatamente quatro contatos com parede antes de apagar.")
+	verificar(ricochetes == [1, 2, 3, 4, 5] and not is_instance_valid(rebatida), "Exatamente cinco contatos com parede antes de apagar.")
 	# Esfera carregada percorre a arena com raio e velocidade reais.
 	r.position = Vector2(300, 230)
 	var grande_rebatida: Node2D = tiro_para(Vector2(500, 310), true)
@@ -199,7 +199,7 @@ func _executar() -> void:
 		await physics_frame
 		if not is_instance_valid(grande_rebatida):
 			break
-	verificar(ricochetes_grande == [1, 2, 3, 4] and not is_instance_valid(grande_rebatida), "Esfera carregada tambem desaparece no quarto ricochete.")
+	verificar(ricochetes_grande == [1, 2, 3, 4, 5] and not is_instance_valid(grande_rebatida), "Esfera carregada tambem desaparece no quinto ricochete.")
 	# Quinas nao consomem todos os ricochetes no mesmo contato.
 	r.position = Vector2(600, 125)
 	var quina: Node2D = tiro_para(Vector2(650, 60))
@@ -243,7 +243,7 @@ func _executar() -> void:
 	verificar(resultado == OK and arena != null and get_nodes_in_group("projeteis").is_empty(), "Reiniciar limpa os tiros da cena anterior.")
 	verificar(arena.get_node("Personagens/Robo").vida_atual == 95 and arena.get_node("Personagens/Guerreiro").vida_atual == 120, "Reiniciar restaura os personagens.")
 	if erros.is_empty():
-		print("COMBO_MIRA_OK: ", contagem_checks, " verificacoes de combo, buffer, mira, carga, colisao continua, equipes, paredes, quinas, quatro ricochetes, dano e morte.")
+		print("COMBO_MIRA_OK: ", contagem_checks, " verificacoes de combo, buffer, mira, carga, colisao continua, equipes, paredes, quinas, cinco ricochetes, dano e morte.")
 	else:
 		print("COMBO_MIRA_FAIL: ", erros)
 	arena.queue_free()

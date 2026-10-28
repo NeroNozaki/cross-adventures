@@ -50,10 +50,15 @@ func _ready() -> void:
  superficie.show_behind_parent=true
  add_child(superficie)
  _atualizar_superficie()
+ if not Engine.is_editor_hint() and int(dados.get("numero",0))==1:
+  var vida: Node2D=Node2D.new()
+  vida.name="VidaNaAgua"
+  vida.set_script(preload("res://scripts/visual/agua_viva.gd"))
+  add_child(vida)
 func ponte_em(c: Vector2i) -> bool:
  if Engine.is_editor_hint(): return false
  for p in dados.get("pontes",[]):
-  if Rect2i(p[0],p[1],p[2],p[3]).has_point(c) and get_parent().sinais.get(str(p[5]),false): return true
+  if Rect2i(p[0],p[1],p[2],p[3]).has_point(c) and get_parent().ponte_pronta(str(p[5])): return true
  return false
 func _atualizar_superficie() -> void:
  var vertices: PackedVector2Array=PackedVector2Array()

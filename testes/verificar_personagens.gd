@@ -19,6 +19,10 @@ func _executar() -> void:
 	var arena: Node2D = cena.instantiate()
 	root.add_child(arena)
 	current_scene = arena
+	# A primeira carga pode consumir o delta do frame de inicialização.
+	# Só medir os comandos depois que os atores participaram da física.
+	await physics_frame
+	await physics_frame
 	await process_frame
 	var g: CharacterBody2D = arena.get_node("Personagens/Guerreiro")
 	var r: CharacterBody2D = arena.get_node("Personagens/Robo")
@@ -43,7 +47,9 @@ func _executar() -> void:
 	r.position = Vector2(180, 300)
 	Input.action_press("guerreiro_direita")
 	Input.action_press("robo_esquerda")
-	await create_timer(0.13).timeout
+	# Mede oito passos reais da simulação (~0,133 s a 60 Hz), sem depender da carga de shaders.
+	for quadro in range(8):
+		await physics_frame
 	Input.action_release("guerreiro_direita")
 	Input.action_release("robo_esquerda")
 	verificar(g.position.x > 125 and r.position.x < 175, "Movimento simultaneo em direcoes independentes.")

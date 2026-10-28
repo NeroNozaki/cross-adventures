@@ -62,7 +62,7 @@ func disparar(carregado: bool = false) -> Node2D:
 	tiro.carregado = carregado
 	tiro.dano = dano_carregado if carregado else dano_ataque
 	tiro.raio = 9.0 if carregado else 4.0
-	tiro.velocidade = 270.0 if carregado else 340.0
+	tiro.velocidade = tiro.VELOCIDADE_CARREGADA if carregado else tiro.VELOCIDADE_SIMPLES
 	var sons: Array[AudioStream] = audio.perfil.ricochete
 	if not sons.is_empty():
 		tiro.som_ricochete = sons.pick_random()

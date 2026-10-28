@@ -45,6 +45,7 @@ func rodar() -> void:
   if nome=="01_jardim":
    var antes: int=agua.superficie.polygon.size()
    f.sinais.ponte=true
+   await create_timer(2.0).timeout
    await process_frame
    await process_frame
    conferir(agua.superficie.polygon.size()==antes-24,"Agua deixa de cobrir as seis celulas da ponte aberta")

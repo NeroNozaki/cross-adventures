@@ -40,6 +40,7 @@ var frente: Vector2 = Vector2.DOWN
 var impulso: Vector2 = Vector2.ZERO
 var tempo_ataque: float = 0.0
 var tempo_dano: float = 0.0
+var velocidade_controle: Vector2 = Vector2.ZERO
 var visual_offset: Vector2
 
 @onready var animacao: AnimatedSprite2D = $Visual/AnimatedSprite2D
@@ -59,6 +60,10 @@ func _ready() -> void:
 	for timer in [recarga, preparo, invulnerabilidade]:
 		timer.process_callback = Timer.TIMER_PROCESS_PHYSICS
 	visual_offset = animacao.offset
+	var respiracao: Node=Node.new()
+	respiracao.name="Respiracao"
+	respiracao.set_script(preload("res://scripts/visual/respiracao.gd"))
+	add_child(respiracao)
 	barra_vida.max_value = vida_maxima
 	barra_vida.value = vida_atual
 	nome_label.text = nome_personagem
@@ -91,7 +96,15 @@ func mover(vetor: Vector2, delta: float) -> void:
 	if orientar_pelo_movimento and not atacando and vetor.length_squared() > 0.01:
 		olhar_para(vetor)
 	var fator: float = velocidade_defendendo if defendendo else 1.0
-	velocity = (Vector2.ZERO if atacando else vetor.limit_length() * velocidade * fator) + impulso
+	# Aceleração curta e reversão suave; soltar o comando para imediatamente.
+	var deseja: Vector2 = vetor.limit_length() * velocidade * fator
+	if atacando and not (equipe == 0 and nome_personagem == "Otto"):
+		deseja = Vector2.ZERO
+	if vetor.is_zero_approx() or deseja.is_zero_approx():
+		velocidade_controle = Vector2.ZERO
+	else:
+		velocidade_controle = velocidade_controle.move_toward(deseja, 1200.0 * delta)
+	velocity = velocidade_controle + impulso if equipe == 0 else deseja + impulso
 	efeitos.atualizar_escudo(defendendo, frente)
 	var posicao_anterior: Vector2 = global_position
 	var fase: Node = get_tree().get_first_node_in_group("fase_atual")
@@ -99,13 +112,13 @@ func mover(vetor: Vector2, delta: float) -> void:
 		fase.mover_personagem(self, delta)
 	else:
 		move_and_slide()
-	audio.registrar_movimento(global_position.distance_to(posicao_anterior), vetor.length_squared() > 0.01 and not atacando)
+	audio.registrar_movimento(global_position.distance_to(posicao_anterior), vetor.length_squared() > 0.01 and not pulando and (not atacando or (equipe == 0 and nome_personagem == "Otto")))
 	if defendendo:
 		_reproduzir("idle")
 	elif tempo_dano > 0.0 and not atacando:
 		_reproduzir("hurt")
 	elif not atacando:
-		_reproduzir("walk" if vetor.length_squared() > 0.01 else "idle")
+		_reproduzir("walk" if global_position.distance_squared_to(posicao_anterior) > 0.0001 and not pulando else "idle")
 
 func olhar_para(vetor: Vector2) -> void:
 	if vetor.length_squared() < 0.001:

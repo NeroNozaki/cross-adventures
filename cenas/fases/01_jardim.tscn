@@ -1,36 +1,26 @@
 [gd_scene format=4]
 
-[ext_resource type="Script" path="res://scripts/fases/fase.gd" id="1_ixqtr"]
-[ext_resource type="Script" path="res://scripts/visual/agua_cenario.gd" id="2_aped3"]
-[ext_resource type="TileSet" path="res://recursos/fases/tileset_cross.tres" id="3_ivj2p"]
-[ext_resource type="Texture2D" path="res://assets/mapa/CRAFTPIX_DUNGEON/walls_floor.png" id="4_axi0o"]
-[ext_resource type="Texture2D" path="res://assets/mapa/CRAFTPIX_DUNGEON/fire_animation.png" id="5_1qt3l"]
-[ext_resource type="Texture2D" path="res://assets/mapa/CRAFTPIX_DUNGEON/Objects.png" id="6_1ei7e"]
-[ext_resource type="Script" path="res://scripts/visual/ambiente.gd" id="7_txywo"]
-[ext_resource type="Script" path="res://scripts/fases/objeto_puzzle.gd" id="8_cb4mh"]
-[ext_resource type="PackedScene" path="res://cenas/personagens/guerreiro.tscn" id="9_dm1hb"]
-[ext_resource type="Script" path="res://scripts/personagens/guerreiro.gd" id="10_iv8fb"]
-[ext_resource type="PackedScene" path="res://cenas/personagens/robo.tscn" id="11_j2663"]
-[ext_resource type="Script" path="res://scripts/personagens/robo.gd" id="12_wbam1"]
-[ext_resource type="PackedScene" path="res://cenas/personagens/zumbi.tscn" id="13_nr5tr"]
-[ext_resource type="Script" path="res://scripts/personagens/vilao.gd" id="14_6yuom"]
-[ext_resource type="PackedScene" path="res://cenas/personagens/cavaleiro_azul.tscn" id="15_setsr"]
-[ext_resource type="Script" path="res://scripts/personagens/cavaleiro.gd" id="16_a4yfx"]
-[ext_resource type="Script" path="res://scripts/fases/explorador.gd" id="17_mei2v"]
-[ext_resource type="Texture2D" path="res://assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/npc_merchant.png" id="18_ef4xd"]
-[ext_resource type="Script" path="res://scripts/visual/camera_coop.gd" id="19_11y7o"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2kng"]
-size = Vector2(32, 32)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wob3a"]
-size = Vector2(32, 32)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_usdh3"]
-size = Vector2(32, 32)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4sio6"]
-size = Vector2(32, 32)
+[ext_resource type="Script" path="res://scripts/fases/fase.gd" id="1_ivj2p"]
+[ext_resource type="Script" path="res://scripts/visual/agua_cenario.gd" id="2_axi0o"]
+[ext_resource type="TileSet" path="res://recursos/fases/tileset_cross.tres" id="3_1qt3l"]
+[ext_resource type="Texture2D" path="res://assets/mapa/CRAFTPIX_DUNGEON/walls_floor.png" id="4_1ei7e"]
+[ext_resource type="Texture2D" path="res://assets/mapa/CRAFTPIX_DUNGEON/fire_animation.png" id="5_txywo"]
+[ext_resource type="Texture2D" path="res://assets/mapa/CRAFTPIX_DUNGEON/Objects.png" id="6_cb4mh"]
+[ext_resource type="Script" path="res://scripts/visual/prop_decorado.gd" id="7_dm1hb"]
+[ext_resource type="Script" path="res://scripts/visual/jardim.gd" id="8_iv8fb"]
+[ext_resource type="Script" path="res://scripts/visual/ambiente.gd" id="9_j2663"]
+[ext_resource type="Script" path="res://scripts/fases/objeto_puzzle.gd" id="10_wbam1"]
+[ext_resource type="PackedScene" path="res://cenas/personagens/guerreiro.tscn" id="11_nr5tr"]
+[ext_resource type="Script" path="res://scripts/personagens/guerreiro.gd" id="12_6yuom"]
+[ext_resource type="PackedScene" path="res://cenas/personagens/robo.tscn" id="13_setsr"]
+[ext_resource type="Script" path="res://scripts/personagens/robo.gd" id="14_a4yfx"]
+[ext_resource type="PackedScene" path="res://cenas/personagens/zumbi.tscn" id="15_mei2v"]
+[ext_resource type="Script" path="res://scripts/personagens/vilao.gd" id="16_ef4xd"]
+[ext_resource type="PackedScene" path="res://cenas/personagens/cavaleiro_azul.tscn" id="17_11y7o"]
+[ext_resource type="Script" path="res://scripts/personagens/cavaleiro.gd" id="18_m2kng"]
+[ext_resource type="Script" path="res://scripts/fases/explorador.gd" id="19_wob3a"]
+[ext_resource type="Texture2D" path="res://assets/mapa/0x72_16x16DungeonTileset.v5/0x72_16x16DungeonTileset.v5/items/npc_merchant.png" id="20_usdh3"]
+[ext_resource type="Script" path="res://scripts/visual/camera_coop.gd" id="21_4sio6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfjrt"]
 size = Vector2(32, 32)
@@ -407,186 +397,184 @@ size = Vector2(32, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4awu"]
 size = Vector2(32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3y1wy"]
-atlas = ExtResource("4_axi0o")
-region = Rect2(96, 32, 16, 16)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3y1wy"]
+size = Vector2(32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4oj8e"]
-atlas = ExtResource("4_axi0o")
-region = Rect2(96, 32, 16, 16)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4oj8e"]
+size = Vector2(32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3g8j3"]
-atlas = ExtResource("4_axi0o")
-region = Rect2(96, 32, 16, 16)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3g8j3"]
+size = Vector2(32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fdh0n"]
-atlas = ExtResource("4_axi0o")
-region = Rect2(96, 32, 16, 16)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdh0n"]
+size = Vector2(32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n7syk"]
-atlas = ExtResource("4_axi0o")
+atlas = ExtResource("4_1ei7e")
 region = Rect2(96, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dfj6d"]
-atlas = ExtResource("4_axi0o")
-region = Rect2(144, 176, 16, 16)
+atlas = ExtResource("4_1ei7e")
+region = Rect2(96, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ibjyw"]
-atlas = ExtResource("5_1qt3l")
-region = Rect2(0, 0, 32, 48)
+atlas = ExtResource("4_1ei7e")
+region = Rect2(96, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qi8ea"]
-atlas = ExtResource("5_1qt3l")
-region = Rect2(0, 48, 32, 48)
+atlas = ExtResource("4_1ei7e")
+region = Rect2(96, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nx4wy"]
-atlas = ExtResource("5_1qt3l")
-region = Rect2(0, 96, 32, 48)
+atlas = ExtResource("4_1ei7e")
+region = Rect2(96, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_adwqy"]
-atlas = ExtResource("5_1qt3l")
-region = Rect2(0, 144, 32, 48)
+atlas = ExtResource("4_1ei7e")
+region = Rect2(144, 176, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tp707"]
-atlas = ExtResource("5_1qt3l")
-region = Rect2(0, 192, 32, 48)
+atlas = ExtResource("5_txywo")
+region = Rect2(0, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_svu3s"]
-atlas = ExtResource("5_1qt3l")
+atlas = ExtResource("5_txywo")
+region = Rect2(0, 48, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3f5u"]
+atlas = ExtResource("5_txywo")
+region = Rect2(0, 96, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ds0m0"]
+atlas = ExtResource("5_txywo")
+region = Rect2(0, 144, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7cul"]
+atlas = ExtResource("5_txywo")
+region = Rect2(0, 192, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fabti"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 240, 32, 48)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_b3f5u"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_k8rtp"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ibjyw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qi8ea")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nx4wy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_adwqy")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tp707")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_svu3s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3f5u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ds0m0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7cul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fabti")
 }],
 "loop": 1,
 "name": &"default",
 "speed": 8.0
 }]
 
-[sub_resource type="Gradient" id="Gradient_ds0m0"]
+[sub_resource type="Gradient" id="Gradient_0br7c"]
 colors = PackedColorArray(1, 0.75, 0.38, 0.9, 1, 0.6, 0.25, 0)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_n7cul"]
-gradient = SubResource("Gradient_ds0m0")
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qs1bg"]
+gradient = SubResource("Gradient_0br7c")
 width = 256
 height = 256
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 0.5)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fabti"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1njq"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 0, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k8rtp"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttxbk"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 48, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0br7c"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygjd0"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 96, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qs1bg"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_dm7rs"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 144, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l1njq"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fo1t"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 192, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ttxbk"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ogqxc"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 240, 32, 48)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_ygjd0"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_o8yod"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fabti")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k8rtp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0br7c")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qs1bg")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_l1njq")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ttxbk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygjd0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dm7rs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fo1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ogqxc")
 }],
 "loop": 1,
 "name": &"default",
 "speed": 8.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dm7rs"]
-atlas = ExtResource("4_axi0o")
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfubi"]
+atlas = ExtResource("4_1ei7e")
 region = Rect2(0, 416, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4fo1t"]
-atlas = ExtResource("6_1ei7e")
-region = Rect2(144, 16, 32, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ogqxc"]
-atlas = ExtResource("6_1ei7e")
-region = Rect2(208, 80, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o8yod"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fj3f"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 0, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yfubi"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_gxvve"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 48, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7fj3f"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvbne"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 96, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gxvve"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbgwt"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 144, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tvbne"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_dwhyw"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 192, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bbgwt"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_kaxud"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 240, 32, 48)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_dwhyw"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_bvdfr"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o8yod")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yfubi")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7fj3f")
 }, {
@@ -598,45 +586,45 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bbgwt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dwhyw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kaxud")
 }],
 "loop": 1,
 "name": &"default",
 "speed": 8.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kaxud"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvr0h"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 0, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bvdfr"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5j34"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 48, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xvr0h"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_cayuj"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 96, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f5j34"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_6akh4"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 144, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cayuj"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwcel"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 192, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6akh4"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lgiu"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 240, 32, 48)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_xwcel"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_5am8b"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kaxud")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bvdfr")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xvr0h")
 }, {
@@ -648,53 +636,53 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6akh4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwcel")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lgiu")
 }],
 "loop": 1,
 "name": &"default",
 "speed": 8.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1lgiu"]
-atlas = ExtResource("4_axi0o")
+[sub_resource type="AtlasTexture" id="AtlasTexture_4h6g0"]
+atlas = ExtResource("4_1ei7e")
 region = Rect2(0, 416, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5am8b"]
-atlas = ExtResource("6_1ei7e")
-region = Rect2(144, 16, 32, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4h6g0"]
-atlas = ExtResource("5_1qt3l")
-region = Rect2(0, 0, 32, 48)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_keo3b"]
-atlas = ExtResource("5_1qt3l")
-region = Rect2(0, 48, 32, 48)
+atlas = ExtResource("6_cb4mh")
+region = Rect2(208, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t63um"]
-atlas = ExtResource("5_1qt3l")
-region = Rect2(0, 96, 32, 48)
+atlas = ExtResource("5_txywo")
+region = Rect2(0, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4y88b"]
-atlas = ExtResource("5_1qt3l")
-region = Rect2(0, 144, 32, 48)
+atlas = ExtResource("5_txywo")
+region = Rect2(0, 48, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uas23"]
-atlas = ExtResource("5_1qt3l")
-region = Rect2(0, 192, 32, 48)
+atlas = ExtResource("5_txywo")
+region = Rect2(0, 96, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ui1l5"]
-atlas = ExtResource("5_1qt3l")
+atlas = ExtResource("5_txywo")
+region = Rect2(0, 144, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjbem"]
+atlas = ExtResource("5_txywo")
+region = Rect2(0, 192, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvatd"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 240, 32, 48)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_qjbem"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_p7vxa"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4h6g0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_keo3b")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_t63um")
 }, {
@@ -706,45 +694,45 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ui1l5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjbem")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvatd")
 }],
 "loop": 1,
 "name": &"default",
 "speed": 8.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rvatd"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2wkb"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 0, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_p7vxa"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_j30ci"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 48, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l2wkb"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcyc2"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 96, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j30ci"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_cgfii"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 144, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jcyc2"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6xvj"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 192, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cgfii"]
-atlas = ExtResource("5_1qt3l")
+[sub_resource type="AtlasTexture" id="AtlasTexture_koy51"]
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 240, 32, 48)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_l6xvj"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_wgfmm"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rvatd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p7vxa")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_l2wkb")
 }, {
@@ -756,54 +744,52 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cgfii")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6xvj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_koy51")
 }],
 "loop": 1,
 "name": &"default",
 "speed": 8.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_koy51"]
-atlas = ExtResource("4_axi0o")
+[sub_resource type="AtlasTexture" id="AtlasTexture_2knfm"]
+atlas = ExtResource("4_1ei7e")
 region = Rect2(0, 416, 32, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wgfmm"]
-atlas = ExtResource("6_1ei7e")
-region = Rect2(144, 16, 32, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2knfm"]
-atlas = ExtResource("6_1ei7e")
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvfhn"]
+atlas = ExtResource("6_cb4mh")
 region = Rect2(208, 80, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wvfhn"]
-atlas = ExtResource("6_1ei7e")
-region = Rect2(144, 16, 32, 16)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_1310w"]
-atlas = ExtResource("6_1ei7e")
+atlas = ExtResource("6_cb4mh")
 region = Rect2(208, 80, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h8y5v"]
-atlas = ExtResource("5_1qt3l")
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lssax"]
-atlas = ExtResource("5_1qt3l")
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 48, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w1c8q"]
-atlas = ExtResource("5_1qt3l")
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 96, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xmcpd"]
-atlas = ExtResource("5_1qt3l")
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 144, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m17r0"]
-atlas = ExtResource("5_1qt3l")
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 192, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8huh3"]
-atlas = ExtResource("5_1qt3l")
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 240, 32, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4du86"]
@@ -833,27 +819,27 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u3n6n"]
-atlas = ExtResource("5_1qt3l")
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 0, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i0cbd"]
-atlas = ExtResource("5_1qt3l")
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 48, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qkmtf"]
-atlas = ExtResource("5_1qt3l")
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 96, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xtyk0"]
-atlas = ExtResource("5_1qt3l")
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 144, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3y8yn"]
-atlas = ExtResource("5_1qt3l")
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 192, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_va0ff"]
-atlas = ExtResource("5_1qt3l")
+atlas = ExtResource("5_txywo")
 region = Rect2(0, 240, 32, 48)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dv75i"]
@@ -883,16 +869,15 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ksc8s"]
-atlas = ExtResource("4_axi0o")
+atlas = ExtResource("4_1ei7e")
 region = Rect2(0, 416, 32, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4d2xw"]
-atlas = ExtResource("6_1ei7e")
-region = Rect2(144, 16, 32, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8we7i"]
-atlas = ExtResource("6_1ei7e")
+atlas = ExtResource("6_cb4mh")
 region = Rect2(208, 80, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8we7i"]
+size = Vector2(28, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d4lyu"]
 size = Vector2(28, 22)
@@ -909,1428 +894,1378 @@ size = Vector2(28, 22)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yndhy"]
 size = Vector2(28, 22)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gu1ge"]
-size = Vector2(28, 22)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gov4h"]
-atlas = ExtResource("6_1ei7e")
+[sub_resource type="AtlasTexture" id="AtlasTexture_gu1ge"]
+atlas = ExtResource("6_cb4mh")
 region = Rect2(192, 80, 16, 16)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ecxai"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gov4h"]
 size = Vector2(28, 22)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x8ch6"]
-atlas = ExtResource("6_1ei7e")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecxai"]
+atlas = ExtResource("6_cb4mh")
 region = Rect2(192, 80, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x8ch6"]
+size = Vector2(28, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bqc1q"]
 size = Vector2(28, 22)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ndog"]
-size = Vector2(28, 22)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w1tvo"]
-atlas = ExtResource("6_1ei7e")
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ndog"]
+atlas = ExtResource("6_cb4mh")
 region = Rect2(192, 80, 16, 16)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_msk6q"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w1tvo"]
 size = Vector2(28, 22)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1cwo5"]
-atlas = ExtResource("6_1ei7e")
+[sub_resource type="AtlasTexture" id="AtlasTexture_msk6q"]
+atlas = ExtResource("6_cb4mh")
 region = Rect2(192, 80, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1cwo5"]
+size = Vector2(28, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eyllc"]
 size = Vector2(28, 22)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2pxk7"]
-size = Vector2(28, 22)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ir4cd"]
-atlas = ExtResource("6_1ei7e")
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pxk7"]
+atlas = ExtResource("6_cb4mh")
 region = Rect2(192, 80, 16, 16)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_all3k"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ir4cd"]
 size = Vector2(28, 22)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_glsv6"]
-atlas = ExtResource("6_1ei7e")
+[sub_resource type="AtlasTexture" id="AtlasTexture_all3k"]
+atlas = ExtResource("6_cb4mh")
 region = Rect2(192, 80, 16, 16)
 
-[node name="Fase1" type="Node2D" unique_id=1663879797]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glsv6"]
+size = Vector2(28, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m6gp0"]
+size = Vector2(28, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_prdo0"]
+size = Vector2(58, 10)
+
+[node name="Fase1" type="Node2D" unique_id=2012365524]
 texture_filter = 1
-script = ExtResource("1_ixqtr")
+script = ExtResource("1_ivj2p")
 arquivo_dados = "res://recursos/fases/01_jardim.json"
 
-[node name="CanaisDeAgua" type="Node2D" parent="." unique_id=990288625]
-script = ExtResource("2_aped3")
+[node name="CanaisDeAgua" type="Node2D" parent="." unique_id=1806861542]
+script = ExtResource("2_axi0o")
 arquivo_dados = "res://recursos/fases/01_jardim.json"
 
-[node name="SoloZ0" type="TileMapLayer" parent="." unique_id=22241492]
+[node name="SoloZ0" type="TileMapLayer" parent="." unique_id=384164680]
 modulate = Color(0.94, 1, 0.95, 1)
 texture_filter = 1
 scale = Vector2(2, 2)
-tile_map_data = PackedByteArray("AAACAAMAAAABAAcAAAADAAMAAAACAAcAAAAEAAMAAAACAAcAAAAFAAMAAAACAAcAAAAGAAMAAAACAAcAAAAHAAMAAAACAAcAAAAIAAMAAAACAAcAAAAJAAMAAAACAAcAAAAKAAMAAAACAAcAAAALAAMAAAADAAcAAAACAAQAAAABAAgAAAADAAQAAAAIAA0AAAAEAAQAAAACAAgAAAAFAAQAAAACAAgAAAAGAAQAAAACAAgAAAAHAAQAAAACAAgAAAAIAAQAAAACAAgAAAAJAAQAAAACAAgAAAAKAAQAAAACAAgAAAALAAQAAAADAAgAAAACAAUAAAABAAgAAAADAAUAAAACAAgAAAAEAAUAAAACAAgAAAAFAAUAAAACAAgAAAAGAAUAAAACAAgAAAAHAAUAAAACAAgAAAAIAAUAAAACAAgAAAAJAAUAAAACAAgAAAAKAAUAAAACAAgAAAALAAUAAAADAAgAAAACAAYAAAABAAgAAAADAAYAAAACAAgAAAAEAAYAAAACAAgAAAAFAAYAAAACAAgAAAAGAAYAAAACAAgAAAAHAAYAAAACAAgAAAAIAAYAAAACAAgAAAAJAAYAAAAIAA0AAAAKAAYAAAAHAA0AAAALAAYAAAADAAgAAAACAAcAAAABAAgAAAADAAcAAAACAAgAAAAEAAcAAAACAAgAAAAFAAcAAAACAAgAAAAGAAcAAAACAAgAAAAHAAcAAAACAAgAAAAIAAcAAAAIAA0AAAAJAAcAAAACAAgAAAAKAAcAAAACAAgAAAALAAcAAAADAAgAAAACAAgAAAABAAgAAAADAAgAAAACAAgAAAAEAAgAAAACAAgAAAAFAAgAAAACAAgAAAAGAAgAAAACAAgAAAAHAAgAAAAIAA0AAAAIAAgAAAACAAgAAAAJAAgAAAACAAgAAAAKAAgAAAACAAgAAAALAAgAAAADAAgAAAACAAkAAAABAAgAAAADAAkAAAACAAgAAAAEAAkAAAACAAgAAAAFAAkAAAACAAgAAAAGAAkAAAAIAA0AAAAHAAkAAAACAAgAAAAIAAkAAAACAAgAAAAJAAkAAAACAAgAAAAKAAkAAAACAAgAAAALAAkAAAADAAgAAAACAAoAAAABAAkAAAADAAoAAAACAAkAAAAEAAoAAAACAAkAAAAFAAoAAAACAAkAAAAGAAoAAAAHAA0AAAAHAAoAAAACAAgAAAAIAAoAAAACAAgAAAAJAAoAAAACAAkAAAAKAAoAAAACAAkAAAALAAoAAAADAAkAAAACABEAAAABAAcAAAADABEAAAACAAcAAAAEABEAAAACAAcAAAAFABEAAAACAAcAAAAGABEAAAACAAgAAAAHABEAAAAHAA0AAAAIABEAAAACAAgAAAAJABEAAAACAAcAAAAKABEAAAACAAcAAAALABEAAAADAAcAAAACABIAAAABAAgAAAADABIAAAACAAgAAAAEABIAAAACAAgAAAAFABIAAAACAAgAAAAGABIAAAAHAA0AAAAHABIAAAACAAgAAAAIABIAAAACAAgAAAAJABIAAAACAAgAAAAKABIAAAACAAgAAAALABIAAAADAAgAAAACABMAAAABAAgAAAADABMAAAACAAgAAAAEABMAAAACAAgAAAAFABMAAAAHAA0AAAAGABMAAAACAAgAAAAHABMAAAACAAgAAAAIABMAAAACAAgAAAAJABMAAAACAAgAAAAKABMAAAACAAgAAAALABMAAAADAAgAAAACABQAAAABAAgAAAADABQAAAACAAgAAAAEABQAAAACAAgAAAAFABQAAAAIAA0AAAAGABQAAAACAAgAAAAHABQAAAACAAgAAAAIABQAAAACAAgAAAAJABQAAAACAAgAAAAKABQAAAACAAgAAAALABQAAAADAAgAAAACABUAAAABAAgAAAADABUAAAACAAgAAAAEABUAAAAIAA0AAAAFABUAAAACAAgAAAAGABUAAAACAAgAAAAHABUAAAACAAgAAAAIABUAAAACAAgAAAAJABUAAAACAAgAAAAKABUAAAACAAgAAAALABUAAAADAAgAAAACABYAAAABAAgAAAADABYAAAAIAA0AAAAEABYAAAACAAgAAAAFABYAAAACAAgAAAAGABYAAAACAAgAAAAHABYAAAACAAgAAAAIABYAAAACAAgAAAAJABYAAAACAAgAAAAKABYAAAACAAgAAAALABYAAAADAAgAAAACABcAAAABAAkAAAADABcAAAACAAkAAAAEABcAAAACAAkAAAAFABcAAAACAAkAAAAGABcAAAACAAkAAAAHABcAAAACAAkAAAAIABcAAAACAAkAAAAJABcAAAACAAkAAAAKABcAAAACAAkAAAALABcAAAADAAkAAAAQAAMAAAABAAcAAAARAAMAAAACAAcAAAASAAMAAAACAAcAAAATAAMAAAACAAcAAAAUAAMAAAACAAcAAAAVAAMAAAACAAcAAAAWAAMAAAACAAcAAAAXAAMAAAACAAcAAAAYAAMAAAACAAcAAAAZAAMAAAADAAcAAAAQAAQAAAABAAgAAAARAAQAAAACAAgAAAASAAQAAAACAAgAAAATAAQAAAACAAgAAAAUAAQAAAACAAgAAAAVAAQAAAAIAA0AAAAWAAQAAAACAAgAAAAXAAQAAAACAAgAAAAYAAQAAAACAAgAAAAZAAQAAAADAAgAAAAQAAUAAAABAAgAAAARAAUAAAACAAgAAAASAAUAAAACAAgAAAATAAUAAAAHAA0AAAAUAAUAAAAIAA0AAAAVAAUAAAACAAgAAAAWAAUAAAACAAgAAAAXAAUAAAACAAgAAAAYAAUAAAACAAgAAAAZAAUAAAADAAgAAAAQAAYAAAABAAgAAAARAAYAAAACAAgAAAASAAYAAAAHAA0AAAATAAYAAAACAAgAAAAUAAYAAAACAAgAAAAVAAYAAAACAAgAAAAWAAYAAAACAAgAAAAXAAYAAAACAAgAAAAYAAYAAAACAAgAAAAZAAYAAAADAAgAAAAQAAcAAAABAAgAAAARAAcAAAAHAA0AAAASAAcAAAACAAgAAAATAAcAAAACAAgAAAAUAAcAAAACAAgAAAAVAAcAAAACAAgAAAAWAAcAAAACAAgAAAAXAAcAAAACAAgAAAAYAAcAAAACAAgAAAAZAAcAAAACAAgAAAAQAAgAAAAHAA0AAAARAAgAAAACAAgAAAASAAgAAAACAAgAAAATAAgAAAACAAgAAAAUAAgAAAACAAgAAAAVAAgAAAACAAgAAAAWAAgAAAACAAgAAAAXAAgAAAACAAgAAAAYAAgAAAACAAgAAAAZAAgAAAAIAA0AAAAQAAkAAAACAAgAAAARAAkAAAACAAgAAAASAAkAAAACAAgAAAATAAkAAAACAAkAAAAUAAkAAAACAAkAAAAVAAkAAAACAAkAAAAWAAkAAAACAAkAAAAXAAkAAAACAAkAAAAYAAkAAAACAAkAAAAZAAkAAAACAAkAAAAPABEAAAABAAcAAAAQABEAAAACAAcAAAARABEAAAACAAcAAAASABEAAAACAAcAAAATABEAAAACAAcAAAAUABEAAAACAAcAAAAVABEAAAACAAcAAAAWABEAAAACAAcAAAAXABEAAAACAAcAAAAYABEAAAACAAcAAAAZABEAAAADAAcAAAAPABIAAAABAAgAAAAQABIAAAACAAgAAAARABIAAAACAAgAAAASABIAAAACAAgAAAATABIAAAACAAgAAAAUABIAAAACAAgAAAAVABIAAAACAAgAAAAWABIAAAACAAgAAAAXABIAAAACAAgAAAAYABIAAAAHAA0AAAAZABIAAAACAAgAAAAPABMAAAABAAgAAAAQABMAAAACAAgAAAARABMAAAACAAgAAAASABMAAAACAAgAAAATABMAAAACAAgAAAAUABMAAAACAAgAAAAVABMAAAACAAgAAAAWABMAAAACAAgAAAAXABMAAAAHAA0AAAAYABMAAAACAAgAAAAZABMAAAACAAgAAAAPABQAAAABAAgAAAAQABQAAAACAAgAAAARABQAAAACAAgAAAASABQAAAACAAgAAAATABQAAAACAAgAAAAUABQAAAACAAgAAAAVABQAAAACAAgAAAAWABQAAAACAAgAAAAXABQAAAAIAA0AAAAYABQAAAACAAgAAAAZABQAAAACAAgAAAAPABUAAAABAAgAAAAQABUAAAACAAgAAAARABUAAAACAAgAAAASABUAAAACAAgAAAATABUAAAACAAgAAAAUABUAAAACAAgAAAAVABUAAAACAAgAAAAWABUAAAAIAA0AAAAXABUAAAACAAgAAAAYABUAAAACAAgAAAAZABUAAAADAAgAAAAPABYAAAABAAgAAAAQABYAAAACAAgAAAARABYAAAACAAgAAAASABYAAAACAAgAAAATABYAAAACAAgAAAAUABYAAAACAAgAAAAVABYAAAAIAA0AAAAWABYAAAACAAgAAAAXABYAAAACAAgAAAAYABYAAAACAAgAAAAZABYAAAADAAgAAAAPABcAAAABAAkAAAAQABcAAAACAAkAAAARABcAAAACAAkAAAASABcAAAACAAkAAAATABcAAAACAAkAAAAUABcAAAACAAkAAAAVABcAAAACAAkAAAAWABcAAAACAAkAAAAXABcAAAACAAkAAAAYABcAAAACAAkAAAAZABcAAAADAAkAAAAdAAUAAAABAAcAAAAdAAYAAAADAAgAAAAdAAcAAAADAAgAAAAdAAgAAAADAAgAAAAdAAkAAAADAAgAAAAdAAoAAAADAAgAAAAfAAoAAAABAAcAAAAgAAoAAAACAAcAAAAhAAoAAAACAAcAAAAiAAoAAAACAAcAAAAjAAoAAAADAAcAAAAdAAsAAAABAAgAAAAeAAsAAAACAAcAAAAfAAsAAAACAAgAAAAgAAsAAAAIAA0AAAAhAAsAAAACAAgAAAAiAAsAAAACAAgAAAAjAAsAAAADAAgAAAAdAAwAAAABAAgAAAAeAAwAAAACAAgAAAAfAAwAAAAIAA0AAAAgAAwAAAACAAgAAAAhAAwAAAACAAgAAAAiAAwAAAACAAgAAAAjAAwAAAADAAgAAAAdAA0AAAABAAgAAAAeAA0AAAAIAA0AAAAfAA0AAAACAAgAAAAgAA0AAAACAAgAAAAhAA0AAAACAAgAAAAiAA0AAAACAAgAAAAjAA0AAAADAAgAAAAdAA4AAAABAAgAAAAeAA4AAAACAAgAAAAfAA4AAAACAAgAAAAgAA4AAAACAAgAAAAhAA4AAAACAAgAAAAiAA4AAAACAAgAAAAjAA4AAAADAAgAAAAdAA8AAAABAAgAAAAeAA8AAAACAAgAAAAfAA8AAAACAAgAAAAgAA8AAAACAAgAAAAhAA8AAAACAAgAAAAiAA8AAAACAAgAAAAjAA8AAAADAAgAAAAdABAAAAABAAgAAAAeABAAAAACAAgAAAAfABAAAAACAAgAAAAgABAAAAACAAgAAAAhABAAAAACAAgAAAAiABAAAAACAAgAAAAjABAAAAADAAgAAAAdABEAAAABAAgAAAAeABEAAAACAAgAAAAfABEAAAACAAgAAAAgABEAAAACAAgAAAAhABEAAAACAAgAAAAiABEAAAAIAA0AAAAjABEAAAADAAgAAAAdABIAAAACAAgAAAAeABIAAAACAAgAAAAfABIAAAACAAgAAAAgABIAAAACAAgAAAAhABIAAAAIAA0AAAAiABIAAAACAAgAAAAjABIAAAADAAgAAAAdABMAAAACAAgAAAAeABMAAAACAAgAAAAfABMAAAACAAgAAAAgABMAAAAIAA0AAAAhABMAAAACAAgAAAAiABMAAAACAAgAAAAjABMAAAADAAgAAAAdABQAAAACAAgAAAAeABQAAAACAAgAAAAfABQAAAACAAgAAAAgABQAAAAHAA0AAAAhABQAAAACAAgAAAAiABQAAAACAAgAAAAjABQAAAADAAgAAAAdABUAAAABAAkAAAAeABUAAAACAAkAAAAfABUAAAACAAkAAAAgABUAAAACAAkAAAAhABUAAAACAAkAAAAiABUAAAACAAkAAAAjABUAAAADAAkAAAAGAAsAAAABAAgAAAAHAAsAAAACAAgAAAAIAAsAAAADAAgAAAAGAAwAAAABAAgAAAAHAAwAAAACAAgAAAAIAAwAAAADAAgAAAAGAA0AAAABAAgAAAAHAA0AAAACAAgAAAAIAA0AAAADAAgAAAAGAA4AAAABAAgAAAAHAA4AAAACAAgAAAAIAA4AAAADAAgAAAAGAA8AAAABAAgAAAAHAA8AAAACAAgAAAAIAA8AAAADAAgAAAAGABAAAAABAAgAAAAHABAAAAACAAgAAAAIABAAAAADAAgAAAAPAAgAAAABAAcAAAAPAAkAAAABAAgAAAAPAAoAAAABAAkAAAAQAAoAAAACAAkAAAARAAoAAAACAAkAAAASAAoAAAADAAkAAAAaABIAAAACAAcAAAAbABIAAAACAAcAAAAcABIAAAACAAcAAAAaABMAAAACAAgAAAAbABMAAAACAAgAAAAcABMAAAACAAgAAAAaABQAAAACAAkAAAAbABQAAAACAAkAAAAcABQAAAACAAkAAAAaAAcAAAACAAcAAAAbAAcAAAACAAcAAAAcAAcAAAACAAcAAAAaAAgAAAACAAgAAAAbAAgAAAACAAgAAAAcAAgAAAACAAgAAAAaAAkAAAACAAkAAAAbAAkAAAACAAkAAAAcAAkAAAACAAkAAAA=")
-tile_set = ExtResource("3_ivj2p")
+tile_map_data = PackedByteArray("AAACAAMAAAABAAcAAAADAAMAAAACAAcAAAAEAAMAAAACAAcAAAAFAAMAAAACAAcAAAAGAAMAAAACAAcAAAAHAAMAAAACAAcAAAAIAAMAAAACAAcAAAAJAAMAAAACAAcAAAAKAAMAAAACAAcAAAALAAMAAAADAAcAAAACAAQAAAABAAgAAAADAAQAAAAIAA0AAAAEAAQAAAACAAgAAAAFAAQAAAAIAA0AAAAGAAQAAAACAAgAAAAHAAQAAAACAAgAAAAIAAQAAAAHAA0AAAAJAAQAAAACAAgAAAAKAAQAAAACAAgAAAALAAQAAAADAAgAAAACAAUAAAABAAgAAAADAAUAAAACAAgAAAAEAAUAAAACAAgAAAAFAAUAAAACAAgAAAAGAAUAAAACAAgAAAAHAAUAAAAHAA0AAAAIAAUAAAACAAgAAAAJAAUAAAACAAgAAAAKAAUAAAAIAA0AAAALAAUAAAADAAgAAAACAAYAAAABAAgAAAADAAYAAAACAAgAAAAEAAYAAAACAAgAAAAFAAYAAAACAAgAAAAGAAYAAAACAAgAAAAHAAYAAAACAAgAAAAIAAYAAAACAAgAAAAJAAYAAAAIAA0AAAAKAAYAAAAHAA0AAAALAAYAAAADAAgAAAACAAcAAAABAAgAAAADAAcAAAACAAgAAAAEAAcAAAACAAgAAAAFAAcAAAACAAgAAAAGAAcAAAACAAgAAAAHAAcAAAACAAgAAAAIAAcAAAAIAA0AAAAJAAcAAAACAAgAAAAKAAcAAAACAAgAAAALAAcAAAADAAgAAAACAAgAAAABAAgAAAADAAgAAAAIAA0AAAAEAAgAAAACAAgAAAAFAAgAAAACAAgAAAAGAAgAAAACAAgAAAAHAAgAAAAIAA0AAAAIAAgAAAACAAgAAAAJAAgAAAACAAgAAAAKAAgAAAACAAgAAAALAAgAAAADAAgAAAACAAkAAAABAAgAAAADAAkAAAACAAgAAAAEAAkAAAACAAgAAAAFAAkAAAAHAA0AAAAGAAkAAAAIAA0AAAAHAAkAAAACAAgAAAAIAAkAAAACAAgAAAAJAAkAAAACAAgAAAAKAAkAAAACAAgAAAALAAkAAAADAAgAAAACAAoAAAABAAkAAAADAAoAAAACAAkAAAAEAAoAAAACAAkAAAAFAAoAAAACAAkAAAAGAAoAAAAHAA0AAAAHAAoAAAAIAA0AAAAIAAoAAAACAAgAAAAJAAoAAAACAAkAAAAKAAoAAAACAAkAAAALAAoAAAADAAkAAAACABEAAAABAAcAAAADABEAAAACAAcAAAAEABEAAAACAAcAAAAFABEAAAACAAcAAAAGABEAAAACAAgAAAAHABEAAAAHAA0AAAAIABEAAAAIAA0AAAAJABEAAAACAAcAAAAKABEAAAACAAcAAAALABEAAAADAAcAAAACABIAAAABAAgAAAADABIAAAACAAgAAAAEABIAAAACAAgAAAAFABIAAAACAAgAAAAGABIAAAAHAA0AAAAHABIAAAAIAA0AAAAIABIAAAACAAgAAAAJABIAAAACAAgAAAAKABIAAAAHAA0AAAALABIAAAADAAgAAAACABMAAAABAAgAAAADABMAAAACAAgAAAAEABMAAAACAAgAAAAFABMAAAAHAA0AAAAGABMAAAACAAgAAAAHABMAAAACAAgAAAAIABMAAAACAAgAAAAJABMAAAAHAA0AAAAKABMAAAACAAgAAAALABMAAAADAAgAAAACABQAAAABAAgAAAADABQAAAACAAgAAAAEABQAAAACAAgAAAAFABQAAAAIAA0AAAAGABQAAAACAAgAAAAHABQAAAACAAgAAAAIABQAAAACAAgAAAAJABQAAAACAAgAAAAKABQAAAACAAgAAAALABQAAAADAAgAAAACABUAAAABAAgAAAADABUAAAAHAA0AAAAEABUAAAAIAA0AAAAFABUAAAACAAgAAAAGABUAAAACAAgAAAAHABUAAAACAAgAAAAIABUAAAACAAgAAAAJABUAAAACAAgAAAAKABUAAAACAAgAAAALABUAAAADAAgAAAACABYAAAABAAgAAAADABYAAAAIAA0AAAAEABYAAAACAAgAAAAFABYAAAAIAA0AAAAGABYAAAACAAgAAAAHABYAAAACAAgAAAAIABYAAAACAAgAAAAJABYAAAACAAgAAAAKABYAAAACAAgAAAALABYAAAADAAgAAAACABcAAAABAAkAAAADABcAAAACAAkAAAAEABcAAAACAAkAAAAFABcAAAACAAkAAAAGABcAAAACAAkAAAAHABcAAAACAAkAAAAIABcAAAACAAkAAAAJABcAAAACAAkAAAAKABcAAAACAAkAAAALABcAAAADAAkAAAAQAAMAAAABAAcAAAARAAMAAAACAAcAAAASAAMAAAACAAcAAAATAAMAAAACAAcAAAAUAAMAAAACAAcAAAAVAAMAAAACAAcAAAAWAAMAAAACAAcAAAAXAAMAAAACAAcAAAAYAAMAAAACAAcAAAAZAAMAAAADAAcAAAAQAAQAAAABAAgAAAARAAQAAAACAAgAAAASAAQAAAAHAA0AAAATAAQAAAACAAgAAAAUAAQAAAACAAgAAAAVAAQAAAAIAA0AAAAWAAQAAAACAAgAAAAXAAQAAAACAAgAAAAYAAQAAAACAAgAAAAZAAQAAAADAAgAAAAQAAUAAAABAAgAAAARAAUAAAACAAgAAAASAAUAAAACAAgAAAATAAUAAAAHAA0AAAAUAAUAAAAIAA0AAAAVAAUAAAACAAgAAAAWAAUAAAACAAgAAAAXAAUAAAAHAA0AAAAYAAUAAAACAAgAAAAZAAUAAAADAAgAAAAQAAYAAAABAAgAAAARAAYAAAACAAgAAAASAAYAAAAHAA0AAAATAAYAAAACAAgAAAAUAAYAAAACAAgAAAAVAAYAAAACAAgAAAAWAAYAAAAHAA0AAAAXAAYAAAACAAgAAAAYAAYAAAACAAgAAAAZAAYAAAADAAgAAAAQAAcAAAABAAgAAAARAAcAAAAHAA0AAAASAAcAAAACAAgAAAATAAcAAAACAAgAAAAUAAcAAAACAAgAAAAVAAcAAAACAAgAAAAWAAcAAAACAAgAAAAXAAcAAAACAAgAAAAYAAcAAAAIAA0AAAAZAAcAAAACAAgAAAAQAAgAAAAHAA0AAAARAAgAAAACAAgAAAASAAgAAAACAAgAAAATAAgAAAACAAgAAAAUAAgAAAACAAgAAAAVAAgAAAACAAgAAAAWAAgAAAACAAgAAAAXAAgAAAACAAgAAAAYAAgAAAACAAgAAAAZAAgAAAAIAA0AAAAQAAkAAAACAAgAAAARAAkAAAACAAgAAAASAAkAAAAIAA0AAAATAAkAAAACAAkAAAAUAAkAAAACAAkAAAAVAAkAAAACAAkAAAAWAAkAAAACAAkAAAAXAAkAAAACAAkAAAAYAAkAAAACAAkAAAAZAAkAAAACAAkAAAAPABEAAAABAAcAAAAQABEAAAACAAcAAAARABEAAAACAAcAAAASABEAAAACAAcAAAATABEAAAACAAcAAAAUABEAAAACAAcAAAAVABEAAAACAAcAAAAWABEAAAACAAcAAAAXABEAAAACAAcAAAAYABEAAAACAAcAAAAZABEAAAADAAcAAAAPABIAAAABAAgAAAAQABIAAAACAAgAAAARABIAAAACAAgAAAASABIAAAACAAgAAAATABIAAAACAAgAAAAUABIAAAAHAA0AAAAVABIAAAACAAgAAAAWABIAAAACAAgAAAAXABIAAAAIAA0AAAAYABIAAAAHAA0AAAAZABIAAAACAAgAAAAPABMAAAABAAgAAAAQABMAAAACAAgAAAARABMAAAACAAgAAAASABMAAAACAAgAAAATABMAAAACAAgAAAAUABMAAAACAAgAAAAVABMAAAACAAgAAAAWABMAAAAIAA0AAAAXABMAAAAHAA0AAAAYABMAAAACAAgAAAAZABMAAAAHAA0AAAAPABQAAAABAAgAAAAQABQAAAACAAgAAAARABQAAAACAAgAAAASABQAAAACAAgAAAATABQAAAACAAgAAAAUABQAAAACAAgAAAAVABQAAAACAAgAAAAWABQAAAACAAgAAAAXABQAAAAIAA0AAAAYABQAAAAHAA0AAAAZABQAAAACAAgAAAAPABUAAAABAAgAAAAQABUAAAAIAA0AAAARABUAAAACAAgAAAASABUAAAACAAgAAAATABUAAAACAAgAAAAUABUAAAACAAgAAAAVABUAAAACAAgAAAAWABUAAAAIAA0AAAAXABUAAAACAAgAAAAYABUAAAACAAgAAAAZABUAAAADAAgAAAAPABYAAAABAAgAAAAQABYAAAACAAgAAAARABYAAAACAAgAAAASABYAAAAHAA0AAAATABYAAAACAAgAAAAUABYAAAACAAgAAAAVABYAAAAIAA0AAAAWABYAAAACAAgAAAAXABYAAAACAAgAAAAYABYAAAACAAgAAAAZABYAAAADAAgAAAAPABcAAAABAAkAAAAQABcAAAACAAkAAAARABcAAAACAAkAAAASABcAAAACAAkAAAATABcAAAACAAkAAAAUABcAAAACAAkAAAAVABcAAAACAAkAAAAWABcAAAACAAkAAAAXABcAAAACAAkAAAAYABcAAAACAAkAAAAZABcAAAADAAkAAAAdAAUAAAABAAcAAAAdAAYAAAADAAgAAAAdAAcAAAADAAgAAAAdAAgAAAADAAgAAAAdAAkAAAADAAgAAAAdAAoAAAADAAgAAAAfAAoAAAABAAcAAAAgAAoAAAACAAcAAAAhAAoAAAACAAcAAAAiAAoAAAACAAcAAAAjAAoAAAADAAcAAAAdAAsAAAABAAgAAAAeAAsAAAACAAcAAAAfAAsAAAACAAgAAAAgAAsAAAAIAA0AAAAhAAsAAAACAAgAAAAiAAsAAAACAAgAAAAjAAsAAAADAAgAAAAdAAwAAAABAAgAAAAeAAwAAAACAAgAAAAfAAwAAAAIAA0AAAAgAAwAAAACAAgAAAAhAAwAAAACAAgAAAAiAAwAAAAHAA0AAAAjAAwAAAADAAgAAAAdAA0AAAABAAgAAAAeAA0AAAAIAA0AAAAfAA0AAAACAAgAAAAgAA0AAAACAAgAAAAhAA0AAAACAAgAAAAiAA0AAAACAAgAAAAjAA0AAAADAAgAAAAdAA4AAAABAAgAAAAeAA4AAAACAAgAAAAfAA4AAAACAAgAAAAgAA4AAAACAAgAAAAhAA4AAAACAAgAAAAiAA4AAAACAAgAAAAjAA4AAAADAAgAAAAdAA8AAAABAAgAAAAeAA8AAAAIAA0AAAAfAA8AAAACAAgAAAAgAA8AAAACAAgAAAAhAA8AAAACAAgAAAAiAA8AAAACAAgAAAAjAA8AAAADAAgAAAAdABAAAAABAAgAAAAeABAAAAACAAgAAAAfABAAAAACAAgAAAAgABAAAAAHAA0AAAAhABAAAAACAAgAAAAiABAAAAACAAgAAAAjABAAAAADAAgAAAAdABEAAAABAAgAAAAeABEAAAACAAgAAAAfABEAAAAHAA0AAAAgABEAAAACAAgAAAAhABEAAAACAAgAAAAiABEAAAAIAA0AAAAjABEAAAADAAgAAAAdABIAAAACAAgAAAAeABIAAAACAAgAAAAfABIAAAACAAgAAAAgABIAAAACAAgAAAAhABIAAAAIAA0AAAAiABIAAAACAAgAAAAjABIAAAADAAgAAAAdABMAAAACAAgAAAAeABMAAAACAAgAAAAfABMAAAACAAgAAAAgABMAAAAIAA0AAAAhABMAAAACAAgAAAAiABMAAAACAAgAAAAjABMAAAADAAgAAAAdABQAAAACAAgAAAAeABQAAAACAAgAAAAfABQAAAACAAgAAAAgABQAAAAHAA0AAAAhABQAAAACAAgAAAAiABQAAAACAAgAAAAjABQAAAADAAgAAAAdABUAAAABAAkAAAAeABUAAAACAAkAAAAfABUAAAACAAkAAAAgABUAAAACAAkAAAAhABUAAAACAAkAAAAiABUAAAACAAkAAAAjABUAAAADAAkAAAAGAAsAAAABAAgAAAAHAAsAAAACAAgAAAAIAAsAAAADAAgAAAAGAAwAAAABAAgAAAAHAAwAAAACAAgAAAAIAAwAAAADAAgAAAAGAA0AAAABAAgAAAAHAA0AAAACAAgAAAAIAA0AAAADAAgAAAAGAA4AAAABAAgAAAAHAA4AAAACAAgAAAAIAA4AAAADAAgAAAAGAA8AAAABAAgAAAAHAA8AAAACAAgAAAAIAA8AAAADAAgAAAAGABAAAAABAAgAAAAHABAAAAACAAgAAAAIABAAAAADAAgAAAAPAAgAAAABAAcAAAAPAAkAAAABAAgAAAAPAAoAAAABAAkAAAAQAAoAAAACAAkAAAARAAoAAAACAAkAAAASAAoAAAADAAkAAAAaABIAAAACAAcAAAAbABIAAAACAAcAAAAcABIAAAACAAcAAAAaABMAAAACAAgAAAAbABMAAAACAAgAAAAcABMAAAACAAgAAAAaABQAAAACAAkAAAAbABQAAAACAAkAAAAcABQAAAACAAkAAAAaAAcAAAACAAcAAAAbAAcAAAACAAcAAAAcAAcAAAACAAcAAAAaAAgAAAAHAA0AAAAbAAgAAAACAAgAAAAcAAgAAAACAAgAAAAaAAkAAAACAAkAAAAbAAkAAAACAAkAAAAcAAkAAAACAAkAAAA=")
+tile_set = ExtResource("3_1qt3l")
 
-[node name="SoloZ1" type="TileMapLayer" parent="." unique_id=1453161287]
+[node name="SoloZ1" type="TileMapLayer" parent="." unique_id=1144067775]
 modulate = Color(0.94, 1, 0.95, 1)
 texture_filter = 1
 position = Vector2(0, -16)
 scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAAeAAUAAAABAAcAAAAfAAUAAAACAAcAAAAgAAUAAAADAAcAAAAiAAUAAAABAAcAAAAjAAUAAAADAAcAAAAeAAYAAAABAAgAAAAfAAYAAAACAAgAAAAgAAYAAAADAAgAAAAiAAYAAAABAAgAAAAjAAYAAAADAAgAAAAeAAcAAAABAAgAAAAfAAcAAAACAAgAAAAgAAcAAAADAAgAAAAiAAcAAAABAAgAAAAjAAcAAAADAAgAAAAeAAgAAAABAAgAAAAfAAgAAAACAAgAAAAgAAgAAAADAAgAAAAiAAgAAAABAAgAAAAjAAgAAAADAAgAAAAeAAkAAAABAAgAAAAfAAkAAAACAAkAAAAgAAkAAAADAAkAAAAiAAkAAAABAAkAAAAjAAkAAAADAAkAAAAeAAoAAAABAAkAAAA=")
-tile_set = ExtResource("3_ivj2p")
+tile_set = ExtResource("3_1qt3l")
 
-[node name="SoloZ2" type="TileMapLayer" parent="." unique_id=1256735466]
+[node name="SoloZ2" type="TileMapLayer" parent="." unique_id=1035953375]
 texture_filter = 1
 position = Vector2(0, -32)
 scale = Vector2(2, 2)
-tile_set = ExtResource("3_ivj2p")
+tile_set = ExtResource("3_1qt3l")
 
-[node name="ParedesDePedra" type="TileMapLayer" parent="." unique_id=1223145742]
+[node name="ParedesDePedra" type="TileMapLayer" parent="." unique_id=674725123]
 texture_filter = 1
 scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAACAAIAAAAGAAIAAAACAAEAAAAGAAEAAAABAAMAAAABAAIAAAADAAIAAAAGAAIAAAADAAEAAAAGAAEAAAAEAAIAAAAGAAIAAAAEAAEAAAAGAAEAAAAFAAIAAAAGAAIAAAAFAAEAAAAGAAEAAAAGAAIAAAAGAAIAAAAGAAEAAAAGAAEAAAAHAAIAAAAGAAIAAAAHAAEAAAAGAAEAAAAIAAIAAAAGAAIAAAAIAAEAAAAGAAEAAAAJAAIAAAAGAAIAAAAJAAEAAAAGAAEAAAAKAAIAAAAGAAIAAAAKAAEAAAAGAAEAAAALAAIAAAAGAAIAAAALAAEAAAAGAAEAAAABAAQAAAABAAIAAAABAAUAAAABAAIAAAABAAYAAAABAAIAAAABAAcAAAABAAIAAAABAAgAAAABAAIAAAABAAkAAAABAAIAAAABAAoAAAABAAIAAAACABAAAAAGAAIAAAACAA8AAAAGAAEAAAABABEAAAABAAIAAAADABAAAAAGAAIAAAADAA8AAAAGAAEAAAAEABAAAAAGAAIAAAAEAA8AAAAGAAEAAAAFABAAAAABAAIAAAAFAA8AAAABAAIAAAAJABAAAAADAAIAAAAJAA8AAAADAAIAAAAKABAAAAAGAAIAAAAKAA8AAAAGAAEAAAALABAAAAAGAAIAAAALAA8AAAAGAAEAAAABABIAAAABAAIAAAABABMAAAABAAIAAAABABQAAAABAAIAAAABABUAAAABAAIAAAABABYAAAABAAIAAAAMABYAAAADAAIAAAABABcAAAABAAIAAAAMABcAAAADAAIAAAAQAAIAAAAGAAIAAAAQAAEAAAAGAAEAAAAPAAMAAAABAAIAAAARAAIAAAAGAAIAAAARAAEAAAAGAAEAAAASAAIAAAAGAAIAAAASAAEAAAAGAAEAAAATAAIAAAAGAAIAAAATAAEAAAAGAAEAAAAUAAIAAAAGAAIAAAAUAAEAAAAGAAEAAAAVAAIAAAAGAAIAAAAVAAEAAAAGAAEAAAAWAAIAAAAGAAIAAAAWAAEAAAAGAAEAAAAXAAIAAAAGAAIAAAAXAAEAAAAGAAEAAAAYAAIAAAAGAAIAAAAYAAEAAAAGAAEAAAAZAAIAAAAGAAIAAAAZAAEAAAAGAAEAAAAaAAMAAAADAAIAAAAPAAQAAAABAAIAAAAaAAQAAAADAAIAAAAPAAUAAAABAAIAAAAaAAUAAAAGAAEAAAAPAAYAAAAGAAEAAAAaAAYAAAAGAAIAAAAPAAcAAAAGAAIAAAAaABUAAAADAAIAAAAOABYAAAABAAIAAAAaABYAAAADAAIAAAAOABcAAAABAAIAAAAaABcAAAADAAIAAAAdAAQAAAAGAAIAAAAdAAMAAAAGAAEAAAAcAAUAAAAGAAEAAAAcAAYAAAAGAAIAAAAkAAoAAAADAAIAAAAkAAsAAAADAAIAAAAkAAwAAAADAAIAAAAkAA0AAAADAAIAAAAkAA4AAAADAAIAAAAkAA8AAAADAAIAAAAkABAAAAADAAIAAAAkABEAAAADAAIAAAAkABIAAAADAAIAAAAkABMAAAADAAIAAAAkABQAAAADAAIAAAAcABUAAAABAAIAAAAkABUAAAADAAIAAAAFAAsAAAABAAIAAAAJAAsAAAADAAIAAAAFAAwAAAABAAIAAAAJAAwAAAADAAIAAAAFAA0AAAABAAIAAAAJAA0AAAADAAIAAAAFAA4AAAABAAIAAAAJAA4AAAADAAIAAAAbAAYAAAAGAAIAAAAbAAUAAAAGAAEAAAA=")
-tile_set = ExtResource("3_ivj2p")
+tile_set = ExtResource("3_1qt3l")
 
-[node name="FrentesEBeirais" type="TileMapLayer" parent="." unique_id=1700295550]
+[node name="FrentesEBeirais" type="TileMapLayer" parent="." unique_id=1246077035]
 texture_filter = 1
 scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAACAAsAAAAGAAMAAAADAAsAAAAGAAMAAAAEAAsAAAAGAAMAAAAFAAsAAAAGAAMAAAAJAAsAAAAGAAMAAAAKAAsAAAAGAAMAAAALAAsAAAAGAAMAAAACABgAAAAGAAMAAAADABgAAAAGAAMAAAAEABgAAAAGAAMAAAAFABgAAAAGAAMAAAAGABgAAAAGAAMAAAAHABgAAAAGAAMAAAAIABgAAAAGAAMAAAAJABgAAAAGAAMAAAAKABgAAAAGAAMAAAALABgAAAAGAAMAAAAPABgAAAAGAAMAAAAQABgAAAAGAAMAAAARABgAAAAGAAMAAAASABgAAAAGAAMAAAATABgAAAAGAAMAAAAUABgAAAAGAAMAAAAVABgAAAAGAAMAAAAWABgAAAAGAAMAAAAXABgAAAAGAAMAAAAYABgAAAAGAAMAAAAZABgAAAAGAAMAAAAdABYAAAAGAAMAAAAeABYAAAAGAAMAAAAfABYAAAAGAAMAAAAgABYAAAAGAAMAAAAhABYAAAAGAAMAAAAiABYAAAAGAAMAAAAjABYAAAAGAAMAAAAaABUAAAAGAAMAAAAbABUAAAAGAAMAAAAcABUAAAAGAAMAAAA=")
-tile_set = ExtResource("3_ivj2p")
+tile_set = ExtResource("3_1qt3l")
 
-[node name="Bordas" type="Node2D" parent="." unique_id=631796420]
+[node name="Bordas" type="Node2D" parent="." unique_id=549691763]
 
-[node name="Parede0" type="StaticBody2D" parent="Bordas" unique_id=1006553148]
+[node name="Parede0" type="StaticBody2D" parent="Bordas" unique_id=849460192]
 position = Vector2(48, 112)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede0" unique_id=1714904049]
-shape = SubResource("RectangleShape2D_m2kng")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede0" unique_id=2005619408]
+shape = SubResource("RectangleShape2D_xfjrt")
 
-[node name="Parede1" type="StaticBody2D" parent="Bordas" unique_id=992663537]
+[node name="Parede1" type="StaticBody2D" parent="Bordas" unique_id=1644835584]
 position = Vector2(80, 80)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede1" unique_id=929155041]
-shape = SubResource("RectangleShape2D_wob3a")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede1" unique_id=2039014675]
+shape = SubResource("RectangleShape2D_pp5tp")
 
-[node name="Parede2" type="StaticBody2D" parent="Bordas" unique_id=370693336]
+[node name="Parede2" type="StaticBody2D" parent="Bordas" unique_id=37294749]
 position = Vector2(112, 80)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede2" unique_id=933677713]
-shape = SubResource("RectangleShape2D_usdh3")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede2" unique_id=2077178618]
+shape = SubResource("RectangleShape2D_r4py1")
 
-[node name="Parede3" type="StaticBody2D" parent="Bordas" unique_id=193553052]
+[node name="Parede3" type="StaticBody2D" parent="Bordas" unique_id=595240238]
 position = Vector2(144, 80)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede3" unique_id=371044126]
-shape = SubResource("RectangleShape2D_4sio6")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede3" unique_id=1547586671]
+shape = SubResource("RectangleShape2D_c8m05")
 
-[node name="Parede4" type="StaticBody2D" parent="Bordas" unique_id=482290823]
+[node name="Parede4" type="StaticBody2D" parent="Bordas" unique_id=641740118]
 position = Vector2(176, 80)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede4" unique_id=769065615]
-shape = SubResource("RectangleShape2D_xfjrt")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede4" unique_id=305450541]
+shape = SubResource("RectangleShape2D_jepj3")
 
-[node name="Parede5" type="StaticBody2D" parent="Bordas" unique_id=1926618064]
+[node name="Parede5" type="StaticBody2D" parent="Bordas" unique_id=2008471740]
 position = Vector2(208, 80)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede5" unique_id=1734956026]
-shape = SubResource("RectangleShape2D_pp5tp")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede5" unique_id=944698803]
+shape = SubResource("RectangleShape2D_8inkr")
 
-[node name="Parede6" type="StaticBody2D" parent="Bordas" unique_id=2118296374]
+[node name="Parede6" type="StaticBody2D" parent="Bordas" unique_id=1860706889]
 position = Vector2(240, 80)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede6" unique_id=174782536]
-shape = SubResource("RectangleShape2D_r4py1")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede6" unique_id=41809884]
+shape = SubResource("RectangleShape2D_o2pan")
 
-[node name="Parede7" type="StaticBody2D" parent="Bordas" unique_id=923736861]
+[node name="Parede7" type="StaticBody2D" parent="Bordas" unique_id=1236070927]
 position = Vector2(272, 80)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede7" unique_id=915589673]
-shape = SubResource("RectangleShape2D_c8m05")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede7" unique_id=184715086]
+shape = SubResource("RectangleShape2D_rfckq")
 
-[node name="Parede8" type="StaticBody2D" parent="Bordas" unique_id=1770543696]
+[node name="Parede8" type="StaticBody2D" parent="Bordas" unique_id=2095918121]
 position = Vector2(304, 80)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede8" unique_id=1359306471]
-shape = SubResource("RectangleShape2D_jepj3")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede8" unique_id=1938551586]
+shape = SubResource("RectangleShape2D_mnqqd")
 
-[node name="Parede9" type="StaticBody2D" parent="Bordas" unique_id=247263407]
+[node name="Parede9" type="StaticBody2D" parent="Bordas" unique_id=83782328]
 position = Vector2(336, 80)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede9" unique_id=189835435]
-shape = SubResource("RectangleShape2D_8inkr")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede9" unique_id=1395990438]
+shape = SubResource("RectangleShape2D_j8fc0")
 
-[node name="Parede10" type="StaticBody2D" parent="Bordas" unique_id=82443670]
+[node name="Parede10" type="StaticBody2D" parent="Bordas" unique_id=471231260]
 position = Vector2(368, 80)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede10" unique_id=1408982993]
-shape = SubResource("RectangleShape2D_o2pan")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede10" unique_id=1602482010]
+shape = SubResource("RectangleShape2D_ls8l3")
 
-[node name="Parede11" type="StaticBody2D" parent="Bordas" unique_id=1165320141]
+[node name="Parede11" type="StaticBody2D" parent="Bordas" unique_id=1987383470]
 position = Vector2(48, 144)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede11" unique_id=2142025756]
-shape = SubResource("RectangleShape2D_rfckq")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede11" unique_id=643352760]
+shape = SubResource("RectangleShape2D_kkl7t")
 
-[node name="Parede12" type="StaticBody2D" parent="Bordas" unique_id=1030473993]
+[node name="Parede12" type="StaticBody2D" parent="Bordas" unique_id=447465798]
 position = Vector2(48, 176)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede12" unique_id=2116591254]
-shape = SubResource("RectangleShape2D_mnqqd")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede12" unique_id=1490294190]
+shape = SubResource("RectangleShape2D_b7f47")
 
-[node name="Parede13" type="StaticBody2D" parent="Bordas" unique_id=898625369]
+[node name="Parede13" type="StaticBody2D" parent="Bordas" unique_id=1036351975]
 position = Vector2(48, 208)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede13" unique_id=1614873706]
-shape = SubResource("RectangleShape2D_j8fc0")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede13" unique_id=522958719]
+shape = SubResource("RectangleShape2D_guic2")
 
-[node name="Parede14" type="StaticBody2D" parent="Bordas" unique_id=1417700150]
+[node name="Parede14" type="StaticBody2D" parent="Bordas" unique_id=952157799]
 position = Vector2(48, 240)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede14" unique_id=1808941925]
-shape = SubResource("RectangleShape2D_ls8l3")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede14" unique_id=1751687005]
+shape = SubResource("RectangleShape2D_m2f2x")
 
-[node name="Parede15" type="StaticBody2D" parent="Bordas" unique_id=1315329413]
+[node name="Parede15" type="StaticBody2D" parent="Bordas" unique_id=1873059367]
 position = Vector2(48, 272)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede15" unique_id=1365733193]
-shape = SubResource("RectangleShape2D_kkl7t")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede15" unique_id=1499822611]
+shape = SubResource("RectangleShape2D_175uy")
 
-[node name="Parede16" type="StaticBody2D" parent="Bordas" unique_id=1610852540]
+[node name="Parede16" type="StaticBody2D" parent="Bordas" unique_id=1023132425]
 position = Vector2(48, 304)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede16" unique_id=183980716]
-shape = SubResource("RectangleShape2D_b7f47")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede16" unique_id=825850779]
+shape = SubResource("RectangleShape2D_id7tm")
 
-[node name="Parede17" type="StaticBody2D" parent="Bordas" unique_id=1703445290]
+[node name="Parede17" type="StaticBody2D" parent="Bordas" unique_id=1071993025]
 position = Vector2(48, 336)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede17" unique_id=380761357]
-shape = SubResource("RectangleShape2D_guic2")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede17" unique_id=1808832405]
+shape = SubResource("RectangleShape2D_nopyy")
 
-[node name="Parede18" type="StaticBody2D" parent="Bordas" unique_id=2009454095]
+[node name="Parede18" type="StaticBody2D" parent="Bordas" unique_id=141361913]
 position = Vector2(80, 368)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede18" unique_id=152425686]
-shape = SubResource("RectangleShape2D_m2f2x")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede18" unique_id=690147549]
+shape = SubResource("RectangleShape2D_cbycw")
 
-[node name="Parede19" type="StaticBody2D" parent="Bordas" unique_id=1331358659]
+[node name="Parede19" type="StaticBody2D" parent="Bordas" unique_id=1578145022]
 position = Vector2(112, 368)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede19" unique_id=714467606]
-shape = SubResource("RectangleShape2D_175uy")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede19" unique_id=165036207]
+shape = SubResource("RectangleShape2D_ch3na")
 
-[node name="Parede20" type="StaticBody2D" parent="Bordas" unique_id=1227024405]
+[node name="Parede20" type="StaticBody2D" parent="Bordas" unique_id=30007381]
 position = Vector2(144, 368)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede20" unique_id=865337755]
-shape = SubResource("RectangleShape2D_id7tm")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede20" unique_id=84007831]
+shape = SubResource("RectangleShape2D_xuklm")
 
-[node name="Parede21" type="StaticBody2D" parent="Bordas" unique_id=705620036]
+[node name="Parede21" type="StaticBody2D" parent="Bordas" unique_id=896108066]
 position = Vector2(176, 368)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede21" unique_id=1655213664]
-shape = SubResource("RectangleShape2D_nopyy")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede21" unique_id=1965406575]
+shape = SubResource("RectangleShape2D_c0ne3")
 
-[node name="Parede22" type="StaticBody2D" parent="Bordas" unique_id=2033294828]
+[node name="Parede22" type="StaticBody2D" parent="Bordas" unique_id=355261275]
 position = Vector2(304, 368)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede22" unique_id=454814328]
-shape = SubResource("RectangleShape2D_cbycw")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede22" unique_id=894071918]
+shape = SubResource("RectangleShape2D_38sg7")
 
-[node name="Parede23" type="StaticBody2D" parent="Bordas" unique_id=489716014]
+[node name="Parede23" type="StaticBody2D" parent="Bordas" unique_id=359533923]
 position = Vector2(336, 368)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede23" unique_id=198485057]
-shape = SubResource("RectangleShape2D_ch3na")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede23" unique_id=1880815947]
+shape = SubResource("RectangleShape2D_q1afv")
 
-[node name="Parede24" type="StaticBody2D" parent="Bordas" unique_id=419837937]
+[node name="Parede24" type="StaticBody2D" parent="Bordas" unique_id=641110613]
 position = Vector2(368, 368)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede24" unique_id=1943928874]
-shape = SubResource("RectangleShape2D_xuklm")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede24" unique_id=1367691044]
+shape = SubResource("RectangleShape2D_4pspb")
 
-[node name="Parede25" type="StaticBody2D" parent="Bordas" unique_id=1136948634]
+[node name="Parede25" type="StaticBody2D" parent="Bordas" unique_id=843445366]
 position = Vector2(48, 560)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede25" unique_id=902979571]
-shape = SubResource("RectangleShape2D_c0ne3")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede25" unique_id=1518246195]
+shape = SubResource("RectangleShape2D_1sbls")
 
-[node name="Parede26" type="StaticBody2D" parent="Bordas" unique_id=2116817368]
+[node name="Parede26" type="StaticBody2D" parent="Bordas" unique_id=1500055048]
 position = Vector2(80, 528)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede26" unique_id=749142575]
-shape = SubResource("RectangleShape2D_38sg7")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede26" unique_id=541303766]
+shape = SubResource("RectangleShape2D_rkb2q")
 
-[node name="Parede27" type="StaticBody2D" parent="Bordas" unique_id=1134751902]
+[node name="Parede27" type="StaticBody2D" parent="Bordas" unique_id=2006771103]
 position = Vector2(112, 528)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede27" unique_id=1190866394]
-shape = SubResource("RectangleShape2D_q1afv")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede27" unique_id=515477839]
+shape = SubResource("RectangleShape2D_sm5nj")
 
-[node name="Parede28" type="StaticBody2D" parent="Bordas" unique_id=1732926660]
+[node name="Parede28" type="StaticBody2D" parent="Bordas" unique_id=284538688]
 position = Vector2(144, 528)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede28" unique_id=1526326691]
-shape = SubResource("RectangleShape2D_4pspb")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede28" unique_id=1735020194]
+shape = SubResource("RectangleShape2D_a7n4n")
 
-[node name="Parede29" type="StaticBody2D" parent="Bordas" unique_id=443390147]
+[node name="Parede29" type="StaticBody2D" parent="Bordas" unique_id=576438457]
 position = Vector2(176, 528)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede29" unique_id=1337139307]
-shape = SubResource("RectangleShape2D_1sbls")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede29" unique_id=418413299]
+shape = SubResource("RectangleShape2D_6xca6")
 
-[node name="Parede30" type="StaticBody2D" parent="Bordas" unique_id=737287350]
+[node name="Parede30" type="StaticBody2D" parent="Bordas" unique_id=1870410781]
 position = Vector2(304, 528)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede30" unique_id=1163533096]
-shape = SubResource("RectangleShape2D_rkb2q")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede30" unique_id=381402811]
+shape = SubResource("RectangleShape2D_n5rwd")
 
-[node name="Parede31" type="StaticBody2D" parent="Bordas" unique_id=2024235441]
+[node name="Parede31" type="StaticBody2D" parent="Bordas" unique_id=1293914327]
 position = Vector2(336, 528)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede31" unique_id=1532844385]
-shape = SubResource("RectangleShape2D_sm5nj")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede31" unique_id=1991645613]
+shape = SubResource("RectangleShape2D_bq3ii")
 
-[node name="Parede32" type="StaticBody2D" parent="Bordas" unique_id=2041531314]
+[node name="Parede32" type="StaticBody2D" parent="Bordas" unique_id=723976628]
 position = Vector2(368, 528)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede32" unique_id=1837476341]
-shape = SubResource("RectangleShape2D_a7n4n")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede32" unique_id=298409716]
+shape = SubResource("RectangleShape2D_363cf")
 
-[node name="Parede33" type="StaticBody2D" parent="Bordas" unique_id=522889391]
+[node name="Parede33" type="StaticBody2D" parent="Bordas" unique_id=58729238]
 position = Vector2(48, 592)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede33" unique_id=790536983]
-shape = SubResource("RectangleShape2D_6xca6")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede33" unique_id=1521922255]
+shape = SubResource("RectangleShape2D_71sgp")
 
-[node name="Parede34" type="StaticBody2D" parent="Bordas" unique_id=78107695]
+[node name="Parede34" type="StaticBody2D" parent="Bordas" unique_id=1163460665]
 position = Vector2(48, 624)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede34" unique_id=742414927]
-shape = SubResource("RectangleShape2D_n5rwd")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede34" unique_id=1237428335]
+shape = SubResource("RectangleShape2D_xt02d")
 
-[node name="Parede35" type="StaticBody2D" parent="Bordas" unique_id=1810925909]
+[node name="Parede35" type="StaticBody2D" parent="Bordas" unique_id=501879424]
 position = Vector2(48, 656)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede35" unique_id=23309710]
-shape = SubResource("RectangleShape2D_bq3ii")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede35" unique_id=2039259036]
+shape = SubResource("RectangleShape2D_03c2h")
 
-[node name="Parede36" type="StaticBody2D" parent="Bordas" unique_id=339827513]
+[node name="Parede36" type="StaticBody2D" parent="Bordas" unique_id=1144208711]
 position = Vector2(48, 688)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede36" unique_id=1692073548]
-shape = SubResource("RectangleShape2D_363cf")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede36" unique_id=1188700435]
+shape = SubResource("RectangleShape2D_2at4f")
 
-[node name="Parede37" type="StaticBody2D" parent="Bordas" unique_id=776755163]
+[node name="Parede37" type="StaticBody2D" parent="Bordas" unique_id=1278958282]
 position = Vector2(48, 720)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede37" unique_id=1214600132]
-shape = SubResource("RectangleShape2D_71sgp")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede37" unique_id=1387598019]
+shape = SubResource("RectangleShape2D_yt0ts")
 
-[node name="Parede38" type="StaticBody2D" parent="Bordas" unique_id=377074198]
+[node name="Parede38" type="StaticBody2D" parent="Bordas" unique_id=2037804005]
 position = Vector2(400, 720)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede38" unique_id=898942107]
-shape = SubResource("RectangleShape2D_xt02d")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede38" unique_id=1290106222]
+shape = SubResource("RectangleShape2D_xrxcp")
 
-[node name="Parede39" type="StaticBody2D" parent="Bordas" unique_id=111076225]
+[node name="Parede39" type="StaticBody2D" parent="Bordas" unique_id=994721034]
 position = Vector2(48, 752)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede39" unique_id=1512854323]
-shape = SubResource("RectangleShape2D_03c2h")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede39" unique_id=1446170657]
+shape = SubResource("RectangleShape2D_twwc6")
 
-[node name="Parede40" type="StaticBody2D" parent="Bordas" unique_id=1071472413]
+[node name="Parede40" type="StaticBody2D" parent="Bordas" unique_id=1656365374]
 position = Vector2(80, 784)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede40" unique_id=592101947]
-shape = SubResource("RectangleShape2D_2at4f")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede40" unique_id=743783338]
+shape = SubResource("RectangleShape2D_wtq5t")
 
-[node name="Parede41" type="StaticBody2D" parent="Bordas" unique_id=1307921222]
+[node name="Parede41" type="StaticBody2D" parent="Bordas" unique_id=1922778067]
 position = Vector2(112, 784)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede41" unique_id=180765585]
-shape = SubResource("RectangleShape2D_yt0ts")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede41" unique_id=1278237477]
+shape = SubResource("RectangleShape2D_rbrsq")
 
-[node name="Parede42" type="StaticBody2D" parent="Bordas" unique_id=1473922392]
+[node name="Parede42" type="StaticBody2D" parent="Bordas" unique_id=436342978]
 position = Vector2(144, 784)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede42" unique_id=1343332454]
-shape = SubResource("RectangleShape2D_xrxcp")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede42" unique_id=2139042124]
+shape = SubResource("RectangleShape2D_nlhgh")
 
-[node name="Parede43" type="StaticBody2D" parent="Bordas" unique_id=391591630]
+[node name="Parede43" type="StaticBody2D" parent="Bordas" unique_id=1338021175]
 position = Vector2(176, 784)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede43" unique_id=1830540358]
-shape = SubResource("RectangleShape2D_twwc6")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede43" unique_id=1869561292]
+shape = SubResource("RectangleShape2D_a6h0p")
 
-[node name="Parede44" type="StaticBody2D" parent="Bordas" unique_id=1960734516]
+[node name="Parede44" type="StaticBody2D" parent="Bordas" unique_id=709897326]
 position = Vector2(208, 784)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede44" unique_id=1330909969]
-shape = SubResource("RectangleShape2D_wtq5t")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede44" unique_id=35819856]
+shape = SubResource("RectangleShape2D_6gy4v")
 
-[node name="Parede45" type="StaticBody2D" parent="Bordas" unique_id=1341306634]
+[node name="Parede45" type="StaticBody2D" parent="Bordas" unique_id=2051108833]
 position = Vector2(240, 784)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede45" unique_id=1473568744]
-shape = SubResource("RectangleShape2D_rbrsq")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede45" unique_id=1404469821]
+shape = SubResource("RectangleShape2D_xsluw")
 
-[node name="Parede46" type="StaticBody2D" parent="Bordas" unique_id=420361328]
+[node name="Parede46" type="StaticBody2D" parent="Bordas" unique_id=632137547]
 position = Vector2(272, 784)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede46" unique_id=866537093]
-shape = SubResource("RectangleShape2D_nlhgh")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede46" unique_id=287909559]
+shape = SubResource("RectangleShape2D_pjafo")
 
-[node name="Parede47" type="StaticBody2D" parent="Bordas" unique_id=1435913425]
+[node name="Parede47" type="StaticBody2D" parent="Bordas" unique_id=1947704607]
 position = Vector2(304, 784)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede47" unique_id=1426258966]
-shape = SubResource("RectangleShape2D_a6h0p")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede47" unique_id=675898186]
+shape = SubResource("RectangleShape2D_jexcj")
 
-[node name="Parede48" type="StaticBody2D" parent="Bordas" unique_id=160199951]
+[node name="Parede48" type="StaticBody2D" parent="Bordas" unique_id=890030427]
 position = Vector2(336, 784)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede48" unique_id=889038171]
-shape = SubResource("RectangleShape2D_6gy4v")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede48" unique_id=306310191]
+shape = SubResource("RectangleShape2D_ij4u2")
 
-[node name="Parede49" type="StaticBody2D" parent="Bordas" unique_id=2024683974]
+[node name="Parede49" type="StaticBody2D" parent="Bordas" unique_id=359033972]
 position = Vector2(400, 752)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede49" unique_id=1296534646]
-shape = SubResource("RectangleShape2D_xsluw")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede49" unique_id=2137164791]
+shape = SubResource("RectangleShape2D_nuquw")
 
-[node name="Parede50" type="StaticBody2D" parent="Bordas" unique_id=1603498634]
+[node name="Parede50" type="StaticBody2D" parent="Bordas" unique_id=793612187]
 position = Vector2(368, 784)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede50" unique_id=154502909]
-shape = SubResource("RectangleShape2D_pjafo")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede50" unique_id=2039811252]
+shape = SubResource("RectangleShape2D_q5qy5")
 
-[node name="Parede51" type="StaticBody2D" parent="Bordas" unique_id=1009789256]
+[node name="Parede51" type="StaticBody2D" parent="Bordas" unique_id=1294926600]
 position = Vector2(496, 112)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede51" unique_id=1710437049]
-shape = SubResource("RectangleShape2D_jexcj")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede51" unique_id=1278349047]
+shape = SubResource("RectangleShape2D_556jg")
 
-[node name="Parede52" type="StaticBody2D" parent="Bordas" unique_id=2128828435]
+[node name="Parede52" type="StaticBody2D" parent="Bordas" unique_id=469979426]
 position = Vector2(528, 80)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede52" unique_id=61647598]
-shape = SubResource("RectangleShape2D_ij4u2")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede52" unique_id=773553621]
+shape = SubResource("RectangleShape2D_cqhtt")
 
-[node name="Parede53" type="StaticBody2D" parent="Bordas" unique_id=541635540]
+[node name="Parede53" type="StaticBody2D" parent="Bordas" unique_id=99212376]
 position = Vector2(560, 80)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede53" unique_id=972806569]
-shape = SubResource("RectangleShape2D_nuquw")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede53" unique_id=1817930217]
+shape = SubResource("RectangleShape2D_qi1xg")
 
-[node name="Parede54" type="StaticBody2D" parent="Bordas" unique_id=1896646847]
+[node name="Parede54" type="StaticBody2D" parent="Bordas" unique_id=202958057]
 position = Vector2(592, 80)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede54" unique_id=1059166104]
-shape = SubResource("RectangleShape2D_q5qy5")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede54" unique_id=1239227547]
+shape = SubResource("RectangleShape2D_1rju3")
 
-[node name="Parede55" type="StaticBody2D" parent="Bordas" unique_id=1033757362]
+[node name="Parede55" type="StaticBody2D" parent="Bordas" unique_id=451743772]
 position = Vector2(624, 80)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede55" unique_id=328988039]
-shape = SubResource("RectangleShape2D_556jg")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede55" unique_id=160556403]
+shape = SubResource("RectangleShape2D_dabht")
 
-[node name="Parede56" type="StaticBody2D" parent="Bordas" unique_id=352364267]
+[node name="Parede56" type="StaticBody2D" parent="Bordas" unique_id=233455555]
 position = Vector2(656, 80)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede56" unique_id=614983906]
-shape = SubResource("RectangleShape2D_cqhtt")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede56" unique_id=172881788]
+shape = SubResource("RectangleShape2D_84i8a")
 
-[node name="Parede57" type="StaticBody2D" parent="Bordas" unique_id=798163573]
+[node name="Parede57" type="StaticBody2D" parent="Bordas" unique_id=1105220253]
 position = Vector2(688, 80)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede57" unique_id=1184155512]
-shape = SubResource("RectangleShape2D_qi1xg")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede57" unique_id=1688053973]
+shape = SubResource("RectangleShape2D_indqr")
 
-[node name="Parede58" type="StaticBody2D" parent="Bordas" unique_id=1466298055]
+[node name="Parede58" type="StaticBody2D" parent="Bordas" unique_id=1393103464]
 position = Vector2(720, 80)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede58" unique_id=434352259]
-shape = SubResource("RectangleShape2D_1rju3")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede58" unique_id=640052573]
+shape = SubResource("RectangleShape2D_va2bv")
 
-[node name="Parede59" type="StaticBody2D" parent="Bordas" unique_id=144282650]
+[node name="Parede59" type="StaticBody2D" parent="Bordas" unique_id=157921340]
 position = Vector2(752, 80)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede59" unique_id=676240599]
-shape = SubResource("RectangleShape2D_dabht")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede59" unique_id=681560649]
+shape = SubResource("RectangleShape2D_wit52")
 
-[node name="Parede60" type="StaticBody2D" parent="Bordas" unique_id=671749316]
+[node name="Parede60" type="StaticBody2D" parent="Bordas" unique_id=1900112013]
 position = Vector2(784, 80)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede60" unique_id=437975569]
-shape = SubResource("RectangleShape2D_84i8a")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede60" unique_id=1340299111]
+shape = SubResource("RectangleShape2D_5w61c")
 
-[node name="Parede61" type="StaticBody2D" parent="Bordas" unique_id=1357507188]
+[node name="Parede61" type="StaticBody2D" parent="Bordas" unique_id=1838968254]
 position = Vector2(848, 112)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede61" unique_id=497252305]
-shape = SubResource("RectangleShape2D_indqr")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede61" unique_id=1720911601]
+shape = SubResource("RectangleShape2D_b5ve6")
 
-[node name="Parede62" type="StaticBody2D" parent="Bordas" unique_id=1500222415]
+[node name="Parede62" type="StaticBody2D" parent="Bordas" unique_id=126881563]
 position = Vector2(816, 80)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede62" unique_id=1537194394]
-shape = SubResource("RectangleShape2D_va2bv")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede62" unique_id=328054156]
+shape = SubResource("RectangleShape2D_djhfb")
 
-[node name="Parede63" type="StaticBody2D" parent="Bordas" unique_id=921539282]
+[node name="Parede63" type="StaticBody2D" parent="Bordas" unique_id=1033885672]
 position = Vector2(496, 144)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede63" unique_id=1585976052]
-shape = SubResource("RectangleShape2D_wit52")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede63" unique_id=240742581]
+shape = SubResource("RectangleShape2D_l77or")
 
-[node name="Parede64" type="StaticBody2D" parent="Bordas" unique_id=2142756405]
+[node name="Parede64" type="StaticBody2D" parent="Bordas" unique_id=1054433634]
 position = Vector2(848, 144)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede64" unique_id=823546941]
-shape = SubResource("RectangleShape2D_5w61c")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede64" unique_id=1281330378]
+shape = SubResource("RectangleShape2D_x68b4")
 
-[node name="Parede65" type="StaticBody2D" parent="Bordas" unique_id=1248508834]
+[node name="Parede65" type="StaticBody2D" parent="Bordas" unique_id=912253531]
 position = Vector2(496, 176)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede65" unique_id=845921586]
-shape = SubResource("RectangleShape2D_b5ve6")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede65" unique_id=1887604745]
+shape = SubResource("RectangleShape2D_drqi4")
 
-[node name="Parede66" type="StaticBody2D" parent="Bordas" unique_id=466852096]
+[node name="Parede66" type="StaticBody2D" parent="Bordas" unique_id=864347355]
 position = Vector2(848, 176)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede66" unique_id=1260092451]
-shape = SubResource("RectangleShape2D_djhfb")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede66" unique_id=278612682]
+shape = SubResource("RectangleShape2D_bdj8j")
 
-[node name="Parede67" type="StaticBody2D" parent="Bordas" unique_id=1205143174]
+[node name="Parede67" type="StaticBody2D" parent="Bordas" unique_id=1803896608]
 position = Vector2(496, 208)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede67" unique_id=426698460]
-shape = SubResource("RectangleShape2D_l77or")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede67" unique_id=23696853]
+shape = SubResource("RectangleShape2D_ten41")
 
-[node name="Parede68" type="StaticBody2D" parent="Bordas" unique_id=1398835258]
+[node name="Parede68" type="StaticBody2D" parent="Bordas" unique_id=1591859834]
 position = Vector2(848, 208)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede68" unique_id=374616784]
-shape = SubResource("RectangleShape2D_x68b4")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede68" unique_id=653764912]
+shape = SubResource("RectangleShape2D_m4dkc")
 
-[node name="Parede69" type="StaticBody2D" parent="Bordas" unique_id=124831232]
+[node name="Parede69" type="StaticBody2D" parent="Bordas" unique_id=353371834]
 position = Vector2(496, 240)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede69" unique_id=1221749717]
-shape = SubResource("RectangleShape2D_drqi4")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede69" unique_id=2110776494]
+shape = SubResource("RectangleShape2D_x1xel")
 
-[node name="Parede70" type="StaticBody2D" parent="Bordas" unique_id=2108026708]
+[node name="Parede70" type="StaticBody2D" parent="Bordas" unique_id=843760818]
 position = Vector2(848, 688)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede70" unique_id=1048387207]
-shape = SubResource("RectangleShape2D_bdj8j")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede70" unique_id=1830186400]
+shape = SubResource("RectangleShape2D_4856o")
 
-[node name="Parede71" type="StaticBody2D" parent="Bordas" unique_id=1015407129]
+[node name="Parede71" type="StaticBody2D" parent="Bordas" unique_id=18855712]
 position = Vector2(464, 720)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede71" unique_id=591134907]
-shape = SubResource("RectangleShape2D_ten41")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede71" unique_id=765419601]
+shape = SubResource("RectangleShape2D_lctgo")
 
-[node name="Parede72" type="StaticBody2D" parent="Bordas" unique_id=1652992793]
+[node name="Parede72" type="StaticBody2D" parent="Bordas" unique_id=98477313]
 position = Vector2(848, 720)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede72" unique_id=889145761]
-shape = SubResource("RectangleShape2D_m4dkc")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede72" unique_id=2088634552]
+shape = SubResource("RectangleShape2D_joejo")
 
-[node name="Parede73" type="StaticBody2D" parent="Bordas" unique_id=149265171]
+[node name="Parede73" type="StaticBody2D" parent="Bordas" unique_id=59384787]
 position = Vector2(464, 752)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede73" unique_id=288232968]
-shape = SubResource("RectangleShape2D_x1xel")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede73" unique_id=44604176]
+shape = SubResource("RectangleShape2D_cfuyd")
 
-[node name="Parede74" type="StaticBody2D" parent="Bordas" unique_id=906256729]
+[node name="Parede74" type="StaticBody2D" parent="Bordas" unique_id=1780732223]
 position = Vector2(496, 784)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede74" unique_id=1396463119]
-shape = SubResource("RectangleShape2D_4856o")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede74" unique_id=1864666334]
+shape = SubResource("RectangleShape2D_psl1p")
 
-[node name="Parede75" type="StaticBody2D" parent="Bordas" unique_id=144913317]
+[node name="Parede75" type="StaticBody2D" parent="Bordas" unique_id=1253459637]
 position = Vector2(528, 784)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede75" unique_id=1702156979]
-shape = SubResource("RectangleShape2D_lctgo")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede75" unique_id=1433989950]
+shape = SubResource("RectangleShape2D_dcgu7")
 
-[node name="Parede76" type="StaticBody2D" parent="Bordas" unique_id=1129226838]
+[node name="Parede76" type="StaticBody2D" parent="Bordas" unique_id=430969760]
 position = Vector2(560, 784)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede76" unique_id=104838820]
-shape = SubResource("RectangleShape2D_joejo")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede76" unique_id=674915928]
+shape = SubResource("RectangleShape2D_l57rs")
 
-[node name="Parede77" type="StaticBody2D" parent="Bordas" unique_id=2019571715]
+[node name="Parede77" type="StaticBody2D" parent="Bordas" unique_id=371421881]
 position = Vector2(592, 784)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede77" unique_id=1259088793]
-shape = SubResource("RectangleShape2D_cfuyd")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede77" unique_id=1570706289]
+shape = SubResource("RectangleShape2D_jwdnq")
 
-[node name="Parede78" type="StaticBody2D" parent="Bordas" unique_id=289964486]
+[node name="Parede78" type="StaticBody2D" parent="Bordas" unique_id=253695456]
 position = Vector2(624, 784)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede78" unique_id=1283339481]
-shape = SubResource("RectangleShape2D_psl1p")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede78" unique_id=822061089]
+shape = SubResource("RectangleShape2D_vf8cj")
 
-[node name="Parede79" type="StaticBody2D" parent="Bordas" unique_id=1308976559]
+[node name="Parede79" type="StaticBody2D" parent="Bordas" unique_id=1890543814]
 position = Vector2(656, 784)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede79" unique_id=1429963620]
-shape = SubResource("RectangleShape2D_dcgu7")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede79" unique_id=192116018]
+shape = SubResource("RectangleShape2D_sivc4")
 
-[node name="Parede80" type="StaticBody2D" parent="Bordas" unique_id=813243351]
+[node name="Parede80" type="StaticBody2D" parent="Bordas" unique_id=1269428562]
 position = Vector2(688, 784)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede80" unique_id=1696978671]
-shape = SubResource("RectangleShape2D_l57rs")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede80" unique_id=187294280]
+shape = SubResource("RectangleShape2D_ip4xf")
 
-[node name="Parede81" type="StaticBody2D" parent="Bordas" unique_id=133798000]
+[node name="Parede81" type="StaticBody2D" parent="Bordas" unique_id=621821673]
 position = Vector2(720, 784)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede81" unique_id=971718192]
-shape = SubResource("RectangleShape2D_jwdnq")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede81" unique_id=2001327188]
+shape = SubResource("RectangleShape2D_3hs1o")
 
-[node name="Parede82" type="StaticBody2D" parent="Bordas" unique_id=154023861]
+[node name="Parede82" type="StaticBody2D" parent="Bordas" unique_id=1501012233]
 position = Vector2(752, 784)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede82" unique_id=920677530]
-shape = SubResource("RectangleShape2D_vf8cj")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede82" unique_id=1241887881]
+shape = SubResource("RectangleShape2D_xsb3l")
 
-[node name="Parede83" type="StaticBody2D" parent="Bordas" unique_id=878040614]
+[node name="Parede83" type="StaticBody2D" parent="Bordas" unique_id=190466743]
 position = Vector2(784, 784)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede83" unique_id=1041700763]
-shape = SubResource("RectangleShape2D_sivc4")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede83" unique_id=1373127263]
+shape = SubResource("RectangleShape2D_xoh6y")
 
-[node name="Parede84" type="StaticBody2D" parent="Bordas" unique_id=111672862]
+[node name="Parede84" type="StaticBody2D" parent="Bordas" unique_id=341107698]
 position = Vector2(848, 752)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede84" unique_id=1844440376]
-shape = SubResource("RectangleShape2D_ip4xf")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede84" unique_id=480899289]
+shape = SubResource("RectangleShape2D_newxa")
 
-[node name="Parede85" type="StaticBody2D" parent="Bordas" unique_id=448399649]
+[node name="Parede85" type="StaticBody2D" parent="Bordas" unique_id=1043544554]
 position = Vector2(816, 784)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede85" unique_id=1216792078]
-shape = SubResource("RectangleShape2D_3hs1o")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede85" unique_id=1918481240]
+shape = SubResource("RectangleShape2D_panft")
 
-[node name="Parede86" type="StaticBody2D" parent="Bordas" unique_id=649321821]
+[node name="Parede86" type="StaticBody2D" parent="Bordas" unique_id=1371517925]
 position = Vector2(912, 176)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede86" unique_id=1453449100]
-shape = SubResource("RectangleShape2D_xsb3l")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede86" unique_id=757662400]
+shape = SubResource("RectangleShape2D_k6kuc")
 
-[node name="Parede87" type="StaticBody2D" parent="Bordas" unique_id=190825925]
+[node name="Parede87" type="StaticBody2D" parent="Bordas" unique_id=1037124833]
 position = Vector2(944, 144)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede87" unique_id=1390446911]
-shape = SubResource("RectangleShape2D_xoh6y")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede87" unique_id=1450671688]
+shape = SubResource("RectangleShape2D_51rnf")
 
-[node name="Parede88" type="StaticBody2D" parent="Bordas" unique_id=595644946]
+[node name="Parede88" type="StaticBody2D" parent="Bordas" unique_id=484696467]
 position = Vector2(976, 144)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede88" unique_id=302374212]
-shape = SubResource("RectangleShape2D_newxa")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede88" unique_id=958424954]
+shape = SubResource("RectangleShape2D_0c5ta")
 
-[node name="Parede89" type="StaticBody2D" parent="Bordas" unique_id=1912304009]
+[node name="Parede89" type="StaticBody2D" parent="Bordas" unique_id=1188037844]
 position = Vector2(1008, 144)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede89" unique_id=464734505]
-shape = SubResource("RectangleShape2D_panft")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede89" unique_id=1553335654]
+shape = SubResource("RectangleShape2D_cyme4")
 
-[node name="Parede90" type="StaticBody2D" parent="Bordas" unique_id=1863162300]
+[node name="Parede90" type="StaticBody2D" parent="Bordas" unique_id=1320762417]
 position = Vector2(1040, 144)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede90" unique_id=1275955120]
-shape = SubResource("RectangleShape2D_k6kuc")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede90" unique_id=1062962928]
+shape = SubResource("RectangleShape2D_yqjl0")
 
-[node name="Parede91" type="StaticBody2D" parent="Bordas" unique_id=124624480]
+[node name="Parede91" type="StaticBody2D" parent="Bordas" unique_id=2130759993]
 position = Vector2(1104, 144)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede91" unique_id=482404975]
-shape = SubResource("RectangleShape2D_51rnf")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede91" unique_id=2125746354]
+shape = SubResource("RectangleShape2D_dqshj")
 
-[node name="Parede92" type="StaticBody2D" parent="Bordas" unique_id=568363718]
+[node name="Parede92" type="StaticBody2D" parent="Bordas" unique_id=518076026]
 position = Vector2(1168, 176)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede92" unique_id=349772642]
-shape = SubResource("RectangleShape2D_0c5ta")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede92" unique_id=1379960030]
+shape = SubResource("RectangleShape2D_wrxus")
 
-[node name="Parede93" type="StaticBody2D" parent="Bordas" unique_id=186329951]
+[node name="Parede93" type="StaticBody2D" parent="Bordas" unique_id=1487957628]
 position = Vector2(1136, 144)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede93" unique_id=1218712823]
-shape = SubResource("RectangleShape2D_cyme4")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede93" unique_id=1399116096]
+shape = SubResource("RectangleShape2D_ujhun")
 
-[node name="Parede94" type="StaticBody2D" parent="Bordas" unique_id=637852366]
+[node name="Parede94" type="StaticBody2D" parent="Bordas" unique_id=1780395764]
 position = Vector2(912, 208)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede94" unique_id=413454688]
-shape = SubResource("RectangleShape2D_yqjl0")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede94" unique_id=2100645119]
+shape = SubResource("RectangleShape2D_wkfxv")
 
-[node name="Parede95" type="StaticBody2D" parent="Bordas" unique_id=13573197]
+[node name="Parede95" type="StaticBody2D" parent="Bordas" unique_id=2013589435]
 position = Vector2(1168, 208)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede95" unique_id=860307118]
-shape = SubResource("RectangleShape2D_dqshj")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede95" unique_id=156926278]
+shape = SubResource("RectangleShape2D_jlspe")
 
-[node name="Parede96" type="StaticBody2D" parent="Bordas" unique_id=1520854218]
+[node name="Parede96" type="StaticBody2D" parent="Bordas" unique_id=1084525029]
 position = Vector2(1168, 240)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede96" unique_id=154928672]
-shape = SubResource("RectangleShape2D_wrxus")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede96" unique_id=1202129344]
+shape = SubResource("RectangleShape2D_sgfpd")
 
-[node name="Parede97" type="StaticBody2D" parent="Bordas" unique_id=226255216]
+[node name="Parede97" type="StaticBody2D" parent="Bordas" unique_id=749603162]
 position = Vector2(1168, 272)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede97" unique_id=960579161]
-shape = SubResource("RectangleShape2D_ujhun")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede97" unique_id=1939948724]
+shape = SubResource("RectangleShape2D_wk2w3")
 
-[node name="Parede98" type="StaticBody2D" parent="Bordas" unique_id=572987222]
+[node name="Parede98" type="StaticBody2D" parent="Bordas" unique_id=326406967]
 position = Vector2(1168, 304)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede98" unique_id=1261542303]
-shape = SubResource("RectangleShape2D_wkfxv")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede98" unique_id=655490214]
+shape = SubResource("RectangleShape2D_1qpm1")
 
-[node name="Parede99" type="StaticBody2D" parent="Bordas" unique_id=1820702035]
+[node name="Parede99" type="StaticBody2D" parent="Bordas" unique_id=1822091189]
 position = Vector2(1168, 336)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede99" unique_id=106714269]
-shape = SubResource("RectangleShape2D_jlspe")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede99" unique_id=1329882319]
+shape = SubResource("RectangleShape2D_yje43")
 
-[node name="Parede100" type="StaticBody2D" parent="Bordas" unique_id=1387066051]
+[node name="Parede100" type="StaticBody2D" parent="Bordas" unique_id=158257115]
 position = Vector2(1168, 368)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede100" unique_id=641008754]
-shape = SubResource("RectangleShape2D_sgfpd")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede100" unique_id=1026170499]
+shape = SubResource("RectangleShape2D_p1oij")
 
-[node name="Parede101" type="StaticBody2D" parent="Bordas" unique_id=1405543658]
+[node name="Parede101" type="StaticBody2D" parent="Bordas" unique_id=9246121]
 position = Vector2(1168, 400)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede101" unique_id=1919846350]
-shape = SubResource("RectangleShape2D_wk2w3")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede101" unique_id=1588092815]
+shape = SubResource("RectangleShape2D_jh3oi")
 
-[node name="Parede102" type="StaticBody2D" parent="Bordas" unique_id=2073269964]
+[node name="Parede102" type="StaticBody2D" parent="Bordas" unique_id=1984436699]
 position = Vector2(1168, 432)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede102" unique_id=777242580]
-shape = SubResource("RectangleShape2D_1qpm1")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede102" unique_id=1610189865]
+shape = SubResource("RectangleShape2D_jrl1b")
 
-[node name="Parede103" type="StaticBody2D" parent="Bordas" unique_id=1394689052]
+[node name="Parede103" type="StaticBody2D" parent="Bordas" unique_id=1977262375]
 position = Vector2(1168, 464)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede103" unique_id=294715534]
-shape = SubResource("RectangleShape2D_yje43")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede103" unique_id=212463222]
+shape = SubResource("RectangleShape2D_exl50")
 
-[node name="Parede104" type="StaticBody2D" parent="Bordas" unique_id=790483685]
+[node name="Parede104" type="StaticBody2D" parent="Bordas" unique_id=1730573970]
 position = Vector2(1168, 496)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede104" unique_id=1904142967]
-shape = SubResource("RectangleShape2D_p1oij")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede104" unique_id=1206461522]
+shape = SubResource("RectangleShape2D_fds3p")
 
-[node name="Parede105" type="StaticBody2D" parent="Bordas" unique_id=1787941180]
+[node name="Parede105" type="StaticBody2D" parent="Bordas" unique_id=2050147325]
 position = Vector2(1168, 528)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede105" unique_id=1138062215]
-shape = SubResource("RectangleShape2D_jh3oi")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede105" unique_id=1832270096]
+shape = SubResource("RectangleShape2D_1ks04")
 
-[node name="Parede106" type="StaticBody2D" parent="Bordas" unique_id=112512606]
+[node name="Parede106" type="StaticBody2D" parent="Bordas" unique_id=31503123]
 position = Vector2(1168, 560)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede106" unique_id=1162006834]
-shape = SubResource("RectangleShape2D_jrl1b")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede106" unique_id=2019361790]
+shape = SubResource("RectangleShape2D_jdv5t")
 
-[node name="Parede107" type="StaticBody2D" parent="Bordas" unique_id=1447141333]
+[node name="Parede107" type="StaticBody2D" parent="Bordas" unique_id=911661121]
 position = Vector2(1168, 592)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede107" unique_id=1325455614]
-shape = SubResource("RectangleShape2D_exl50")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede107" unique_id=420335206]
+shape = SubResource("RectangleShape2D_fk2q3")
 
-[node name="Parede108" type="StaticBody2D" parent="Bordas" unique_id=2042686438]
+[node name="Parede108" type="StaticBody2D" parent="Bordas" unique_id=2051089404]
 position = Vector2(1168, 624)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede108" unique_id=717642856]
-shape = SubResource("RectangleShape2D_fds3p")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede108" unique_id=1036857237]
+shape = SubResource("RectangleShape2D_r0aiy")
 
-[node name="Parede109" type="StaticBody2D" parent="Bordas" unique_id=1591753569]
+[node name="Parede109" type="StaticBody2D" parent="Bordas" unique_id=1114063390]
 position = Vector2(1168, 656)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede109" unique_id=1682850331]
-shape = SubResource("RectangleShape2D_1ks04")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede109" unique_id=1418687367]
+shape = SubResource("RectangleShape2D_xyag1")
 
-[node name="Parede110" type="StaticBody2D" parent="Bordas" unique_id=584621697]
+[node name="Parede110" type="StaticBody2D" parent="Bordas" unique_id=1893947228]
 position = Vector2(912, 688)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede110" unique_id=55357146]
-shape = SubResource("RectangleShape2D_jdv5t")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede110" unique_id=975730477]
+shape = SubResource("RectangleShape2D_wsqw8")
 
-[node name="Parede111" type="StaticBody2D" parent="Bordas" unique_id=944218521]
+[node name="Parede111" type="StaticBody2D" parent="Bordas" unique_id=270673091]
 position = Vector2(944, 720)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede111" unique_id=1674931993]
-shape = SubResource("RectangleShape2D_fk2q3")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede111" unique_id=328936267]
+shape = SubResource("RectangleShape2D_i0w0c")
 
-[node name="Parede112" type="StaticBody2D" parent="Bordas" unique_id=292374595]
+[node name="Parede112" type="StaticBody2D" parent="Bordas" unique_id=306100040]
 position = Vector2(976, 720)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede112" unique_id=2039542210]
-shape = SubResource("RectangleShape2D_r0aiy")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede112" unique_id=29916981]
+shape = SubResource("RectangleShape2D_so00g")
 
-[node name="Parede113" type="StaticBody2D" parent="Bordas" unique_id=209292253]
+[node name="Parede113" type="StaticBody2D" parent="Bordas" unique_id=88703183]
 position = Vector2(1008, 720)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede113" unique_id=693173171]
-shape = SubResource("RectangleShape2D_xyag1")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede113" unique_id=397534478]
+shape = SubResource("RectangleShape2D_fgmkx")
 
-[node name="Parede114" type="StaticBody2D" parent="Bordas" unique_id=1850151332]
+[node name="Parede114" type="StaticBody2D" parent="Bordas" unique_id=1149556014]
 position = Vector2(1040, 720)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede114" unique_id=2021905181]
-shape = SubResource("RectangleShape2D_wsqw8")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede114" unique_id=1239931753]
+shape = SubResource("RectangleShape2D_12k2n")
 
-[node name="Parede115" type="StaticBody2D" parent="Bordas" unique_id=28896892]
+[node name="Parede115" type="StaticBody2D" parent="Bordas" unique_id=378438595]
 position = Vector2(1072, 720)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede115" unique_id=938997138]
-shape = SubResource("RectangleShape2D_i0w0c")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede115" unique_id=1272520944]
+shape = SubResource("RectangleShape2D_ujjib")
 
-[node name="Parede116" type="StaticBody2D" parent="Bordas" unique_id=264745232]
+[node name="Parede116" type="StaticBody2D" parent="Bordas" unique_id=1899036251]
 position = Vector2(1104, 720)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede116" unique_id=1776627813]
-shape = SubResource("RectangleShape2D_so00g")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede116" unique_id=676123985]
+shape = SubResource("RectangleShape2D_h5pg6")
 
-[node name="Parede117" type="StaticBody2D" parent="Bordas" unique_id=1548715663]
+[node name="Parede117" type="StaticBody2D" parent="Bordas" unique_id=1767679704]
 position = Vector2(1168, 688)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede117" unique_id=179796177]
-shape = SubResource("RectangleShape2D_fgmkx")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede117" unique_id=656148316]
+shape = SubResource("RectangleShape2D_e1vud")
 
-[node name="Parede118" type="StaticBody2D" parent="Bordas" unique_id=635338209]
+[node name="Parede118" type="StaticBody2D" parent="Bordas" unique_id=1916584510]
 position = Vector2(1136, 720)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede118" unique_id=1436580086]
-shape = SubResource("RectangleShape2D_12k2n")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede118" unique_id=893135141]
+shape = SubResource("RectangleShape2D_jytkl")
 
-[node name="Parede119" type="StaticBody2D" parent="Bordas" unique_id=1056381512]
+[node name="Parede119" type="StaticBody2D" parent="Bordas" unique_id=762502939]
 position = Vector2(176, 400)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede119" unique_id=1995995852]
-shape = SubResource("RectangleShape2D_ujjib")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede119" unique_id=1663566641]
+shape = SubResource("RectangleShape2D_k2sdb")
 
-[node name="Parede120" type="StaticBody2D" parent="Bordas" unique_id=1200873595]
+[node name="Parede120" type="StaticBody2D" parent="Bordas" unique_id=1923618624]
 position = Vector2(304, 400)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede120" unique_id=1203318062]
-shape = SubResource("RectangleShape2D_h5pg6")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede120" unique_id=1780136482]
+shape = SubResource("RectangleShape2D_n31on")
 
-[node name="Parede121" type="StaticBody2D" parent="Bordas" unique_id=2040581649]
+[node name="Parede121" type="StaticBody2D" parent="Bordas" unique_id=1280185431]
 position = Vector2(176, 432)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede121" unique_id=1627036499]
-shape = SubResource("RectangleShape2D_e1vud")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede121" unique_id=1785849247]
+shape = SubResource("RectangleShape2D_au8vj")
 
-[node name="Parede122" type="StaticBody2D" parent="Bordas" unique_id=311310617]
+[node name="Parede122" type="StaticBody2D" parent="Bordas" unique_id=1179980628]
 position = Vector2(304, 432)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede122" unique_id=1025404037]
-shape = SubResource("RectangleShape2D_jytkl")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede122" unique_id=339393920]
+shape = SubResource("RectangleShape2D_sfidk")
 
-[node name="Parede123" type="StaticBody2D" parent="Bordas" unique_id=2134953742]
+[node name="Parede123" type="StaticBody2D" parent="Bordas" unique_id=1662118835]
 position = Vector2(176, 464)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede123" unique_id=1292295807]
-shape = SubResource("RectangleShape2D_k2sdb")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede123" unique_id=1716747678]
+shape = SubResource("RectangleShape2D_gfd2m")
 
-[node name="Parede124" type="StaticBody2D" parent="Bordas" unique_id=1331395602]
+[node name="Parede124" type="StaticBody2D" parent="Bordas" unique_id=1839946556]
 position = Vector2(304, 464)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede124" unique_id=1128792479]
-shape = SubResource("RectangleShape2D_n31on")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede124" unique_id=2023099980]
+shape = SubResource("RectangleShape2D_y4awu")
 
-[node name="Parede125" type="StaticBody2D" parent="Bordas" unique_id=536172927]
+[node name="Parede125" type="StaticBody2D" parent="Bordas" unique_id=1872033733]
 position = Vector2(176, 496)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede125" unique_id=2099072854]
-shape = SubResource("RectangleShape2D_au8vj")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede125" unique_id=1872423273]
+shape = SubResource("RectangleShape2D_3y1wy")
 
-[node name="Parede126" type="StaticBody2D" parent="Bordas" unique_id=1045942299]
+[node name="Parede126" type="StaticBody2D" parent="Bordas" unique_id=824510655]
 position = Vector2(304, 496)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede126" unique_id=1153013008]
-shape = SubResource("RectangleShape2D_sfidk")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede126" unique_id=746649138]
+shape = SubResource("RectangleShape2D_4oj8e")
 
-[node name="Parede127" type="StaticBody2D" parent="Bordas" unique_id=1670370489]
+[node name="Parede127" type="StaticBody2D" parent="Bordas" unique_id=2134214426]
 position = Vector2(880, 688)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede127" unique_id=123497993]
-shape = SubResource("RectangleShape2D_gfd2m")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede127" unique_id=428354973]
+shape = SubResource("RectangleShape2D_3g8j3")
 
-[node name="Parede128" type="StaticBody2D" parent="Bordas" unique_id=836022169]
+[node name="Parede128" type="StaticBody2D" parent="Bordas" unique_id=1391667895]
 position = Vector2(880, 208)
 collision_mask = 6
 metadata/altura = -99
 
-[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede128" unique_id=130273820]
-shape = SubResource("RectangleShape2D_y4awu")
+[node name="Colisao" type="CollisionShape2D" parent="Bordas/Parede128" unique_id=1280432578]
+shape = SubResource("RectangleShape2D_fdh0n")
 
-[node name="ArquiteturaEDecoracao" type="Node2D" parent="." unique_id=334007766]
+[node name="ArquiteturaEDecoracao" type="Node2D" parent="." unique_id=2046653674]
 
-[node name="Face31_0_9_0" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=889452248]
+[node name="Face31_0_9_0" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=432592014]
 modulate = Color(0.5529412, 0.58431375, 0.6745098, 1)
 position = Vector2(1008, 312)
 scale = Vector2(2, 1)
-texture = SubResource("AtlasTexture_3y1wy")
+texture = SubResource("AtlasTexture_n7syk")
 
-[node name="Face32_0_9_0" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=1303674662]
+[node name="Face32_0_9_0" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=1598388379]
 modulate = Color(0.5529412, 0.58431375, 0.6745098, 1)
 position = Vector2(1040, 312)
 scale = Vector2(2, 1)
-texture = SubResource("AtlasTexture_4oj8e")
+texture = SubResource("AtlasTexture_dfj6d")
 
-[node name="Face34_0_9_0" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=1200395247]
+[node name="Face34_0_9_0" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=2073472804]
 modulate = Color(0.5529412, 0.58431375, 0.6745098, 1)
 position = Vector2(1104, 312)
 scale = Vector2(2, 1)
-texture = SubResource("AtlasTexture_3g8j3")
+texture = SubResource("AtlasTexture_ibjyw")
 
-[node name="Face35_0_9_0" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=1419256866]
+[node name="Face35_0_9_0" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=1322282051]
 modulate = Color(0.5529412, 0.58431375, 0.6745098, 1)
 position = Vector2(1136, 312)
 scale = Vector2(2, 1)
-texture = SubResource("AtlasTexture_fdh0n")
+texture = SubResource("AtlasTexture_qi8ea")
 
-[node name="Face30_0_10_0" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=2127709321]
+[node name="Face30_0_10_0" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=1280396551]
 modulate = Color(0.5529412, 0.58431375, 0.6745098, 1)
 position = Vector2(976, 344)
 scale = Vector2(2, 1)
-texture = SubResource("AtlasTexture_n7syk")
+texture = SubResource("AtlasTexture_nx4wy")
 
-[node name="Escada[30_0, 10_0]" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=2095499236]
+[node name="Escada[30_0, 10_0]" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=1143701417]
 position = Vector2(976, 320)
 scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_dfj6d")
+texture = SubResource("AtlasTexture_adwqy")
 
-[node name="Tocha0_4_0" type="AnimatedSprite2D" parent="ArquiteturaEDecoracao" unique_id=460538809]
+[node name="Tocha0_4_0" type="AnimatedSprite2D" parent="ArquiteturaEDecoracao" unique_id=1688334676]
 position = Vector2(144, 84)
-scale = Vector2(1.2, 1.2)
-sprite_frames = SubResource("SpriteFrames_b3f5u")
+sprite_frames = SubResource("SpriteFrames_k8rtp")
 autoplay = "default"
 
-[node name="Luz0_4_0" type="PointLight2D" parent="ArquiteturaEDecoracao" unique_id=320320446]
+[node name="Luz0_4_0" type="PointLight2D" parent="ArquiteturaEDecoracao" unique_id=376675515]
 position = Vector2(144, 100)
 energy = 0.7
-texture = SubResource("GradientTexture2D_n7cul")
+texture = SubResource("GradientTexture2D_qs1bg")
 
-[node name="Tocha0_9_0" type="AnimatedSprite2D" parent="ArquiteturaEDecoracao" unique_id=1426614788]
+[node name="Tocha0_9_0" type="AnimatedSprite2D" parent="ArquiteturaEDecoracao" unique_id=1039310965]
 position = Vector2(304, 84)
-scale = Vector2(1.2, 1.2)
-sprite_frames = SubResource("SpriteFrames_ygjd0")
+sprite_frames = SubResource("SpriteFrames_o8yod")
 autoplay = "default"
 
-[node name="Luz0_9_0" type="PointLight2D" parent="ArquiteturaEDecoracao" unique_id=1089300963]
+[node name="Luz0_9_0" type="PointLight2D" parent="ArquiteturaEDecoracao" unique_id=224041495]
 position = Vector2(304, 100)
 energy = 0.7
-texture = SubResource("GradientTexture2D_n7cul")
+texture = SubResource("GradientTexture2D_qs1bg")
 
-[node name="Arco0" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=675090910]
+[node name="Arco0" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=34035510]
 position = Vector2(240, 80)
-scale = Vector2(1.3, 1.3)
-texture = SubResource("AtlasTexture_dm7rs")
+texture = SubResource("AtlasTexture_yfubi")
 
-[node name="SombraItem0_0" type="Polygon2D" parent="ArquiteturaEDecoracao" unique_id=413493917]
-position = Vector2(112, 304)
-color = Color(0.06, 0.08, 0.13, 0.3)
-polygon = PackedVector2Array(-12, -4, 10, -4, 14, 0, 10, 4, -10, 4, -14, 0)
-
-[node name="Tesouro0" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=177893596]
-position = Vector2(112, 288)
-scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_4fo1t")
-metadata/celula = Vector2i(3, 9)
-metadata/altura = 0
-
-[node name="SombraItem0_1" type="Polygon2D" parent="ArquiteturaEDecoracao" unique_id=1901826152]
-position = Vector2(336, 304)
-color = Color(0.06, 0.08, 0.13, 0.3)
-polygon = PackedVector2Array(-12, -4, 10, -4, 14, 0, 10, 4, -10, 4, -14, 0)
-
-[node name="Urna0" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=1595232168]
-position = Vector2(336, 288)
-scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_ogqxc")
-metadata/celula = Vector2i(10, 9)
-metadata/altura = 0
-
-[node name="Tocha1_4_0" type="AnimatedSprite2D" parent="ArquiteturaEDecoracao" unique_id=285095094]
+[node name="Tocha1_4_0" type="AnimatedSprite2D" parent="ArquiteturaEDecoracao" unique_id=1048462300]
 position = Vector2(144, 532)
-scale = Vector2(1.2, 1.2)
-sprite_frames = SubResource("SpriteFrames_dwhyw")
+sprite_frames = SubResource("SpriteFrames_bvdfr")
 autoplay = "default"
 
-[node name="Luz1_4_0" type="PointLight2D" parent="ArquiteturaEDecoracao" unique_id=1816309132]
+[node name="Luz1_4_0" type="PointLight2D" parent="ArquiteturaEDecoracao" unique_id=54177878]
 position = Vector2(144, 548)
 energy = 0.7
-texture = SubResource("GradientTexture2D_n7cul")
+texture = SubResource("GradientTexture2D_qs1bg")
 
-[node name="Tocha1_9_0" type="AnimatedSprite2D" parent="ArquiteturaEDecoracao" unique_id=927790885]
+[node name="Tocha1_9_0" type="AnimatedSprite2D" parent="ArquiteturaEDecoracao" unique_id=308124919]
 position = Vector2(304, 532)
-scale = Vector2(1.2, 1.2)
-sprite_frames = SubResource("SpriteFrames_xwcel")
+sprite_frames = SubResource("SpriteFrames_5am8b")
 autoplay = "default"
 
-[node name="Luz1_9_0" type="PointLight2D" parent="ArquiteturaEDecoracao" unique_id=880464819]
+[node name="Luz1_9_0" type="PointLight2D" parent="ArquiteturaEDecoracao" unique_id=606581477]
 position = Vector2(304, 548)
 energy = 0.7
-texture = SubResource("GradientTexture2D_n7cul")
+texture = SubResource("GradientTexture2D_qs1bg")
 
-[node name="Arco1" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=1561341007]
+[node name="Arco1" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=1111703376]
 position = Vector2(112, 528)
-scale = Vector2(1.3, 1.3)
-texture = SubResource("AtlasTexture_1lgiu")
+texture = SubResource("AtlasTexture_4h6g0")
 
-[node name="SombraItem1_0" type="Polygon2D" parent="ArquiteturaEDecoracao" unique_id=1810175317]
+[node name="SombraItem1_1" type="Polygon2D" parent="ArquiteturaEDecoracao" unique_id=1005771645]
 position = Vector2(336, 592)
 color = Color(0.06, 0.08, 0.13, 0.3)
 polygon = PackedVector2Array(-12, -4, 10, -4, 14, 0, 10, 4, -10, 4, -14, 0)
 
-[node name="Tesouro1" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=2026120215]
+[node name="Urna1" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=414664030]
 position = Vector2(336, 576)
 scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_5am8b")
+texture = SubResource("AtlasTexture_keo3b")
 metadata/celula = Vector2i(10, 18)
 metadata/altura = 0
 
-[node name="Tocha2_18_0" type="AnimatedSprite2D" parent="ArquiteturaEDecoracao" unique_id=1697490163]
+[node name="SuporteDePedra" type="Node2D" parent="ArquiteturaEDecoracao/Urna1" unique_id=575256387]
+script = ExtResource("7_dm1hb")
+
+[node name="Tocha2_18_0" type="AnimatedSprite2D" parent="ArquiteturaEDecoracao" unique_id=1319290035]
 position = Vector2(592, 84)
-scale = Vector2(1.2, 1.2)
-sprite_frames = SubResource("SpriteFrames_qjbem")
+sprite_frames = SubResource("SpriteFrames_p7vxa")
 autoplay = "default"
 
-[node name="Luz2_18_0" type="PointLight2D" parent="ArquiteturaEDecoracao" unique_id=609852541]
+[node name="Luz2_18_0" type="PointLight2D" parent="ArquiteturaEDecoracao" unique_id=1004627114]
 position = Vector2(592, 100)
 energy = 0.7
-texture = SubResource("GradientTexture2D_n7cul")
+texture = SubResource("GradientTexture2D_qs1bg")
 
-[node name="Tocha2_23_0" type="AnimatedSprite2D" parent="ArquiteturaEDecoracao" unique_id=938014828]
+[node name="Tocha2_23_0" type="AnimatedSprite2D" parent="ArquiteturaEDecoracao" unique_id=199915272]
 position = Vector2(752, 84)
-scale = Vector2(1.2, 1.2)
-sprite_frames = SubResource("SpriteFrames_l6xvj")
+sprite_frames = SubResource("SpriteFrames_wgfmm")
 autoplay = "default"
 
-[node name="Luz2_23_0" type="PointLight2D" parent="ArquiteturaEDecoracao" unique_id=214214160]
+[node name="Luz2_23_0" type="PointLight2D" parent="ArquiteturaEDecoracao" unique_id=541221409]
 position = Vector2(752, 100)
 energy = 0.7
-texture = SubResource("GradientTexture2D_n7cul")
+texture = SubResource("GradientTexture2D_qs1bg")
 
-[node name="Arco2" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=930850324]
+[node name="Arco2" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=557749082]
 position = Vector2(688, 80)
-scale = Vector2(1.3, 1.3)
-texture = SubResource("AtlasTexture_koy51")
+texture = SubResource("AtlasTexture_2knfm")
 
-[node name="SombraItem2_0" type="Polygon2D" parent="ArquiteturaEDecoracao" unique_id=852654341]
+[node name="SombraItem2_1" type="Polygon2D" parent="ArquiteturaEDecoracao" unique_id=801492497]
 position = Vector2(784, 144)
 color = Color(0.06, 0.08, 0.13, 0.3)
 polygon = PackedVector2Array(-12, -4, 10, -4, 14, 0, 10, 4, -10, 4, -14, 0)
 
-[node name="Tesouro2" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=582593970]
+[node name="Urna2" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=1829935766]
 position = Vector2(784, 128)
 scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_wgfmm")
+texture = SubResource("AtlasTexture_wvfhn")
 metadata/celula = Vector2i(24, 4)
 metadata/altura = 0
 
-[node name="SombraItem2_1" type="Polygon2D" parent="ArquiteturaEDecoracao" unique_id=1240218045]
-position = Vector2(560, 272)
-color = Color(0.06, 0.08, 0.13, 0.3)
-polygon = PackedVector2Array(-12, -4, 10, -4, 14, 0, 10, 4, -10, 4, -14, 0)
+[node name="SuporteDePedra" type="Node2D" parent="ArquiteturaEDecoracao/Urna2" unique_id=1176455608]
+script = ExtResource("7_dm1hb")
 
-[node name="Urna2" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=807632787]
-position = Vector2(560, 256)
-scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_2knfm")
-metadata/celula = Vector2i(17, 8)
-metadata/altura = 0
-
-[node name="SombraItem3_0" type="Polygon2D" parent="ArquiteturaEDecoracao" unique_id=1859692019]
+[node name="SombraItem3_1" type="Polygon2D" parent="ArquiteturaEDecoracao" unique_id=1318978253]
 position = Vector2(784, 592)
 color = Color(0.06, 0.08, 0.13, 0.3)
 polygon = PackedVector2Array(-12, -4, 10, -4, 14, 0, 10, 4, -10, 4, -14, 0)
 
-[node name="Tesouro3" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=1660975948]
+[node name="Urna3" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=653554692]
 position = Vector2(784, 576)
 scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_wvfhn")
+texture = SubResource("AtlasTexture_1310w")
 metadata/celula = Vector2i(24, 18)
 metadata/altura = 0
 
-[node name="SombraItem3_1" type="Polygon2D" parent="ArquiteturaEDecoracao" unique_id=250703820]
-position = Vector2(528, 720)
-color = Color(0.06, 0.08, 0.13, 0.3)
-polygon = PackedVector2Array(-12, -4, 10, -4, 14, 0, 10, 4, -10, 4, -14, 0)
+[node name="SuporteDePedra" type="Node2D" parent="ArquiteturaEDecoracao/Urna3" unique_id=1299286687]
+script = ExtResource("7_dm1hb")
 
-[node name="Urna3" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=1984382458]
-position = Vector2(528, 704)
-scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_1310w")
-metadata/celula = Vector2i(16, 22)
-metadata/altura = 0
-
-[node name="Tocha4_31_0" type="AnimatedSprite2D" parent="ArquiteturaEDecoracao" unique_id=844215852]
+[node name="Tocha4_31_0" type="AnimatedSprite2D" parent="ArquiteturaEDecoracao" unique_id=1661544960]
 position = Vector2(1008, 148)
-scale = Vector2(1.2, 1.2)
 sprite_frames = SubResource("SpriteFrames_4du86")
 autoplay = "default"
 
-[node name="Luz4_31_0" type="PointLight2D" parent="ArquiteturaEDecoracao" unique_id=1957839108]
+[node name="Luz4_31_0" type="PointLight2D" parent="ArquiteturaEDecoracao" unique_id=1576262483]
 position = Vector2(1008, 164)
 energy = 0.7
-texture = SubResource("GradientTexture2D_n7cul")
+texture = SubResource("GradientTexture2D_qs1bg")
 
-[node name="Tocha4_33_0" type="AnimatedSprite2D" parent="ArquiteturaEDecoracao" unique_id=495376814]
+[node name="Tocha4_33_0" type="AnimatedSprite2D" parent="ArquiteturaEDecoracao" unique_id=81597180]
 position = Vector2(1072, 148)
-scale = Vector2(1.2, 1.2)
 sprite_frames = SubResource("SpriteFrames_dv75i")
 autoplay = "default"
 
-[node name="Luz4_33_0" type="PointLight2D" parent="ArquiteturaEDecoracao" unique_id=901871713]
+[node name="Luz4_33_0" type="PointLight2D" parent="ArquiteturaEDecoracao" unique_id=2076141608]
 position = Vector2(1072, 164)
 energy = 0.7
-texture = SubResource("GradientTexture2D_n7cul")
+texture = SubResource("GradientTexture2D_qs1bg")
 
-[node name="Arco4" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=909191724]
+[node name="Arco4" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=1051675405]
 position = Vector2(1040, 144)
-scale = Vector2(1.3, 1.3)
 texture = SubResource("AtlasTexture_ksc8s")
 
-[node name="SombraItem4_0" type="Polygon2D" parent="ArquiteturaEDecoracao" unique_id=580756478]
+[node name="SombraItem4_1" type="Polygon2D" parent="ArquiteturaEDecoracao" unique_id=385936390]
 position = Vector2(976, 192)
 color = Color(0.06, 0.08, 0.13, 0.3)
 polygon = PackedVector2Array(-12, -4, 10, -4, 14, 0, 10, 4, -10, 4, -14, 0)
 
-[node name="Tesouro4" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=178751536]
+[node name="Urna4" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=380732242]
 position = Vector2(976, 176)
 scale = Vector2(2, 2)
 texture = SubResource("AtlasTexture_4d2xw")
 metadata/celula = Vector2i(30, 6)
 metadata/altura = 1
 
-[node name="SombraItem4_1" type="Polygon2D" parent="ArquiteturaEDecoracao" unique_id=340970834]
-position = Vector2(976, 656)
-color = Color(0.06, 0.08, 0.13, 0.3)
-polygon = PackedVector2Array(-12, -4, 10, -4, 14, 0, 10, 4, -10, 4, -14, 0)
+[node name="SuporteDePedra" type="Node2D" parent="ArquiteturaEDecoracao/Urna4" unique_id=648840440]
+script = ExtResource("7_dm1hb")
 
-[node name="Urna4" type="Sprite2D" parent="ArquiteturaEDecoracao" unique_id=799877183]
-position = Vector2(976, 640)
-scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_8we7i")
-metadata/celula = Vector2i(30, 20)
-metadata/altura = 0
-
-[node name="LuzAmbiente" type="CanvasModulate" parent="." unique_id=1055277157]
+[node name="LuzAmbiente" type="CanvasModulate" parent="." unique_id=739169854]
 color = Color(0.78, 0.81, 0.9, 1)
 
-[node name="Ambiente" type="Node2D" parent="." unique_id=591746037]
-script = ExtResource("7_txywo")
+[node name="AcabamentoJardim" type="Node2D" parent="." unique_id=257492650]
+script = ExtResource("8_iv8fb")
 
-[node name="Objetos" type="Node2D" parent="." unique_id=1904588592]
+[node name="Ambiente" type="Node2D" parent="." unique_id=1883967355]
+script = ExtResource("9_j2663")
 
-[node name="PlacaA" type="StaticBody2D" parent="Objetos" unique_id=771225583]
-position = Vector2(208, 592)
-script = ExtResource("8_cb4mh")
+[node name="Objetos" type="Node2D" parent="." unique_id=1742582636]
+
+[node name="PlacaA" type="StaticBody2D" parent="Objetos" unique_id=1199460224]
+position = Vector2(144, 592)
+script = ExtResource("10_wbam1")
 config = {
 "id": "PlacaA",
 "personagem": "Lucas",
 "sinal": "placa_a",
 "tipo": "placa",
-"x": 6.0,
+"x": 4.0,
 "y": 18.0,
 "z": 0.0
 }
 
-[node name="Colisao" type="CollisionShape2D" parent="Objetos/PlacaA" unique_id=733350549]
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/PlacaA" unique_id=1978139618]
 position = Vector2(0, -8)
-shape = SubResource("RectangleShape2D_d4lyu")
+shape = SubResource("RectangleShape2D_8we7i")
 
-[node name="Cristal" type="StaticBody2D" parent="Objetos" unique_id=441664232]
-position = Vector2(336, 240)
-script = ExtResource("8_cb4mh")
+[node name="Cristal" type="StaticBody2D" parent="Objetos" unique_id=823830996]
+position = Vector2(304, 176)
+script = ExtResource("10_wbam1")
 config = {
 "depende": ["placa_a"],
 "id": "Cristal",
+"ricochetes": 1.0,
 "sinal": "cristal",
 "tipo": "receptor",
-"x": 10.0,
-"y": 7.0,
+"x": 9.0,
+"y": 5.0,
 "z": 0.0
 }
 
-[node name="Colisao" type="CollisionShape2D" parent="Objetos/Cristal" unique_id=1932457460]
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/Cristal" unique_id=1534957425]
 position = Vector2(0, -8)
-shape = SubResource("RectangleShape2D_oj7dg")
+shape = SubResource("RectangleShape2D_d4lyu")
 
-[node name="Saida" type="StaticBody2D" parent="Objetos" unique_id=69654443]
+[node name="Saida" type="StaticBody2D" parent="Objetos" unique_id=1472104653]
 position = Vector2(1136, 176)
-script = ExtResource("8_cb4mh")
+script = ExtResource("10_wbam1")
 config = {
 "id": "Saida",
 "tipo": "saida",
@@ -2339,45 +2274,45 @@ config = {
 "z": 1.0
 }
 
-[node name="Colisao" type="CollisionShape2D" parent="Objetos/Saida" unique_id=862622518]
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/Saida" unique_id=2093152430]
 position = Vector2(0, -8)
-shape = SubResource("RectangleShape2D_xyn8a")
+shape = SubResource("RectangleShape2D_oj7dg")
 
-[node name="PlacaInicio" type="StaticBody2D" parent="Objetos" unique_id=410665428]
-position = Vector2(144, 624)
-script = ExtResource("8_cb4mh")
+[node name="PlacaInicio" type="StaticBody2D" parent="Objetos" unique_id=291045741]
+position = Vector2(112, 656)
+script = ExtResource("10_wbam1")
 config = {
 "id": "PlacaInicio",
-"texto": "F1 mostra os controles. Tab trava a mira. V mostra o mapa completo.",
+"texto": "Lucas fica na placa desta sala. Otto segue pelo corredor ao norte e usa o espelho da sala de cima para atingir o cristal.",
 "tipo": "placa_texto",
-"x": 4.0,
-"y": 19.0,
+"x": 3.0,
+"y": 20.0,
 "z": 0.0
 }
 
-[node name="Colisao" type="CollisionShape2D" parent="Objetos/PlacaInicio" unique_id=1645994879]
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/PlacaInicio" unique_id=1753617461]
 position = Vector2(0, -8)
-shape = SubResource("RectangleShape2D_48fat")
+shape = SubResource("RectangleShape2D_xyn8a")
 
-[node name="PlacaRampa" type="StaticBody2D" parent="Objetos" unique_id=1044057565]
+[node name="PlacaRampa" type="StaticBody2D" parent="Objetos" unique_id=663213620]
 position = Vector2(944, 432)
-script = ExtResource("8_cb4mh")
+script = ExtResource("10_wbam1")
 config = {
 "id": "PlacaRampa",
-"texto": "As escadas mudam a altura. Saltem a fenda do terraço para alcançar a porta.",
+"texto": "Subam pela escada de pedra. No terraço, usem F (Lucas) ou P (Otto) com direção para saltar a fenda.",
 "tipo": "placa_texto",
 "x": 29.0,
 "y": 13.0,
 "z": 0.0
 }
 
-[node name="Colisao" type="CollisionShape2D" parent="Objetos/PlacaRampa" unique_id=1671951616]
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/PlacaRampa" unique_id=803902252]
 position = Vector2(0, -8)
-shape = SubResource("RectangleShape2D_yndhy")
+shape = SubResource("RectangleShape2D_48fat")
 
-[node name="DecorInterativa0" type="StaticBody2D" parent="Objetos" unique_id=33805252]
+[node name="DecorInterativa0" type="StaticBody2D" parent="Objetos" unique_id=607477616]
 position = Vector2(112, 144)
-script = ExtResource("8_cb4mh")
+script = ExtResource("10_wbam1")
 config = {
 "id": "DecorInterativa0",
 "tipo": "barril",
@@ -2386,77 +2321,77 @@ config = {
 "z": 0.0
 }
 
-[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa0" unique_id=10786526]
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa0" unique_id=894803942]
 position = Vector2(0, -8)
-shape = SubResource("RectangleShape2D_gu1ge")
+shape = SubResource("RectangleShape2D_yndhy")
 
-[node name="AreaDano" type="Area2D" parent="Objetos/DecorInterativa0" unique_id=1421834071]
+[node name="AreaDano" type="Area2D" parent="Objetos/DecorInterativa0" unique_id=2090688121]
 collision_layer = 16
 collision_mask = 0
 
-[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa0/AreaDano" unique_id=1292719031]
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa0/AreaDano" unique_id=656807667]
 position = Vector2(0, -8)
-shape = SubResource("RectangleShape2D_gu1ge")
+shape = SubResource("RectangleShape2D_yndhy")
 
-[node name="Sprite" type="Sprite2D" parent="Objetos/DecorInterativa0" unique_id=920988035]
+[node name="Sprite" type="Sprite2D" parent="Objetos/DecorInterativa0" unique_id=917239760]
 position = Vector2(0, -16)
 scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_gov4h")
+texture = SubResource("AtlasTexture_gu1ge")
 
-[node name="DecorInterativa1" type="StaticBody2D" parent="Objetos" unique_id=1147160272]
-position = Vector2(336, 144)
-script = ExtResource("8_cb4mh")
+[node name="DecorInterativa1" type="StaticBody2D" parent="Objetos" unique_id=122987383]
+position = Vector2(336, 336)
+script = ExtResource("10_wbam1")
 config = {
 "id": "DecorInterativa1",
 "tipo": "barril",
 "x": 10.0,
-"y": 4.0,
+"y": 10.0,
 "z": 0.0
 }
 
-[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa1" unique_id=860891556]
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa1" unique_id=1612257399]
 position = Vector2(0, -8)
-shape = SubResource("RectangleShape2D_ecxai")
+shape = SubResource("RectangleShape2D_gov4h")
 
-[node name="AreaDano" type="Area2D" parent="Objetos/DecorInterativa1" unique_id=1268622752]
+[node name="AreaDano" type="Area2D" parent="Objetos/DecorInterativa1" unique_id=925798271]
 collision_layer = 16
 collision_mask = 0
 
-[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa1/AreaDano" unique_id=357324292]
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa1/AreaDano" unique_id=1228371520]
 position = Vector2(0, -8)
-shape = SubResource("RectangleShape2D_ecxai")
+shape = SubResource("RectangleShape2D_gov4h")
 
-[node name="Sprite" type="Sprite2D" parent="Objetos/DecorInterativa1" unique_id=568427112]
+[node name="Sprite" type="Sprite2D" parent="Objetos/DecorInterativa1" unique_id=1701816671]
 position = Vector2(0, -16)
 scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_x8ch6")
+texture = SubResource("AtlasTexture_ecxai")
 
-[node name="DecorInterativa2" type="StaticBody2D" parent="Objetos" unique_id=1504913883]
-position = Vector2(336, 720)
-script = ExtResource("8_cb4mh")
+[node name="DecorInterativa2" type="StaticBody2D" parent="Objetos" unique_id=211639709]
+position = Vector2(336, 752)
+script = ExtResource("10_wbam1")
 config = {
 "id": "DecorInterativa2",
 "tipo": "planta",
 "x": 10.0,
-"y": 22.0,
+"y": 23.0,
 "z": 0.0
 }
 
-[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa2" unique_id=439022395]
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa2" unique_id=1963537243]
 position = Vector2(0, -8)
-shape = SubResource("RectangleShape2D_bqc1q")
+shape = SubResource("RectangleShape2D_x8ch6")
 
-[node name="AreaDano" type="Area2D" parent="Objetos/DecorInterativa2" unique_id=1893581852]
+[node name="AreaDano" type="Area2D" parent="Objetos/DecorInterativa2" unique_id=277206804]
 collision_layer = 16
 collision_mask = 0
 
-[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa2/AreaDano" unique_id=928930473]
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa2/AreaDano" unique_id=554661707]
 position = Vector2(0, -8)
-shape = SubResource("RectangleShape2D_bqc1q")
+shape = SubResource("RectangleShape2D_x8ch6")
 
-[node name="DecorInterativa3" type="StaticBody2D" parent="Objetos" unique_id=1444467963]
+[node name="DecorInterativa3" type="StaticBody2D" parent="Objetos" unique_id=1873321914]
 position = Vector2(560, 144)
-script = ExtResource("8_cb4mh")
+script = ExtResource("10_wbam1")
 config = {
 "id": "DecorInterativa3",
 "tipo": "barril",
@@ -2465,26 +2400,26 @@ config = {
 "z": 0.0
 }
 
-[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa3" unique_id=1540797394]
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa3" unique_id=1195610147]
 position = Vector2(0, -8)
-shape = SubResource("RectangleShape2D_3ndog")
+shape = SubResource("RectangleShape2D_bqc1q")
 
-[node name="AreaDano" type="Area2D" parent="Objetos/DecorInterativa3" unique_id=1300021059]
+[node name="AreaDano" type="Area2D" parent="Objetos/DecorInterativa3" unique_id=2144208875]
 collision_layer = 16
 collision_mask = 0
 
-[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa3/AreaDano" unique_id=820876716]
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa3/AreaDano" unique_id=1468623724]
 position = Vector2(0, -8)
-shape = SubResource("RectangleShape2D_3ndog")
+shape = SubResource("RectangleShape2D_bqc1q")
 
-[node name="Sprite" type="Sprite2D" parent="Objetos/DecorInterativa3" unique_id=1002565730]
+[node name="Sprite" type="Sprite2D" parent="Objetos/DecorInterativa3" unique_id=1940304271]
 position = Vector2(0, -16)
 scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_w1tvo")
+texture = SubResource("AtlasTexture_3ndog")
 
-[node name="DecorInterativa4" type="StaticBody2D" parent="Objetos" unique_id=947185791]
+[node name="DecorInterativa4" type="StaticBody2D" parent="Objetos" unique_id=1072682760]
 position = Vector2(784, 272)
-script = ExtResource("8_cb4mh")
+script = ExtResource("10_wbam1")
 config = {
 "id": "DecorInterativa4",
 "tipo": "barril",
@@ -2493,26 +2428,26 @@ config = {
 "z": 0.0
 }
 
-[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa4" unique_id=1752997965]
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa4" unique_id=246923394]
 position = Vector2(0, -8)
-shape = SubResource("RectangleShape2D_msk6q")
+shape = SubResource("RectangleShape2D_w1tvo")
 
-[node name="AreaDano" type="Area2D" parent="Objetos/DecorInterativa4" unique_id=21189227]
+[node name="AreaDano" type="Area2D" parent="Objetos/DecorInterativa4" unique_id=976948602]
 collision_layer = 16
 collision_mask = 0
 
-[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa4/AreaDano" unique_id=1798449228]
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa4/AreaDano" unique_id=1840236308]
 position = Vector2(0, -8)
-shape = SubResource("RectangleShape2D_msk6q")
+shape = SubResource("RectangleShape2D_w1tvo")
 
-[node name="Sprite" type="Sprite2D" parent="Objetos/DecorInterativa4" unique_id=409436958]
+[node name="Sprite" type="Sprite2D" parent="Objetos/DecorInterativa4" unique_id=1928673872]
 position = Vector2(0, -16)
 scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_1cwo5")
+texture = SubResource("AtlasTexture_msk6q")
 
-[node name="DecorInterativa5" type="StaticBody2D" parent="Objetos" unique_id=711771263]
+[node name="DecorInterativa5" type="StaticBody2D" parent="Objetos" unique_id=1109846244]
 position = Vector2(528, 592)
-script = ExtResource("8_cb4mh")
+script = ExtResource("10_wbam1")
 config = {
 "id": "DecorInterativa5",
 "tipo": "planta",
@@ -2521,21 +2456,21 @@ config = {
 "z": 0.0
 }
 
-[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa5" unique_id=897428559]
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa5" unique_id=600338429]
 position = Vector2(0, -8)
-shape = SubResource("RectangleShape2D_eyllc")
+shape = SubResource("RectangleShape2D_1cwo5")
 
-[node name="AreaDano" type="Area2D" parent="Objetos/DecorInterativa5" unique_id=428993727]
+[node name="AreaDano" type="Area2D" parent="Objetos/DecorInterativa5" unique_id=995055448]
 collision_layer = 16
 collision_mask = 0
 
-[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa5/AreaDano" unique_id=870714203]
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa5/AreaDano" unique_id=1841448858]
 position = Vector2(0, -8)
-shape = SubResource("RectangleShape2D_eyllc")
+shape = SubResource("RectangleShape2D_1cwo5")
 
-[node name="DecorInterativa6" type="StaticBody2D" parent="Objetos" unique_id=1052047959]
+[node name="DecorInterativa6" type="StaticBody2D" parent="Objetos" unique_id=613033824]
 position = Vector2(784, 720)
-script = ExtResource("8_cb4mh")
+script = ExtResource("10_wbam1")
 config = {
 "id": "DecorInterativa6",
 "tipo": "barril",
@@ -2544,26 +2479,26 @@ config = {
 "z": 0.0
 }
 
-[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa6" unique_id=969133283]
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa6" unique_id=1062993583]
 position = Vector2(0, -8)
-shape = SubResource("RectangleShape2D_2pxk7")
+shape = SubResource("RectangleShape2D_eyllc")
 
-[node name="AreaDano" type="Area2D" parent="Objetos/DecorInterativa6" unique_id=1458604085]
+[node name="AreaDano" type="Area2D" parent="Objetos/DecorInterativa6" unique_id=485309158]
 collision_layer = 16
 collision_mask = 0
 
-[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa6/AreaDano" unique_id=2063751879]
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa6/AreaDano" unique_id=488290038]
 position = Vector2(0, -8)
-shape = SubResource("RectangleShape2D_2pxk7")
+shape = SubResource("RectangleShape2D_eyllc")
 
-[node name="Sprite" type="Sprite2D" parent="Objetos/DecorInterativa6" unique_id=2107584757]
+[node name="Sprite" type="Sprite2D" parent="Objetos/DecorInterativa6" unique_id=677698197]
 position = Vector2(0, -16)
 scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_ir4cd")
+texture = SubResource("AtlasTexture_2pxk7")
 
-[node name="DecorInterativa7" type="StaticBody2D" parent="Objetos" unique_id=1870279174]
+[node name="DecorInterativa7" type="StaticBody2D" parent="Objetos" unique_id=624075411]
 position = Vector2(1104, 656)
-script = ExtResource("8_cb4mh")
+script = ExtResource("10_wbam1")
 config = {
 "id": "DecorInterativa7",
 "tipo": "barril",
@@ -2572,35 +2507,83 @@ config = {
 "z": 0.0
 }
 
-[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa7" unique_id=1077886310]
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa7" unique_id=1892434438]
 position = Vector2(0, -8)
-shape = SubResource("RectangleShape2D_all3k")
+shape = SubResource("RectangleShape2D_ir4cd")
 
-[node name="AreaDano" type="Area2D" parent="Objetos/DecorInterativa7" unique_id=1281535454]
+[node name="AreaDano" type="Area2D" parent="Objetos/DecorInterativa7" unique_id=1930925343]
 collision_layer = 16
 collision_mask = 0
 
-[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa7/AreaDano" unique_id=1384942827]
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/DecorInterativa7/AreaDano" unique_id=1024505266]
 position = Vector2(0, -8)
-shape = SubResource("RectangleShape2D_all3k")
+shape = SubResource("RectangleShape2D_ir4cd")
 
-[node name="Sprite" type="Sprite2D" parent="Objetos/DecorInterativa7" unique_id=788585522]
+[node name="Sprite" type="Sprite2D" parent="Objetos/DecorInterativa7" unique_id=848054041]
 position = Vector2(0, -16)
 scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_glsv6")
+texture = SubResource("AtlasTexture_all3k")
 
-[node name="Plataformas" type="Node2D" parent="." unique_id=887858261]
+[node name="BauJardim" type="StaticBody2D" parent="Objetos" unique_id=662881962]
+position = Vector2(112, 272)
+script = ExtResource("10_wbam1")
+config = {
+"id": "BauJardim",
+"tipo": "bau",
+"x": 3.0,
+"y": 8.0,
+"z": 0.0
+}
 
-[node name="Personagens" type="Node2D" parent="." unique_id=189409673]
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/BauJardim" unique_id=1935853838]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_glsv6")
+
+[node name="PlacaCombate" type="StaticBody2D" parent="Objetos" unique_id=837098698]
+position = Vector2(528, 720)
+script = ExtResource("10_wbam1")
+config = {
+"id": "PlacaCombate",
+"texto": "Lucas: três cliques encadeiam o combo; Shift bloqueia pela frente. Otto: segure o tiro para carregar.",
+"tipo": "placa_texto",
+"x": 16.0,
+"y": 22.0,
+"z": 0.0
+}
+
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/PlacaCombate" unique_id=359805316]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_m6gp0")
+
+[node name="EspelhoJardim" type="StaticBody2D" parent="Objetos" unique_id=1960417631]
+position = Vector2(304, 272)
+rotation = -0.7853982
+script = ExtResource("10_wbam1")
+config = {
+"id": "EspelhoJardim",
+"rot": -45.0,
+"tipo": "espelho",
+"x": 9.0,
+"y": 8.0,
+"z": 0.0
+}
+
+[node name="Colisao" type="CollisionShape2D" parent="Objetos/EspelhoJardim" unique_id=1409445547]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_prdo0")
+
+[node name="Plataformas" type="Node2D" parent="." unique_id=2046040775]
+
+[node name="Personagens" type="Node2D" parent="." unique_id=1337805231]
 y_sort_enabled = true
 
-[node name="Guerreiro" type="CharacterBody2D" parent="Personagens" unique_id=277115212 instance=ExtResource("9_dm1hb")]
+[node name="Guerreiro" type="CharacterBody2D" parent="Personagens" unique_id=1638936399 instance=ExtResource("11_nr5tr")]
 texture_filter = 1
 position = Vector2(144, 688)
 collision_layer = 2
 collision_mask = 5
 motion_mode = 1
-script = ExtResource("10_iv8fb")
+script = ExtResource("12_6yuom")
 nome_personagem = "Lucas"
 vida_maxima = 120
 velocidade = 92.0
@@ -2612,17 +2595,17 @@ preparo_ataque = 0.22
 duracao_ataque = 0.65
 pode_usar_escudo = true
 
-[node name="Sombra" type="Polygon2D" parent="Personagens/Guerreiro" unique_id=1582064185]
+[node name="Sombra" type="Polygon2D" parent="Personagens/Guerreiro" unique_id=1054828788]
 color = Color(0.03, 0.05, 0.08, 0.28)
 polygon = PackedVector2Array(9, 0, 7.7942286, 2, 4.5, 3.4641016, 5.5107286e-16, 4, -4.5, 3.4641016, -7.7942286, 2, -9, 4.8984254e-16, -7.7942286, -2, -4.5, -3.4641016, -1.6532186e-15, -4, 4.5, -3.4641016, 7.7942286, -2)
 
-[node name="Robo" type="CharacterBody2D" parent="Personagens" unique_id=862129061 instance=ExtResource("11_j2663")]
+[node name="Robo" type="CharacterBody2D" parent="Personagens" unique_id=1461132777 instance=ExtResource("13_setsr")]
 texture_filter = 1
 position = Vector2(208, 688)
 collision_layer = 2
 collision_mask = 5
 motion_mode = 1
-script = ExtResource("12_wbam1")
+script = ExtResource("14_a4yfx")
 prefixo_controle = "robo"
 nome_personagem = "Otto"
 vida_maxima = 95
@@ -2635,17 +2618,17 @@ preparo_ataque = 0.14
 duracao_ataque = 0.43
 possui_morte_animada = false
 
-[node name="Sombra" type="Polygon2D" parent="Personagens/Robo" unique_id=1841193857]
+[node name="Sombra" type="Polygon2D" parent="Personagens/Robo" unique_id=919779316]
 color = Color(0.03, 0.05, 0.08, 0.28)
 polygon = PackedVector2Array(9, 0, 7.7942286, 2, 4.5, 3.4641016, 5.5107286e-16, 4, -4.5, 3.4641016, -7.7942286, 2, -9, 4.8984254e-16, -7.7942286, -2, -4.5, -3.4641016, -1.6532186e-15, -4, 4.5, -3.4641016, 7.7942286, -2)
 
-[node name="Inimigo0" type="CharacterBody2D" parent="Personagens" unique_id=1790592277 instance=ExtResource("13_nr5tr")]
+[node name="Inimigo0" type="CharacterBody2D" parent="Personagens" unique_id=48094921 instance=ExtResource("15_mei2v")]
 texture_filter = 1
 position = Vector2(592, 656)
 collision_layer = 4
 collision_mask = 7
 motion_mode = 1
-script = ExtResource("14_6yuom")
+script = ExtResource("16_ef4xd")
 nome_personagem = "Zumbi"
 equipe = 1
 vida_maxima = 75
@@ -2657,17 +2640,17 @@ intervalo_ataque = 1.4
 preparo_ataque = 0.32
 duracao_ataque = 0.65
 
-[node name="Sombra" type="Polygon2D" parent="Personagens/Inimigo0" unique_id=1951413835]
+[node name="Sombra" type="Polygon2D" parent="Personagens/Inimigo0" unique_id=1833227587]
 color = Color(0.03, 0.05, 0.08, 0.28)
 polygon = PackedVector2Array(9, 0, 7.7942286, 2, 4.5, 3.4641016, 5.5107286e-16, 4, -4.5, 3.4641016, -7.7942286, 2, -9, 4.8984254e-16, -7.7942286, -2, -4.5, -3.4641016, -1.6532186e-15, -4, 4.5, -3.4641016, 7.7942286, -2)
 
-[node name="Inimigo1" type="CharacterBody2D" parent="Personagens" unique_id=7406873 instance=ExtResource("15_setsr")]
+[node name="Inimigo1" type="CharacterBody2D" parent="Personagens" unique_id=499033482 instance=ExtResource("17_11y7o")]
 texture_filter = 1
 position = Vector2(1008, 560)
 collision_layer = 4
 collision_mask = 7
 motion_mode = 1
-script = ExtResource("16_a4yfx")
+script = ExtResource("18_m2kng")
 nome_personagem = "Cavaleiro Azul"
 equipe = 1
 vida_maxima = 105
@@ -2679,21 +2662,21 @@ intervalo_ataque = 1.15
 preparo_ataque = 0.26
 duracao_ataque = 0.55
 
-[node name="Sombra" type="Polygon2D" parent="Personagens/Inimigo1" unique_id=1001822973]
+[node name="Sombra" type="Polygon2D" parent="Personagens/Inimigo1" unique_id=233683357]
 color = Color(0.03, 0.05, 0.08, 0.28)
 polygon = PackedVector2Array(9, 0, 7.7942286, 2, 4.5, 3.4641016, 5.5107286e-16, 4, -4.5, 3.4641016, -7.7942286, 2, -9, 4.8984254e-16, -7.7942286, -2, -4.5, -3.4641016, -1.6532186e-15, -4, 4.5, -3.4641016, 7.7942286, -2)
 
-[node name="Exploradores" type="Node2D" parent="." unique_id=354442297]
+[node name="Exploradores" type="Node2D" parent="." unique_id=692340925]
 
-[node name="Explorador0" type="Node2D" parent="Exploradores" unique_id=1541545760]
+[node name="Explorador0" type="Node2D" parent="Exploradores" unique_id=1019761173]
 position = Vector2(144, 144)
-script = ExtResource("17_mei2v")
-caminho = PackedVector2Array(144, 144, 272, 144, 272, 208, 144, 208)
+script = ExtResource("19_wob3a")
+caminho = PackedVector2Array(144, 144, 208, 144, 208, 208, 144, 208)
 
-[node name="Sprite" type="Sprite2D" parent="Exploradores/Explorador0" unique_id=2106103604]
+[node name="Sprite" type="Sprite2D" parent="Exploradores/Explorador0" unique_id=1129919210]
 scale = Vector2(2, 2)
-texture = ExtResource("18_ef4xd")
+texture = ExtResource("20_usdh3")
 
-[node name="CameraCompartilhada" type="Camera2D" parent="." unique_id=20848688]
+[node name="CameraCompartilhada" type="Camera2D" parent="." unique_id=1382936794]
 position = Vector2(608, 416)
-script = ExtResource("19_11y7o")
+script = ExtResource("21_4sio6")

@@ -21,7 +21,7 @@ A linha e a marca de mira acompanham a posição do mouse em qualquer ângulo. A
 
 Clique e solte para disparar uma esfera simples. Segure por pelo menos 0,85 s e solte para disparar a esfera maior. O anel ao redor do robô mostra o carregamento e fica dourado quando pronto. O tiro maior tem raio 9 e dano 38; o simples tem raio 4 e dano 18, antes da defesa do inimigo. Os valores ficam editáveis nos scripts/cenas.
 
-As duas esferas ricocheteiam no cenário e apagam no quarto contato com parede. Ao acertar um inimigo, causam dano e desaparecem. Elas atravessam os protagonistas sem causar fogo amigo e não empurram os personagens. Em um mapa sem paredes, o limite de vida de 12 s evita esferas acumuladas indefinidamente.
+As duas esferas ricocheteiam no cenário e apagam no quinto contato com parede. Ao acertar um inimigo, causam dano e desaparecem. Elas atravessam os protagonistas sem causar fogo amigo e não empurram os personagens. Em um mapa sem paredes, o limite de vida de 12 s evita esferas acumuladas indefinidamente.
 
 A carga é cancelada ao sofrer dano, morrer, perder o foco da janela ou desabilitar o controle. Ao morrer, os tiros daquele robô são removidos. Soltar o botão depois de uma carga cancelada não cria um tiro.
 
@@ -32,7 +32,7 @@ A carga é cancelada ao sofrer dano, morrer, perder o foco da janela ou desabili
 - Sofrer dano interrompe o preparo de um ataque, evitando acertos depois da interrupção.
 - A colisão circular contínua impede tiros rápidos de atravessar paredes finas.
 - A origem dos disparos tem margem de segurança para não nascer dentro da parede.
-- Quinas e contatos repetidos com a mesma superfície não consomem quatro ricochetes de uma vez.
+- Quinas e contatos repetidos com a mesma superfície não consomem cinco ricochetes de uma vez.
 - A mira é ocultada na morte e o carregamento não permanece ativo ao perder o foco.
 - Escudo, áudio, vida, IA e morte com armadura caída continuam funcionando.
 

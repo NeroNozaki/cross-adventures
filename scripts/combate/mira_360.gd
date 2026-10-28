@@ -1,6 +1,7 @@
 extends Node2D
 ## Coordenadas do mundo: funciona com redimensionamento da janela e Camera2D.
 
+const REGRA_PROJETIL=preload("res://scripts/combate/projetil.gd")
 @export var comprimento_maximo: float = 520.0
 var travada: bool = false
 var trajeto: PackedVector2Array = PackedVector2Array()
@@ -61,11 +62,11 @@ func _prever() -> void:
 		trajeto = PackedVector2Array()
 		return
 	var vetor: Vector2 = direcao
-	var restante: float = 4000.0
+	var restante: float = (REGRA_PROJETIL.VELOCIDADE_CARREGADA if carga>=1 else REGRA_PROJETIL.VELOCIDADE_SIMPLES)*REGRA_PROJETIL.VIDA_PADRAO
 	trajeto = PackedVector2Array([to_local(p - offset)])
 	var contatos: int = 0
 	var tentativas: int = 0
-	while contatos < 4 and tentativas < 24:
+	while contatos < REGRA_PROJETIL.LIMITE_RICOCHETES and tentativas < 30:
 		tentativas += 1
 		consulta.global_position = p
 		consulta.target_position = vetor * restante

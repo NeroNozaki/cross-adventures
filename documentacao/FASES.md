@@ -16,11 +16,13 @@ Abra project.godot no Godot 4.7.1 e pressione F5. A cena inicial agora é cenas/
 
 C alterna Normal, Fogo, Gelo, Choque e Onda nas fases 3 e 4. Tab trava/destrava o ângulo da mira. M alterna efeitos sonoros. R reinicia a sala atual; na conclusão final, volta à primeira fase. Os dois personagens continuam independentes e simultâneos.
 
-## 1. Jardim da Provação — apresentar
+## 1. Jardim da Provação — cooperação entre salas
 
-Ruínas de pedra em cinco setores conectados por corredores, com um canal central e um grande reservatório. Lucas mantém a placa dourada pressionada enquanto Otto atinge o cristal azul. A ponte permanece aberta após a ativação. Derrotem Zumbi e Cavaleiro Azul, subam a escada da ruína à direita e saltem o vão estreito da plataforma elevada. Reúnam os dois no portal.
+Lucas mantém a placa dourada na sala inferior. Otto sobe pelo corredor até a sala ao norte, se posiciona na marca abaixo à esquerda do espelho e dispara para a direita. O espelho diagonal reflete a esfera para cima, até o cristal da sala superior. Tab permite examinar a trajetória. O cristal exige pelo menos um ricochete e Lucas na placa no momento do impacto.
 
-Dica: o cristal está acima da extremidade esquerda do caminho. Não é necessário ricochete nesta primeira sala. A primeira escada elevada fica à direita da ponte; o vão do terraço exige salto para o mesmo nível.
+O acerto destrava a ponte definitivamente. Lucas pode sair da placa e Otto retorna pelo corredor. Aguardem as três partes encaixarem (1,8 s, com som de mecanismo), atravessem juntos, derrotem os guardas e sigam para a escada e o salto até a porta. A câmera acompanha a equipe mesmo durante a separação entre salas.
+
+O baú opcional fica no canto inferior esquerdo da sala norte, separado do espelho e do cristal. E/I abre e recupera até 30 de vida de cada herói vivo, uma única vez. A antiga mureta inferior foi retirada para facilitar a circulação.
 
 ## 2. Galeria dos Ecos — desenvolver
 
@@ -53,7 +55,7 @@ Os três selos removem a proteção do chefe. Ele persegue os heróis e anuncia 
 ## Regras dos cenários
 
 - Cada posição do chão tem altura lógica Z. Andar para o vazio ou atravessar uma borda de altura diferente é bloqueado; escadas mudam o nível. Saltos têm alcance de 64 pixels e aceitam apenas pousos na mesma altura, sem atravessar paredes.
-- Ataques, projéteis e colisões entre personagens respeitam a altura. As paredes externas refletem em qualquer nível. As esferas desaparecem no quarto contato com paredes; receptores e obstáculos elementais podem consumi-las antes disso.
+- Ataques, projéteis e colisões entre personagens respeitam a altura. As paredes externas refletem em qualquer nível. As esferas desaparecem no quinto contato com paredes; receptores e obstáculos elementais podem consumi-las antes disso.
 - Água congela em um bloco que Lucas pode empurrar. Fogo derrete gelo. Choque aciona condutores. Onda dissipa bolhas. Objetos mudam sua colisão durante a partida.
 - Plantas e barris quebram com espada ou tiros, espalhando fragmentos e liberando passagem. Os fragmentos não interceptam projéteis.
 - Exploradores percorrem rotas ambientais e têm um pequeno salto visual. São NPCs de ambientação, sem combate ou diálogo.

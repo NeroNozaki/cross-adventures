@@ -90,7 +90,7 @@ func rodar() -> void:
 			lucas.recarga.stop()
 			verificar(fase.altura_em(Vector2(400,656)) == -1, "Vao central real")
 			verificar(fase.get_node("SoloZ0").get_cell_source_id(Vector2i(12,20)) == -1, "Vao sem tile")
-			var t = tiro_falso()
+			var t = tiro_falso("normal",0,1)
 			obj.get_node("Cristal").receber_projetil(t)
 			verificar(not fase.sinais.get("cristal",false), "Cristal exige parceiro na placa")
 			otto.position = obj.get_node("PlacaA").position
@@ -100,9 +100,11 @@ func rodar() -> void:
 			lucas.position = obj.get_node("PlacaA").position
 			tick(fase)
 			verificar(fase.sinais.get("placa_a",false), "Placa detecta Lucas")
-			await disparo(fase,obj.get_node("Cristal").position+Vector2(0,64),Vector2.UP)
+			await disparo(fase,obj.get_node("EspelhoJardim").position+Vector2(-128,-15),Vector2.RIGHT)
 			tick(fase)
 			verificar(fase.sinais.get("ponte",false), "Tiro real abre ponte")
+			verificar(not fase.ponte_pronta("ponte"),"Ponte aguarda a animação antes de abrir a colisão")
+			await create_timer(2.0).timeout
 			verificar(fase.altura_em(Vector2(400,656)) == 0, "Colisao da ponte atualizada")
 			lucas.position = Vector2(1040,240)
 			lucas.altura_nivel = 1
