@@ -46,6 +46,7 @@ animations = [{
 size = Vector2(12, 13)
 
 [node name="button" type="Node2D" unique_id=1975652764]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_1v2ee")
 
 [node name="animation" type="AnimatedSprite2D" parent="." unique_id=1356618486]

@@ -1,4 +1,6 @@
-extends "res://scripts/personagens/personagem_base.gd"
+extends PersonagemBase
+class_name Vilao
+
 ## Patrulha local lenta; perseguição e combate conservam suas velocidades originais.
 @export_category("Inteligencia artificial")
 @export var raio_deteccao: float = 180.0

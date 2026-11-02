@@ -1,4 +1,4 @@
-extends "res://scripts/personagens/heroi.gd"
+extends Heroi
 
 const PROJETIL: PackedScene = preload("res://cenas/combate/projetil.tscn")
 @export var tempo_carga_total: float = 0.85

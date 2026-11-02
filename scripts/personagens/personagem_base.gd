@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name PersonagemBase
 ## Base de combate compartilhada. O ponto (0, 0) fica nos pes do personagem.
 
 signal vida_alterada(atual: int, maxima: int)
