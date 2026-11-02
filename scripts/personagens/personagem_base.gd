@@ -61,10 +61,6 @@ func _ready() -> void:
 	for timer in [recarga, preparo, invulnerabilidade]:
 		timer.process_callback = Timer.TIMER_PROCESS_PHYSICS
 	visual_offset = animacao.offset
-	var respiracao: Node=Node.new()
-	respiracao.name="Respiracao"
-	respiracao.set_script(preload("res://scripts/visual/respiracao.gd"))
-	add_child(respiracao)
 	barra_vida.max_value = vida_maxima
 	barra_vida.value = vida_atual
 	nome_label.text = nome_personagem

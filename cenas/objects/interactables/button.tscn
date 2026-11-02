@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://dabnusi6k2rco"]
 
-[ext_resource type="Script" uid="uid://qvjqdyl2xxo3" path="res://scripts/interactables/button.gd" id="1_1v2ee"]
 [ext_resource type="Texture2D" uid="uid://dhgbpwwpdn5lc" path="res://assets/Dungeon Gathering Free Version/Button.png" id="1_85stp"]
+[ext_resource type="Script" uid="uid://qvjqdyl2xxo3" path="res://scripts/objects/interactables/button.gd" id="1_n53u5"]
+[ext_resource type="Script" path="res://scripts/signals/signal_emitter.gd" id="2_emitter"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1v2ee"]
 atlas = ExtResource("1_85stp")
@@ -47,7 +48,7 @@ size = Vector2(12, 13)
 
 [node name="button" type="Node2D" unique_id=1975652764]
 scale = Vector2(1.5, 1.5)
-script = ExtResource("1_1v2ee")
+script = ExtResource("1_n53u5")
 
 [node name="animation" type="AnimatedSprite2D" parent="." unique_id=1356618486]
 sprite_frames = SubResource("SpriteFrames_nqwk7")
@@ -58,3 +59,6 @@ animation = &"1-not_pressed"
 [node name="shape" type="CollisionShape2D" parent="hitbox" unique_id=1908964629]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_b6daa")
+
+[node name="SignalEmitter" type="Node" parent="."]
+script = ExtResource("2_emitter")

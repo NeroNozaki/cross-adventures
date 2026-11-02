@@ -7,8 +7,11 @@
 [ext_resource type="PackedScene" path="res://cenas/personagens/robo.tscn" id="4_d5osd"]
 [ext_resource type="Texture2D" uid="uid://d3606jq1byqa7" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetDungeon.png" id="4_vdv27"]
 [ext_resource type="Texture2D" uid="uid://c4861kvc8lkid" path="res://assets/Dungeon Gathering Free Version/Set 1.png" id="5_8nyq1"]
-[ext_resource type="PackedScene" uid="uid://dabnusi6k2rco" path="res://cenas/interactables/button.tscn" id="7_d5osd"]
+[ext_resource type="PackedScene" uid="uid://dabnusi6k2rco" path="res://cenas/objects/interactables/button.tscn" id="7_d5osd"]
 [ext_resource type="PackedScene" path="res://cenas/personagens/guerreiro.tscn" id="8_n3pm7"]
+[ext_resource type="PackedScene" uid="uid://y0p6fel4ynhy" path="res://cenas/objects/non-interactable/fence.tscn" id="9_860vq"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_n3pm7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_si8hq"]
 texture = ExtResource("1_1rfui")
@@ -730,17 +733,29 @@ texture = ExtResource("5_8nyq1")
 2:7/0 = 0
 3:7/0 = 0
 4:7/0 = 0
+4:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:7/0 = 0
+5:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:7/0 = 0
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:7/0 = 0
+7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:7/0 = 0
+8:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:7/0 = 0
+9:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:7/0 = 0
+10:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 11:7/0 = 0
+11:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 12:7/0 = 0
+12:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:7/0 = 0
+13:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 14:7/0 = 0
+14:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:7/0 = 0
+15:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:7/0 = 0
 17:7/0 = 0
 18:7/0 = 0
@@ -748,17 +763,24 @@ texture = ExtResource("5_8nyq1")
 2:8/0 = 0
 3:8/0 = 0
 4:8/0 = 0
+4:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:8/0 = 0
+5:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:8/0 = 0
 7:8/0 = 0
+7:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:8/0 = 0
+8:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:8/0 = 0
 10:8/0 = 0
 11:8/0 = 0
+11:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 12:8/0 = 0
+12:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:8/0 = 0
 14:8/0 = 0
 15:8/0 = 0
+15:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:8/0 = 0
 17:8/0 = 0
 18:8/0 = 0
@@ -768,34 +790,54 @@ texture = ExtResource("5_8nyq1")
 2:9/0 = 0
 3:9/0 = 0
 4:9/0 = 0
+4:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:9/0 = 0
+5:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:9/0 = 0
+6:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:9/0 = 0
+7:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:9/0 = 0
+8:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:9/0 = 0
 10:9/0 = 0
 11:9/0 = 0
+11:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 12:9/0 = 0
+12:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:9/0 = 0
 14:9/0 = 0
 15:9/0 = 0
+15:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:9/0 = 0
 17:9/0 = 0
 18:9/0 = 0
 2:10/0 = 0
 3:10/0 = 0
 4:10/0 = 0
+4:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:10/0 = 0
+5:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:10/0 = 0
+6:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:10/0 = 0
+7:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:10/0 = 0
+8:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:10/0 = 0
+9:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:10/0 = 0
+10:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 11:10/0 = 0
+11:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 12:10/0 = 0
+12:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:10/0 = 0
+13:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 14:10/0 = 0
+14:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:10/0 = 0
+15:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 17:10/0 = 0
 18:10/0 = 0
 3:11/0 = 0
@@ -898,17 +940,14 @@ texture = ExtResource("5_8nyq1")
 8:19/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_nqwk7"]
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 6
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_n3pm7")
 sources/1 = SubResource("TileSetAtlasSource_si8hq")
 sources/2 = SubResource("TileSetAtlasSource_n3pm7")
 sources/3 = SubResource("TileSetAtlasSource_860vq")
 sources/4 = SubResource("TileSetAtlasSource_8nyq1")
 sources/5 = SubResource("TileSetAtlasSource_d5osd")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1rfui"]
-size = Vector2(638, 12)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vdv27"]
-size = Vector2(12, 377)
 
 [node name="area1" type="Node2D" unique_id=368229941]
 script = ExtResource("1_si8hq")
@@ -927,14 +966,40 @@ tile_set = SubResource("TileSet_nqwk7")
 scale = Vector2(1.5, 1.5)
 tile_set = SubResource("TileSet_nqwk7")
 
-[node name="button" parent="." unique_id=2079836377 instance=ExtResource("7_d5osd")]
-position = Vector2(606, 365)
+[node name="MarcadorRobo" type="Polygon2D" parent="." unique_id=192060572]
+z_index = 1
+color = Color(0.3, 0.8, 1, 1)
+polygon = PackedVector2Array(-5, 4, 0, 0, 5, 4, 0, 7)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=685528796]
+anchor_mode = 0
+zoom = Vector2(0.67, 0.67)
+
+[node name="objects" type="Node2D" parent="." unique_id=852374700]
+
+[node name="fence" parent="objects" unique_id=1840592650 instance=ExtResource("9_860vq")]
+position = Vector2(767, 241)
+channel = &"1"
+
+[node name="button" parent="objects" unique_id=2079836377 instance=ExtResource("7_d5osd")]
+position = Vector2(459, 475.00003)
+channel = &"1"
 
 [node name="Personagens" type="Node2D" parent="." unique_id=2012058812]
 y_sort_enabled = true
 
 [node name="Guerreiro" parent="Personagens" unique_id=1968535207 instance=ExtResource("8_n3pm7")]
 position = Vector2(249, 390)
+nome_personagem = "Personagem"
+vida_maxima = 100
+velocidade = 95.0
+dano_ataque = 15
+defesa = 2
+alcance_ataque = 29.0
+intervalo_ataque = 0.7
+preparo_ataque = 0.18
+duracao_ataque = 0.5
+pode_usar_escudo = false
 
 [node name="Sombra" type="Polygon2D" parent="Personagens/Guerreiro" unique_id=556038652]
 color = Color(0.03, 0.05, 0.08, 0.28)
@@ -942,32 +1007,17 @@ polygon = PackedVector2Array(9, 0, 7.7942286, 2, 4.5, 3.4641016, 5.5107286e-16, 
 
 [node name="Robo" parent="Personagens" unique_id=398588747 instance=ExtResource("4_d5osd")]
 position = Vector2(313, 390)
+nome_personagem = "Personagem"
+vida_maxima = 100
+velocidade = 95.0
+orientar_pelo_movimento = true
+dano_ataque = 15
+alcance_ataque = 29.0
+intervalo_ataque = 0.7
+preparo_ataque = 0.18
+duracao_ataque = 0.5
+possui_morte_animada = true
 
 [node name="Sombra" type="Polygon2D" parent="Personagens/Robo" unique_id=1033258184]
 color = Color(0.03, 0.05, 0.08, 0.28)
 polygon = PackedVector2Array(9, 0, 7.7942286, 2, 4.5, 3.4641016, 5.5107286e-16, 4, -4.5, 3.4641016, -7.7942286, 2, -9, 4.8984254e-16, -7.7942286, -2, -4.5, -3.4641016, -1.6532186e-15, -4, 4.5, -3.4641016, 7.7942286, -2)
-
-[node name="MarcadorRobo" type="Polygon2D" parent="." unique_id=192060572]
-z_index = 1
-color = Color(0.3, 0.8, 1, 1)
-polygon = PackedVector2Array(-5, 4, 0, 0, 5, 4, 0, 7)
-
-[node name="Limites" type="StaticBody2D" parent="." unique_id=1042708962]
-visible = false
-collision_mask = 6
-
-[node name="Topo" type="CollisionShape2D" parent="Limites" unique_id=2001477948]
-position = Vector2(320, 7)
-shape = SubResource("RectangleShape2D_1rfui")
-
-[node name="Base" type="CollisionShape2D" parent="Limites" unique_id=645524796]
-position = Vector2(320, 394)
-shape = SubResource("RectangleShape2D_1rfui")
-
-[node name="Esquerda" type="CollisionShape2D" parent="Limites" unique_id=978957749]
-position = Vector2(7, 199)
-shape = SubResource("RectangleShape2D_vdv27")
-
-[node name="Direita" type="CollisionShape2D" parent="Limites" unique_id=194850858]
-position = Vector2(633, 199.5)
-shape = SubResource("RectangleShape2D_vdv27")
