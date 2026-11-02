@@ -22,6 +22,7 @@ config/features=PackedStringArray("4.7", "GL Compatibility")
 
 PhysicsLayers="*uid://dy5c01uqlu33x"
 SignalBus="*res://scripts/signals/signal_bus.gd"
+FluxoTela="*uid://c3vki778cjtlx"
 
 [display]
 
