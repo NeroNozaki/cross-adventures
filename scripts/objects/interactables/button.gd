@@ -1,12 +1,9 @@
-extends Node2D
-## Button presses when heroes stand on it and publishes state to the signal bus.
-## It does not know fences, doors, or any receiver.
+extends Interactable
+## Button sends on/off. Toggle invert_send to swap behavior.
 
 @onready var animation: AnimatedSprite2D = $animation
 @onready var hitbox: Area2D = $hitbox
-@onready var emitter: Node = $SignalEmitter
 @export var single_use := false
-@export var channel: StringName = &"button"
 
 var bodies_on_button: int = 0
 var pressed: bool = false
@@ -15,8 +12,7 @@ signal state_changed(pressed: bool)
 
 
 func _ready() -> void:
-	if channel != &"":
-		emitter.channel = channel
+	super._ready()
 	hitbox.collision_layer = 0
 	hitbox.collision_mask = 0
 	hitbox.set_collision_layer_value(PhysicsLayers.BUTTON, true)
@@ -42,8 +38,9 @@ func _press() -> void:
 	if bodies_on_button >= 1 and not pressed:
 		pressed = true
 		animation.play("3-pressed")
-		state_changed.emit(pressed)
-		emitter.send(pressed)
+		if has_signal("state_changed"):
+			state_changed.emit(pressed)
+		send_on_off(pressed)
 
 
 func _release() -> void:
@@ -52,5 +49,6 @@ func _release() -> void:
 	if bodies_on_button == 0:
 		pressed = false
 		animation.play("1-not_pressed")
-		state_changed.emit(pressed)
-		emitter.send(pressed)
+		if has_signal("state_changed"):
+			state_changed.emit(pressed)
+		send_on_off(pressed)

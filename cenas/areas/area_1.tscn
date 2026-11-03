@@ -992,6 +992,7 @@ zoom = Vector2(0.67, 0.67)
 [node name="fence" parent="objects" unique_id=1521976333 instance=ExtResource("9_860vq")]
 position = Vector2(253, 299)
 channel = &"switch1"
+invert_receive = true
 
 [node name="fence_set_1" type="Node2D" parent="objects" unique_id=2053502495]
 position = Vector2(853, 252)

@@ -1,12 +1,9 @@
-extends Node2D
-## Fence listens to a signal channel and raises/lowers based on the received value.
-## It does not know the button or any emitter.
+extends NonInteractable
+## Fence: on = lowered/open. Use invert_receive to swap. Use start_activated to start lowered.
 
 @onready var static_body: StaticBody2D = $static_body
 @onready var collision: CollisionShape2D = $static_body/shape
 @onready var animation: AnimatedSprite2D = $animation
-@onready var receiver: Node = $SignalReceiver
-@export var channel: StringName = &"mechanism.button"
 
 var _lowered := false
 var _target_lowered := false
@@ -14,19 +11,24 @@ var _animating := false
 
 
 func _ready() -> void:
+	super._ready()
 	static_body.collision_layer = 0
 	static_body.collision_mask = 0
 	static_body.set_collision_layer_value(PhysicsLayers.ENVIRONMENT, true)
 	static_body.set_collision_mask_value(PhysicsLayers.HERO, true)
 	static_body.set_collision_mask_value(PhysicsLayers.ENEMY, true)
-	animation.play("raised")
-	if channel != &"":
-		receiver.configure(channel)
-	receiver.received.connect(_on_received)
+	_lowered = _is_activated
+	if _is_activated:
+		animation.play("lowered")
+		collision.disabled = true
+	else:
+		animation.play("raised")
+		collision.disabled = false
 
 
-func _on_received(value: Variant) -> void:
-	_target_lowered = bool(value)
+func _on_activated(activated: bool) -> void:
+	var target_lowered := activated
+	_target_lowered = target_lowered
 	if not _animating:
 		_animate_to_target()
 
