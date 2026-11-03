@@ -148,7 +148,7 @@ script = ExtResource("1_3ad52")
 
 [node name="animation" type="AnimatedSprite2D" parent="." unique_id=1700856929]
 sprite_frames = SubResource("SpriteFrames_nqwk7")
-animation = &"rising"
+animation = &"raised"
 
 [node name="static_body" type="StaticBody2D" parent="." unique_id=1625222495]
 collision_mask = 6

@@ -2,21 +2,22 @@ extends Node2D
 ## Coordenadas do mundo: funciona com redimensionamento da janela e Camera2D.
 
 const REGRA_PROJETIL=preload("res://scripts/combate/projetil.gd")
-@export var comprimento_maximo: float = 520.0
+@export var comprimento_maximo: float = 520.0 / 2
 var travada: bool = false
 var trajeto: PackedVector2Array = PackedVector2Array()
 var consulta: ShapeCast2D
 var direcao: Vector2 = Vector2.RIGHT
-var comprimento: float = 120.0
+var comprimento: float = 520.0 / 2
 var carga: float = 0.0
 
 func atualizar(alvo_global: Vector2, progresso: float) -> void:
 	var ate_alvo: Vector2 = alvo_global - global_position
 	if not travada and ate_alvo.length_squared() > 0.01:
 		direcao = ate_alvo.normalized()
-	comprimento = clampf(ate_alvo.length(), 22.0, comprimento_maximo)
+	# A linha tem alcance visual fixo; o cursor so define o angulo.
+	comprimento = maxf(comprimento_maximo, 0.0)
 	carga = clampf(progresso, 0.0, 1.0)
-	if is_inside_tree() and get_tree().get_first_node_in_group("fase_atual") != null:
+	if is_inside_tree():
 		_prever()
 	else:
 		trajeto = PackedVector2Array()
@@ -26,14 +27,12 @@ func _draw() -> void:
 	var cor: Color = Color("ffcd65") if carga >= 1.0 else Color("73e9ff")
 	if trajeto.size() >= 2:
 		for i in range(1, trajeto.size()):
-			if i > 1 and not travada and carga <= 0.0:
-				break
 			draw_dashed_line(trajeto[i - 1], trajeto[i], Color(cor, 0.55 - float(i - 1) * 0.07), 1.0, 6.0)
 			if i < trajeto.size() - 1:
 				draw_circle(trajeto[i], 3, cor, false, 1.0)
 	else:
 		draw_dashed_line(direcao * 18.0, direcao * comprimento, Color(cor, 0.55), 1.0, 5.0)
-	var ponta: Vector2 = direcao * comprimento
+	var ponta: Vector2 = trajeto[trajeto.size() - 1] if trajeto.size() >= 2 else direcao * comprimento
 	draw_circle(ponta, 4.0, Color(cor, 0.9), false, 1.0, true)
 	draw_line(ponta + Vector2(-7, 0), ponta + Vector2(7, 0), cor, 1.0)
 	draw_line(ponta + Vector2(0, -7), ponta + Vector2(0, 7), cor, 1.0)
@@ -62,21 +61,24 @@ func _prever() -> void:
 		trajeto = PackedVector2Array()
 		return
 	var vetor: Vector2 = direcao
-	var restante: float = (REGRA_PROJETIL.VELOCIDADE_CARREGADA if carga>=1 else REGRA_PROJETIL.VELOCIDADE_SIMPLES)*REGRA_PROJETIL.VIDA_PADRAO
+	var restante: float = maxf(comprimento, 0.0)
 	trajeto = PackedVector2Array([to_local(p - offset)])
 	var contatos: int = 0
 	var tentativas: int = 0
-	while contatos < REGRA_PROJETIL.LIMITE_RICOCHETES and tentativas < 30:
+	var max_contatos: int = REGRA_PROJETIL.LIMITE_RICOCHETES if carga >= 0.001 else 0
+	while restante > 0.01 and tentativas < 30:
 		tentativas += 1
 		consulta.global_position = p
 		consulta.target_position = vetor * restante
 		consulta.force_shapecast_update()
 		if not consulta.is_colliding():
-			trajeto.append(to_local(p + vetor * restante - offset))
+			p += vetor * restante
+			restante = 0.0
+			trajeto.append(to_local(p - offset))
 			break
-		var distancia: float = restante * consulta.get_closest_collision_safe_fraction()
+		var distancia: float = restante * clampf(consulta.get_closest_collision_safe_fraction(), 0.0, 1.0)
 		p += vetor * distancia
-		restante -= distancia
+		restante = maxf(0.0, restante - distancia)
 		var corpo: Object = consulta.get_collider(0)
 		if corpo.has_meta("altura") and int(corpo.get_meta("altura")) >= 0 and int(corpo.get_meta("altura")) != z:
 			consulta.add_exception_rid(corpo.get_rid())
@@ -86,6 +88,8 @@ func _prever() -> void:
 			var t: String = corpo.tipo()
 			if t in ["receptor", "condutor", "agua", "bolha", "planta", "barril"] or (t in ["gelo", "barreira_gelo"] and get_parent().elemento == "fogo"):
 				break
+		if contatos >= max_contatos:
+			break
 		var normal: Vector2 = consulta.get_collision_normal(0)
 		if corpo.has_method("tipo") and corpo.tipo() == "espelho":
 			normal = corpo.global_transform.y.normalized()
@@ -94,5 +98,7 @@ func _prever() -> void:
 			break
 		contatos += 1
 		vetor = vetor.bounce(normal).normalized()
-		p += normal * 0.8
+		var margem: float = minf(0.8, restante)
+		p += normal * margem
+		restante -= margem
 	consulta.position = Vector2.ZERO

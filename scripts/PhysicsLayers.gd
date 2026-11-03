@@ -7,4 +7,5 @@ enum {
 	HERO_HURTBOX = 4,
 	ENEMY_HURTBOX = 5,
 	BUTTON = 6,
+	HOLES = 7,
 }

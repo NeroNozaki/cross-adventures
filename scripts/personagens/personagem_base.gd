@@ -5,6 +5,8 @@ class_name PersonagemBase
 signal vida_alterada(atual: int, maxima: int)
 signal morreu(personagem: CharacterBody2D)
 signal bloqueou
+signal caiu_no_buraco(personagem: CharacterBody2D)
+signal renasceu(personagem: CharacterBody2D)
 
 @export_category("Atributos RPG")
 @export var nome_personagem: String = "Personagem"
@@ -21,10 +23,12 @@ signal bloqueou
 @export var duracao_ataque: float = 0.5
 @export var tempo_invulneravel: float = 0.4
 @export_category("Escudo")
-@export var pode_usar_escudo: bool = false
 @export_range(0.1, 1.0) var velocidade_defendendo: float = 0.45
 @export_category("Visual")
 @export var possui_morte_animada: bool = true
+@export_category("Queda e renascimento")
+@export var dano_queda: int = 20
+@export var duracao_queda: float = 0.45
 
 @export var altura_nivel: int = 0
 var pulando: bool = false
@@ -43,6 +47,12 @@ var tempo_ataque: float = 0.0
 var tempo_dano: float = 0.0
 var velocidade_controle: Vector2 = Vector2.ZERO
 var visual_offset: Vector2
+var caindo: bool = false
+var posicao_renascimento: Vector2
+var camada_colisao_padrao: int
+var mascara_colisao_padrao: int
+var camada_area_dano_padrao: int
+var posicao_visual_padrao: Vector2
 
 @onready var animacao: AnimatedSprite2D = $Visual/AnimatedSprite2D
 @onready var barra_vida: ProgressBar = $BarraVida
@@ -61,12 +71,18 @@ func _ready() -> void:
 	for timer in [recarga, preparo, invulnerabilidade]:
 		timer.process_callback = Timer.TIMER_PROCESS_PHYSICS
 	visual_offset = animacao.offset
+	posicao_visual_padrao = animacao.position
+	camada_colisao_padrao = collision_layer
+	collision_mask = collision_mask | (1 << (PhysicsLayers.HOLES - 1))
+	mascara_colisao_padrao = collision_mask
+	posicao_renascimento = global_position
 	barra_vida.max_value = vida_maxima
 	barra_vida.value = vida_atual
 	nome_label.text = nome_personagem
 	add_to_group("combatentes")
 	add_to_group("herois" if equipe == 0 else "viloes")
 	area_dano.collision_layer = 8 if equipe == 0 else 16
+	camada_area_dano_padrao = area_dano.collision_layer
 	area_ataque.collision_mask = 16 if equipe == 0 else 8
 	preparo.timeout.connect(_aplicar_ataque)
 	vida_alterada.emit(vida_atual, vida_maxima)
@@ -79,29 +95,29 @@ func atualizar_estado(delta: float) -> void:
 		tempo_ataque -= delta
 		if tempo_ataque <= 0.0:
 			atacando = false
-	if not esta_morto:
+	if not esta_morto and not caindo:
 		if invulnerabilidade.is_stopped():
 			animacao.modulate = Color.WHITE
 		else:
 			animacao.modulate = Color(1.0, 0.5, 0.5, 0.75)
 
-func mover(vetor: Vector2, delta: float) -> void:
+func pode_mover_atacando() -> bool:
+	return false
+
+func mover(vetor: Vector2, delta: float, multiplicador: float = 1.0) -> void:
 	atualizar_estado(delta)
-	if esta_morto:
+	if esta_morto or caindo:
 		velocity = Vector2.ZERO
 		return
-	if orientar_pelo_movimento and not atacando and vetor.length_squared() > 0.01:
+	if orientar_pelo_movimento and not atacando and not defendendo and vetor.length_squared() > 0.01:
 		olhar_para(vetor)
 	var fator: float = velocidade_defendendo if defendendo else 1.0
-	# Aceleração curta e reversão suave; soltar o comando para imediatamente.
-	var deseja: Vector2 = vetor.limit_length() * velocidade * fator
-	if atacando and not (equipe == 0 and nome_personagem == "Otto"):
+	# Sem aceleracao de entrada: andar, parar e inverter respondem no mesmo quadro.
+	var deseja: Vector2 = vetor.limit_length() * velocidade * fator * maxf(multiplicador, 0.0)
+	if atacando and not pode_mover_atacando():
 		deseja = Vector2.ZERO
-	if vetor.is_zero_approx() or deseja.is_zero_approx():
-		velocidade_controle = Vector2.ZERO
-	else:
-		velocidade_controle = velocidade_controle.move_toward(deseja, 1200.0 * delta)
-	velocity = velocidade_controle + impulso if equipe == 0 else deseja + impulso
+	velocidade_controle = deseja
+	velocity = deseja + impulso
 	efeitos.atualizar_escudo(defendendo, frente)
 	var posicao_anterior: Vector2 = global_position
 	var fase: Node = get_tree().get_first_node_in_group("fase_atual")
@@ -109,9 +125,9 @@ func mover(vetor: Vector2, delta: float) -> void:
 		fase.mover_personagem(self, delta)
 	else:
 		move_and_slide()
-	audio.registrar_movimento(global_position.distance_to(posicao_anterior), vetor.length_squared() > 0.01 and not pulando and (not atacando or (equipe == 0 and nome_personagem == "Otto")))
+	audio.registrar_movimento(global_position.distance_to(posicao_anterior), vetor.length_squared() > 0.01 and not pulando and (not atacando or pode_mover_atacando()))
 	if defendendo:
-		_reproduzir("idle")
+		_reproduzir("walk" if global_position.distance_squared_to(posicao_anterior) > 0.0001 and not pulando else "idle")
 	elif tempo_dano > 0.0 and not atacando:
 		_reproduzir("hurt")
 	elif not atacando:
@@ -127,15 +143,11 @@ func olhar_para(vetor: Vector2) -> void:
 		direcao = "down" if vetor.y > 0.0 else "up"
 		frente = Vector2.DOWN if vetor.y > 0.0 else Vector2.UP
 
-func definir_defesa(ativa: bool) -> void:
-	var ja_defendia: bool = defendendo
-	defendendo = ativa and pode_usar_escudo and not esta_morto and not pulando and not atacando and tempo_dano <= 0.0
-	efeitos.atualizar_escudo(defendendo, frente)
-	if defendendo and not ja_defendia:
-		audio.tocar(&"defesa")
+func definir_defesa(_ativa: bool) -> void:
+	pass
 
 func iniciar_ataque() -> bool:
-	if esta_morto or pulando or atacando or defendendo or tempo_dano > 0.0 or not recarga.is_stopped():
+	if esta_morto or caindo or pulando or atacando or defendendo or tempo_dano > 0.0 or not recarga.is_stopped():
 		return false
 	atacando = true
 	tempo_ataque = duracao_ataque
@@ -187,7 +199,7 @@ func _aplicar_ataque() -> void:
 		audio.tocar(&"acerto")
 
 func receber_dano(valor: int, origem: Vector2) -> void:
-	if esta_morto or not invulnerabilidade.is_stopped():
+	if esta_morto or caindo or not invulnerabilidade.is_stopped():
 		return
 	var ate_origem: Vector2 = origem - global_position
 	if defendendo and ate_origem.length_squared() > 0.01 and ate_origem.normalized().dot(frente) >= 0.45:
@@ -217,6 +229,7 @@ func receber_dano(valor: int, origem: Vector2) -> void:
 
 func _morrer() -> void:
 	esta_morto = true
+	caindo = false
 	atacando = false
 	defendendo = false
 	efeitos.parar()
@@ -234,6 +247,102 @@ func _morrer() -> void:
 		var fade: Tween = create_tween()
 		fade.tween_property(animacao, "modulate:a", 0.25, 0.8)
 	morreu.emit(self)
+
+func definir_ponto_renascimento(ponto: Vector2) -> void:
+	if ponto.is_finite():
+		posicao_renascimento = ponto
+
+func obter_ponto_renascimento() -> Vector2:
+	return posicao_renascimento
+
+func definir_colisao_buraco(ativa: bool) -> void:
+	set_collision_mask_value(PhysicsLayers.HOLES, ativa)
+
+func esta_sobre_buraco() -> bool:
+	var colisao: CollisionShape2D = get_node_or_null("CollisionShape2D") as CollisionShape2D
+	if colisao == null or colisao.shape == null:
+		return false
+	var consulta: PhysicsShapeQueryParameters2D = PhysicsShapeQueryParameters2D.new()
+	consulta.shape = colisao.shape
+	consulta.transform = colisao.global_transform
+	consulta.collision_mask = 1 << (PhysicsLayers.HOLES - 1)
+	consulta.collide_with_bodies = true
+	consulta.collide_with_areas = false
+	consulta.exclude = [get_rid()]
+	return not get_world_2d().direct_space_state.intersect_shape(consulta, 1).is_empty()
+
+func cair_no_buraco() -> void:
+	if esta_morto or caindo:
+		return
+	caindo = true
+	atacando = false
+	defendendo = false
+	tempo_ataque = 0.0
+	impulso = Vector2.ZERO
+	velocidade_controle = Vector2.ZERO
+	velocity = Vector2.ZERO
+	preparo.stop()
+	efeitos.parar()
+	$PivoAtaque/EfeitoGolpe.visible = false
+	_aplicar_dano_queda(dano_queda)
+	set_deferred("collision_layer", 0)
+	set_deferred("collision_mask", 0)
+	area_dano.set_deferred("collision_layer", 0)
+	barra_vida.hide()
+	_reproduzir("hurt")
+	caiu_no_buraco.emit(self)
+	var queda: Tween = create_tween()
+	queda.set_parallel(true)
+	queda.tween_property(animacao, "position", posicao_visual_padrao + Vector2(0, 24), duracao_queda)
+	queda.tween_property(animacao, "modulate:a", 0.0, duracao_queda)
+	queda.chain().tween_callback(Callable(self, "respawn"))
+
+func _aplicar_dano_queda(valor: int) -> void:
+	if valor <= 0:
+		return
+	vida_atual = maxi(1, vida_atual - valor)
+	barra_vida.value = vida_atual
+	vida_alterada.emit(vida_atual, vida_maxima)
+	tempo_dano = 0.24
+	audio.tocar(&"dano")
+
+func respawn(restaurar_vida: bool = false) -> void:
+	if not is_inside_tree():
+		return
+	var estava_morto: bool = esta_morto
+	caindo = false
+	esta_morto = false
+	atacando = false
+	defendendo = false
+	tempo_ataque = 0.0
+	tempo_dano = 0.0
+	impulso = Vector2.ZERO
+	velocidade_controle = Vector2.ZERO
+	velocity = Vector2.ZERO
+	preparo.stop()
+	recarga.stop()
+	invulnerabilidade.stop()
+	efeitos.parar()
+	$PivoAtaque/EfeitoGolpe.visible = false
+	if restaurar_vida or estava_morto:
+		vida_atual = vida_maxima
+	else:
+		vida_atual = maxi(1, vida_atual)
+	barra_vida.max_value = vida_maxima
+	barra_vida.value = vida_atual
+	barra_vida.show()
+	nome_label.modulate = Color.WHITE
+	animacao.modulate = Color.WHITE
+	animacao.position = posicao_visual_padrao
+	if audio.has_method("reviver"):
+		audio.call(&"reviver")
+	global_position = posicao_renascimento
+	set_deferred("collision_layer", camada_colisao_padrao)
+	set_deferred("collision_mask", mascara_colisao_padrao)
+	area_dano.set_deferred("collision_layer", camada_area_dano_padrao)
+	vida_alterada.emit(vida_atual, vida_maxima)
+	_reproduzir("idle")
+	renasceu.emit(self)
 
 func _reproduzir(acao: String) -> void:
 	var nome: StringName = StringName(acao + "_" + direcao)

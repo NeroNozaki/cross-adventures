@@ -6,7 +6,7 @@ extends Node2D
 @onready var hitbox: Area2D = $hitbox
 @onready var emitter: Node = $SignalEmitter
 @export var single_use := false
-@export var channel: StringName = &"mechanism.button"
+@export var channel: StringName = &"button"
 
 var bodies_on_button: int = 0
 var pressed: bool = false

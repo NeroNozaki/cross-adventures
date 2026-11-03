@@ -55,7 +55,7 @@ Os três selos removem a proteção do chefe. Ele persegue os heróis e anuncia 
 ## Regras dos cenários
 
 - Cada posição do chão tem altura lógica Z. Andar para o vazio ou atravessar uma borda de altura diferente é bloqueado; escadas mudam o nível. Saltos têm alcance de 64 pixels e aceitam apenas pousos na mesma altura, sem atravessar paredes.
-- Ataques, projéteis e colisões entre personagens respeitam a altura. As paredes externas refletem em qualquer nível. As esferas desaparecem no quinto contato com paredes; receptores e obstáculos elementais podem consumi-las antes disso.
+- Ataques, projéteis e colisões entre personagens respeitam a altura. As paredes externas refletem em qualquer nível. A esfera simples para no primeiro contato com parede; somente a carregada ricocheteia e desaparece no quinto contato. Receptores e obstáculos elementais podem consumi-las antes disso.
 - Água congela em um bloco que Lucas pode empurrar. Fogo derrete gelo. Choque aciona condutores. Onda dissipa bolhas. Objetos mudam sua colisão durante a partida.
 - Plantas e barris quebram com espada ou tiros, espalhando fragmentos e liberando passagem. Os fragmentos não interceptam projéteis.
 - Exploradores percorrem rotas ambientais e têm um pequeno salto visual. São NPCs de ambientação, sem combate ou diálogo.

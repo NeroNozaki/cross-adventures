@@ -57,6 +57,11 @@ func finalizar() -> void:
 	else:
 		_reproduzir(&"morte")
 
+func reviver() -> void:
+	morto = false
+	distancia_acumulada = 0.0
+	atraso_morte.stop()
+
 func _reproduzir(evento: StringName) -> void:
 	if perfil == null:
 		return

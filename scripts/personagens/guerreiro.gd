@@ -1,5 +1,5 @@
 extends Heroi
-## Cada comando aceito avanca um golpe; um unico comando pode aguardar o fim do atual.
+## Cada comando aceito avanca um golpe; so depois que o golpe sai outro comando pode aguardar o fim dele.
 
 @export var janela_combo: float = 1.1
 @export var janela_buffer: float = 0.7
@@ -11,7 +11,10 @@ signal golpe_combo(passo: int)
 func _physics_process(delta: float) -> void:
 	restante_combo = maxf(0.0, restante_combo - delta)
 	buffer_ataque = maxf(0.0, buffer_ataque - delta)
+	var acao_escudo: String = prefixo_controle + "_defender"
+	definir_defesa(InputMap.has_action(acao_escudo) and Input.is_action_pressed(acao_escudo))
 	super._physics_process(delta)
+
 	if esta_morto or pulando or defendendo or tempo_dano > 0.0:
 		buffer_ataque = 0.0
 	elif buffer_ataque > 0.0 and not atacando and recarga.is_stopped():
@@ -21,8 +24,11 @@ func iniciar_ataque() -> bool:
 	if esta_morto or pulando or defendendo or tempo_dano > 0.0:
 		buffer_ataque = 0.0
 		return false
-	if atacando or not recarga.is_stopped():
-		buffer_ataque = janela_buffer
+	if atacando:
+		if preparo.is_stopped():
+			buffer_ataque = janela_buffer
+		return false
+	if not recarga.is_stopped():
 		return false
 	passo_combo = 1 if restante_combo <= 0.0 else (passo_combo % 3) + 1
 	duracao_ataque = [0.36, 0.4, 0.52][passo_combo - 1]
@@ -52,3 +58,10 @@ func receber_dano(valor: int, origem: Vector2) -> void:
 	if vida_atual < antes:
 		buffer_ataque = 0.0
 		restante_combo = 0.0
+
+func definir_defesa(ativa: bool) -> void:
+	var ja_defendia: bool = defendendo
+	defendendo = ativa and not esta_morto and not caindo  and not atacando and tempo_dano <= 0.0
+	efeitos.atualizar_escudo(defendendo, frente)
+	if defendendo and not ja_defendia:
+		audio.tocar(&"defesa")

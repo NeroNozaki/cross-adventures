@@ -36,11 +36,32 @@ func _executar() -> void:
 				verificar(frames.has_animation(acao + "_" + dir), "Animacao: " + ator.name + acao + dir)
 	verificar(g.controlado and r.controlado, "Ambos os herois devem receber comandos.")
 	verificar(g.prefixo_controle != r.prefixo_controle, "Controles precisam de prefixos separados.")
-	var esperado: Dictionary = {"robo_esquerda": KEY_LEFT, "robo_direita": KEY_RIGHT, "robo_cima": KEY_UP, "robo_baixo": KEY_DOWN, "robo_atacar": KEY_ENTER, "guerreiro_defender": KEY_SHIFT}
+	var esperado: Dictionary = {
+		"guerreiro_esquerda": KEY_LEFT,
+		"guerreiro_direita": KEY_RIGHT,
+		"guerreiro_cima": KEY_UP,
+		"guerreiro_baixo": KEY_DOWN,
+		"guerreiro_atacar": KEY_KP_1,
+		"guerreiro_defender": KEY_KP_2,
+		"lucas_pular": KEY_KP_0,
+		"lucas_interagir": KEY_KP_5,
+		"robo_esquerda": KEY_A,
+		"robo_direita": KEY_D,
+		"robo_cima": KEY_W,
+		"robo_baixo": KEY_S,
+		"otto_pular": KEY_SPACE,
+		"otto_interagir": KEY_E,
+	}
 	for acao in esperado:
 		var evento: InputEventKey = InputEventKey.new()
 		evento.physical_keycode = esperado[acao]
 		verificar(InputMap.event_is_action(evento, acao), "Mapeamento real da tecla: " + acao)
+	var mouse_esquerdo: InputEventMouseButton = InputEventMouseButton.new()
+	mouse_esquerdo.button_index = MOUSE_BUTTON_LEFT
+	verificar(InputMap.event_is_action(mouse_esquerdo, "robo_atacar"), "Mapeamento real do tiro de Otto.")
+	var mouse_direito: InputEventMouseButton = InputEventMouseButton.new()
+	mouse_direito.button_index = MOUSE_BUTTON_RIGHT
+	verificar(InputMap.event_is_action(mouse_direito, "otto_dash"), "Mapeamento real do dash de Otto.")
 	c.set_physics_process(false)
 	z.set_physics_process(false)
 	g.position = Vector2(120, 180)

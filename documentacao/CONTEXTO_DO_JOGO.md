@@ -33,7 +33,7 @@ Implementado: quatro cenas reutilizáveis, animações, colisões, combate corpo
 
 Áudio desta etapa: passos por deslocamento real, ataque, acerto confirmado, dano e morte dos quatro personagens; equipar/erguer escudo e bloqueio frontal de Lucas; som metálico da armadura sincronizado com a queda. As cenas usam o componente AudioPersonagem e os perfis em recursos/audio. O mapa dos arquivos está em documentacao/MAPA_DE_SONS.json.
 
-Otto agora usa projéteis. Clique curto gera esfera simples; segurar por 0,85 s e soltar gera esfera maior. Ambas ricocheteiam em paredes e apagam no quarto contato, ou ao atingir um inimigo. Mira, carga, disparo, dano e ricochete têm efeitos visuais/sonoros. Os tiros não causam dano nos aliados. Detalhes em documentacao/COMBO_MIRA_PROJETEIS.md.
+Otto agora usa projéteis. Clique curto gera esfera simples; segurar por 0,85 s e soltar gera esfera maior. A simples para no primeiro contato com parede; somente a carregada ricocheteia, apagando no quinto contato. As duas desaparecem ao atingir um inimigo. Mira, carga, disparo, dano e ricochete têm efeitos visuais/sonoros. Os tiros não causam dano nos aliados. Detalhes em documentacao/COMBO_MIRA_PROJETEIS.md.
 
 O controle de gamepad para Lucas ainda NÃO foi implementado. Otto já usa teclado independente e mira pelo mouse. A utilidade final de Otto, além da ação de ataque carregado solicitada nesta etapa, continua sem definição no SGDD.
 
@@ -116,3 +116,13 @@ O usuário pediu explicitamente mais desafio e separação dos mecanismos. O lim
 ## Decisão mais recente: cristal ao norte — 28/10/2026
 
 O usuário pediu explicitamente o cristal na parte de cima, em sala separada da placa. Implementado: Lucas na placa inferior (4,18), Otto percorre o corredor até a sala norte e usa o espelho (9,8) para atingir o cristal (9,5), disparando da região (5,8). O acerto fica travado; Otto volta à ponte para atravessarem juntos. A mureta inferior foi removida e o cabo de energia segue o corredor. Baú, barril e rota do explorador foram afastados dos mecanismos superiores. Ver CRISTAL_NORTE_2026-10-28.md; substitui o layout anterior com mecanismos na mesma sala. Percurso real e câmera com os dois heróis em salas distintas foram verificados.
+
+## Ajustes atuais de Otto — 02/11/2026
+
+O usuário pediu explicitamente que somente a esfera carregada ricocheteie e que Otto não pare de andar ao disparar. Implementado: a esfera simples desaparece no primeiro contato com parede; a carregada mantém o limite de cinco contatos. A previsão da mira mostra o trajeto correspondente ao tipo de tiro. O ataque de Otto não zera mais a velocidade: um gancho `pode_mover_atacando()` na base mantém o movimento mesmo quando a cena sobrescreve o nome do personagem. Também permanecem implementados o dash no clique direito, os buracos sólidos na camada 7, queda com dano/renascimento e as cenas reutilizáveis LevelSpawn/Checkpoint. Validação: testes/verify_dash_respawn.gd (31), testes/verificar_combo_mira.gd (53), além de switch, signals e áudio.
+
+A mira de Otto usa comprimento visual fixo, definido por `comprimento_maximo` (520 px). O cursor define somente o ângulo: a linha pode ultrapassá-lo quando perto ou não alcançá-lo quando longe. A previsão percorre paredes e ricochetes dentro desse orçamento fixo, parando na primeira parede para o tiro simples e mostrando os ricochetes da esfera carregada. O comprimento nunca ultrapassa o valor configurado; testes/verificar_combo_mira.gd cobre cursor perto/longe, parada simples e ricochete carregado.
+
+## Ajustes atuais de Lucas — 02/11/2026
+
+O usuário pediu que o combo não gerasse um golpe extra ao spammar e soltar o ataque e que o escudo mantivesse a orientação ao recuar. Implementado: cada golpe exige um comando; o buffer só aceita um novo comando depois que o golpe atual já saiu (fim do preparo), então toques repetidos antes disso são ignorados. O terceiro golpe também aceita buffer depois de sair e reinicia o combo, a pedido do usuário; o tempo dos golpes continua igual ao dos clipes. Com o escudo erguido, `defendendo` bloqueia a troca de direção no `Heroi` e no `PersonagemBase`; Lucas anda mais devagar, recua de costas e mantém `frente`/`direcao` para a defesa frontal. `verificar_combo_mira.gd` passou com 53 verificações, incluindo comandos antes do primeiro golpe, buffer no terceiro e escudo recuando. `verificar_personagens.gd` voltou a passar com os mapeamentos atuais de teclado.
