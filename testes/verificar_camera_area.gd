@@ -1,9 +1,14 @@
 extends SceneTree
+
 var falhas: Array[String] = []
 var total: int = 0
 
 
 func _initialize() -> void:
+	create_timer(15.0).timeout.connect(func():
+		push_error("Timeout do teste da camera")
+		quit(2)
+	)
 	call_deferred("rodar")
 
 
@@ -14,51 +19,58 @@ func conferir(ok: bool, texto: String) -> void:
 		push_error(texto)
 
 
-func passos() -> void:
-	await physics_frame
-	await physics_frame
-	await process_frame
+func passos(count: int = 3) -> void:
+	for _i in range(count):
+		await physics_frame
 	await process_frame
 
 
 func rodar() -> void:
-	var area: Node2D = load("res://cenas/areas/area_1.tscn").instantiate()
-	root.add_child(area)
-	current_scene = area
-	await passos()
-	var camera: Camera2D = area.get_node("CameraCompartilhada")
-	conferir(camera != null, "area tem CameraCompartilhada")
-	conferir(camera.alvos.size() == 2, "camera conhece os dois alvos da cena")
-	conferir(camera.limites_mundo == Rect2(0, -32, 640, 432), "limites vem da propria cena")
-	conferir(
-		camera.zoom.x >= camera.zoom_minimo - 0.001 and camera.zoom.x <= camera.zoom_maximo + 0.001,
-		"zoom inicial dentro do intervalo"
-	)
-	conferir(camera.limit_left == 0 and camera.limit_right == 640, "limites normais aplicados")
-	var lucas: Node2D = area.get_node("Personagens/Guerreiro")
-	var otto: Node2D = area.get_node("Personagens/Robo")
+	var mundo := Node2D.new()
+	root.add_child(mundo)
+	current_scene = mundo
+
+	var lucas: Node2D = load("res://cenas/personagens/guerreiro.tscn").instantiate()
 	lucas.set_physics_process(false)
+	mundo.add_child(lucas)
+	lucas.global_position = Vector2.ZERO
+	var otto: Node2D = load("res://cenas/personagens/robo.tscn").instantiate()
 	otto.set_physics_process(false)
-	lucas.global_position = Vector2(240, 250)
-	otto.global_position = Vector2(400, 250)
-	await create_timer(0.5).timeout
-	conferir(absf(camera.global_position.x - 320.0) < 80.0, "camera centraliza os dois alvos")
-	var evento := InputEventKey.new()
-	evento.physical_keycode = KEY_V
-	evento.pressed = true
-	Input.parse_input_event(evento)
+	mundo.add_child(otto)
+	otto.global_position = Vector2.ZERO
+
+	var camera: Camera2D = load("res://scripts/objects/camera/camera2D.gd").new()
+	camera.player1 = otto
+	camera.player2 = lucas
+	mundo.add_child(camera)
+	camera.global_position = Vector2.ZERO
+
+	var spawn: Node2D = load("res://cenas/objects/respawn/level_spawn.tscn").instantiate()
+	spawn.set("team_spacing", 64.0)
+	mundo.add_child(spawn)
+	spawn.global_position = Vector2(1000, 720)
+	await passos(5)
+
+	conferir(lucas.global_position.y == 720.0, "level spawn move Lucas antes da camera")
+	conferir(otto.global_position.y == 720.0, "level spawn move Otto antes da camera")
+	conferir(is_equal_approx(camera.current_anchor, 575.0), "camera usa a ancora do spawn, nao a posicao inicial")
+	conferir(is_equal_approx(camera.global_position.y, 575.0), "camera nasce enquadrada nos personagens")
+	conferir(camera.state == camera.State.LOCKED, "camera trava no quadro do spawn")
+
+	lucas.global_position = Vector2(0, 600)
+	otto.global_position = Vector2(0, 700)
 	await passos()
-	conferir(camera.visao_geral, "V abre a visao geral")
-	conferir(camera.limit_left < 0, "visao geral ignora os limites da area")
-	evento = InputEventKey.new()
-	evento.physical_keycode = KEY_V
-	evento.pressed = true
-	Input.parse_input_event(evento)
+	conferir(camera.state == camera.State.LOCKED, "camera permanece travada com os dois no mesmo quadro")
+	conferir(is_equal_approx(camera.global_position.y, 575.0), "camera nao pula ao andar dentro do quadro")
+
+	lucas.global_position = Vector2(0, 100)
+	otto.global_position = Vector2(0, 1000)
 	await passos()
-	conferir(not camera.visao_geral, "V fecha a visao geral")
-	conferir(camera.limit_left == 0, "limites da area voltam ao normal")
+	conferir(camera.state == camera.State.FLOATING, "camera flutua quando os herois se separam")
+	conferir(is_equal_approx(camera.target_y, 262.5), "camera calcula o centro entre os herois")
+
 	if falhas.is_empty():
-		print("CAMERA_AREA_OK: %d verificacoes da camera independente da area." % total)
+		print("CAMERA_AREA_OK: %d verificacoes da camera no spawn." % total)
 		quit(0)
 	else:
 		print(falhas)

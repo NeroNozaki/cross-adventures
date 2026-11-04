@@ -149,6 +149,7 @@ ajuda_fases={
 2d_physics/layer_5="DanoViloes"
 2d_physics/layer_6="Botoes"
 2d_physics/layer_7="Buracos"
+2d_physics/layer_8="TerrenoInstavel"
 
 [rendering]
 

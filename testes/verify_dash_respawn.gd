@@ -91,16 +91,17 @@ func run() -> void:
 	check(lucas.global_position.distance_to(Vector2(268, 180)) < 0.1, "level spawn move Lucas para o inicio")
 	check(otto.global_position.distance_to(Vector2(332, 180)) < 0.1, "level spawn move Otto para o inicio")
 
-	var checkpoint: Area2D = load("res://cenas/objects/respawn/checkpoint.tscn").instantiate()
+	var checkpoint: Node2D = load("res://cenas/objects/respawn/checkpoint.tscn").instantiate()
 	checkpoint.team_spacing = 48.0
 	arena.add_child(checkpoint)
 	checkpoint.global_position = Vector2(400, 180)
+	checkpoint.get_node("RespawnPoint").global_position = Vector2(440, 220)
 	await wait_physics()
 	otto.global_position = checkpoint.global_position
 	await wait_physics(5)
 	check(checkpoint.is_active, "checkpoint detecta um heroi")
-	check(lucas.obter_ponto_renascimento().distance_to(Vector2(376, 180)) < 0.1, "checkpoint atualiza Lucas")
-	check(otto.obter_ponto_renascimento().distance_to(Vector2(424, 180)) < 0.1, "checkpoint atualiza Otto")
+	check(lucas.obter_ponto_renascimento().distance_to(Vector2(416, 220)) < 0.1, "checkpoint atualiza Lucas no ponto separado do gatilho")
+	check(otto.obter_ponto_renascimento().distance_to(Vector2(464, 220)) < 0.1, "checkpoint atualiza Otto no ponto separado do gatilho")
 
 	make_hole(arena, Vector2(300, 260))
 	await wait_physics()
@@ -126,6 +127,7 @@ func run() -> void:
 	otto.tempo_dano = 0.0
 	otto.dash_cooldown_remaining = 0.0
 	otto.definir_ponto_renascimento(Vector2(320, 340))
+	otto.definir_ultima_posicao_segura(Vector2(300, 300))
 	check(otto.iniciar_dash(Vector2.RIGHT), "segundo dash inicia")
 	for _frame in range(30):
 		await physics_frame
@@ -136,7 +138,7 @@ func run() -> void:
 	check(not otto.get_collision_mask_value(PhysicsLayers.HOLES), "Otto permanece sem colisao de buraco durante a queda")
 	await create_timer(otto.duracao_queda + 0.2).timeout
 	check(not otto.caindo and not otto.esta_morto, "Otto renasce apos a queda")
-	check(otto.global_position.distance_to(Vector2(320, 340)) < 0.1, "Otto renasce no checkpoint")
+	check(otto.global_position.distance_to(Vector2(300, 300)) < 0.1, "Otto renasce no ultimo piso seguro, nao no checkpoint")
 	check(otto.get_collision_mask_value(PhysicsLayers.HOLES), "renascimento restaura a colisao com buracos")
 	check(otto.vida_atual == otto.vida_maxima - otto.dano_queda, "dano da queda permanece apos o renascimento")
 

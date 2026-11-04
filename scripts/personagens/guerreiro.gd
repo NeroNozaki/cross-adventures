@@ -15,13 +15,13 @@ func _physics_process(delta: float) -> void:
 	definir_defesa(InputMap.has_action(acao_escudo) and Input.is_action_pressed(acao_escudo))
 	super._physics_process(delta)
 
-	if esta_morto or pulando or defendendo or tempo_dano > 0.0:
+	if esta_morto or pulando or defendendo or tempo_dano > 0.0 or esta_empurrado():
 		buffer_ataque = 0.0
 	elif buffer_ataque > 0.0 and not atacando and recarga.is_stopped():
 		iniciar_ataque()
 
 func iniciar_ataque() -> bool:
-	if esta_morto or pulando or defendendo or tempo_dano > 0.0:
+	if esta_morto or pulando or defendendo or tempo_dano > 0.0 or esta_empurrado():
 		buffer_ataque = 0.0
 		return false
 	if atacando:
@@ -61,7 +61,7 @@ func receber_dano(valor: int, origem: Vector2) -> void:
 
 func definir_defesa(ativa: bool) -> void:
 	var ja_defendia: bool = defendendo
-	defendendo = ativa and not esta_morto and not caindo  and not atacando and tempo_dano <= 0.0
+	defendendo = ativa and not esta_morto and not caindo and not atacando and tempo_dano <= 0.0 and not esta_empurrado()
 	efeitos.atualizar_escudo(defendendo, frente)
 	if defendendo and not ja_defendia:
 		audio.tocar(&"defesa")

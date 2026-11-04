@@ -15,11 +15,31 @@ var target_y: float = 0.0
 
 
 func _ready() -> void:
-	if player1 and player2:
-		var avg_y = (player1.global_position.y + player2.global_position.y) * 0.5
-		current_anchor = floor(avg_y / view_height) * view_height
-		target_y = current_anchor
-		global_position.y = current_anchor
+	set_process(false)
+	_initialize_after_spawn.call_deferred()
+
+
+func _initialize_after_spawn() -> void:
+	await get_tree().physics_frame
+	_snap_to_players()
+	set_process(true)
+
+
+func _snap_to_players() -> void:
+	if not player1 or not player2:
+		return
+	var p1_y = player1.global_position.y
+	var p2_y = player2.global_position.y
+	var min_y = min(p1_y, p2_y)
+	var max_y = max(p1_y, p2_y)
+	var avg_y = (p1_y + p2_y) * 0.5
+	current_anchor = floor(avg_y / view_height) * view_height
+	target_y = current_anchor
+	state = State.LOCKED
+	if min_y < current_anchor or max_y > current_anchor + view_height:
+		state = State.FLOATING
+		_update_floating_target(min_y, max_y)
+	global_position.y = target_y
 
 
 func _process(delta: float) -> void:

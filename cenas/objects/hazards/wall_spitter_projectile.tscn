@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dkluronen864u"]
+
+[ext_resource type="Texture2D" uid="uid://ucs7pw6pq0v3" path="res://assets/Ninja Adventure - Asset Pack/Items/Food/Seed3.png" id="1_s5b4s"]
+[ext_resource type="Script" uid="uid://blvwqvt38i2w0" path="res://scripts/objects/hazards/wall_spitter_projectile.gd" id="2_projectile"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nqwk7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_s5b4s")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b6daa"]
+radius = 3.0
+
+[node name="wall_spitter_projectile" type="Node2D" unique_id=1821876773]
+script = ExtResource("2_projectile")
+
+[node name="animation" type="AnimatedSprite2D" parent="." unique_id=274641424]
+sprite_frames = SubResource("SpriteFrames_nqwk7")
+
+[node name="sweep" type="ShapeCast2D" parent="." unique_id=82395443]
+shape = SubResource("CircleShape2D_b6daa")
+target_position = Vector2(0, 1)
+collision_mask = 9
+collide_with_areas = true

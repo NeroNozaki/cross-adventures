@@ -22,6 +22,10 @@ signal dashed
 func pode_mover_atacando() -> bool:
 	return true
 
+
+func _pode_registrar_piso_seguro() -> bool:
+	return not dashing
+
 func _physics_process(delta: float) -> void:
 	var movimento: Vector2 = Vector2.ZERO
 	dash_cooldown_remaining = maxf(0.0, dash_cooldown_remaining - delta)
@@ -32,6 +36,11 @@ func _physics_process(delta: float) -> void:
 		mover(movimento, delta)
 		return
 	if caindo:
+		cancelar_carga()
+		mira.hide()
+		mover(movimento, delta)
+		return
+	if esta_empurrado():
 		cancelar_carga()
 		mira.hide()
 		mover(movimento, delta)
@@ -55,7 +64,7 @@ func _physics_process(delta: float) -> void:
 	mover(movimento, delta)
 
 func iniciar_dash(direcao: Vector2) -> bool:
-	if esta_morto or caindo or pulando or not controlado or dashing or dash_cooldown_remaining > 0.0 or tempo_dano > 0.0:
+	if esta_morto or caindo or pulando or not controlado or dashing or dash_cooldown_remaining > 0.0 or tempo_dano > 0.0 or esta_empurrado():
 		return false
 	var rumo: Vector2 = direcao.normalized()
 	if rumo.is_zero_approx():
@@ -96,7 +105,7 @@ func cancelar_dash() -> void:
 		definir_colisao_buraco(true)
 
 func iniciar_carga() -> bool:
-	if esta_morto or caindo or dashing or pulando or not controlado or not recarga.is_stopped() or tempo_dano > 0.0 or carregando:
+	if esta_morto or caindo or dashing or pulando or not controlado or not recarga.is_stopped() or tempo_dano > 0.0 or carregando or esta_empurrado():
 		return false
 	carregando = true
 	tempo_carga = 0.0
@@ -119,7 +128,7 @@ func iniciar_ataque() -> bool:
 	return disparar(false) != null
 
 func disparar(carregado: bool = false) -> Node2D:
-	if esta_morto or caindo or dashing or pulando or not controlado or not recarga.is_stopped() or tempo_dano > 0.0:
+	if esta_morto or caindo or dashing or pulando or not controlado or not recarga.is_stopped() or tempo_dano > 0.0 or esta_empurrado():
 		return null
 	var tiro: Node2D = PROJETIL.instantiate()
 	tiro.emissor = self
@@ -186,11 +195,11 @@ func _morrer() -> void:
 	mira.hide()
 	super._morrer()
 
-func respawn(restaurar_vida: bool = false) -> void:
+func respawn(restaurar_vida: bool = false, usar_ultimo_piso_seguro: bool = false) -> void:
 	dashing = false
 	dash_remaining = 0.0
 	dash_cooldown_remaining = 0.0
-	super.respawn(restaurar_vida)
+	super.respawn(restaurar_vida, usar_ultimo_piso_seguro)
 
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_APPLICATION_FOCUS_OUT:

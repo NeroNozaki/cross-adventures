@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bsihrvbnum6vc"]
+
+[ext_resource type="Texture2D" uid="uid://c4861kvc8lkid" path="res://assets/Dungeon Gathering Free Version/Set 1.png" id="1_allkk"]
+[ext_resource type="Script" uid="uid://b4ilvxy26vqpq" path="res://scripts/objects/non-interactables/wall_spitter.gd" id="1_g0oum"]
+[ext_resource type="PackedScene" uid="uid://bqxhc5ktl8twr" path="res://cenas/signal_components/signal_receiver.tscn" id="3_receiver"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7vtg"]
+atlas = ExtResource("1_allkk")
+region = Rect2(160, 176, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nqwk7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7vtg")
+}],
+"loop": 0,
+"name": &"large",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b6daa"]
+size = Vector2(16, 16)
+
+[node name="wall_spitter" type="Node2D" unique_id=2140932937]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_g0oum")
+
+[node name="animation" type="AnimatedSprite2D" parent="." unique_id=245434712]
+sprite_frames = SubResource("SpriteFrames_nqwk7")
+animation = &"large"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1687140085]
+
+[node name="shape" type="CollisionShape2D" parent="StaticBody2D" unique_id=1568299917]
+shape = SubResource("RectangleShape2D_b6daa")
+
+[node name="SignalReceiver" parent="." unique_id=1634472998 instance=ExtResource("3_receiver")]

@@ -22,6 +22,8 @@ func _assign_team() -> void:
 		var offset: Vector2 = Vector2((float(index) - float(count - 1) * 0.5) * team_spacing, 0.0)
 		var point: Vector2 = respawn_point.global_position + offset
 		hero.call(&"definir_ponto_renascimento", point)
+		hero.call(&"definir_ultima_posicao_segura", point)
+		hero.call(&"definir_ponto_seguro_inicial", point)
 		if move_team_on_ready and hero is Node2D and not hero.get("esta_morto"):
 			(hero as Node2D).global_position = point
 	team_spawned.emit()

@@ -8,4 +8,5 @@ enum {
 	ENEMY_HURTBOX = 5,
 	BUTTON = 6,
 	HOLES = 7,
+	UNSTABLE_GROUND = 8,
 }
