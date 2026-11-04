@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://jcynk6dejx7" path="res://scripts/objects/non-interactables/fence.gd" id="1_3ad52"]
 [ext_resource type="Texture2D" uid="uid://c4861kvc8lkid" path="res://assets/Dungeon Gathering Free Version/Set 1.png" id="1_ica1r"]
-[ext_resource type="Script" uid="uid://chf7du1kg2bs2" path="res://scripts/signals/signal_receiver.gd" id="2_receiver"]
+[ext_resource type="PackedScene" uid="uid://bqxhc5ktl8twr" path="res://cenas/signal_components/signal_receiver.tscn" id="3_ixfd5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3ad52"]
 atlas = ExtResource("1_ica1r")
@@ -157,5 +157,4 @@ collision_mask = 6
 position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_b6daa")
 
-[node name="SignalReceiver" type="Node" parent="." unique_id=940283277]
-script = ExtResource("2_receiver")
+[node name="SignalReceiver" parent="." unique_id=1186303325 instance=ExtResource("3_ixfd5")]

@@ -1,4 +1,5 @@
 extends NonInteractable
+class_name Fence
 ## Fence: on = lowered/open. Use invert_receive to swap. Use start_activated to start lowered.
 
 @onready var static_body: StaticBody2D = $static_body

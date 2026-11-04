@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var button2 = $objects/button2
 @onready var button3 = $objects/button3
-@onready var fence_set3 = $objects/fence_set_3
+@onready var fence_set3 = $objects/fence_set3
 @onready var switch2 = $objects/switch2
 
 var robo
@@ -42,7 +42,7 @@ func _check_both_buttons(_state = null) -> void:
 
 func _is_button_pressed(btn: Node) -> bool:
 	if "pressed" in btn:
-		return bool(btn.pressed)
+		return btn.pressed == true
 	return false
 
 
@@ -69,9 +69,8 @@ func _lock_button(btn: Node) -> void:
 
 
 func _open_fences() -> void:
-	for child in fence_set3.get_children():
-		if child.has_method("_on_activated"):
-			child._on_activated(true)
+	if fence_set3 and fence_set3.has_method("definir_ativado"):
+		fence_set3.definir_ativado(true)
 
 
 func _process(_delta: float) -> void:

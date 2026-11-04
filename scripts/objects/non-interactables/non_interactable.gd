@@ -12,6 +12,20 @@ var _is_activated: bool = false
 
 
 func _ready() -> void:
+	_configure_receiver()
+	if start_activated:
+		_is_activated = true
+	else:
+		_is_activated = false
+
+
+func definir_canal(novo_canal: StringName) -> void:
+	channel = novo_canal
+	if is_node_ready():
+		_configure_receiver()
+
+
+func _configure_receiver() -> void:
 	_receiver = get_node_or_null("SignalReceiver")
 	if _receiver and channel != &"":
 		if _receiver.has_method("configure"):
@@ -22,10 +36,8 @@ func _ready() -> void:
 			_receiver.received_changed.connect(_on_received_changed)
 		if _receiver.has_signal("received") and not _receiver.received.is_connected(_on_received):
 			_receiver.received.connect(_on_received)
-	if start_activated:
-		_is_activated = true
-	else:
-		_is_activated = false
+	elif _receiver and channel == &"" and _receiver.has_method("configure"):
+		_receiver.configure(&"")
 
 
 func _on_received_changed(is_on: bool) -> void:
@@ -37,18 +49,27 @@ func _on_received(value: Variant) -> void:
 
 
 func _interpret(value: Variant) -> bool:
-	if typeof(value) == TYPE_BOOL:
-		return value
-	if typeof(value) == TYPE_STRING or typeof(value) == TYPE_STRING_NAME:
-		var s := str(value).strip_edges().to_lower()
-		if s in ["on", "true", "1", "open", "lower", "down", "blue", "gold", "pressed"]:
-			return true
-		if s in ["off", "false", "0", "closed", "raise", "up", "red", "unpressed"]:
+	match typeof(value):
+		TYPE_BOOL:
+			return value
+		TYPE_STRING, TYPE_STRING_NAME:
+			var s := str(value).strip_edges().to_lower()
+			if s in ["on", "true", "1", "open", "lower", "down", "blue", "gold", "pressed"]:
+				return true
+			if s in ["off", "false", "0", "closed", "raise", "up", "red", "unpressed"]:
+				return false
 			return false
-		return false
-	if typeof(value) == TYPE_INT:
-		return value != 0
-	return bool(value)
+		TYPE_INT:
+			return value != 0
+		TYPE_FLOAT:
+			return not is_zero_approx(float(value))
+		_:
+			return false
+
+
+func definir_ativado(ativado: bool) -> void:
+	_is_activated = ativado
+	_on_activated(ativado)
 
 
 func _apply(is_on: bool) -> void:

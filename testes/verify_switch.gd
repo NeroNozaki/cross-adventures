@@ -76,13 +76,13 @@ func run() -> void:
 	await wait_frames()
 	check(single.get_state() == &"gold", "single-use turns gold after the first hit")
 	check(single.animation.animation == &"gold", "single-use plays gold")
-	check(single_events == [&"gold"], "single-use publishes gold")
+	check(single_events == [&"gold", true], "single-use publishes gold and on")
 	check(single.hitbox.collision_layer == 0 and not single.hitbox.monitorable, "single-use disables its hitbox")
 
 	single.receber_dano(10, Vector2.ZERO)
 	single.receber_dano(10, Vector2.ZERO)
 	await wait_frames()
-	check(single.get_state() == &"gold" and single_events.size() == 1, "single-use cannot trigger again")
+	check(single.get_state() == &"gold" and single_events.size() == 2, "single-use cannot trigger again")
 
 	var multi: Node2D = load("res://cenas/objects/interactables/switch.tscn").instantiate()
 	multi.single_use = false
@@ -102,7 +102,7 @@ func run() -> void:
 	check(multi.get_state() == &"red", "multiple-use toggles back to red")
 	check(multi.animation.animation == &"red", "multiple-use plays red")
 	multi.receber_dano(10, Vector2.ZERO)
-	check(multi_events == [&"blue", &"red", &"blue"], "multiple-use publishes every new state")
+	check(multi_events == [&"blue", true, &"red", false, &"blue", true], "multiple-use publishes every new state and on/off")
 	check(multi.hitbox.get_collision_layer_value(PhysicsLayers.ENEMY_HURTBOX), "multiple-use keeps its hitbox active")
 
 	var start_blue: Node2D = load("res://cenas/objects/interactables/switch.tscn").instantiate()

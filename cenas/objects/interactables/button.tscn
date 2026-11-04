@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dhgbpwwpdn5lc" path="res://assets/Dungeon Gathering Free Version/Button.png" id="1_85stp"]
 [ext_resource type="Script" uid="uid://qvjqdyl2xxo3" path="res://scripts/objects/interactables/button.gd" id="1_n53u5"]
-[ext_resource type="Script" uid="uid://ttvt60hb7bou" path="res://scripts/signals/signal_emitter.gd" id="2_emitter"]
+[ext_resource type="PackedScene" uid="uid://wuohnjd4pudr" path="res://cenas/signal_components/signal_emitter.tscn" id="3_ede7p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1v2ee"]
 atlas = ExtResource("1_85stp")
@@ -60,5 +60,4 @@ animation = &"1-not_pressed"
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_b6daa")
 
-[node name="SignalEmitter" type="Node" parent="." unique_id=51669143]
-script = ExtResource("2_emitter")
+[node name="SignalEmitter" parent="." unique_id=81484739 instance=ExtResource("3_ede7p")]

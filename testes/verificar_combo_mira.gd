@@ -82,7 +82,6 @@ func _executar() -> void:
 	g.golpe_combo.connect(contar_golpe_cedo)
 	g.iniciar_ataque()
 	g.iniciar_ataque()
-	await create_timer(0.08).timeout
 	g.iniciar_ataque()
 	await create_timer(0.8).timeout
 	g.golpe_combo.disconnect(contar_golpe_cedo)
