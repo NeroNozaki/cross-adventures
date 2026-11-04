@@ -59,6 +59,7 @@ var camada_colisao_padrao: int
 var mascara_colisao_padrao: int
 var camada_area_dano_padrao: int
 var posicao_visual_padrao: Vector2
+var _colisao_buraco_ativa: bool = true
 
 @onready var animacao: AnimatedSprite2D = $Visual/AnimatedSprite2D
 @onready var barra_vida: ProgressBar = $BarraVida
@@ -80,6 +81,7 @@ func _ready() -> void:
 	posicao_visual_padrao = animacao.position
 	camada_colisao_padrao = collision_layer
 	collision_mask = collision_mask | (1 << (PhysicsLayers.HOLES - 1))
+	_colisao_buraco_ativa = true
 	mascara_colisao_padrao = collision_mask
 	posicao_renascimento = global_position
 	ultima_posicao_segura = global_position
@@ -140,7 +142,7 @@ func mover(vetor: Vector2, delta: float, multiplicador: float = 1.0) -> void:
 	if empurrado and esta_sobre_buraco():
 		cair_no_buraco()
 		return
-	if not empurrado and not pulando and vetor.length_squared() > 0.01 and _pode_registrar_piso_seguro() and not esta_sobre_buraco() and not esta_sobre_terreno_instavel():
+	if not empurrado and not pulando and vetor.length_squared() > 0.01 and _pode_registrar_piso_seguro() and not esta_sobre_buraco_bruto() and not esta_sobre_terreno_instavel():
 		ultima_posicao_segura = global_position
 	audio.registrar_movimento(global_position.distance_to(posicao_anterior), not empurrado and vetor.length_squared() > 0.01 and not pulando and (not atacando or pode_mover_atacando()))
 	if defendendo:
@@ -305,6 +307,7 @@ func _block_hit(origin: Vector2, apply_recoil: bool) -> void:
 func _morrer() -> void:
 	esta_morto = true
 	caindo = false
+	_colisao_buraco_ativa = false
 	atacando = false
 	defendendo = false
 	tempo_empurrao = 0.0
@@ -341,7 +344,12 @@ func obter_ponto_renascimento() -> Vector2:
 	return posicao_renascimento
 
 func definir_colisao_buraco(ativa: bool) -> void:
+	_colisao_buraco_ativa = ativa
 	set_collision_mask_value(PhysicsLayers.HOLES, ativa)
+
+
+func pode_cair_em_buraco_reexposto() -> bool:
+	return _colisao_buraco_ativa and not esta_morto and not caindo and not pulando and not esta_empurrado()
 
 func esta_sobre_terreno_instavel(ponto: Vector2 = Vector2.INF) -> bool:
 	var alvo: Vector2 = global_position if not ponto.is_finite() else ponto
@@ -384,6 +392,13 @@ func esta_sobre_buraco() -> bool:
 	consulta.exclude = [get_rid()]
 	return not get_world_2d().direct_space_state.intersect_shape(consulta, 1).is_empty()
 
+
+func esta_sobre_buraco_bruto() -> bool:
+	var campo: HoleField = get_tree().get_first_node_in_group("hole_fields") as HoleField
+	if campo != null:
+		return campo.contem_buraco_bruto(global_position)
+	return esta_sobre_buraco()
+
 func cair_no_buraco() -> void:
 	if esta_morto or caindo:
 		return
@@ -395,6 +410,7 @@ func cair_no_buraco() -> void:
 	impulso = Vector2.ZERO
 	velocidade_controle = Vector2.ZERO
 	velocity = Vector2.ZERO
+	_colisao_buraco_ativa = false
 	preparo.stop()
 	efeitos.parar()
 	$PivoAtaque/EfeitoGolpe.visible = false
@@ -459,6 +475,7 @@ func respawn(restaurar_vida: bool = false, usar_ultimo_piso_seguro: bool = false
 	var destino: Vector2 = ultima_posicao_segura if usar_ultimo_piso_seguro else posicao_renascimento
 	global_position = _resolver_ponto_renascimento(destino)
 	ultima_posicao_segura = global_position
+	_colisao_buraco_ativa = true
 	set_deferred("collision_layer", camada_colisao_padrao)
 	set_deferred("collision_mask", mascara_colisao_padrao)
 	area_dano.set_deferred("collision_layer", camada_area_dano_padrao)
