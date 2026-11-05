@@ -37,59 +37,59 @@ func run() -> void:
 
 	var right_click := InputEventMouseButton.new()
 	right_click.button_index = MOUSE_BUTTON_RIGHT
-	check(InputMap.event_is_action(right_click, "otto_dash"), "clique direito aciona otto_dash")
-	check(not InputMap.event_is_action(right_click, "robo_atacar"), "clique direito nao dispara o tiro")
+	check(InputMap.event_is_action(right_click, "player2_dash"), "clique direito aciona player2_dash")
+	check(not InputMap.event_is_action(right_click, "player2_atacar"), "clique direito nao dispara o tiro")
 	var left_click := InputEventMouseButton.new()
 	left_click.button_index = MOUSE_BUTTON_LEFT
-	check(InputMap.event_is_action(left_click, "robo_atacar") and not InputMap.event_is_action(left_click, "otto_dash"), "clique esquerdo continua apenas no tiro")
+	check(InputMap.event_is_action(left_click, "player2_atacar") and not InputMap.event_is_action(left_click, "player2_dash"), "clique esquerdo continua apenas no tiro")
 
 	var arena: Node2D = load("res://cenas/testes/arena_teste.tscn").instantiate()
 	root.add_child(arena)
 	current_scene = arena
 	await wait_physics()
-	var lucas: CharacterBody2D = arena.get_node("Personagens/Guerreiro")
-	var otto: CharacterBody2D = arena.get_node("Personagens/Robo")
+	var player1: CharacterBody2D = arena.get_node("Personagens/Player1")
+	var player2: CharacterBody2D = arena.get_node("Personagens/Player2")
 	var zumbi: CharacterBody2D = arena.get_node("Personagens/Zumbi")
-	for actor in [lucas, otto, arena.get_node("Personagens/CavaleiroAzul"), zumbi]:
+	for actor in [player1, player2, arena.get_node("Personagens/CavaleiroAzul"), zumbi]:
 		actor.set_physics_process(false)
-	check(lucas.get_collision_mask_value(PhysicsLayers.HOLES), "herois colidem com buracos")
+	check(player1.get_collision_mask_value(PhysicsLayers.HOLES), "herois colidem com buracos")
 	check(zumbi.get_collision_mask_value(PhysicsLayers.HOLES), "inimigos colidem com buracos")
 
-	lucas.global_position = Vector2(160, 180)
-	lucas.velocidade_controle = Vector2.ZERO
-	lucas.mover(Vector2.RIGHT, 1.0 / 60.0)
-	check(absf(lucas.velocidade_controle.x - lucas.velocidade) < 0.01, "movimento atinge a velocidade no primeiro quadro")
-	lucas.mover(Vector2.ZERO, 1.0 / 60.0)
-	check(lucas.velocidade_controle.is_zero_approx() and lucas.velocity.is_zero_approx(), "soltar o comando para imediatamente")
+	player1.global_position = Vector2(160, 180)
+	player1.velocidade_controle = Vector2.ZERO
+	player1.mover(Vector2.RIGHT, 1.0 / 60.0)
+	check(absf(player1.velocidade_controle.x - player1.velocidade) < 0.01, "movimento atinge a velocidade no primeiro quadro")
+	player1.mover(Vector2.ZERO, 1.0 / 60.0)
+	check(player1.velocidade_controle.is_zero_approx() and player1.velocity.is_zero_approx(), "soltar o comando para imediatamente")
 
-	otto.nome_personagem = "Personagem"
-	otto.global_position = Vector2(240, 200)
-	otto.atacando = true
-	otto.tempo_ataque = 1.0
-	var antes_tiro: Vector2 = otto.global_position
-	otto.mover(Vector2.RIGHT, 1.0 / 60.0)
-	check(otto.global_position.x > antes_tiro.x + 0.1, "Otto continua andando enquanto ataca")
-	otto.atacando = false
-	otto.tempo_ataque = 0.0
-	otto.nome_personagem = "Otto"
+	player2.nome_personagem = "Personagem"
+	player2.global_position = Vector2(240, 200)
+	player2.atacando = true
+	player2.tempo_ataque = 1.0
+	var antes_tiro: Vector2 = player2.global_position
+	player2.mover(Vector2.RIGHT, 1.0 / 60.0)
+	check(player2.global_position.x > antes_tiro.x + 0.1, "Player2 continua andando enquanto ataca")
+	player2.atacando = false
+	player2.tempo_ataque = 0.0
+	player2.nome_personagem = "Player2"
 
 	make_hole(arena, Vector2(230, 180))
 	await wait_physics()
-	lucas.global_position = Vector2(170, 180)
-	lucas.velocidade_controle = Vector2.ZERO
+	player1.global_position = Vector2(170, 180)
+	player1.velocidade_controle = Vector2.ZERO
 	for _frame in range(60):
-		lucas.mover(Vector2.RIGHT, 1.0 / 60.0)
-	check(lucas.global_position.x < 214.0, "buraco bloqueia a caminhada como uma parede")
+		player1.mover(Vector2.RIGHT, 1.0 / 60.0)
+	check(player1.global_position.x < 214.0, "buraco bloqueia a caminhada como uma parede")
 
 	var spawn: Node2D = load("res://cenas/objects/respawn/level_spawn.tscn").instantiate()
 	spawn.team_spacing = 64.0
 	arena.add_child(spawn)
 	spawn.global_position = Vector2(300, 180)
 	await wait_physics()
-	check(lucas.obter_ponto_renascimento().distance_to(Vector2(268, 180)) < 0.1, "level spawn posiciona Lucas")
-	check(otto.obter_ponto_renascimento().distance_to(Vector2(332, 180)) < 0.1, "level spawn posiciona Otto")
-	check(lucas.global_position.distance_to(Vector2(268, 180)) < 0.1, "level spawn move Lucas para o inicio")
-	check(otto.global_position.distance_to(Vector2(332, 180)) < 0.1, "level spawn move Otto para o inicio")
+	check(player1.obter_ponto_renascimento().distance_to(Vector2(268, 180)) < 0.1, "level spawn posiciona Player1")
+	check(player2.obter_ponto_renascimento().distance_to(Vector2(332, 180)) < 0.1, "level spawn posiciona Player2")
+	check(player1.global_position.distance_to(Vector2(268, 180)) < 0.1, "level spawn move Player1 para o inicio")
+	check(player2.global_position.distance_to(Vector2(332, 180)) < 0.1, "level spawn move Player2 para o inicio")
 
 	var checkpoint: Node2D = load("res://cenas/objects/respawn/checkpoint.tscn").instantiate()
 	checkpoint.team_spacing = 48.0
@@ -97,50 +97,50 @@ func run() -> void:
 	checkpoint.global_position = Vector2(400, 180)
 	checkpoint.get_node("RespawnPoint").global_position = Vector2(440, 220)
 	await wait_physics()
-	otto.global_position = checkpoint.global_position
+	player2.global_position = checkpoint.global_position
 	await wait_physics(5)
 	check(checkpoint.is_active, "checkpoint detecta um heroi")
-	check(lucas.obter_ponto_renascimento().distance_to(Vector2(416, 220)) < 0.1, "checkpoint atualiza Lucas no ponto separado do gatilho")
-	check(otto.obter_ponto_renascimento().distance_to(Vector2(464, 220)) < 0.1, "checkpoint atualiza Otto no ponto separado do gatilho")
+	check(player1.obter_ponto_renascimento().distance_to(Vector2(416, 220)) < 0.1, "checkpoint atualiza Player1 no ponto separado do gatilho")
+	check(player2.obter_ponto_renascimento().distance_to(Vector2(464, 220)) < 0.1, "checkpoint atualiza Player2 no ponto separado do gatilho")
 
 	make_hole(arena, Vector2(300, 260))
 	await wait_physics()
-	otto.set_physics_process(true)
-	otto.global_position = Vector2(250, 260)
-	otto.vida_atual = otto.vida_maxima
-	otto.tempo_dano = 0.0
-	otto.dash_cooldown_remaining = 0.0
-	check(otto.iniciar_dash(Vector2.RIGHT), "dash inicia na direcao do movimento")
-	check(not otto.get_collision_mask_value(PhysicsLayers.HOLES), "dash ignora o layer de buracos")
+	player2.set_physics_process(true)
+	player2.global_position = Vector2(250, 260)
+	player2.vida_atual = player2.vida_maxima
+	player2.tempo_dano = 0.0
+	player2.dash_cooldown_remaining = 0.0
+	check(player2.iniciar_dash(Vector2.RIGHT), "dash inicia na direcao do movimento")
+	check(not player2.get_collision_mask_value(PhysicsLayers.HOLES), "dash ignora o layer de buracos")
 	for _frame in range(30):
 		await physics_frame
-		if not otto.dashing:
+		if not player2.dashing:
 			break
-	check(otto.global_position.x > 320.0, "dash atravessa o buraco")
-	check(not otto.caindo and not otto.dashing, "dash terminou fora do buraco sem queda")
-	check(otto.get_collision_mask_value(PhysicsLayers.HOLES), "colisao com buracos volta ao terminar o dash")
+	check(player2.global_position.x > 320.0, "dash atravessa o buraco")
+	check(not player2.caindo and not player2.dashing, "dash terminou fora do buraco sem queda")
+	check(player2.get_collision_mask_value(PhysicsLayers.HOLES), "colisao com buracos volta ao terminar o dash")
 
 	make_hole(arena, Vector2(360, 300), Vector2(80, 32))
 	await wait_physics()
-	otto.global_position = Vector2(300, 300)
-	otto.vida_atual = otto.vida_maxima
-	otto.tempo_dano = 0.0
-	otto.dash_cooldown_remaining = 0.0
-	otto.definir_ponto_renascimento(Vector2(320, 340))
-	otto.definir_ultima_posicao_segura(Vector2(300, 300))
-	check(otto.iniciar_dash(Vector2.RIGHT), "segundo dash inicia")
+	player2.global_position = Vector2(300, 300)
+	player2.vida_atual = player2.vida_maxima
+	player2.tempo_dano = 0.0
+	player2.dash_cooldown_remaining = 0.0
+	player2.definir_ponto_renascimento(Vector2(320, 340))
+	player2.definir_ultima_posicao_segura(Vector2(300, 300))
+	check(player2.iniciar_dash(Vector2.RIGHT), "segundo dash inicia")
 	for _frame in range(30):
 		await physics_frame
-		if otto.caindo:
+		if player2.caindo:
 			break
-	check(otto.caindo, "dash que termina dentro do buraco derruba Otto")
-	check(otto.vida_atual == otto.vida_maxima - otto.dano_queda, "queda aplica dano")
-	check(not otto.get_collision_mask_value(PhysicsLayers.HOLES), "Otto permanece sem colisao de buraco durante a queda")
-	await create_timer(otto.duracao_queda + 0.2).timeout
-	check(not otto.caindo and not otto.esta_morto, "Otto renasce apos a queda")
-	check(otto.global_position.distance_to(Vector2(300, 300)) < 0.1, "Otto renasce no ultimo piso seguro, nao no checkpoint")
-	check(otto.get_collision_mask_value(PhysicsLayers.HOLES), "renascimento restaura a colisao com buracos")
-	check(otto.vida_atual == otto.vida_maxima - otto.dano_queda, "dano da queda permanece apos o renascimento")
+	check(player2.caindo, "dash que termina dentro do buraco derruba Player2")
+	check(player2.vida_atual == player2.vida_maxima - player2.dano_queda, "queda aplica dano")
+	check(not player2.get_collision_mask_value(PhysicsLayers.HOLES), "Player2 permanece sem colisao de buraco durante a queda")
+	await create_timer(player2.duracao_queda + 0.2).timeout
+	check(not player2.caindo and not player2.esta_morto, "Player2 renasce apos a queda")
+	check(player2.global_position.distance_to(Vector2(300, 300)) < 0.1, "Player2 renasce no ultimo piso seguro, nao no checkpoint")
+	check(player2.get_collision_mask_value(PhysicsLayers.HOLES), "renascimento restaura a colisao com buracos")
+	check(player2.vida_atual == player2.vida_maxima - player2.dano_queda, "dano da queda permanece apos o renascimento")
 
 	if failures.is_empty():
 		print("DASH_RESPAWN_OK: %d verificacoes de movimento instantaneo, buracos, dash, queda, level spawn e checkpoint." % total)

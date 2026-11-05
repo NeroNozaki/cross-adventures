@@ -35,7 +35,7 @@ func esperar_combo(passo: int) -> void:
 		if g.passo_combo == passo:
 			return
 
-func preparar_lucas() -> void:
+func preparar_player1() -> void:
 	g.set_physics_process(false)
 	g.atacando = false
 	g.recarga.stop()
@@ -60,8 +60,8 @@ func _executar() -> void:
 	root.add_child(arena)
 	current_scene = arena
 	await process_frame
-	g = arena.get_node("Personagens/Guerreiro")
-	r = arena.get_node("Personagens/Robo")
+	g = arena.get_node("Personagens/Player1")
+	r = arena.get_node("Personagens/Player2")
 	c = arena.get_node("Personagens/CavaleiroAzul")
 	z = arena.get_node("Personagens/Zumbi")
 	for ator in [g, r, c, z]:
@@ -74,7 +74,7 @@ func _executar() -> void:
 		for passo in range(1, 4):
 			var nome: StringName = StringName("combo_%d_%s" % [passo, d])
 			verificar(clips.has_animation(nome) and clips.get_frame_count(nome) > 0, "Clip de combo: " + str(nome))
-	preparar_lucas()
+	preparar_player1()
 	g.position = Vector2(150, 180)
 	g.set_physics_process(true)
 	var golpes_cedo: Array[int] = []
@@ -86,7 +86,7 @@ func _executar() -> void:
 	await create_timer(0.8).timeout
 	g.golpe_combo.disconnect(contar_golpe_cedo)
 	verificar(golpes_cedo == [1], "Comandos antes do primeiro golpe nao enfileiram ataque extra.")
-	preparar_lucas()
+	preparar_player1()
 	g.position = Vector2(150, 180)
 	g.set_physics_process(true)
 	g.iniciar_ataque()
@@ -102,13 +102,13 @@ func _executar() -> void:
 	await create_timer(1.2).timeout
 	g.iniciar_ataque()
 	verificar(g.passo_combo == 1, "Pausa entre comandos reinicia o combo.")
-	preparar_lucas()
+	preparar_player1()
 	g.set_physics_process(true)
-	Input.action_press("guerreiro_atacar")
+	Input.action_press("player1_atacar")
 	await create_timer(0.8).timeout
-	Input.action_release("guerreiro_atacar")
+	Input.action_release("player1_atacar")
 	verificar(g.passo_combo == 1, "Segurar ataque nao encadeia o combo automaticamente.")
-	preparar_lucas()
+	preparar_player1()
 	g.position = Vector2(150, 180)
 	g.set_physics_process(true)
 	var golpes_spam: Array[int] = []
@@ -124,24 +124,24 @@ func _executar() -> void:
 	await create_timer(0.2).timeout
 	g.golpe_combo.disconnect(contar_golpe)
 	verificar(golpes_spam.slice(0, 4) == [1, 2, 3, 1], "Terceiro golpe aceita buffer e reinicia o combo.")
-	preparar_lucas()
+	preparar_player1()
 	g.position = Vector2(150, 180)
 	g.olhar_para(Vector2.RIGHT)
 	g.set_physics_process(true)
 	var x_antes_escudo: float = g.position.x
-	Input.action_press("guerreiro_defender")
-	Input.action_press("guerreiro_esquerda")
+	Input.action_press("player1_defender")
+	Input.action_press("player1_esquerda")
 	for quadro in range(8):
 		await physics_frame
 	var defendeu_recuando: bool = g.defendendo
 	var direcao_escudo: String = g.direcao
 	var frente_escudo: Vector2 = g.frente
 	var clip_escudo: StringName = g.animacao.animation
-	Input.action_release("guerreiro_esquerda")
-	Input.action_release("guerreiro_defender")
+	Input.action_release("player1_esquerda")
+	Input.action_release("player1_defender")
 	g.set_physics_process(false)
 	verificar(defendeu_recuando and direcao_escudo == "right" and frente_escudo == Vector2.RIGHT and clip_escudo == &"walk_right" and g.position.x < x_antes_escudo, "Escudo mantem a direcao e recua de costas.")
-	preparar_lucas()
+	preparar_player1()
 	# Mira em oito angulos, independente da direcao da caminhada.
 	for i in range(8):
 		var dir: Vector2 = Vector2.RIGHT.rotated(float(i) * TAU / 8.0)
@@ -150,9 +150,9 @@ func _executar() -> void:
 	verificar(not r.orientar_pelo_movimento, "Movimento nao substitui a direcao da mira.")
 	var mouse: InputEventMouseButton = InputEventMouseButton.new()
 	mouse.button_index = MOUSE_BUTTON_LEFT
-	verificar(InputMap.event_is_action(mouse, "robo_atacar") and not InputMap.event_is_action(mouse, "guerreiro_atacar"), "Clique esquerdo dispara apenas com Otto.")
+	verificar(InputMap.event_is_action(mouse, "player2_atacar") and not InputMap.event_is_action(mouse, "player1_atacar"), "Clique esquerdo dispara apenas com Player2.")
 	mouse.button_index = MOUSE_BUTTON_RIGHT
-	verificar(InputMap.event_is_action(mouse, "otto_dash") and not InputMap.event_is_action(mouse, "robo_atacar") and not InputMap.event_is_action(mouse, "guerreiro_atacar"), "Clique direito aciona apenas o dash de Otto.")
+	verificar(InputMap.event_is_action(mouse, "player2_dash") and not InputMap.event_is_action(mouse, "player2_atacar") and not InputMap.event_is_action(mouse, "player1_atacar"), "Clique direito aciona apenas o dash de Player2.")
 	# Carga curta versus carga completa.
 	r.position = Vector2(150, 260)
 	r.recarga.stop()
@@ -177,15 +177,15 @@ func _executar() -> void:
 	r.position = Vector2(260, 270)
 	g.set_physics_process(true)
 	r.set_physics_process(true)
-	Input.action_press("guerreiro_direita")
-	Input.action_press("robo_esquerda")
+	Input.action_press("player1_direita")
+	Input.action_press("player2_esquerda")
 	await create_timer(0.45).timeout
-	Input.action_release("guerreiro_direita")
-	Input.action_release("robo_esquerda")
+	Input.action_release("player1_direita")
+	Input.action_release("player2_esquerda")
 	g.set_physics_process(false)
 	r.set_physics_process(false)
 	verificar(g.position.x > r.position.x, "Os jogadores nao ficam presos um ao outro.")
-	preparar_lucas()
+	preparar_player1()
 	# Interrupcao de golpe ao sofrer dano e bloqueio de golpe por parede.
 	g.position = Vector2(300, 220)
 	c.position = Vector2(329, 220)
@@ -211,7 +211,7 @@ func _executar() -> void:
 	parede.position = Vector2(315, 220)
 	await physics_frame
 	await physics_frame
-	preparar_lucas()
+	preparar_player1()
 	g.olhar_para(Vector2.RIGHT)
 	g.iniciar_ataque()
 	await create_timer(0.22).timeout
@@ -306,7 +306,7 @@ func _executar() -> void:
 	await process_frame
 	arena = current_scene
 	verificar(resultado == OK and arena != null and get_nodes_in_group("projeteis").is_empty(), "Reiniciar limpa os tiros da cena anterior.")
-	verificar(arena.get_node("Personagens/Robo").vida_atual == 95 and arena.get_node("Personagens/Guerreiro").vida_atual == 120, "Reiniciar restaura os personagens.")
+	verificar(arena.get_node("Personagens/Player2").vida_atual == 95 and arena.get_node("Personagens/Player1").vida_atual == 120, "Reiniciar restaura os personagens.")
 	if erros.is_empty():
 		print("COMBO_MIRA_OK: ", contagem_checks, " verificacoes de combo, buffer, mira, carga, colisao continua, equipes, paredes, quinas, cinco ricochetes, dano e morte.")
 	else:

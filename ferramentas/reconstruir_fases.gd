@@ -260,8 +260,8 @@ func _fase(i: int) -> void:
 	var chars: Node2D = filho(raiz, raiz, Node2D.new(), "Personagens")
 	chars.y_sort_enabled = true
 	for j in range(2):
-		var ator: CharacterBody2D = load("res://cenas/personagens/" + ("guerreiro" if j == 0 else "robo") + ".tscn").instantiate()
-		filho(raiz, chars, ator, "Guerreiro" if j == 0 else "Robo")
+		var ator: CharacterBody2D = load("res://cenas/personagens/" + ("player1" if j == 0 else "player2") + ".tscn").instantiate()
+		filho(raiz, chars, ator, "Player1" if j == 0 else "Player2")
 		ator.position = Vector2(dados["spawns"][j][0] * 32 + 16, dados["spawns"][j][1] * 32 + 16)
 		_sombra(raiz, ator)
 	for j in range(dados["inimigos"].size()):

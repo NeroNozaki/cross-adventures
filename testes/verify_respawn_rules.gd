@@ -65,79 +65,79 @@ func run() -> void:
 	root.add_child(world)
 	current_scene = world
 
-	var lucas := make_hero("res://cenas/personagens/guerreiro.tscn", world, Vector2.ZERO)
-	var otto := make_hero("res://cenas/personagens/robo.tscn", world, Vector2.ZERO)
+	var player1 := make_hero("res://cenas/personagens/player1.tscn", world, Vector2.ZERO)
+	var player2 := make_hero("res://cenas/personagens/player2.tscn", world, Vector2.ZERO)
 	var spawn: Node2D = load("res://cenas/objects/respawn/level_spawn.tscn").instantiate()
 	spawn.set("team_spacing", 0.0)
 	world.add_child(spawn)
 	spawn.global_position = Vector2(100, 100)
 	await wait_physics(5)
-	check(lucas.global_position.distance_to(Vector2(100, 100)) < 0.1, "level spawn posiciona Lucas")
-	check(otto.global_position.distance_to(Vector2(100, 100)) < 0.1, "level spawn posiciona Otto")
+	check(player1.global_position.distance_to(Vector2(100, 100)) < 0.1, "level spawn posiciona Player1")
+	check(player2.global_position.distance_to(Vector2(100, 100)) < 0.1, "level spawn posiciona Player2")
 
 	var ponto_a := Vector2(340, 240)
 	var ponto_b := Vector2(540, 240)
 	var checkpoint_a := make_checkpoint(world, Vector2(300, 200), ponto_a)
 	var checkpoint_b := make_checkpoint(world, Vector2(500, 200), ponto_b)
 
-	otto.global_position = checkpoint_a.global_position
+	player2.global_position = checkpoint_a.global_position
 	await wait_physics(5)
 	check(checkpoint_a.is_active, "primeiro checkpoint ativa")
 	check(Checkpoint.checkpoint_ativo == checkpoint_a, "primeiro checkpoint vira o ativo")
-	check(lucas.obter_ponto_renascimento().distance_to(ponto_a) < 0.1, "primeiro checkpoint atualiza Lucas")
-	check(otto.obter_ponto_renascimento().distance_to(ponto_a) < 0.1, "primeiro checkpoint atualiza Otto")
+	check(player1.obter_ponto_renascimento().distance_to(ponto_a) < 0.1, "primeiro checkpoint atualiza Player1")
+	check(player2.obter_ponto_renascimento().distance_to(ponto_a) < 0.1, "primeiro checkpoint atualiza Player2")
 
-	lucas.global_position = checkpoint_b.global_position
+	player1.global_position = checkpoint_b.global_position
 	await wait_physics(5)
 	check(checkpoint_b.is_active, "segundo checkpoint ativa")
 	check(not checkpoint_a.is_active, "segundo checkpoint desativa o primeiro")
 	check(Checkpoint.checkpoint_ativo == checkpoint_b, "segundo checkpoint vira o unico ativo")
-	check(lucas.obter_ponto_renascimento().distance_to(ponto_b) < 0.1, "segundo checkpoint atualiza Lucas")
-	check(otto.obter_ponto_renascimento().distance_to(ponto_b) < 0.1, "segundo checkpoint atualiza Otto")
+	check(player1.obter_ponto_renascimento().distance_to(ponto_b) < 0.1, "segundo checkpoint atualiza Player1")
+	check(player2.obter_ponto_renascimento().distance_to(ponto_b) < 0.1, "segundo checkpoint atualiza Player2")
 
-	otto.global_position = Vector2.ZERO
+	player2.global_position = Vector2.ZERO
 	await wait_physics(3)
-	otto.global_position = checkpoint_a.global_position
+	player2.global_position = checkpoint_a.global_position
 	await wait_physics(5)
 	check(checkpoint_a.is_active, "checkpoint antigo pode ser reativado")
 	check(not checkpoint_b.is_active, "reativar o primeiro desativa o segundo")
 	check(Checkpoint.checkpoint_ativo == checkpoint_a, "ultimo checkpoint acionado fica ativo")
-	check(lucas.obter_ponto_renascimento().distance_to(ponto_a) < 0.1, "reativacao volta o ponto de Lucas")
-	check(otto.obter_ponto_renascimento().distance_to(ponto_a) < 0.1, "reativacao volta o ponto de Otto")
+	check(player1.obter_ponto_renascimento().distance_to(ponto_a) < 0.1, "reativacao volta o ponto de Player1")
+	check(player2.obter_ponto_renascimento().distance_to(ponto_a) < 0.1, "reativacao volta o ponto de Player2")
 
-	lucas.vida_atual = 1
-	lucas.invulnerabilidade.stop()
-	lucas.receber_dano(9999, lucas.global_position + Vector2.LEFT)
-	check(lucas.esta_morto, "dano letal derruba Lucas")
-	await create_timer(lucas.tempo_renascimento_morte + 0.25).timeout
-	check(not lucas.esta_morto, "Lucas renasce sozinho apos morrer")
-	check(lucas.vida_atual == lucas.vida_maxima, "renascimento por morte restaura toda a vida")
-	check(lucas.global_position.distance_to(ponto_a) < 0.1, "renascimento por morte usa o checkpoint mais recente")
+	player1.vida_atual = 1
+	player1.invulnerabilidade.stop()
+	player1.receber_dano(9999, player1.global_position + Vector2.LEFT)
+	check(player1.esta_morto, "dano letal derruba Player1")
+	await create_timer(player1.tempo_renascimento_morte + 0.25).timeout
+	check(not player1.esta_morto, "Player1 renasce sozinho apos morrer")
+	check(player1.vida_atual == player1.vida_maxima, "renascimento por morte restaura toda a vida")
+	check(player1.global_position.distance_to(ponto_a) < 0.1, "renascimento por morte usa o checkpoint mais recente")
 
 	var unstable_position := Vector2(800, 400)
 	make_unstable_ground(world, unstable_position, Vector2(96, 96))
 	await wait_physics(2)
-	check(otto.esta_sobre_terreno_instavel(unstable_position), "consulta detecta terreno instavel")
-	check(not otto.esta_sobre_terreno_instavel(Vector2(100, 100)), "consulta aceita piso estavel")
+	check(player2.esta_sobre_terreno_instavel(unstable_position), "consulta detecta terreno instavel")
+	check(not player2.esta_sobre_terreno_instavel(Vector2(100, 100)), "consulta aceita piso estavel")
 
-	otto.definir_ponto_renascimento(unstable_position)
-	otto.definir_ultima_posicao_segura(Vector2(100, 100))
-	otto.definir_ponto_seguro_inicial(Vector2(100, 100))
-	otto.respawn(true)
+	player2.definir_ponto_renascimento(unstable_position)
+	player2.definir_ultima_posicao_segura(Vector2(100, 100))
+	player2.definir_ponto_seguro_inicial(Vector2(100, 100))
+	player2.respawn(true)
 	await wait_physics()
-	check(otto.global_position.distance_to(Vector2(100, 100)) < 0.1, "respawn recusa terreno instavel e usa o ultimo piso seguro")
+	check(player2.global_position.distance_to(Vector2(100, 100)) < 0.1, "respawn recusa terreno instavel e usa o ultimo piso seguro")
 
-	otto.global_position = unstable_position
-	otto.ultima_posicao_segura = Vector2(100, 100)
-	otto.mover(Vector2.RIGHT, 1.0 / 60.0)
-	check(otto.ultima_posicao_segura.distance_to(Vector2(100, 100)) < 0.1, "andar sobre terreno instavel nao grava piso seguro")
+	player2.global_position = unstable_position
+	player2.ultima_posicao_segura = Vector2(100, 100)
+	player2.mover(Vector2.RIGHT, 1.0 / 60.0)
+	check(player2.ultima_posicao_segura.distance_to(Vector2(100, 100)) < 0.1, "andar sobre terreno instavel nao grava piso seguro")
 
-	otto.definir_ponto_renascimento(unstable_position)
-	otto.definir_ultima_posicao_segura(unstable_position)
-	otto.definir_ponto_seguro_inicial(Vector2(50, 50))
-	otto.respawn(true)
+	player2.definir_ponto_renascimento(unstable_position)
+	player2.definir_ultima_posicao_segura(unstable_position)
+	player2.definir_ponto_seguro_inicial(Vector2(50, 50))
+	player2.respawn(true)
 	await wait_physics()
-	check(otto.global_position.distance_to(Vector2(50, 50)) < 0.1, "respawn cai para o ponto inicial se o ultimo piso tambem for instavel")
+	check(player2.global_position.distance_to(Vector2(50, 50)) < 0.1, "respawn cai para o ponto inicial se o ultimo piso tambem for instavel")
 
 	if failures.is_empty():
 		print("RESPAWN_RULES_OK: %d verificacoes de checkpoints exclusivos, morte, piso seguro e terreno instavel." % total)

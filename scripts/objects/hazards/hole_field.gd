@@ -9,10 +9,13 @@ class_name HoleField
 var _cells: Dictionary = {}
 var _blockers: Dictionary = {}
 var _bodies: Dictionary = {}
+var _desativadas: Dictionary = {}
 
 
 func _ready() -> void:
 	add_to_group("hole_fields")
+	if tile_map_layer == null:
+		push_warning("HoleField sem tile_map_layer; nenhum buraco sera criado.")
 	rebuild()
 
 
@@ -26,6 +29,8 @@ func configure(mapa: TileMapLayer, camada_fisica: int = 1) -> void:
 func rebuild() -> void:
 	_limpar_todos_os_corpos()
 	_cells.clear()
+	_bodies.clear()
+	_desativadas.clear()
 	if tile_map_layer == null or tile_map_layer.tile_set == null:
 		return
 	var tamanho: Vector2 = Vector2(tile_map_layer.tile_set.tile_size)
@@ -39,7 +44,10 @@ func rebuild() -> void:
 		var metade: Vector2 = tamanho * 0.5
 		var retangulo_local := Rect2(Vector2(celula) * tamanho + metade + limites.position, limites.size)
 		_cells[celula] = _retangulo_para_mundo(retangulo_local)
-	_reconstruir_todas_as_celulas()
+	for celula in _cells:
+		_criar_corpo(celula)
+	for celula in _cells:
+		_atualizar_celula(celula)
 
 
 func registrar_bloqueador(id: int, retangulo: Rect2) -> void:
@@ -49,9 +57,10 @@ func registrar_bloqueador(id: int, retangulo: Rect2) -> void:
 	var anterior: Variant = _blockers.get(id)
 	_blockers[id] = retangulo
 	var afetadas: Dictionary = {}
-	_reunir_celulas_em(anterior, afetadas)
+	if anterior is Rect2:
+		_reunir_celulas_em(anterior, afetadas)
 	_reunir_celulas_em(retangulo, afetadas)
-	_reconstruir_celulas(afetadas)
+	_atualizar_celulas(afetadas)
 
 
 func remover_bloqueador(id: int) -> void:
@@ -61,7 +70,7 @@ func remover_bloqueador(id: int) -> void:
 	_blockers.erase(id)
 	var afetadas: Dictionary = {}
 	_reunir_celulas_em(anterior, afetadas)
-	_reconstruir_celulas(afetadas)
+	_atualizar_celulas(afetadas)
 
 
 func contem_buraco_bruto(ponto: Vector2) -> bool:
@@ -78,127 +87,140 @@ func contem_buraco_bruto_retangulo(retangulo: Rect2) -> bool:
 	return false
 
 
+func celula_esta_ativa(celula: Vector2i) -> bool:
+	return _cells.has(celula) and not _desativadas.has(celula)
+
+
 func obter_pecas_celula(celula: Vector2i) -> Array[Rect2]:
 	var pecas: Array[Rect2] = []
-	if not _cells.has(celula):
-		return pecas
-	pecas.append(_cells[celula])
-	for bloqueador in _blockers.values():
-		var restantes: Array[Rect2] = []
-		for peca in pecas:
-			restantes.append_array(_subtrair_retangulo(peca, bloqueador))
-		pecas = restantes
-		if pecas.is_empty():
-			break
+	if celula_esta_ativa(celula):
+		pecas.append(_cells[celula])
 	return pecas
 
 
 func obter_corpos_celula(celula: Vector2i) -> Array:
-	return _bodies.get(celula, [])
+	if not _bodies.has(celula):
+		return []
+	return [_bodies[celula]]
+
+
+func obter_celulas() -> Array[Vector2i]:
+	var lista: Array[Vector2i] = []
+	for celula in _cells:
+		lista.append(celula)
+	return lista
+
+
+func obter_retangulo_celula(celula: Vector2i) -> Rect2:
+	return _cells.get(celula, Rect2())
 
 
 func quantidade_celulas() -> int:
 	return _cells.size()
 
 
-func _reconstruir_todas_as_celulas() -> void:
-	for celula in _cells:
-		_reconstruir_celula(celula)
+func quantidade_corpos() -> int:
+	return _bodies.size()
 
 
-func _reconstruir_celulas(celulas: Dictionary) -> void:
-	if celulas.is_empty():
-		return
+func _atualizar_celulas(celulas: Dictionary) -> void:
 	for celula in celulas:
-		_reconstruir_celula(celula)
+		_atualizar_celula(celula)
 
 
-func _reconstruir_celula(celula: Vector2i) -> void:
-	var pecas: Array[Rect2] = obter_pecas_celula(celula)
-	_derrubar_herois_em(pecas)
-	_limpar_corpos_da_celula(celula)
-	var corpos: Array = []
-	for indice in range(pecas.size()):
-		corpos.append(_criar_corpo(pecas[indice], celula, indice))
-	if corpos.is_empty():
-		_bodies.erase(celula)
-	else:
-		_bodies[celula] = corpos
+func _atualizar_celula(celula: Vector2i) -> void:
+	if not _bodies.has(celula):
+		return
+	var bloqueada: bool = _celula_esta_bloqueada(celula)
+	var estava_bloqueada: bool = _desativadas.has(celula)
+	if bloqueada == estava_bloqueada:
+		return
+	var corpo: StaticBody2D = _bodies[celula]
+	if bloqueada:
+		corpo.collision_layer = 0
+		_desativadas[celula] = true
+		return
+	_derrubar_herois_na(celula)
+	corpo.collision_layer = solid_collision_layer
+	_desativadas.erase(celula)
 
 
-func _criar_corpo(peca: Rect2, celula: Vector2i, indice: int) -> StaticBody2D:
+func _celula_esta_bloqueada(celula: Vector2i) -> bool:
+	var retangulo: Rect2 = _cells[celula]
+	for bloqueador in _blockers.values():
+		if retangulo.intersects(bloqueador):
+			return true
+	return false
+
+
+func _criar_corpo(celula: Vector2i) -> void:
+	var retangulo: Rect2 = _cells[celula]
 	var corpo := StaticBody2D.new()
-	corpo.name = "Buraco_%d_%d_%d" % [celula.x, celula.y, indice]
+	corpo.name = "Buraco_%d_%d" % [celula.x, celula.y]
 	corpo.collision_layer = solid_collision_layer
 	corpo.collision_mask = solid_collision_mask
 	var forma := RectangleShape2D.new()
-	forma.size = peca.size
+	forma.size = retangulo.size
 	var colisao := CollisionShape2D.new()
 	colisao.shape = forma
 	corpo.add_child(colisao)
 	add_child(corpo)
-	corpo.global_position = peca.get_center()
-	return corpo
+	corpo.global_position = retangulo.get_center()
+	_bodies[celula] = corpo
 
 
-func _limpar_corpos_da_celula(celula: Vector2i) -> void:
-	if not _bodies.has(celula):
+func _derrubar_herois_na(celula: Vector2i) -> void:
+	if not is_inside_tree():
 		return
-	for corpo in _bodies[celula]:
-		if is_instance_valid(corpo):
-			remove_child(corpo)
-			corpo.queue_free()
-	_bodies.erase(celula)
-
-
-func _limpar_todos_os_corpos() -> void:
-	for celula in _bodies.keys():
-		_limpar_corpos_da_celula(celula)
-	_bodies.clear()
-
-
-func _derrubar_herois_em(pecas: Array[Rect2]) -> void:
-	if pecas.is_empty() or not is_inside_tree():
-		return
+	var retangulo: Rect2 = _cells[celula]
 	for heroi in get_tree().get_nodes_in_group("herois"):
 		if not is_instance_valid(heroi) or not heroi.has_method("cair_no_buraco"):
 			continue
 		if heroi.has_method("pode_cair_em_buraco_reexposto") and not heroi.pode_cair_em_buraco_reexposto():
 			continue
-		for peca in pecas:
-			if peca.has_point(heroi.global_position):
-				heroi.cair_no_buraco()
-				break
+		if retangulo.has_point(heroi.global_position):
+			heroi.cair_no_buraco()
 
 
-func _reunir_celulas_em(retangulo: Variant, destino: Dictionary) -> void:
-	if not retangulo is Rect2:
-		return
-	var area: Rect2 = retangulo
+func _limpar_todos_os_corpos() -> void:
+	for corpo in _bodies.values():
+		if is_instance_valid(corpo):
+			remove_child(corpo)
+			corpo.queue_free()
+	_bodies.clear()
+
+
+func _reunir_celulas_em(area: Rect2, destino: Dictionary) -> void:
 	if area.size.x <= 0.0 or area.size.y <= 0.0:
 		return
-	for celula in _cells:
-		if (_cells[celula] as Rect2).intersects(area):
-			destino[celula] = true
-
-
-func _subtrair_retangulo(base: Rect2, corte: Rect2) -> Array[Rect2]:
-	var intersecao: Rect2 = base.intersection(corte)
-	if intersecao.size.x <= 0.001 or intersecao.size.y <= 0.001:
-		return [base]
-	var resultado: Array[Rect2] = []
-	var inicio: Vector2 = base.position
-	var fim: Vector2 = base.end
-	var topo := Rect2(inicio, Vector2(base.size.x, intersecao.position.y - inicio.y))
-	var baixo := Rect2(Vector2(inicio.x, intersecao.end.y), Vector2(base.size.x, fim.y - intersecao.end.y))
-	var meio_y: float = intersecao.position.y
-	var meio_altura: float = intersecao.size.y
-	var esquerda := Rect2(Vector2(inicio.x, meio_y), Vector2(intersecao.position.x - inicio.x, meio_altura))
-	var direita := Rect2(Vector2(intersecao.end.x, meio_y), Vector2(fim.x - intersecao.end.x, meio_altura))
-	for peca in [topo, baixo, esquerda, direita]:
-		if peca.size.x > 0.001 and peca.size.y > 0.001:
-			resultado.append(peca)
-	return resultado
+	if tile_map_layer == null or tile_map_layer.tile_set == null:
+		return
+	var tamanho: Vector2 = Vector2(tile_map_layer.tile_set.tile_size)
+	if tamanho.x <= 0.0 or tamanho.y <= 0.0:
+		return
+	var inversa: Transform2D = tile_map_layer.global_transform.affine_inverse()
+	var cantos: Array[Vector2] = [
+		inversa * area.position,
+		inversa * Vector2(area.end.x, area.position.y),
+		inversa * area.end,
+		inversa * Vector2(area.position.x, area.end.y),
+	]
+	var minimo: Vector2 = cantos[0]
+	var maximo: Vector2 = cantos[0]
+	for canto in cantos:
+		minimo.x = minf(minimo.x, canto.x)
+		minimo.y = minf(minimo.y, canto.y)
+		maximo.x = maxf(maximo.x, canto.x)
+		maximo.y = maxf(maximo.y, canto.y)
+	var inicio_x: int = floori(minimo.x / tamanho.x) - 1
+	var fim_x: int = floori(maximo.x / tamanho.x) + 1
+	var inicio_y: int = floori(minimo.y / tamanho.y) - 1
+	var fim_y: int = floori(maximo.y / tamanho.y) + 1
+	for x in range(inicio_x, fim_x + 1):
+		for y in range(inicio_y, fim_y + 1):
+			var celula := Vector2i(x, y)
+			if _cells.has(celula) and (_cells[celula] as Rect2).intersects(area):
+				destino[celula] = true
 
 
 func _limites_dos_poligonos(dados: TileData) -> Rect2:

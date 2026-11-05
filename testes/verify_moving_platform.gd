@@ -67,13 +67,14 @@ func run() -> void:
 	mapa.position = Vector2.ZERO
 
 	var campo: HoleField = load("res://cenas/objects/hazards/hole_field.tscn").instantiate()
+	campo.tile_map_layer = mapa
+	campo.scan_physics_layer = 1
 	world.add_child(campo)
-	campo.configure(mapa, 1)
 	await wait_frames(2)
 	check(campo.quantidade_celulas() == 25, "HoleField encontra os 25 tiles de buraco")
 	check(campo.contem_buraco_bruto(Vector2(0, 0)), "mapa bruto continua marcando buraco coberto")
 
-	var hero: Node2D = load("res://cenas/personagens/guerreiro.tscn").instantiate()
+	var hero: Node2D = load("res://cenas/personagens/player1.tscn").instantiate()
 	world.add_child(hero)
 	hero.global_position = Vector2(0, 0)
 	hero.set_physics_process(false)
@@ -101,8 +102,8 @@ func run() -> void:
 	check((camada_fisica & (1 << (PhysicsLayers.UNSTABLE_GROUND - 1))) != 0, "plataforma usa a camada de terreno instavel")
 
 	check(campo.obter_pecas_celula(Vector2i(0, 0)).is_empty(), "celula totalmente coberta nao tem colisao de buraco")
-	var parte_parcial: Array[Rect2] = campo.obter_pecas_celula(Vector2i(1, 0))
-	check(parte_parcial.size() == 1 and retangulo_igual(parte_parcial[0], Rect2(42, 0, 6, 24)), "celula parcialmente coberta preserva apenas a fracao exposta")
+	check(not campo.celula_esta_ativa(Vector2i(-2, 0)), "celula parcialmente coberta tambem e desligada inteira")
+	check(not campo.celula_esta_ativa(Vector2i(1, 0)), "borda direita coberta desliga a celula inteira")
 	var parte_livre: Array[Rect2] = campo.obter_pecas_celula(Vector2i(2, 0))
 	check(parte_livre.size() == 1 and retangulo_igual(parte_livre[0], Rect2(48, 0, 24, 24)), "celula fora da plataforma continua inteira")
 	check(hero.get_collision_mask_value(PhysicsLayers.HOLES), "heroi mantem a colisao de buracos sobre a plataforma")
@@ -162,7 +163,7 @@ func run() -> void:
 	check(partes_iniciada.global_position.distance_to(ativa_iniciada.global_position) < 0.1, "start_activated comeca na ancora ativa")
 
 	if failures.is_empty():
-		print("MOVING_PLATFORM_OK: %d verificacoes de ancoras, sinal, movimento suave, reversao, recorte exato de buracos e passageiros." % total)
+		print("MOVING_PLATFORM_OK: %d verificacoes de ancoras, sinal, movimento suave, reversao, celulas desligadas e passageiros." % total)
 		quit(0)
 	else:
 		print(failures)

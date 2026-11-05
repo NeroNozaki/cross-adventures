@@ -14,9 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://cb4m783cpr5nu" path="res://cenas/objects/non-interactable/wall.tscn" id="12_7lo41"]
 [ext_resource type="PackedScene" uid="uid://d0t2xit01apls" path="res://cenas/objects/non-interactable/fence_set.tscn" id="13_0rkg2"]
 [ext_resource type="PackedScene" uid="uid://dd3s5cdmsxyss" path="res://cenas/objects/non-interactable/wall_set.tscn" id="14_lna4w"]
-[ext_resource type="PackedScene" path="res://cenas/personagens/guerreiro.tscn" id="14_nrat6"]
+[ext_resource type="PackedScene" path="res://cenas/personagens/player1.tscn" id="14_nrat6"]
 [ext_resource type="PackedScene" uid="uid://c50q7faxabyui" path="res://cenas/objects/non-interactable/moving_platform.tscn" id="15_4vi3m"]
-[ext_resource type="PackedScene" path="res://cenas/personagens/robo.tscn" id="15_fi4ie"]
+[ext_resource type="PackedScene" path="res://cenas/personagens/player2.tscn" id="15_fi4ie"]
 [ext_resource type="PackedScene" uid="uid://bsihrvbnum6vc" path="res://cenas/objects/non-interactable/wall_spitter.tscn" id="15_jxv52"]
 [ext_resource type="PackedScene" uid="uid://bpfllmgoocxli" path="res://cenas/objects/respawn/checkpoint.tscn" id="16_lna4w"]
 [ext_resource type="PackedScene" uid="uid://b1app4yluftqg" path="res://cenas/objects/unstable_ground.tscn" id="19_6vj3d"]
@@ -1037,7 +1037,7 @@ pattern_0 = SubResource("TileMapPattern_jxv52")
 script = ExtResource("1_wulx4")
 
 [node name="LevelSpawn" parent="." unique_id=1045799053 instance=ExtResource("2_wulx4")]
-position = Vector2(169, -64)
+position = Vector2(183, -71)
 
 [node name="Terrain map layer" type="TileMapLayer" parent="." unique_id=671236802]
 scale = Vector2(1.5, 1.5)
@@ -1053,10 +1053,10 @@ tile_set = SubResource("TileSet_nqwk7")
 scale = Vector2(1.5, 1.5)
 tile_set = SubResource("TileSet_nqwk7")
 
-[node name="HoleField" parent="." unique_id=313915550 instance=ExtResource("20_holefield")]
+[node name="HoleField" parent="." unique_id=313915550 node_paths=PackedStringArray("tile_map_layer") instance=ExtResource("20_holefield")]
 tile_map_layer = NodePath("../Terrain map layer")
 
-[node name="MarcadorRobo" type="Polygon2D" parent="." unique_id=192060572]
+[node name="MarcadorPlayer2" type="Polygon2D" parent="." unique_id=192060572]
 z_index = 1
 color = Color(0.3, 0.8, 1, 1)
 polygon = PackedVector2Array(-5, 4, 0, 0, 5, 4, 0, 7)
@@ -1110,6 +1110,7 @@ channel = &"switch1"
 
 [node name="button5" parent="objects" unique_id=26034848 instance=ExtResource("10_y6lms")]
 position = Vector2(903, -32)
+channel = &"button5"
 
 [node name="switch3" parent="objects" unique_id=2130922261 instance=ExtResource("11_qa2hc")]
 position = Vector2(60, -491.00003)
@@ -1134,96 +1135,78 @@ channel = &"button6"
 [node name="wall_spitter" parent="objects/wall_spitters" unique_id=2140932937 instance=ExtResource("15_jxv52")]
 position = Vector2(348, -252)
 shoot_interval = 1.5
-start_activated = true
 
 [node name="wall_spitter2" parent="objects/wall_spitters" unique_id=1734147121 instance=ExtResource("15_jxv52")]
 position = Vector2(372, -252)
 shoot_interval = 1.5
-start_activated = true
 
 [node name="wall_spitter3" parent="objects/wall_spitters" unique_id=1242370446 instance=ExtResource("15_jxv52")]
 position = Vector2(396, -252)
 shoot_interval = 1.5
-start_activated = true
 
 [node name="wall_spitter4" parent="objects/wall_spitters" unique_id=98322413 instance=ExtResource("15_jxv52")]
 position = Vector2(420.00003, -252)
 shoot_interval = 1.5
-start_activated = true
 
 [node name="wall_spitter5" parent="objects/wall_spitters" unique_id=1463548986 instance=ExtResource("15_jxv52")]
 position = Vector2(444, -252)
 shoot_interval = 1.5
-start_activated = true
 
 [node name="wall_spitter6" parent="objects/wall_spitters" unique_id=1131468300 instance=ExtResource("15_jxv52")]
 position = Vector2(468.00003, -252)
 shoot_interval = 1.5
-start_activated = true
 
 [node name="wall_spitter7" parent="objects/wall_spitters" unique_id=1828660833 instance=ExtResource("15_jxv52")]
 position = Vector2(492.00003, -252)
 shoot_interval = 1.5
-start_activated = true
 
 [node name="wall_spitter8" parent="objects/wall_spitters" unique_id=677230491 instance=ExtResource("15_jxv52")]
 position = Vector2(516, -252)
 shoot_interval = 1.5
-start_activated = true
 
 [node name="wall_spitter9" parent="objects/wall_spitters" unique_id=1848691516 instance=ExtResource("15_jxv52")]
 position = Vector2(540, -252)
 shoot_interval = 1.5
-start_activated = true
 
 [node name="wall_spitter10" parent="objects/wall_spitters" unique_id=123760291 instance=ExtResource("15_jxv52")]
 position = Vector2(564, -252)
 shoot_interval = 1.5
-start_activated = true
 
 [node name="wall_spitter11" parent="objects/wall_spitters" unique_id=1724157597 instance=ExtResource("15_jxv52")]
 position = Vector2(588, -252)
 shoot_interval = 1.5
-start_activated = true
 
 [node name="wall_spitter12" parent="objects/wall_spitters" unique_id=175406365 instance=ExtResource("15_jxv52")]
 position = Vector2(612, -252)
 shoot_interval = 1.5
-start_activated = true
 
 [node name="wall_spitter13" parent="objects/wall_spitters" unique_id=644390983 instance=ExtResource("15_jxv52")]
 position = Vector2(636, -252)
 shoot_interval = 1.5
-start_activated = true
 
 [node name="wall_spitter14" parent="objects/wall_spitters" unique_id=111561138 instance=ExtResource("15_jxv52")]
 position = Vector2(660, -252)
 shoot_interval = 1.5
-start_activated = true
 
 [node name="wall_spitter15" parent="objects/wall_spitters" unique_id=1741356607 instance=ExtResource("15_jxv52")]
 position = Vector2(684, -252)
 shoot_interval = 1.5
-start_activated = true
 
 [node name="wall_spitter16" parent="objects/wall_spitters" unique_id=866353993 instance=ExtResource("15_jxv52")]
 position = Vector2(708, -252)
 shoot_interval = 1.5
-start_activated = true
 
 [node name="wall_spitter17" parent="objects/wall_spitters" unique_id=892265797 instance=ExtResource("15_jxv52")]
 position = Vector2(732, -252)
 shoot_interval = 1.5
-start_activated = true
 
 [node name="wall_spitter18" parent="objects/wall_spitters" unique_id=530730369 instance=ExtResource("15_jxv52")]
 position = Vector2(756, -252)
 shoot_interval = 1.5
-start_activated = true
 
 [node name="moving_platform" parent="objects" unique_id=2121456830 instance=ExtResource("15_4vi3m")]
 position = Vector2(156, -348)
-channel = &"button10"
+channel = &"button5"
 
 [node name="InactiveAnchor" parent="objects/moving_platform" index="1" unique_id=1970191169]
 position = Vector2(0, -101)
@@ -1233,7 +1216,7 @@ position = Vector2(0, 0)
 
 [node name="moving_platform3" parent="objects" unique_id=1677260867 instance=ExtResource("15_4vi3m")]
 position = Vector2(300, -348)
-channel = &"button10"
+channel = &"button5"
 
 [node name="InactiveAnchor" parent="objects/moving_platform3" index="1" unique_id=1970191169]
 position = Vector2(0, -101)
@@ -1243,7 +1226,7 @@ position = Vector2(0, 0)
 
 [node name="moving_platform5" parent="objects" unique_id=1620071857 instance=ExtResource("15_4vi3m")]
 position = Vector2(444, -348)
-channel = &"button10"
+channel = &"button5"
 
 [node name="InactiveAnchor" parent="objects/moving_platform5" index="1" unique_id=1970191169]
 position = Vector2(0, -101)
@@ -1253,28 +1236,28 @@ position = Vector2(0, 0)
 
 [node name="moving_platform2" parent="objects" unique_id=793990328 instance=ExtResource("15_4vi3m")]
 position = Vector2(228, -348)
-channel = &"button10"
+channel = &"button5"
 
 [node name="ActiveAnchor" parent="objects/moving_platform2" index="2" unique_id=1326967223]
 position = Vector2(0, -101)
 
 [node name="moving_platform4" parent="objects" unique_id=609041373 instance=ExtResource("15_4vi3m")]
 position = Vector2(372, -348)
-channel = &"button10"
+channel = &"button5"
 
 [node name="ActiveAnchor" parent="objects/moving_platform4" index="2" unique_id=1326967223]
 position = Vector2(0, -101)
 
 [node name="moving_platform6" parent="objects" unique_id=1918298757 instance=ExtResource("15_4vi3m")]
 position = Vector2(516, -348)
-channel = &"button10"
+channel = &"button5"
 
 [node name="ActiveAnchor" parent="objects/moving_platform6" index="2" unique_id=1326967223]
 position = Vector2(0, -101)
 
 [node name="button7" parent="objects" unique_id=171288897 instance=ExtResource("10_y6lms")]
 position = Vector2(53.089523, -69.94586)
-channel = &"button10"
+channel = &"button5"
 
 [node name="Personagens" type="Node2D" parent="." unique_id=2012058812]
 y_sort_enabled = true
@@ -1283,10 +1266,10 @@ y_sort_enabled = true
 anchor_mode = 0
 zoom = Vector2(0.667, 0.667)
 script = ExtResource("9_5xflf")
-player1 = NodePath("../Robo")
-player2 = NodePath("../Guerreiro")
+player1 = NodePath("../Player1")
+player2 = NodePath("../Player2")
 
-[node name="Guerreiro" parent="Personagens" unique_id=1968535207 instance=ExtResource("14_nrat6")]
+[node name="Player1" parent="Personagens" unique_id=1968535207 instance=ExtResource("14_nrat6")]
 position = Vector2(224, 471)
 nome_personagem = "Personagem"
 vida_maxima = 100
@@ -1298,11 +1281,11 @@ intervalo_ataque = 0.7
 preparo_ataque = 0.18
 duracao_ataque = 0.5
 
-[node name="Sombra" type="Polygon2D" parent="Personagens/Guerreiro" unique_id=556038652]
+[node name="Sombra" type="Polygon2D" parent="Personagens/Player1" unique_id=556038652]
 color = Color(0.03, 0.05, 0.08, 0.28)
 polygon = PackedVector2Array(9, 0, 7.7942286, 2, 4.5, 3.4641016, 5.5107286e-16, 4, -4.5, 3.4641016, -7.7942286, 2, -9, 4.8984254e-16, -7.7942286, -2, -4.5, -3.4641016, -1.6532186e-15, -4, 4.5, -3.4641016, 7.7942286, -2)
 
-[node name="Robo" parent="Personagens" unique_id=398588747 instance=ExtResource("15_fi4ie")]
+[node name="Player2" parent="Personagens" unique_id=398588747 instance=ExtResource("15_fi4ie")]
 position = Vector2(313, 390)
 nome_personagem = "Personagem"
 vida_maxima = 100
@@ -1315,7 +1298,7 @@ preparo_ataque = 0.18
 duracao_ataque = 0.2
 possui_morte_animada = true
 
-[node name="Sombra" type="Polygon2D" parent="Personagens/Robo" unique_id=1033258184]
+[node name="Sombra" type="Polygon2D" parent="Personagens/Player2" unique_id=1033258184]
 color = Color(0.03, 0.05, 0.08, 0.28)
 polygon = PackedVector2Array(9, 0, 7.7942286, 2, 4.5, 3.4641016, 5.5107286e-16, 4, -4.5, 3.4641016, -7.7942286, 2, -9, 4.8984254e-16, -7.7942286, -2, -4.5, -3.4641016, -1.6532186e-15, -4, 4.5, -3.4641016, 7.7942286, -2)
 

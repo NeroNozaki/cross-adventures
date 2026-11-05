@@ -48,18 +48,18 @@ func _physics_process(delta: float) -> void:
 	mira.show()
 	mira.atualizar(get_global_mouse_position(), tempo_carga / tempo_carga_total if carregando else 0.0)
 	olhar_para(mira.direcao)
-	movimento = Input.get_vector("robo_esquerda", "robo_direita", "robo_cima", "robo_baixo")
+	movimento = Input.get_vector("player2_esquerda", "player2_direita", "player2_cima", "player2_baixo")
 	if dashing:
 		_process_dash(delta)
 		return
-	if Input.is_action_just_pressed("otto_dash") and iniciar_dash(movimento):
+	if Input.is_action_just_pressed("player2_dash") and iniciar_dash(movimento):
 		_process_dash(delta)
 		return
-	if Input.is_action_just_pressed("robo_atacar"):
+	if Input.is_action_just_pressed("player2_atacar"):
 		iniciar_carga()
 	if carregando:
 		tempo_carga = minf(tempo_carga + delta, tempo_carga_total)
-	if Input.is_action_just_released("robo_atacar"):
+	if Input.is_action_just_released("player2_atacar"):
 		liberar_carga()
 	mover(movimento, delta)
 

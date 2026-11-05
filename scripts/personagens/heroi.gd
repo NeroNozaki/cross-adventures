@@ -3,7 +3,7 @@ class_name Heroi
 ## Dois controles independentes: cada instancia usa seu proprio prefixo de acoes.
 
 @export var controlado: bool = true
-@export var prefixo_controle: String = "guerreiro"
+@export var prefixo_controle: String = "player1"
 
 func _ready() -> void:
 	super._ready()

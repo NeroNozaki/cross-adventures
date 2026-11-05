@@ -6,7 +6,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		visao_geral=not visao_geral
 func _process(delta: float) -> void:
 	var fase: Node2D=get_parent()
-	if fase.dados.is_empty() or not is_instance_valid(fase.lucas): return
+	if fase.dados.is_empty() or not is_instance_valid(fase.player1): return
 	var tela: Vector2=get_viewport_rect().size
 	var destino: Vector2
 	var escala: float
@@ -18,8 +18,8 @@ func _process(delta: float) -> void:
 		destino=Vector2(fase.dados.largura*16,fase.dados.altura*16)
 		escala=minf((tela.x-40)/(fase.dados.largura*32.0),(tela.y-104)/(fase.dados.altura*32.0))
 	else:
-		var a: Vector2=fase.lucas.global_position-Vector2(0,16*fase.lucas.altura_nivel)
-		var b: Vector2=fase.otto.global_position-Vector2(0,16*fase.otto.altura_nivel)
+		var a: Vector2=fase.player1.global_position-Vector2(0,16*fase.player1.altura_nivel)
+		var b: Vector2=fase.player2.global_position-Vector2(0,16*fase.player2.altura_nivel)
 		destino=(a+b)*0.5
 		var distancia: Vector2=(a-b).abs()+Vector2(260,240)
 		escala=clampf(minf((tela.x-60)/distancia.x,(tela.y-110)/distancia.y),0.27,0.9)

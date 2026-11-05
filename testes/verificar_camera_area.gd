@@ -30,18 +30,18 @@ func rodar() -> void:
 	root.add_child(mundo)
 	current_scene = mundo
 
-	var lucas: Node2D = load("res://cenas/personagens/guerreiro.tscn").instantiate()
-	lucas.set_physics_process(false)
-	mundo.add_child(lucas)
-	lucas.global_position = Vector2.ZERO
-	var otto: Node2D = load("res://cenas/personagens/robo.tscn").instantiate()
-	otto.set_physics_process(false)
-	mundo.add_child(otto)
-	otto.global_position = Vector2.ZERO
+	var player1: Node2D = load("res://cenas/personagens/player1.tscn").instantiate()
+	player1.set_physics_process(false)
+	mundo.add_child(player1)
+	player1.global_position = Vector2.ZERO
+	var player2: Node2D = load("res://cenas/personagens/player2.tscn").instantiate()
+	player2.set_physics_process(false)
+	mundo.add_child(player2)
+	player2.global_position = Vector2.ZERO
 
 	var camera: Camera2D = load("res://scripts/objects/camera/camera2D.gd").new()
-	camera.player1 = otto
-	camera.player2 = lucas
+	camera.player1 = player1
+	camera.player2 = player2
 	mundo.add_child(camera)
 	camera.global_position = Vector2.ZERO
 
@@ -51,20 +51,20 @@ func rodar() -> void:
 	spawn.global_position = Vector2(1000, 720)
 	await passos(5)
 
-	conferir(lucas.global_position.y == 720.0, "level spawn move Lucas antes da camera")
-	conferir(otto.global_position.y == 720.0, "level spawn move Otto antes da camera")
+	conferir(player1.global_position.y == 720.0, "level spawn move Player1 antes da camera")
+	conferir(player2.global_position.y == 720.0, "level spawn move Player2 antes da camera")
 	conferir(is_equal_approx(camera.current_anchor, 575.0), "camera usa a ancora do spawn, nao a posicao inicial")
 	conferir(is_equal_approx(camera.global_position.y, 575.0), "camera nasce enquadrada nos personagens")
 	conferir(camera.state == camera.State.LOCKED, "camera trava no quadro do spawn")
 
-	lucas.global_position = Vector2(0, 600)
-	otto.global_position = Vector2(0, 700)
+	player1.global_position = Vector2(0, 600)
+	player2.global_position = Vector2(0, 700)
 	await passos()
 	conferir(camera.state == camera.State.LOCKED, "camera permanece travada com os dois no mesmo quadro")
 	conferir(is_equal_approx(camera.global_position.y, 575.0), "camera nao pula ao andar dentro do quadro")
 
-	lucas.global_position = Vector2(0, 100)
-	otto.global_position = Vector2(0, 1000)
+	player1.global_position = Vector2(0, 100)
+	player2.global_position = Vector2(0, 1000)
 	await passos()
 	conferir(camera.state == camera.State.FLOATING, "camera flutua quando os herois se separam")
 	conferir(is_equal_approx(camera.target_y, 262.5), "camera calcula o centro entre os herois")

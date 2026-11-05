@@ -4,8 +4,8 @@ Projeto real: C:\Users\finan\OneDrive\Documentos\cross-adventures.
 
 Abra project.godot no Godot 4.7.1 e pressione F5. Escolha INICIAR AVENTURA. F1 abre o guia e pausa a partida; F1/Esc fecha. Esc abre a pausa.
 
-Lucas: WASD, Espaço/J/clique direito para combo, Shift para escudo, F para saltar e E para interagir/empurrar.
-Otto: setas, mouse para mirar, clique esquerdo/Enter para tiro, segurar e soltar para carga, P para saltar e I para interagir. C alterna elementos nas fases 3/4. Tab trava a mira e mostra os próximos ricochetes. V alterna a visão geral do mapa. M alterna os efeitos e R reinicia a sala.
+Player1: WASD, F para atacar/combo, G para escudo frontal, KP 0 para saltar e KP 5 para interagir/empurrar.
+Player2: setas, mouse para mirar, clique esquerdo para tiro/carga, clique direito para dash, Espaço para saltar e E para interagir. C alterna elementos nas fases 3/4. Tab trava a mira e mostra os próximos ricochetes. V alterna a visão geral do mapa. M alterna os efeitos e R reinicia a sala.
 
 Quatro fases: Jardim da Provação, Galeria dos Ecos, Oficina das Quatro Fontes e Santuário do Guardião.
 

@@ -488,5 +488,5 @@ func _reproduzir(acao: String) -> void:
 	if not animacao.sprite_frames.has_animation(nome):
 		nome = StringName("idle_" + direcao)
 	animacao.play(nome)
-	# O guerreiro usa uma tela maior no ataque, com os pes no mesmo ponto.
+	# O player1 usa uma tela maior no ataque, com os pes no mesmo ponto.
 	animacao.offset = visual_offset

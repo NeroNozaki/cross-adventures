@@ -5,11 +5,11 @@ extends Node2D
 @onready var fence_set3 = $objects/fence_set3
 @onready var switch2 = $objects/switch2
 
-var robo
+var player2
 var _fences_opened := false
 
 func _ready() -> void:
-	robo = $Personagens/Robo
+	player2 = $Personagens/Player2
 	
 	# Connect both buttons to the same check
 	if button2 and button2.has_signal("state_changed"):
@@ -74,6 +74,6 @@ func _open_fences() -> void:
 
 
 func _process(_delta: float) -> void:
-	if has_node("MarcadorRobo") and robo:
-		$MarcadorRobo.position = robo.position + Vector2(0, 8)
-		$MarcadorRobo.visible = not robo.esta_morto
+	if has_node("MarcadorPlayer2") and player2:
+		$MarcadorPlayer2.position = player2.position + Vector2(0, 8)
+		$MarcadorPlayer2.visible = not player2.esta_morto
