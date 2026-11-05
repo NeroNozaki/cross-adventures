@@ -1037,7 +1037,7 @@ pattern_0 = SubResource("TileMapPattern_jxv52")
 script = ExtResource("1_wulx4")
 
 [node name="LevelSpawn" parent="." unique_id=1045799053 instance=ExtResource("2_wulx4")]
-position = Vector2(183, -71)
+position = Vector2(468, 498)
 
 [node name="Terrain map layer" type="TileMapLayer" parent="." unique_id=671236802]
 scale = Vector2(1.5, 1.5)
