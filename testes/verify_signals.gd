@@ -48,16 +48,52 @@ func run() -> void:
 	await wait_frames()
 
 	button._on_body_entered(null)
+	await wait_frames()
+	check(fence.obter_estado() == Fence.STATE.OPENING, "pressed button starts opening state")
+	check(not fence.collision.disabled, "opening fence still blocks the passage")
 	await create_timer(2.0).timeout
-	check(fence._lowered, "pressed button lowers the fence")
+	check(fence.esta_aberta(), "pressed button opens the fence")
+	check(fence.obter_estado() == Fence.STATE.OPEN, "opening animation ends in OPEN")
 	check(fence.collision.disabled, "lowered fence opens the passage")
 	check(fence.animation.animation == &"lowered", "animation ends in lowered")
 
+	var open_frame: int = fence.animation.frame
+	fence.definir_ativado(true)
+	await wait_frames()
+	check(fence.esta_aberta(), "repeated activation keeps the fence OPEN")
+	check(fence.animation.animation == &"lowered" and fence.animation.frame == open_frame, "repeated activation does not replay the opening animation")
+	check(fence.collision.disabled, "repeated activation keeps the passage open")
+
 	button._on_body_exited(null)
+	await wait_frames()
+	check(fence.obter_estado() == Fence.STATE.CLOSING, "released button starts closing state")
+	check(fence.collision.disabled, "closing fence keeps the passage open until it is raised")
 	await create_timer(2.0).timeout
-	check(not fence._lowered, "released button raises the fence")
-	check(not fence.collision.disabled, "raised fence blocks the passage again")
+	check(fence.esta_fechada(), "released button closes the fence")
 	check(fence.animation.animation == &"raised", "animation ends in raised")
+	check(not fence.collision.disabled, "raised fence blocks the passage again")
+
+	var start_open: Node2D = load("res://cenas/objects/non-interactable/fence.tscn").instantiate()
+	start_open.start_activated = true
+	root.add_child(start_open)
+	await wait_frames()
+	check(start_open.esta_aberta(), "start_activated begins in OPEN")
+	check(start_open.animation.animation == &"lowered", "start_activated begins with lowered visual")
+	check(start_open.collision.disabled, "start_activated begins with open collision")
+
+	var reversing: Node2D = load("res://cenas/objects/non-interactable/fence.tscn").instantiate()
+	root.add_child(reversing)
+	await wait_frames()
+	reversing.definir_ativado(true)
+	await create_timer(0.15).timeout
+	check(reversing.obter_estado() == Fence.STATE.OPENING, "fence reaches OPENING before reversal")
+	reversing.definir_ativado(false)
+	await wait_frames()
+	check(reversing.obter_estado() == Fence.STATE.CLOSING, "mid-animation reversal changes to CLOSING")
+	await create_timer(1.2).timeout
+	check(reversing.esta_fechada(), "reversed fence settles CLOSED")
+	check(not reversing.collision.disabled, "reversed fence restores collision")
+	check(reversing.animation.animation == &"raised", "reversed fence settles on raised visual")
 
 	check(not fence._interpret(null), "null signal payload is ignored")
 	check(not fence._interpret(Vector2.ONE), "vector signal payload is ignored")
@@ -85,7 +121,7 @@ func run() -> void:
 	await wait_frames()
 	var stayed_raised := true
 	for part in set_fences:
-		if part._lowered:
+		if part.esta_aberta():
 			stayed_raised = false
 	check(stayed_raised, "unsupported payloads do not activate the fence set")
 
@@ -94,7 +130,7 @@ func run() -> void:
 	var all_lowered := true
 	var all_open := true
 	for part in set_fences:
-		if not part._lowered:
+		if not part.esta_aberta():
 			all_lowered = false
 		if not part.collision.disabled:
 			all_open = false
@@ -106,7 +142,7 @@ func run() -> void:
 	var all_raised := true
 	var all_closed := true
 	for part in set_fences:
-		if part._lowered:
+		if part.esta_aberta():
 			all_raised = false
 		if part.collision.disabled:
 			all_closed = false
@@ -127,7 +163,7 @@ func run() -> void:
 	var switch_lowered := true
 	var switch_open := true
 	for part in switch_fences:
-		if not part._lowered:
+		if not part.esta_aberta():
 			switch_lowered = false
 		if not part.collision.disabled:
 			switch_open = false

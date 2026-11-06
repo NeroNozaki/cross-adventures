@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bfcw5kgxwknfu"]
+
+[ext_resource type="Script" path="res://scripts/objects/level_specifics/level_end.gd" id="1_end"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nqwk7"]
+size = Vector2(25, 25)
+
+[node name="level_end" type="Area2D" unique_id=907361801]
+script = ExtResource("1_end")
+
+[node name="shape" type="CollisionShape2D" parent="." unique_id=1802582558]
+shape = SubResource("RectangleShape2D_nqwk7")

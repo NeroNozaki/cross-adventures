@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Cross Adventures"
-run/main_scene="uid://ctkkskt8bxjlc"
+run/main_scene="uid://ctl32w4thhh80"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
 [autoload]

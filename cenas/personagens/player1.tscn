@@ -1,10 +1,8 @@
-[gd_scene load_steps=11 format=3]
+[gd_scene format=3 uid="uid://dc8yclherfo4k"]
 
-[ext_resource type="Script" path="res://scripts/personagens/player1.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://5mugxlygqby7" path="res://scripts/personagens/player1.gd" id="1_script"]
 [ext_resource type="SpriteFrames" path="res://recursos/personagens/player1.tres" id="2_frames"]
-
-[ext_resource type="Script" path="res://scripts/efeitos/efeitos_combate.gd" id="3_fx"]
-
+[ext_resource type="Script" uid="uid://812llsqvakdw" path="res://scripts/efeitos/efeitos_combate.gd" id="3_fx"]
 [ext_resource type="PackedScene" path="res://cenas/audio/audio_personagem.tscn" id="10_audio"]
 [ext_resource type="Resource" path="res://recursos/audio/player1.tres" id="11_profile"]
 
@@ -18,83 +16,78 @@ radius = 13.0
 radius = 21.0
 
 [sub_resource type="StyleBoxFlat" id="Style_bg"]
-bg_color = Color(0.08, 0.10, 0.13, 0.95)
+bg_color = Color(0.08, 0.1, 0.13, 0.95)
 corner_radius_top_left = 2
 corner_radius_top_right = 2
-corner_radius_bottom_left = 2
 corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
 
 [sub_resource type="StyleBoxFlat" id="Style_fill"]
 bg_color = Color(0.25, 0.8, 0.5, 1)
 
-[node name="Player1" type="CharacterBody2D"]
+[node name="Player1" type="CharacterBody2D" unique_id=1314664736]
 texture_filter = 1
-motion_mode = 1
 collision_layer = 2
 collision_mask = 5
+motion_mode = 1
 script = ExtResource("1_script")
 nome_personagem = "Player1"
-equipe = 0
 vida_maxima = 120
-velocidade = 92.0
+velocidade = 120.0
 dano_ataque = 23
 defesa = 4
 alcance_ataque = 30.0
 intervalo_ataque = 0.82
 preparo_ataque = 0.22
 duracao_ataque = 0.65
-possui_morte_animada = true
-controlado = true
-prefixo_controle = "player1"
-pode_usar_escudo = true
 
-[node name="Visual" type="Node2D" parent="."]
+[node name="Visual" type="Node2D" parent="." unique_id=452955230]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Visual"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Visual" unique_id=806481832]
 scale = Vector2(1.35, 1.35)
 sprite_frames = ExtResource("2_frames")
 animation = &"idle_down"
 offset = Vector2(0, -13)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=904100806]
 shape = SubResource("Shape_body")
 
-[node name="AreaDano" type="Area2D" parent="."]
+[node name="AreaDano" type="Area2D" parent="." unique_id=1445559492]
 position = Vector2(0, -10)
 collision_layer = 8
 collision_mask = 0
 monitoring = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDano"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDano" unique_id=1660059460]
 shape = SubResource("Shape_hurt")
 
-[node name="PivoAtaque" type="Node2D" parent="."]
+[node name="PivoAtaque" type="Node2D" parent="." unique_id=1138994077]
 position = Vector2(0, 19)
 rotation = 1.5707964
 
-[node name="AreaAtaque" type="Area2D" parent="PivoAtaque"]
+[node name="AreaAtaque" type="Area2D" parent="PivoAtaque" unique_id=9665163]
 collision_layer = 0
 collision_mask = 16
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PivoAtaque/AreaAtaque"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PivoAtaque/AreaAtaque" unique_id=564994028]
 shape = SubResource("Shape_attack")
 
-[node name="EfeitoGolpe" type="Polygon2D" parent="PivoAtaque"]
+[node name="EfeitoGolpe" type="Polygon2D" parent="PivoAtaque" unique_id=126788205]
 visible = false
-polygon = PackedVector2Array(4, -17, 14, -12, 19, 0, 14, 12, 4, 17, 10, 0)
 color = Color(1, 0.88, 0.5, 0.8)
+polygon = PackedVector2Array(4, -17, 14, -12, 19, 0, 14, 12, 4, 17, 10, 0)
 
-[node name="RecargaAtaque" type="Timer" parent="."]
+[node name="RecargaAtaque" type="Timer" parent="." unique_id=420062615]
 one_shot = true
 
-[node name="PreparoAtaque" type="Timer" parent="."]
+[node name="PreparoAtaque" type="Timer" parent="." unique_id=2128639560]
 one_shot = true
 
-[node name="Invulnerabilidade" type="Timer" parent="."]
+[node name="Invulnerabilidade" type="Timer" parent="." unique_id=564316350]
 one_shot = true
 
-[node name="BarraVida" type="ProgressBar" parent="."]
+[node name="BarraVida" type="ProgressBar" parent="." unique_id=160207482]
 offset_left = -21.0
 offset_top = -44.0
 offset_right = 21.0
@@ -106,12 +99,11 @@ max_value = 120.0
 value = 120.0
 show_percentage = false
 
-[node name="Nome" type="Label" parent="."]
+[node name="Nome" type="Label" parent="." unique_id=2048044855]
 offset_left = -58.0
 offset_top = -60.0
 offset_right = 58.0
 offset_bottom = -44.0
-mouse_filter = 2
 theme_override_colors/font_color = Color(0.95, 0.95, 0.9, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 1
@@ -120,10 +112,10 @@ theme_override_font_sizes/font_size = 10
 text = "Player1"
 horizontal_alignment = 1
 
-[node name="EfeitosCombate" type="Node2D" parent="."]
-position = Vector2(0, -12)
+[node name="EfeitosCombate" type="Node2D" parent="." unique_id=1731990711]
 z_index = 1
+position = Vector2(0, -12)
 script = ExtResource("3_fx")
 
-[node name="AudioPersonagem" parent="." instance=ExtResource("10_audio")]
+[node name="AudioPersonagem" parent="." unique_id=75565028 instance=ExtResource("10_audio")]
 perfil = ExtResource("11_profile")
