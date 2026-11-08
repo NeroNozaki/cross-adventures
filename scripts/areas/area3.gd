@@ -1,22 +1,21 @@
-extends Node2D
+extends BaseArea
 
 @onready var button2 = $objects/button2
 @onready var button3 = $objects/button3
-@onready var fence_set3 = $objects/fence_set3
 @onready var switch2 = $objects/switch2
 
-var player2
+@onready var player1 = $Personagens/Player1
+@onready var player2 = $Personagens/Player2
 var _fences_opened := false
 
 func _ready() -> void:
-	player2 = $Personagens/Player2
+	super._ready()
 	
 	# Connect both buttons to the same check
 	if button2 and button2.has_signal("state_changed"):
 		button2.state_changed.connect(_check_both_buttons)
 	if button3 and button3.has_signal("state_changed"):
 		button3.state_changed.connect(_check_both_buttons)
-
 
 func _check_both_buttons(_state = null) -> void:
 	if _fences_opened:
@@ -37,7 +36,6 @@ func _check_both_buttons(_state = null) -> void:
 	_fences_opened = true
 	_lock_button(button2)
 	_lock_button(button3)
-	_open_fences()
 
 
 func _is_button_pressed(btn: Node) -> bool:
@@ -66,11 +64,6 @@ func _lock_button(btn: Node) -> void:
 	var anim = btn.get("animation")
 	if anim and anim.has_method("play"):
 		anim.play("3-pressed")
-
-
-func _open_fences() -> void:
-	if fence_set3 and fence_set3.has_method("definir_ativado"):
-		fence_set3.definir_ativado(true)
 
 
 func _process(_delta: float) -> void:
