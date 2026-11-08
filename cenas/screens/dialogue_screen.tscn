@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://st7ts4brie7j"]
+
+[ext_resource type="Texture2D" uid="uid://b5p3xfvrgcrn7" path="res://assets/Ninja Adventure - Asset Pack/Ui/Dialog/FacesetBox.png" id="1_qphq6"]
+[ext_resource type="Texture2D" uid="uid://5p8sq823vokq" path="res://assets/Ninja Adventure - Asset Pack/Ui/Dialog/DialogBox.png" id="2_evq1b"]
+
+[node name="dialogue_screen" type="Control" unique_id=1628631186]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="ColorRect" parent="." unique_id=1827745983]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 400.0
+color = Color(0, 0, 0, 0.6431373)
+
+[node name="main_container" type="MarginContainer" parent="background" unique_id=121088835]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -273.0
+offset_top = -200.0
+offset_right = 273.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="layout" type="VBoxContainer" parent="background/main_container" unique_id=374066850]
+layout_mode = 2
+
+[node name="portrait_container" type="HBoxContainer" parent="background/main_container/layout" unique_id=1336501138]
+layout_mode = 2
+theme_override_constants/separation = 400
+alignment = 1
+
+[node name="portrait1" type="TextureRect" parent="background/main_container/layout/portrait_container" unique_id=1567268565]
+layout_mode = 2
+texture = ExtResource("1_qphq6")
+
+[node name="portrait2" type="TextureRect" parent="background/main_container/layout/portrait_container" unique_id=435381362]
+layout_mode = 2
+texture = ExtResource("1_qphq6")
+
+[node name="dialogue_box" type="PanelContainer" parent="background/main_container/layout" unique_id=1600936002]
+layout_mode = 2
+
+[node name="texture" type="TextureRect" parent="background/main_container/layout/dialogue_box" unique_id=993465262]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 10)
+offset_transform_scale = Vector2(1, 1.2)
+texture = ExtResource("2_evq1b")
+
+[node name="content" type="VBoxContainer" parent="background/main_container/layout/dialogue_box" unique_id=1860294964]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="background/main_container/layout/dialogue_box/content" unique_id=355127877]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+
+[node name="speaker_name" type="Label" parent="background/main_container/layout/dialogue_box/content/MarginContainer" unique_id=700154120]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "nome"
+
+[node name="MarginContainer2" type="MarginContainer" parent="background/main_container/layout/dialogue_box/content" unique_id=2112047707]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 10
+
+[node name="dialogue_text" type="RichTextLabel" parent="background/main_container/layout/dialogue_box/content/MarginContainer2" unique_id=357129534]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "dialogo"
+fit_content = true

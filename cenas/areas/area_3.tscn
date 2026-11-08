@@ -1270,6 +1270,7 @@ y_sort_enabled = true
 [node name="Camera2D" type="Camera2D" parent="Personagens" unique_id=685528796 node_paths=PackedStringArray("player1", "player2")]
 anchor_mode = 0
 zoom = Vector2(0.667, 0.667)
+limit_top = -570
 script = ExtResource("9_5xflf")
 player1 = NodePath("../Player1")
 player2 = NodePath("../Player2")
