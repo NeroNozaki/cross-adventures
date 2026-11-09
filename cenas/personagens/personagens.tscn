@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dtwf56jlqm37l"]
+
+[ext_resource type="Script" uid="uid://jaw44x8hjp0m" path="res://scripts/objects/camera/camera2D.gd" id="1_h8yr2"]
+[ext_resource type="PackedScene" uid="uid://dc8yclherfo4k" path="res://cenas/personagens/player1.tscn" id="2_kq81a"]
+[ext_resource type="PackedScene" uid="uid://blyrhu0pr35r8" path="res://cenas/personagens/player2.tscn" id="3_fuw02"]
+
+[node name="Personagens" type="Node2D" unique_id=1523534277]
+y_sort_enabled = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=442141033 node_paths=PackedStringArray("player1", "player2")]
+anchor_mode = 0
+zoom = Vector2(0.667, 0.667)
+limit_top = -570
+script = ExtResource("1_h8yr2")
+player1 = NodePath("../Player1")
+player2 = NodePath("../Player2")
+
+[node name="Player1" parent="." unique_id=1314664736 instance=ExtResource("2_kq81a")]
+position = Vector2(-44, -6)
+nome_personagem = "Personagem"
+vida_maxima = 100
+velocidade = 95.0
+dano_ataque = 15
+defesa = 2
+alcance_ataque = 29.0
+intervalo_ataque = 0.7
+preparo_ataque = 0.18
+duracao_ataque = 0.5
+
+[node name="Player2" parent="." unique_id=742595606 instance=ExtResource("3_fuw02")]
+position = Vector2(40, -7)
+nome_personagem = "Personagem"
+vida_maxima = 100
+velocidade = 200.0
+orientar_pelo_movimento = true
+dano_ataque = 15
+alcance_ataque = 29.0
+intervalo_ataque = 0.7
+preparo_ataque = 0.18
+duracao_ataque = 0.2
+possui_morte_animada = true

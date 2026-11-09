@@ -1057,11 +1057,6 @@ tile_set = SubResource("TileSet_nqwk7")
 [node name="HoleField" parent="." unique_id=313915550 node_paths=PackedStringArray("tile_map_layer") instance=ExtResource("20_holefield")]
 tile_map_layer = NodePath("../Terrain map layer")
 
-[node name="MarcadorPlayer2" type="Polygon2D" parent="." unique_id=192060572]
-z_index = 1
-color = Color(0.3, 0.8, 1, 1)
-polygon = PackedVector2Array(-5, 4, 0, 0, 5, 4, 0, 7)
-
 [node name="objects" type="Node2D" parent="." unique_id=852374700]
 
 [node name="button" parent="objects" unique_id=2079836377 instance=ExtResource("10_y6lms")]
@@ -1286,10 +1281,6 @@ intervalo_ataque = 0.7
 preparo_ataque = 0.18
 duracao_ataque = 0.5
 
-[node name="Sombra" type="Polygon2D" parent="Personagens/Player1" unique_id=556038652]
-color = Color(0.03, 0.05, 0.08, 0.28)
-polygon = PackedVector2Array(9, 0, 7.7942286, 2, 4.5, 3.4641016, 5.5107286e-16, 4, -4.5, 3.4641016, -7.7942286, 2, -9, 4.8984254e-16, -7.7942286, -2, -4.5, -3.4641016, -1.6532186e-15, -4, 4.5, -3.4641016, 7.7942286, -2)
-
 [node name="Player2" parent="Personagens" unique_id=398588747 instance=ExtResource("15_fi4ie")]
 position = Vector2(313, 390)
 nome_personagem = "Personagem"
@@ -1302,10 +1293,6 @@ intervalo_ataque = 0.7
 preparo_ataque = 0.18
 duracao_ataque = 0.2
 possui_morte_animada = true
-
-[node name="Sombra" type="Polygon2D" parent="Personagens/Player2" unique_id=1033258184]
-color = Color(0.03, 0.05, 0.08, 0.28)
-polygon = PackedVector2Array(9, 0, 7.7942286, 2, 4.5, 3.4641016, 5.5107286e-16, 4, -4.5, 3.4641016, -7.7942286, 2, -9, 4.8984254e-16, -7.7942286, -2, -4.5, -3.4641016, -1.6532186e-15, -4, 4.5, -3.4641016, 7.7942286, -2)
 
 [node name="Checkpoint" parent="." unique_id=1456814157 instance=ExtResource("16_lna4w")]
 position = Vector2(98, -64)

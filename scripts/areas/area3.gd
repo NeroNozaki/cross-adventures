@@ -4,8 +4,6 @@ extends BaseArea
 @onready var button3 = $objects/button3
 @onready var switch2 = $objects/switch2
 
-@onready var player1 = $Personagens/Player1
-@onready var player2 = $Personagens/Player2
 var _fences_opened := false
 
 func _ready() -> void:
@@ -67,6 +65,4 @@ func _lock_button(btn: Node) -> void:
 
 
 func _process(_delta: float) -> void:
-	if has_node("MarcadorPlayer2") and player2:
-		$MarcadorPlayer2.position = player2.position + Vector2(0, 8)
-		$MarcadorPlayer2.visible = not player2.esta_morto
+	super._process(_delta)

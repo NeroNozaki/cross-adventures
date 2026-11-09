@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://blyrhu0pr35r8"]
 
 [ext_resource type="Script" uid="uid://bsnhbbxsjddlr" path="res://scripts/personagens/player2.gd" id="1_script"]
-[ext_resource type="SpriteFrames" path="res://recursos/personagens/player2.tres" id="2_frames"]
+[ext_resource type="SpriteFrames" uid="uid://ctwqnaqti2v7r" path="res://recursos/personagens/player2.tres" id="2_frames"]
 [ext_resource type="Script" uid="uid://812llsqvakdw" path="res://scripts/efeitos/efeitos_combate.gd" id="3_fx"]
 [ext_resource type="PackedScene" path="res://cenas/audio/audio_personagem.tscn" id="10_audio"]
-[ext_resource type="Resource" path="res://recursos/audio/player2.tres" id="11_profile"]
+[ext_resource type="Resource" uid="uid://csd7ll3a7188x" path="res://recursos/audio/player2.tres" id="11_profile"]
 [ext_resource type="Script" uid="uid://rvxywydbpatg" path="res://scripts/combate/mira_360.gd" id="12_aim"]
 
 [sub_resource type="CircleShape2D" id="Shape_body"]
@@ -127,3 +127,13 @@ perfil = ExtResource("11_profile")
 z_index = 4
 position = Vector2(0, -15)
 script = ExtResource("12_aim")
+
+[node name="Marcador" type="Polygon2D" parent="." unique_id=921236615]
+z_index = 1
+position = Vector2(0, 5)
+color = Color(0.3, 0.8, 1, 1)
+polygon = PackedVector2Array(-5, 4, 0, 0, 5, 4, 0, 7)
+
+[node name="Sombra" type="Polygon2D" parent="." unique_id=1230930835]
+color = Color(0.03, 0.05, 0.08, 0.28)
+polygon = PackedVector2Array(9, 0, 7.7942286, 2, 4.5, 3.4641016, 5.5107286e-16, 4, -4.5, 3.4641016, -7.7942286, 2, -9, 4.8984254e-16, -7.7942286, -2, -4.5, -3.4641016, -1.6532186e-15, -4, 4.5, -3.4641016, 7.7942286, -2)
