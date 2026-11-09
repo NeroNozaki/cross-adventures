@@ -71,6 +71,7 @@ var _colisao_buraco_ativa: bool = true
 @onready var area_dano: Area2D = $AreaDano
 @onready var efeitos: Node2D = $EfeitosCombate
 @onready var audio: Node2D = $AudioPersonagem
+@onready var marcador: Polygon2D = get_node_or_null("Marcador")
 
 func _ready() -> void:
 	vida_atual = vida_maxima
@@ -96,6 +97,7 @@ func _ready() -> void:
 	area_ataque.collision_mask = 16 if equipe == 0 else 8
 	preparo.timeout.connect(_aplicar_ataque)
 	vida_alterada.emit(vida_atual, vida_maxima)
+	_atualizar_marcador()
 	_reproduzir("idle")
 
 func atualizar_estado(delta: float) -> void:
@@ -111,6 +113,12 @@ func atualizar_estado(delta: float) -> void:
 			animacao.modulate = Color.WHITE
 		else:
 			animacao.modulate = Color(1.0, 0.5, 0.5, 0.75)
+	_atualizar_marcador()
+
+func _atualizar_marcador() -> void:
+	if marcador:
+		marcador.visible = not esta_morto
+
 
 func pode_mover_atacando() -> bool:
 	return false
@@ -480,6 +488,7 @@ func respawn(restaurar_vida: bool = false, usar_ultimo_piso_seguro: bool = false
 	set_deferred("collision_mask", mascara_colisao_padrao)
 	area_dano.set_deferred("collision_layer", camada_area_dano_padrao)
 	vida_alterada.emit(vida_atual, vida_maxima)
+	_atualizar_marcador()
 	_reproduzir("idle")
 	renasceu.emit(self)
 

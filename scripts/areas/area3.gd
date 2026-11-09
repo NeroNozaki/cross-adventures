@@ -2,6 +2,7 @@ extends BaseArea
 
 @onready var button2 = $objects/button2
 @onready var button3 = $objects/button3
+@onready var fence_set3 = $objects/fence_set3
 @onready var switch2 = $objects/switch2
 
 var _fences_opened := false
@@ -30,8 +31,11 @@ func _check_both_buttons(_state = null) -> void:
 	if _get_bodies_on(button2) == 0 or _get_bodies_on(button3) == 0:
 		return
 
-	# Success — lock everything
+	# Success — open once and lock everything
+	if fence_set3 == null or not fence_set3.has_method("definir_ativado"):
+		return
 	_fences_opened = true
+	fence_set3.definir_ativado(true)
 	_lock_button(button2)
 	_lock_button(button3)
 
@@ -62,7 +66,3 @@ func _lock_button(btn: Node) -> void:
 	var anim = btn.get("animation")
 	if anim and anim.has_method("play"):
 		anim.play("3-pressed")
-
-
-func _process(_delta: float) -> void:
-	super._process(_delta)

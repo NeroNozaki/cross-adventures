@@ -32,6 +32,7 @@ collision_layer = 2
 collision_mask = 5
 motion_mode = 1
 script = ExtResource("1_script")
+dash_duration = 0.2
 prefixo_controle = "player2"
 nome_personagem = "Player2"
 vida_maxima = 95
