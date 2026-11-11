@@ -22,18 +22,15 @@ config/features=PackedStringArray("4.7", "GL Compatibility")
 
 PhysicsLayers="*uid://dy5c01uqlu33x"
 SignalBus="*res://scripts/signals/signal_bus.gd"
-Convivencia="*res://scripts/screens/convivencia.gd"
 FluxoTela="*uid://c3vki778cjtlx"
 
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=400
-window/size/mode=3
 window/size/window_width_override=1080
 window/size/window_height_override=675
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [input]
 

@@ -1,33 +1,5 @@
 # Cross Adventures — referência do projeto
 
-## Atualização consolidada — 11/11/2026
-
-O usuário aprovou a fase 1 (Bosque); a fase 2 continua pendente. A revisão atual trabalha na area_3, preservando seu mapa e mecanismos. Diálogos aparecem somente no Bosque, com balão semitransparente, retratos animados, Continuar/Finalizar e Pular tudo (encerra a conversa atual). O encontro da dupla ocorre no início do Bosque, não na apresentação do menu. As dicas do Bosque duram no máximo quatro segundos de jogo e desaparecem suavemente.
-
-O guia tem duas páginas e demonstrações separadas de disparo e carga. O menu e Vamos explorar usam a mesma moldura botao_reliquia.svg em todos os estados. A area_3 recebeu braseiros CraftPix, música 21 - Dungeon, cadência de passos, nomes Lucas/Otto e dicas temporárias. As duas placas abrem permanentemente fence_set3.
-
-O HUD usa a moldura ThemeMetal3/nine_path_panel.png do Ninja Adventure. A amizade mostra quatro corações IconHeart.png com os mesmos marcos de conquista. Na area_3, scripts/areas/hud_dupla.gd mostra retratos e vida independente dos heróis, com Tiny5 e LifeBarMiniUnder.png; as barras sobre os personagens ficam ocultas. O Bosque permanece sem os cartões de vida, por ser tutorial sem combate.
-
-Validação desta revisão: renderização de menu/guia/balões/area_3, entrada no Bosque pelo botão Vamos explorar, continuar/pular e retomada da partida, duas placas reais e grade persistente, vida independente e atualização dos corações. Os scripts de diagnóstico foram executados no workspace externo, não são testes distribuídos com o jogo. As verificações headless da area_3 ainda emitem avisos de recursos/objetos em uso no encerramento; isso não foi investigado nesta revisão.
-
-## Diálogos e amizade
-
-O autoload Convivencia, em scripts/screens/convivencia.gd, fornece o guia visual compartilhado pelo menu e pela pausa, conversas curtas por etapa e uma barra compacta de amizade. Os controles do guia são obtidos do InputMap (Lucas WASD/F/G, salto 0 numérico e interação 5 numérico; Otto setas/mouse, botão esquerdo, carga, botão direito, Espaço e E). Não trocar essas teclas sem atualizar o restante do jogo.
-
-O guia usa teclas e desenhos de mouse existentes em assets/Ninja Adventure - Asset Pack/Ui/Input. scripts/screens/tecla_guia.gd mostra WASD/setas na disposição física, pressiona visualmente os ícones conforme InputMap e oferece demonstração por clique, incluindo uma barra de carga. A página inicial apresenta andar, espada, escudo, mira e disparo. Outras ações mostra salto, interação e esquiva. Reabrir o guia volta aos comandos principais. O mundo fica pausado durante as demonstrações e os comandos não movimentam a dupla.
-
-Os retratos em assets/INTERFACE/retratos_conversa.png têm três colunas de expressão e duas linhas, Lucas e Otto. A boca/visor alterna somente durante a digitação. Há som de escrita e uma respiração discreta; completar uma fala e avançar são ações separadas. O jogo pausa para leitura e preserva a pausa anterior quando o guia fecha. As conversas esperam a cortina FluxoTela terminar, evitando retomar movimento no meio de uma fala.
-
-A dupla se conhece no caminho inicial. Há falas no início do Bosque, descoberta do rio, placa, ponte e entrada, além da chegada à area_3, duas placas simultâneas e saída. Quatro conquistas únicas por partida avançam Conhecendo → Ajudando → Confiança → Parceria → Amigos. Não há perda de amizade por errar. O progresso é mantido entre as duas áreas disponíveis na sessão e reiniciado ao escolher Jogar. Fases futuras ainda precisam receber suas próprias falas e marcos.
-
-## Primeira fase atual — Bosque
-
-O menu em cenas/screens/start_menu.tscn e scripts/screens/start_menu.gd leva à cena cenas/areas/bosque.tscn. O Bosque usa tiles editáveis P_P (bosque_pp_tiles.png), vegetação Valley Ruin (bosque_valley_natureza.png e bosque_valley_flores.png), coluna P_P e placa/interruptor/torre da area_3. Não utiliza o mapa de exemplo como fundo. É um tutorial sem inimigos, cronômetro ou punição.
-
-Lucas usa WASD e permanece na placa de pedra. Somente Lucas libera o alvo, que sobe e ganha marcação; sair da placa antes do acerto o recolhe. Otto usa setas, mira com mouse e dispara com clique esquerdo. O alvo é generoso e pode ser tentado novamente. Após um acerto, a ponte desdobra cinco partes com ponte_mecanismo.wav e só libera colisão ao terminar. Permanece aberta após Lucas sair. A travessia não encerra o Bosque: os dois precisam chegar à entrada de pedra em Rect2(640,220,70,62). A porta CraftPix abre; a dupla anda automaticamente para dentro e só então segue para area_3.tscn. Textos temporários usam controles reais e uma dica adicional após inatividade; o zoom revela o percurso gradualmente.
-
-Scripts locais scripts/areas/bosque.gd, cristal_bosque.gd e ambiente_bosque.gd coordenam o tutorial, o alvo e as ondas/marcas no chão. passos_bosque.gd sincroniza quadros de caminhada pela distância real, com sombra de contato e poeira discreta, somente no Bosque. Ponte com vigas, veios, fixações e sombra deslocada na água. Entrada usa walls_floor.png, doors_lever_chest_animation.png e fire_animation.png do CraftPix existente. Música existente Ninja Adventure 35 - Adventure, pausa por Esc e silêncio com M. Validada recolha/reabertura, erro e repetição, tiro real, animação/colisão da ponte, sumiço do texto, caminhada/parada e entrada cooperativa pela porta.
-
 Fonte principal de design: `documentacao/SGDD - Cross Adventures.pdf`, 1 página, por Protetores da Juventude. O usuário entregou o documento e o definiu como referência para as próximas instruções em 21/10/2026. O conteúdo descreve o produto; o checklist do PDF não autoriza executar automaticamente todas as funcionalidades.
 
 ## Conceito e enredo do SGDD

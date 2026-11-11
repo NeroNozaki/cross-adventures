@@ -10,7 +10,6 @@ var _saindo := false
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
-	$VBoxContainer/controls.pressed.connect(Convivencia.abrir_ajuda)
 	hide()
 
 
