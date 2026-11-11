@@ -1,71 +1,6 @@
 [gd_scene format=3 uid="uid://ctl32w4thhh80"]
 
 [ext_resource type="Script" uid="uid://cl1k3ib1d3l28" path="res://scripts/screens/start_menu.gd" id="1_0mc4a"]
-[ext_resource type="AudioStream" uid="uid://c4c7vl1jifc4s" path="res://assets/SONS/INTERFACE/CLIQUES/KENNEY_INTERFACE_SOUNDS/click_002.ogg" id="click"]
-[ext_resource type="Texture2D" uid="uid://bd3cspe3yue5w" path="res://assets/INTERFACE/capa_menu.png" id="cover"]
-[ext_resource type="FontFile" uid="uid://da65cas70ohw7" path="res://assets/INTERFACE/FONTES/TINY5/Tiny5.ttf" id="font"]
-[ext_resource type="AudioStream" uid="uid://r1ugwo00m5sq" path="res://assets/SONS/INTERFACE/SELECAO/KENNEY_INTERFACE_SOUNDS/select_001.ogg" id="hover"]
-[ext_resource type="Texture2D" uid="uid://ckgap8oisr28b" path="res://assets/INTERFACE/letreiro.png" id="logo"]
-[ext_resource type="SpriteFrames" uid="uid://bvmmlx5n13xcf" path="res://recursos/personagens/player1.tres" id="lucas"]
-[ext_resource type="SpriteFrames" uid="uid://ctwqnaqti2v7r" path="res://recursos/personagens/player2.tres" id="otto"]
-[ext_resource type="Texture2D" uid="uid://bnmy7nmdmvsqa" path="res://assets/INTERFACE/botao_reliquia.svg" id="plate"]
-[ext_resource type="Texture2D" uid="uid://2lj2t4or5taj" path="res://assets/INTERFACE/trilha_ruinas.png" id="ruinas"]
-[ext_resource type="AudioStream" uid="uid://biu207cawpuet" path="res://assets/Ninja Adventure - Asset Pack/Audio/Musics/35 - Adventure.ogg" id="theme"]
-[ext_resource type="AudioStream" uid="uid://btw582646upua" path="res://assets/SONS/INTERFACE/OUTROS/KENNEY_INTERFACE_SOUNDS/tick_001.ogg" id="tick"]
-
-[sub_resource type="Shader" id="living"]
-code = "shader_type canvas_item;
-void fragment(){
- vec4 c=texture(TEXTURE,UV);
- float water=smoothstep(0.70,0.83,UV.y)*smoothstep(0.08,0.30,c.g-c.r);
- vec2 shift=vec2(sin(UV.y*240.0+TIME*2.8)*0.0018,0.0);
- c=mix(c,texture(TEXTURE,UV+shift),water);
- float blue=smoothstep(0.25,0.65,c.b-c.r)*smoothstep(0.24,0.5,c.g)*smoothstep(0.12,0.3,UV.y);
- c.rgb+=vec3(0.02,0.10,0.13)*blue*(0.5+0.5*sin(TIME*3.3-UV.x*30.0));
- COLOR=c;
-}"
-
-[sub_resource type="ShaderMaterial" id="water"]
-shader = SubResource("living")
-
-[sub_resource type="Gradient" id="fade"]
-colors = PackedColorArray(0.02, 0.04, 0.08, 0, 0.02, 0.04, 0.08, 0.75)
-
-[sub_resource type="GradientTexture2D" id="shade"]
-gradient = SubResource("fade")
-fill_to = Vector2(0, 1)
-
-[sub_resource type="Shader" id="glint"]
-code = "shader_type canvas_item;
-void fragment(){
- vec4 c=texture(TEXTURE,UV);
- float d=abs(UV.x+0.16*UV.y-(mod(TIME,5.8)*1.1-0.22));
- c.rgb+=vec3(0.32,0.27,0.15)*(1.0-smoothstep(0.0,0.06,d))*smoothstep(0.12,0.6,c.r);
- COLOR=c;
-}"
-
-[sub_resource type="ShaderMaterial" id="gold"]
-shader = SubResource("glint")
-
-[sub_resource type="StyleBoxFlat" id="normal"]
-bg_color = Color(0.09, 0.15, 0.2, 1)
-border_width_left = 2
-border_width_bottom = 2
-border_color = Color(0.22, 0.45, 0.47, 1)
-
-[sub_resource type="StyleBoxTexture" id="pressed"]
-content_margin_left = 4.0
-content_margin_right = 4.0
-texture = ExtResource("plate")
-texture_margin_left = 15.0
-texture_margin_right = 15.0
-modulate_color = Color(0.7, 0.95, 1.08, 1)
-
-[sub_resource type="StyleBoxFlat" id="highlight"]
-bg_color = Color(0.14, 0.25, 0.29, 1)
-border_width_left = 2
-border_width_bottom = 2
-border_color = Color(0.94, 0.71, 0.34, 1)
 
 [node name="start_menu" type="Control" unique_id=1897801583]
 layout_mode = 3
@@ -76,194 +11,58 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0mc4a")
 
-[node name="Backdrop" type="ColorRect" parent="." unique_id=2069945821]
-layout_mode = 0
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-color = Color(0.035, 0.065, 0.09, 1)
-
-[node name="Cover" type="TextureRect" parent="." unique_id=636402963]
-material = SubResource("water")
-layout_mode = 0
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-texture = ExtResource("cover")
-expand_mode = 1
-stretch_mode = 6
-
-[node name="Shade" type="TextureRect" parent="." unique_id=974469777]
-layout_mode = 0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-texture = SubResource("shade")
-expand_mode = 1
-
-[node name="Title" type="TextureRect" parent="." unique_id=765707823]
-material = SubResource("gold")
-layout_mode = 0
-anchor_left = 0.5
-anchor_top = 0.025
-anchor_right = 0.5
-anchor_bottom = 0.245
-offset_left = -148.0
-offset_right = 148.0
-mouse_filter = 2
-texture = ExtResource("logo")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=249994500]
+[node name="Label" type="Label" parent="." unique_id=1818064420]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -75.0
-offset_top = -124.0
-offset_right = 75.0
-offset_bottom = -10.0
-theme_override_constants/separation = 8
+anchor_bottom = 0.5
+offset_left = -331.0
+offset_top = -197.0
+offset_right = 329.0
+offset_bottom = -77.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 86
+text = "PLACE HOLDER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1162977307]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -134.0
+offset_top = -60.0
+offset_right = 134.0
+offset_bottom = 193.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
 alignment = 1
 
-[node name="PLAY" type="Button" parent="VBoxContainer" unique_id=1705663372]
-custom_minimum_size = Vector2(140, 32)
+[node name="PLAY" type="Button" parent="VBoxContainer" unique_id=511489240]
 layout_mode = 2
-size_flags_vertical = 4
-theme_override_fonts/font = ExtResource("font")
-theme_override_font_sizes/font_size = 16
-theme_override_styles/normal = SubResource("normal")
-theme_override_styles/pressed = SubResource("pressed")
-theme_override_styles/hover = SubResource("highlight")
-theme_override_styles/focus = SubResource("highlight")
-text = "Jogar"
+theme_override_font_sizes/font_size = 40
+text = "JOGAR"
 
-[node name="COMO JOGAR" type="Button" parent="VBoxContainer" unique_id=522939160]
-custom_minimum_size = Vector2(140, 32)
+[node name="COMO JOGAR" type="Button" parent="VBoxContainer" unique_id=1254456206]
 layout_mode = 2
-size_flags_vertical = 4
-theme_override_fonts/font = ExtResource("font")
-theme_override_font_sizes/font_size = 16
-theme_override_styles/normal = SubResource("normal")
-theme_override_styles/pressed = SubResource("pressed")
-theme_override_styles/hover = SubResource("highlight")
-theme_override_styles/focus = SubResource("highlight")
-text = "Como jogar"
+theme_override_font_sizes/font_size = 40
+text = "COMO JOGAR"
 
-[node name="EXIT" type="Button" parent="VBoxContainer" unique_id=1369405530]
-custom_minimum_size = Vector2(140, 32)
+[node name="EXIT" type="Button" parent="VBoxContainer" unique_id=630360589]
 layout_mode = 2
-size_flags_vertical = 4
-theme_override_fonts/font = ExtResource("font")
-theme_override_font_sizes/font_size = 16
-theme_override_styles/normal = SubResource("normal")
-theme_override_styles/pressed = SubResource("pressed")
-theme_override_styles/hover = SubResource("highlight")
-theme_override_styles/focus = SubResource("highlight")
-text = "Sair"
-
-[node name="Jornada" type="TextureRect" parent="." unique_id=578415708]
-visible = false
-layout_mode = 0
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-texture = ExtResource("ruinas")
-expand_mode = 1
-
-[node name="Lucas" type="AnimatedSprite2D" parent="Jornada" unique_id=1503164334]
-texture_filter = 1
-scale = Vector2(2, 2)
-sprite_frames = ExtResource("lucas")
-animation = &"attack_down"
-offset = Vector2(0, -13)
-
-[node name="Otto" type="AnimatedSprite2D" parent="Jornada" unique_id=1702952445]
-texture_filter = 1
-scale = Vector2(1.7, 1.7)
-sprite_frames = ExtResource("otto")
-animation = &"attack_down"
-offset = Vector2(0, -15)
-
-[node name="BoasVindas" type="Control" parent="." unique_id=1278674350]
-visible = false
-anchors_preset = 0
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-
-[node name="Sombra" type="TextureRect" parent="BoasVindas" unique_id=1474627587]
-layout_mode = 0
-anchor_right = 1.0
-anchor_bottom = 0.38
-mouse_filter = 2
-texture = SubResource("shade")
-expand_mode = 1
-flip_v = true
-
-[node name="Texto" type="VBoxContainer" parent="BoasVindas" unique_id=1908565983]
-layout_mode = 0
-anchor_right = 1.0
-anchor_bottom = 0.3
-theme_override_constants/separation = 5
-alignment = 1
-
-[node name="Titulo" type="Label" parent="BoasVindas/Texto" unique_id=1166463258]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.85, 0.55, 1)
-theme_override_constants/outline_size = 3
-theme_override_font_sizes/font_size = 20
-text = "Boas-vindas ao mundo de aventuras!"
-horizontal_alignment = 1
-
-[node name="Convite" type="Label" parent="BoasVindas/Texto" unique_id=499945267]
-layout_mode = 2
-theme_override_constants/outline_size = 3
-theme_override_font_sizes/font_size = 16
-text = "Lucas e Otto viram um portão entre as árvores.
-O que será que tem do outro lado?"
-horizontal_alignment = 1
-
-[node name="Comecar" type="Button" parent="BoasVindas" unique_id=1961709599]
-custom_minimum_size = Vector2(150, 32)
-layout_mode = 0
-anchor_left = 0.5
-anchor_top = 0.7
-anchor_right = 0.5
-anchor_bottom = 0.7
-offset_left = -80.0
-offset_right = 80.0
-offset_bottom = 32.0
-theme_override_font_sizes/font_size = 16
-theme_override_styles/normal = SubResource("normal")
-theme_override_styles/pressed = SubResource("pressed")
-theme_override_styles/hover = SubResource("highlight")
-theme_override_styles/focus = SubResource("highlight")
-text = "Vamos explorar!"
-
-[node name="Musica" type="AudioStreamPlayer" parent="." unique_id=1692668182]
-stream = ExtResource("theme")
-volume_db = -40.0
-autoplay = true
-parameters/looping = 1
-
-[node name="Sobre" type="AudioStreamPlayer" parent="." unique_id=1702692744]
-stream = ExtResource("hover")
-volume_db = -15.0
-
-[node name="Clique" type="AudioStreamPlayer" parent="." unique_id=972115412]
-stream = ExtResource("click")
-volume_db = -10.0
-
-[node name="Letra" type="AudioStreamPlayer" parent="." unique_id=1654145004]
-stream = ExtResource("tick")
-volume_db = -24.0
+theme_override_font_sizes/font_size = 40
+text = "SAIR
+"
 
 [connection signal="pressed" from="VBoxContainer/PLAY" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="VBoxContainer/COMO JOGAR" to="." method="_abrir_ajuda"]
 [connection signal="pressed" from="VBoxContainer/EXIT" to="." method="_on_exit_pressed"]
-[connection signal="pressed" from="BoasVindas/Comecar" to="." method="_iniciar_transicao"]
