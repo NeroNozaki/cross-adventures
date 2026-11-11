@@ -74,6 +74,12 @@ func _todos_os_jogadores_dentro() -> bool:
 
 func _iniciar_saida() -> void:
 	_iniciado = true
+	Convivencia.ganhar("masmorra_saida")
+	await Convivencia.falar("masmorra_saida",[
+		[1,"No começo, eu quase não conhecia você."],
+		[0,"Agora somos uma equipe! Obrigado por me ajudar."],
+		[1,"Nossa aventura ficou melhor juntos!"]
+	])
 	_jogadores = _jogadores_dentro.duplicate()
 	_direcoes.clear()
 	for jogador in _jogadores:
