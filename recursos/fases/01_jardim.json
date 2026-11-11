@@ -3123,7 +3123,7 @@
       "y": 18,
       "z": 0,
       "sinal": "placa_a",
-      "personagem": "Lucas"
+      "personagem": "Player1"
     },
     {
       "id": "Cristal",
@@ -3150,7 +3150,7 @@
       "x": 3,
       "y": 20,
       "z": 0,
-      "texto": "Lucas fica na placa desta sala. Otto segue pelo corredor ao norte e usa o espelho da sala de cima para atingir o cristal."
+      "texto": "Player1 fica na placa desta sala. Player2 segue pelo corredor ao norte e usa o espelho da sala de cima para atingir o cristal."
     },
     {
       "id": "PlacaRampa",
@@ -3158,7 +3158,7 @@
       "x": 29,
       "y": 13,
       "z": 0,
-      "texto": "Subam pela escada de pedra. No terraço, usem F (Lucas) ou P (Otto) com direção para saltar a fenda."
+      "texto": "Subam pela escada de pedra. No terraço, usem F (Player1) ou P (Player2) com direção para saltar a fenda."
     },
     {
       "id": "DecorInterativa0",
@@ -3229,7 +3229,7 @@
       "x": 16,
       "y": 22,
       "z": 0,
-      "texto": "Lucas: três cliques encadeiam o combo; Shift bloqueia pela frente. Otto: segure o tiro para carregar."
+      "texto": "Player1: três cliques encadeiam o combo; Shift bloqueia pela frente. Player2: segure o tiro para carregar."
     },
     {
       "id": "EspelhoJardim",
@@ -3299,6 +3299,6 @@
     ]
   ],
   "proxima": "res://cenas/fases/02_galeria.tscn",
-  "objetivo": "Lucas na placa embaixo; Otto no cristal da sala ao norte.",
-  "introducao": "Lucas mantém a placa na sala de entrada. Otto explora a sala ao norte e reflete o tiro no espelho para ativar o cristal distante."
+  "objetivo": "Player1 na placa embaixo; Player2 no cristal da sala ao norte.",
+  "introducao": "Player1 mantém a placa na sala de entrada. Player2 explora a sala ao norte e reflete o tiro no espelho para ativar o cristal distante."
 }

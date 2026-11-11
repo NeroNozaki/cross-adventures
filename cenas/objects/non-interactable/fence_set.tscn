@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d0t2xit01apls"]
+
+[ext_resource type="Script" uid="uid://5y2x2l2rqtlw" path="res://scripts/objects/non-interactables/fence_set.gd" id="1_set"]
+[ext_resource type="PackedScene" uid="uid://y0p6fel4ynhy" path="res://cenas/objects/non-interactable/fence.tscn" id="2_fence"]
+[ext_resource type="Script" uid="uid://chf7du1kg2bs2" path="res://scripts/signals/signal_receiver.gd" id="3_receiver"]
+
+[node name="fence_set" type="Node2D" unique_id=499220946]
+script = ExtResource("1_set")
+
+[node name="SignalReceiver" type="Node" parent="." unique_id=415596885]
+script = ExtResource("3_receiver")
+
+[node name="fence_1" parent="." unique_id=44594114 instance=ExtResource("2_fence")]
+position = Vector2(-24, 0)
+
+[node name="fence_2" parent="." unique_id=879544940 instance=ExtResource("2_fence")]
+
+[node name="fence_3" parent="." unique_id=357701911 instance=ExtResource("2_fence")]
+position = Vector2(24, 0)

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bqxhc5ktl8twr"]
+
+[ext_resource type="Script" uid="uid://chf7du1kg2bs2" path="res://scripts/signals/signal_receiver.gd" id="1_3hhcl"]
+
+[node name="SignalReceiver" type="Node" unique_id=1186303325]
+script = ExtResource("1_3hhcl")

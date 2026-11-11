@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://wuohnjd4pudr"]
+
+[ext_resource type="Script" uid="uid://ttvt60hb7bou" path="res://scripts/signals/signal_emitter.gd" id="1_wsynt"]
+
+[node name="SignalEmitter" type="Node" unique_id=81484739]
+script = ExtResource("1_wsynt")

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dd3s5cdmsxyss"]
+
+[ext_resource type="Script" uid="uid://5y2x2l2rqtlw" path="res://scripts/objects/non-interactables/fence_set.gd" id="1_mxc6i"]
+[ext_resource type="Script" uid="uid://chf7du1kg2bs2" path="res://scripts/signals/signal_receiver.gd" id="2_nkf3y"]
+[ext_resource type="PackedScene" uid="uid://cb4m783cpr5nu" path="res://cenas/objects/non-interactable/wall.tscn" id="3_onqmv"]
+
+[node name="wall_set" type="Node2D" unique_id=499220946]
+script = ExtResource("1_mxc6i")
+
+[node name="SignalReceiver" type="Node" parent="." unique_id=415596885]
+script = ExtResource("2_nkf3y")
+
+[node name="wall_1" parent="." unique_id=340513756 instance=ExtResource("3_onqmv")]
+position = Vector2(-24, 0)
+
+[node name="wall_2" parent="." unique_id=1059430554 instance=ExtResource("3_onqmv")]
+position = Vector2(24, 0)

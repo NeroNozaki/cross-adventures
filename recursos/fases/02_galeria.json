@@ -3356,7 +3356,7 @@
       "y": 20,
       "z": 0,
       "sinal": "placa_a",
-      "personagem": "Lucas"
+      "personagem": "Player1"
     },
     {
       "id": "Espelho",
@@ -3494,6 +3494,6 @@
   "selos": [],
   "npcs": [],
   "proxima": "res://cenas/fases/03_oficina.tscn",
-  "objetivo": "Lucas na placa; Otto reflete a esfera até o cristal da galeria.",
+  "objetivo": "Player1 na placa; Player2 reflete a esfera até o cristal da galeria.",
   "introducao": "A galeria protege o cristal de ecos. Encontrem a placa e o espelho. O tiro precisa ricochetear antes de chegar ao cristal."
 }

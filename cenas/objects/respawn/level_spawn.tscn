@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cuunxdtlugmkd"]
+
+[ext_resource type="Script" uid="uid://5dyi77tytcfp" path="res://scripts/objects/respawn/level_spawn.gd" id="1_script"]
+
+[node name="LevelSpawn" type="Node2D" unique_id=1022907120]
+script = ExtResource("1_script")
+
+[node name="RespawnPoint" type="Marker2D" parent="." unique_id=1124490669]

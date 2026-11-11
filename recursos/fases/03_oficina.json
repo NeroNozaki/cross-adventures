@@ -3474,7 +3474,7 @@
       "x": 5,
       "y": 10,
       "z": 0,
-      "texto": "Selecione Gelo com C. Congele o bloco e use Lucas para empurrar duas casas até a placa."
+      "texto": "Selecione Gelo com C. Congele o bloco e use Player1 para empurrar duas casas até a placa."
     },
     {
       "id": "Fonte0",
@@ -3614,5 +3614,5 @@
   ],
   "proxima": "res://cenas/fases/04_santuario.tscn",
   "objetivo": "Unam gelo, fogo, choque e onda; cruzem a plataforma até a saída.",
-  "introducao": "Cada câmara guarda uma fonte. Gelo cria o bloco de Lucas; fogo abre a passagem; choque ricocheteado e onda completam os mecanismos."
+  "introducao": "Cada câmara guarda uma fonte. Gelo cria o bloco de Player1; fogo abre a passagem; choque ricocheteado e onda completam os mecanismos."
 }

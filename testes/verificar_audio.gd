@@ -32,8 +32,8 @@ func _executar() -> void:
 	await physics_frame
 	await physics_frame
 	await process_frame
-	var g: CharacterBody2D = arena.get_node("Personagens/Guerreiro")
-	var r: CharacterBody2D = arena.get_node("Personagens/Robo")
+	var g: CharacterBody2D = arena.get_node("Personagens/Player1")
+	var r: CharacterBody2D = arena.get_node("Personagens/Player2")
 	var c: CharacterBody2D = arena.get_node("Personagens/CavaleiroAzul")
 	var z: CharacterBody2D = arena.get_node("Personagens/Zumbi")
 	var todos: Array[CharacterBody2D] = [g, r, c, z]
@@ -51,13 +51,13 @@ func _executar() -> void:
 	z.set_physics_process(false)
 	g.position = Vector2(100, 180)
 	r.position = Vector2(150, 300)
-	Input.action_press("guerreiro_direita")
-	Input.action_press("robo_direita")
+	Input.action_press("player1_direita")
+	Input.action_press("player2_direita")
 	# Os passos dependem da distância simulada, não do custo de um frame de renderização.
 	for quadro in range(30):
 		await physics_frame
-	Input.action_release("guerreiro_direita")
-	Input.action_release("robo_direita")
+	Input.action_release("player1_direita")
+	Input.action_release("player2_direita")
 	await physics_frame
 	verificar(contar(g.name, &"passo") >= 1 and contar(r.name, &"passo") >= 1, "Os dois jogadores produzem passos ao se deslocar.")
 	g.set_physics_process(false)
