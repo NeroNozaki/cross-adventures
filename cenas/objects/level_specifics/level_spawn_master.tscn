@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cfa4rofxpk6tb"]
+
+[ext_resource type="Script" uid="uid://bfe1fx810tw0b" path="res://scripts/objects/respawn/level_spawn_master.gd" id="1_master"]
+
+[node name="LevelSpawnMaster" type="Node2D" unique_id=1558837417]
+script = ExtResource("1_master")

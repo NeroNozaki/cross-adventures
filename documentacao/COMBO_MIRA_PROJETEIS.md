@@ -21,6 +21,8 @@ Enquanto o escudo está erguido, Lucas mantém a direção e a frente atuais. An
 
 A linha e a marca de mira acompanham a posição do mouse em qualquer ângulo. A movimentação não altera o ângulo do disparo. O corpo usa as quatro direções dos sprites existentes; o emissor e a mira giram livremente. Otto continua andando normalmente enquanto dispara; atacar não zera nem interrompe o movimento.
 
+A mira tem assistência magnética perto de 0°, 45°, 90° e das demais direções de 45 em 45°. Dentro de 10°, o ângulo é puxado suavemente para a direção exata; quanto mais perto, mais forte o encaixe. Fora dessa janela a mira permanece livre. A força e a janela ficam configuráveis em Mira360 (`assistencia_angular_graus` e `forca_assistencia`). O disparo, o dash e a previsão usam a direção já assistida.
+
 A linha tem comprimento visual fixo: usa o cursor apenas para definir o ângulo, podendo ultrapassá-lo quando ele está perto ou terminar antes dele quando está longe. A previsão reflete nas paredes dentro desse limite, sem nunca ultrapassar o comprimento fixo. O tiro simples mostra a parada na primeira parede; a esfera carregada mostra os ricochetes.
 
 Clique e solte para disparar uma esfera simples. Segure por pelo menos 0,85 s e solte para disparar a esfera maior. O anel ao redor do robô mostra o carregamento e fica dourado quando pronto. O tiro maior tem raio 9 e dano 38; o simples tem raio 4 e dano 18, antes da defesa do inimigo. Os valores ficam editáveis nos scripts/cenas.
@@ -42,7 +44,7 @@ A carga é cancelada ao sofrer dano, morrer, perder o foco da janela ou desabili
 - O escudo mantém a orientação ao recuar.
 - Comandos repetidos antes de o golpe atual sair não criam um ataque extra; depois que o golpe sai, incluindo o terceiro, o buffer inicia o próximo.
 
-Os casos acima têm testes em testes/verificar_combo_mira.gd, além das verificações de personagens e áudio já existentes.
+Os casos acima têm testes em testes/verificar_combo_mira.gd, além das verificações de personagens e áudio já existentes. O encaixe angular da mira tem teste próprio em testes/verificar_mira_assistida.gd.
 
 ## Organização
 

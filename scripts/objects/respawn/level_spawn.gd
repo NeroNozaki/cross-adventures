@@ -9,7 +9,16 @@ signal team_spawned
 @onready var respawn_point: Marker2D = $RespawnPoint
 
 func _ready() -> void:
-	call_deferred("_assign_team")
+	if _gerenciado_pelo_master():
+		return
+	call_deferred("ativar")
+
+func ativar() -> void:
+	_assign_team()
+
+func _gerenciado_pelo_master() -> bool:
+	var pai := get_parent()
+	return pai != null and pai.has_method(&"ativar_spawn_selecionado")
 
 func _assign_team() -> void:
 	var heroes: Array[Node] = get_tree().get_nodes_in_group("herois")

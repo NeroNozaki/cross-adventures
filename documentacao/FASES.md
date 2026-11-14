@@ -66,6 +66,8 @@ Os três selos removem a proteção do chefe. Ele persegue os heróis e anuncia 
 
 As quatro cenas ficam em cenas/fases, com TileMapLayers SoloZ0, SoloZ1 e SoloZ2, objetos de puzzle, personagens, exploradores e câmera compartilhada. O TileSet comum está em recursos/fases/tileset_cross.tres. Os objetos possuem configuração exportada e nós de colisão editáveis.
 
+Para escolher onde a dupla nasce, adicione `LevelSpawnMaster` à sala e coloque um ou mais `LevelSpawn` como filhos diretos, posicionando cada `RespawnPoint`. No inspetor do master, o campo Spawn Ativo lista os nomes dos filhos; selecione um. Os demais não são ativados. O primeiro filho é usado se o campo ficar vazio. Em tempo de execução, use `definir_spawn_ativo(&"Nome")`.
+
 Os JSONs em recursos/fases são a fonte da geração inicial. ferramentas/reconstruir_fases.gd reconstrói cenas e tiles a partir deles e preserva versões anteriores em backups. Essa reconstrução substitui edições manuais nas cenas geradas; use apenas quando desejar regenerá-las. Alterar só o JSON não atualiza automaticamente os tiles visuais da cena.
 
 Validação: testes/verificar_fases.gd cobre altura, saltos, cooperação, tiros reais nos espelhos, elementos, empurrões, transporte, chefe, portais, respawn e transições. testes/verificar_cenarios.gd verifica apoio no chão, colisões de entrada, rotas de inimigos e enquadramento da equipe nas quatro fases. Os testes anteriores de personagens, áudio e combo/mira permanecem obrigatórios para mudanças nesses sistemas.

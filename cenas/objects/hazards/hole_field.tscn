@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene format=3 uid="uid://3lsr651kmjwt"]
 
-[ext_resource type="Script" path="res://scripts/objects/hazards/hole_field.gd" id="1_hole"]
+[ext_resource type="Script" uid="uid://dxkbkn3dvr4ct" path="res://scripts/objects/hazards/hole_field.gd" id="1_hole"]
 
-[node name="HoleField" type="Node2D"]
+[node name="HoleField" type="Node2D" unique_id=1692194616]
 script = ExtResource("1_hole")

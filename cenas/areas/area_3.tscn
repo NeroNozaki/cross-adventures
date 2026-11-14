@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://ctkkskt8bxjlc"]
 
 [ext_resource type="Script" uid="uid://cq3sxhfy2q2ac" path="res://scripts/areas/area3.gd" id="1_wulx4"]
+[ext_resource type="Script" uid="uid://bfe1fx810tw0b" path="res://scripts/objects/respawn/level_spawn_master.gd" id="2_master"]
 [ext_resource type="PackedScene" uid="uid://cuunxdtlugmkd" path="res://cenas/objects/respawn/level_spawn.tscn" id="2_wulx4"]
 [ext_resource type="Texture2D" uid="uid://c3deqrxf2aib7" path="res://assets/Dungeon Gathering Free Version/Set 4.5.png" id="3_lna4w"]
 [ext_resource type="Texture2D" uid="uid://hy5qxsj1tal2" path="res://assets/CENARIOS/KENNEY_TINY_DUNGEON/Tilemap/tilemap_packed.png" id="4_jxv52"]
@@ -20,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://bsihrvbnum6vc" path="res://cenas/objects/non-interactable/wall_spitter.tscn" id="15_jxv52"]
 [ext_resource type="PackedScene" uid="uid://bpfllmgoocxli" path="res://cenas/objects/respawn/checkpoint.tscn" id="16_lna4w"]
 [ext_resource type="PackedScene" uid="uid://b1app4yluftqg" path="res://cenas/objects/level_specifics/unstable_ground.tscn" id="19_6vj3d"]
-[ext_resource type="PackedScene" path="res://cenas/objects/hazards/hole_field.tscn" id="20_holefield"]
+[ext_resource type="PackedScene" uid="uid://3lsr651kmjwt" path="res://cenas/objects/hazards/hole_field.tscn" id="20_holefield"]
 [ext_resource type="PackedScene" uid="uid://bfcw5kgxwknfu" path="res://cenas/objects/level_specifics/level_end.tscn" id="22_hsrb0"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_jxv52"]
@@ -1042,8 +1043,15 @@ pattern_0 = SubResource("TileMapPattern_jxv52")
 [node name="area3" type="Node2D" unique_id=368229941]
 script = ExtResource("1_wulx4")
 
-[node name="LevelSpawn" parent="." unique_id=1045799053 instance=ExtResource("2_wulx4")]
-position = Vector2(180, 135)
+[node name="LevelSpawnMaster" type="Node2D" parent="." unique_id=2082823409]
+script = ExtResource("2_master")
+spawn_ativo = "spawn1"
+
+[node name="spawn1" parent="LevelSpawnMaster" unique_id=1045799053 instance=ExtResource("2_wulx4")]
+position = Vector2(438, 503)
+
+[node name="spawn2" parent="LevelSpawnMaster" unique_id=1022907120 instance=ExtResource("2_wulx4")]
+position = Vector2(178, -64)
 
 [node name="Terrain map layer" type="TileMapLayer" parent="." unique_id=671236802]
 scale = Vector2(1.5, 1.5)

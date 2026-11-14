@@ -188,3 +188,9 @@ Validação após a renomeação: `verificar_personagens` (4 cenas, 80 animaçõ
 ## Area 1: tres switches — 09/11/2026
 
 `scripts/areas/area1.gd` assina os canais `area1_switch2`, `area1_switch3` e `area1_switch4` pelo `SignalBus`. `switch2`, `switch3` e `switch4` da `cenas/areas/area_1.tscn` publicam nesses canais. `fence3`, `fence4` e todas as partes de `fence_set3` só recebem `definir_ativado(true)` quando os três switches já publicaram `gold`; com um ou dois acionados, continuam fechados. O script cancela as assinaturas ao sair da árvore. Validação: `testes/verificar_area1_switches.gd` (13), `verify_signals` (36), `verify_switch` (19), `verificar_pausa` (18), `verificar_puzzle_botoes` (9) e boot de `area_1`.
+
+## Pontos de spawn por sala — 14/11/2026
+
+`LevelSpawnMaster` (`scripts/objects/respawn/level_spawn_master.gd` e `cenas/objects/level_specifics/level_spawn_master.tscn`) agrupa vários `LevelSpawn` filhos diretos em uma única sala e ativa apenas o escolhido. O campo exportado `spawn_ativo` vira uma lista com os nomes dos filhos no inspetor graças a `_validate_property()`; não é necessário plugin. Nome vazio usa o primeiro filho; nome inválido cai no primeiro e emite aviso. `definir_spawn_ativo(&"Nome")` permite trocar em tempo de execução.
+
+Os filhos `LevelSpawn` detectam o master pelo método `ativar_spawn_selecionado()` e deixam de se autoativar; o master adia a ativação para depois do `_ready` de todos. Um `LevelSpawn` fora de um master continua funcionando sozinho, preservando os testes antigos. `area_1` e `area_3` agora usam o master com seus spawns existentes. Validação: `testes/verificar_level_spawn_master.gd` (19 verificações de lista, seleção única, troca, nome inválido e compatibilidade), `verify_respawn_rules` (27), `verificar_camera_area` (9), `verificar_area1_switches` (13), `verificar_puzzle_botoes` (9) e `verificar_pausa` (18).
