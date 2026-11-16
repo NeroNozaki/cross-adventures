@@ -22,7 +22,7 @@ func receber_projetil(tiro: Node) -> String:
 		return "consumir"
 	if not ativo:
 		if aviso_restante == 0:
-			sala.avisar("Nico precisa ficar na pedra para revelar o alvo.")
+			sala.avisar("Nico precisa preparar a trava com F." if sala.mapa_id == 2 or (sala.mapa_id == 4 and not sala.roda_ativa) else "Nico precisa ficar na pedra para revelar o alvo.")
 			aviso_restante = 2.0
 		return "consumir"
 	if sala.mapa_id == 4 and (not tiro.carregado or tiro.ricochetes < 1):

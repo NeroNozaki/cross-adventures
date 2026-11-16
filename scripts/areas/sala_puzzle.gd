@@ -7,6 +7,10 @@ var resolvida := false
 var animando := false
 var progresso := 0
 var placa_ativa := false
+var ajuda_otto := false
+var roda_ativa := false
+var pistas_lidas: Dictionary = {}
+var erros_sequencia := 0
 var tempo_aviso := 0.0
 var ocioso := 0.0
 var dica_dada := false
@@ -22,7 +26,10 @@ func _ready() -> void:
 	dados = MAPAS.FASES[mapa_id]
 	fase_historia = mapa_id
 	super._ready()
-	$PlacaNico/hitbox.collision_mask = 0
+	if has_node("PlacaNico"):
+		$PlacaNico/hitbox.collision_mask = 0
+	if has_node("PlacaOtto"):
+		$PlacaOtto/hitbox.collision_mask = 0
 	$Saida.monitoring = false
 	for heroi in [nico,otto]:
 		heroi.get_node("BarraVida").hide()
@@ -78,8 +85,19 @@ func _boas_vindas() -> void:
 	avisar(dados.dica)
 
 func _ajustar_camera() -> void:
+	_atualizar_camera(1.0)
+
+func _atualizar_camera(delta: float) -> void:
 	var janela := get_viewport_rect().size
-	$Camera.zoom = Vector2.ONE*minf(janela.x/800.0,janela.y/552.0)
+	var separacao := (nico.position-otto.position).abs()
+	var escala := clampf(minf(janela.x/(separacao.x+330),janela.y/(separacao.y+260)),0.65,1.25)
+	$Camera.zoom = $Camera.zoom.lerp(Vector2.ONE*escala,minf(1,delta*3))
+	var foco := (nico.position+otto.position)/2
+	var metade: Vector2 = janela/$Camera.zoom/2
+	var tamanho := Vector2(dados.tamanho)*24
+	foco.x = clampf(foco.x,minf(metade.x,tamanho.x/2),maxf(tamanho.x-metade.x,tamanho.x/2))
+	foco.y = clampf(foco.y,minf(metade.y,tamanho.y/2),maxf(tamanho.y-metade.y,tamanho.y/2))
+	$Camera.position = $Camera.position.lerp(foco,minf(1,delta*4))
 
 func avisar(mensagem: String) -> void:
 	aviso.text = mensagem
@@ -92,22 +110,35 @@ func _som(caminho: String) -> void:
 	som.play()
 
 func _physics_process(delta: float) -> void:
+	_atualizar_camera(delta)
 	tempo_aviso = maxf(0,tempo_aviso-delta)
 	aviso.modulate.a = clampf(tempo_aviso/0.5,0,1)
 	musica.stream_paused = HistoriaDupla.silenciado
-	var sobre: bool = nico.global_position.distance_to($PlacaNico.global_position) < 18 and not nico.pulando and not nico.esta_morto
-	if sobre != placa_ativa:
-		placa_ativa = sobre
-		$PlacaNico.bodies_on_button = 1 if sobre else 0
-		if sobre:
-			$PlacaNico._press()
-		else:
-			$PlacaNico._release()
-		if not resolvida:
-			avisar("O alvo apareceu! Otto, é sua vez." if sobre else "O alvo guardou. Nico pode voltar para a pedra.")
-			_som("res://assets/SONS/INTERFACE/CLIQUES/KENNEY_INTERFACE_SOUNDS/click_002.ogg")
+	if has_node("PlacaNico"):
+		var sobre: bool = _sobre(nico,$PlacaNico)
+		if sobre != placa_ativa:
+			placa_ativa = sobre
+			_marcar_placa($PlacaNico,sobre)
+			if not resolvida and (mapa_id == 1 or roda_ativa):
+				avisar("O alvo apareceu! Otto, é sua vez." if sobre else "O alvo guardou. Nico pode voltar para a pedra.")
+	if mapa_id == 1:
+		var sobre_otto := _sobre(otto,$PlacaOtto)
+		if sobre_otto != ajuda_otto:
+			ajuda_otto = sobre_otto
+			_marcar_placa($PlacaOtto,sobre_otto)
+			if resolvida and not roda_ativa:
+				avisar("Otto segura a pedra! Nico, golpeie a trava com F." if sobre_otto else "Otto pode voltar à pedra para ajudar Nico.")
+	if mapa_id == 2:
+		for i in 3:
+			if not pistas_lidas.has(i) and nico.position.distance_to(Vector2(dados.pistas[i])*24+Vector2(12,12)) < 48:
+				pistas_lidas[i] = true
+				get_node("Pistas/Pista%d"%i).modulate.a = 1
+				avisar(["Nico: Primeiro, o triângulo!","Nico: Depois, o círculo!","Nico: Por último, o quadrado!"][i])
+				_som("res://assets/SONS/INTERFACE/SELECAO/KENNEY_INTERFACE_SOUNDS/select_001.ogg")
+				ocioso = 0
+				_atualizar_objetivo()
 	for alvo in $Alvos.get_children():
-		alvo.ativo = placa_ativa and not resolvida
+		alvo.ativo = _alvos_liberados()
 	if mapa_id == 4 and resolvida and not pronta:
 		var placas := $PlacasFinais.get_children()
 		if placas[0].pressed and placas[1].pressed:
@@ -126,19 +157,71 @@ func _physics_process(delta: float) -> void:
 	ocioso += delta
 	if ocioso > 25 and not dica_dada and not pronta:
 		dica_dada = true
-		avisar(dados.dica)
+		avisar(_dica_atual())
+
+func _sobre(heroi: Heroi, pedra: Node2D) -> bool:
+	return heroi.position.distance_to(pedra.position) < 18 and not heroi.pulando and not heroi.esta_morto
+
+func _marcar_placa(pedra: Node, pressionada: bool) -> void:
+	pedra.bodies_on_button = 1 if pressionada else 0
+	if pressionada: pedra._press()
+	else: pedra._release()
+	_som("res://assets/SONS/INTERFACE/CLIQUES/KENNEY_INTERFACE_SOUNDS/click_002.ogg")
+
+func pode_acionar_roda() -> bool:
+	if mapa_id == 1 and (not resolvida or not ajuda_otto):
+		avisar("Primeiro libertem Otto. Depois, ele segura a pedra da sala para Nico.")
+		return false
+	return true
+
+func acionar_roda() -> void:
+	roda_ativa = true
+	ocioso = 0
+	dica_dada = false
+	_som("res://assets/SONS/CENARIO/PONTE/ponte_mecanismo.wav")
+	if mapa_id == 1:
+		animando = true
+		await _abrir_grade($GradeFinal)
+		animando = false
+		_preparar_saida()
+	elif mapa_id == 2:
+		avisar("Os alvos despertaram! Nico lê as pistas; Otto testa os símbolos.")
+	else:
+		var t := create_tween()
+		t.tween_property($Espelho,"rotation",-PI/4,0.75).set_trans(Tween.TRANS_SINE)
+		avisar("O espelho virou! Nico fica na pedra; Otto carrega a esfera na outra ala.")
+	_atualizar_objetivo()
+
+func _dica_atual() -> String:
+	if mapa_id == 1 and resolvida:
+		return "Otto, a pedra da sala é sua vez de ajudar! Nico usa F na trava."
+	if mapa_id == 2:
+		if not roda_ativa: return "Nico, procure a trava no centro da cisterna. Use F perto dela."
+		return ["Procurem a primeira pista na alcova da esquerda: triângulo.","A segunda pista fica na galeria de cima: círculo.","A última pista fica na ponta da galeria: quadrado."][mini(progresso,2)]
+	if mapa_id == 4 and not roda_ativa:
+		return "Nico, a trava fica na sala acima da sua pedra. Use F para virar o espelho."
+	return dados.dica
+
+func _alvos_liberados() -> bool:
+	if resolvida: return false
+	match mapa_id:
+		1: return placa_ativa
+		2: return roda_ativa
+		4: return placa_ativa and roda_ativa
+	return false
 
 func alvo_atingido(indice_alvo: int) -> void:
-	if resolvida or not placa_ativa:
+	if not _alvos_liberados():
 		return
 	ocioso = 0
 	if mapa_id == 2:
 		var ordem := [1,0,2]
+		if not pistas_lidas.has(progresso):
+			avisar(_dica_atual())
+			return
 		if indice_alvo != ordem[progresso]:
-			progresso = 0
-			for alvo in $Alvos.get_children():
-				alvo.confirmado = false
-			avisar("Quase! Vamos olhar a pista: 2, depois 1 e depois 3. Pode tentar de novo!")
+			erros_sequencia += 1
+			avisar("Esse não é o próximo símbolo. Os acertos continuam guardados!" if erros_sequencia < 3 else _dica_atual())
 			_som("res://assets/SONS/INTERFACE/OUTROS/KENNEY_INTERFACE_SOUNDS/tick_001.ogg")
 			_atualizar_objetivo()
 			return
@@ -154,9 +237,15 @@ func alvo_atingido(indice_alvo: int) -> void:
 func _atualizar_objetivo() -> void:
 	var status := "Nico na pedra · Otto no alvo"
 	if mapa_id == 2:
-		status = "Ordem: 2 → 1 → 3 · %d / 3"%progresso
+		var marcas: Array[String] = []
+		for i in 3:
+			marcas.append(["△","○","□"][i] if pistas_lidas.has(i) else "?")
+		status = "Pistas: %s · %d / 3"%[" → ".join(marcas),progresso]
 	if resolvida:
 		status = "Uma pedra para cada amigo" if mapa_id == 4 else "Abrindo a passagem..."
+		if mapa_id == 1 and not roda_ativa: status = "Otto na pedra · Nico na trava (F)"
+	elif mapa_id == 4 and not roda_ativa:
+		status = "Nico: preparar o espelho na ala esquerda"
 	if pronta:
 		status = "Saída: cheguem juntos ao círculo"
 	objetivo.text = "%d / 4 · %s\n%s"%[mapa_id,dados.nome,status]
@@ -166,29 +255,56 @@ func _abrir_passagem() -> void:
 	avisar("Conseguimos! Esperem o mecanismo terminar de abrir.")
 	_som("res://assets/SONS/CENARIO/PONTE/ponte_mecanismo.wav")
 	if mapa_id == 2:
-		$Ponte.show()
-		$Ponte.modulate.a = 0
-		$Ponte.position.y = -10
-		var tween := create_tween().set_parallel(true)
-		tween.tween_property($Ponte,"modulate:a",1.0,0.9)
-		tween.tween_property($Ponte,"position:y",0.0,1.2).set_trans(Tween.TRANS_BOUNCE)
-		await tween.finished
+		await _erguer_ponte()
 		$BloqueioPonte/shape.set_deferred("disabled",true)
 	else:
-		for parte in $Grade.get_children():
-			parte.definir_ativado(true)
-		await get_tree().create_timer(1.2,false).timeout
+		await _abrir_grade($Grade)
 	animando = false
 	if mapa_id == 4:
 		avisar("Agora, uma pedra para cada amigo na sala da porta!")
+	elif mapa_id == 1:
+		avisar("Otto está livre! Agora ele segura a pedra para Nico abrir a última grade.")
+		ocioso = 0
+		dica_dada = false
 	else:
 		_preparar_saida()
+
+func _abrir_grade(grupo: Node) -> void:
+	for parte in grupo.get_children():
+		parte.definir_ativado(true)
+	await get_tree().create_timer(1.2,false).timeout
+
+func _erguer_ponte() -> void:
+	# Lajes sobem uma a uma; a colisão continua fechada até a última encaixar.
+	var ponte: TileMapLayer = $Ponte
+	var r: Rect2i = dados.ponte
+	var lajes: Array[TileMapLayer] = []
+	for x in range(r.position.x,r.end.x):
+		var laje := TileMapLayer.new()
+		laje.tile_set = ponte.tile_set
+		laje.scale = ponte.scale
+		laje.z_index = -3
+		laje.position.y = 14
+		for y in range(r.position.y,r.end.y):
+			var p := Vector2i(x,y)
+			laje.set_cell(p,ponte.get_cell_source_id(p),ponte.get_cell_atlas_coords(p))
+		add_child(laje)
+		lajes.append(laje)
+		var t := create_tween().set_parallel(true)
+		t.tween_property(laje,"position:y",0.0,0.28).set_trans(Tween.TRANS_BACK)
+		t.tween_property(laje,"modulate:a",1.0,0.28).from(0.25)
+		await t.finished
+	ponte.show()
+	for laje in lajes:
+		laje.queue_free()
 
 func _preparar_saida() -> void:
 	if pronta or animando:
 		return
 	pronta = true
 	_atualizar_objetivo()
+	var luz := create_tween()
+	luz.tween_property($LuzSaida,"energy",1.0,1.1)
 	$Porta.play("abrir")
 	await $Porta.animation_finished
 	$Saida.set_deferred("monitoring",true)

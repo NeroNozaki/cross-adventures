@@ -10,6 +10,10 @@ var _fences_opened := false
 
 func _ready() -> void:
 	super._ready()
+	var leitura := Node2D.new()
+	leitura.name = "LeituraDaMasmorra"
+	leitura.set_script(load("res://scripts/areas/leitura_masmorra.gd"))
+	add_child(leitura)
 	
 	# Connect both buttons to the same check
 	if button2 and button2.has_signal("state_changed"):

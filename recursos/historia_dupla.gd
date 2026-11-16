@@ -8,7 +8,7 @@ const FASES = {
   },
   "2": {
     "titulo": "Uma pequena ajuda",
-    "inicio": [["Nico", "Outra porta! Você cuida da mira e eu procuro as pedras?"], ["Otto", "Boa ideia. Se precisar, pode me chamar."]],
+    "inicio": [["Nico", "Opa! Conheço essas marquinhas. São pistas dos guardiões!"], ["Otto", "Então você lê as pistas e eu acerto os símbolos?"], ["Nico", "Combinado! Meus ossinhos já querem explorar!"]],
     "fim": [["Otto", "Sua ideia funcionou, Nico! Obrigado."], ["Nico", "De nada! Meu crânio também tem boas ideias!"]]
   },
   "3": {

@@ -6,6 +6,9 @@
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ymbe0"]
 texture = ExtResource("1_4if5p")
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
 2:7/0 = 0
 1:8/0 = 0
 2:8/0 = 0

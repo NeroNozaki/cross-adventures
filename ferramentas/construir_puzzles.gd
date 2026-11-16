@@ -55,7 +55,7 @@ func criar_tiles() -> void:
 		for y in 14:
 			for x in 10:
 				var p := Vector2i(x,y)
-				var usados := [Vector2i(2,8),Vector2i(7,13),Vector2i(8,13),Vector2i(9,13),Vector2i(1,8),Vector2i(3,8),Vector2i(2,7),Vector2i(2,9)] if fonte == 0 else [Vector2i(6,2),Vector2i(6,4),Vector2i(5,2),Vector2i(7,2)]
+				var usados := [Vector2i(2,8),Vector2i(7,13),Vector2i(8,13),Vector2i(9,13),Vector2i(1,8),Vector2i(3,8),Vector2i(2,7),Vector2i(2,9),Vector2i(5,1),Vector2i(6,1),Vector2i(7,1)] if fonte == 0 else [Vector2i(6,2),Vector2i(6,4),Vector2i(5,2),Vector2i(7,2)]
 				if p not in usados:
 					continue
 				a.create_tile(p)
@@ -107,7 +107,7 @@ func etiqueta(texto: String, ponto: Vector2, pai: Node = null, cor: Color = Colo
 	return l
 
 func objeto(tipo: String, ponto: Vector2, pai: Node) -> void:
-	var recortes := {"caixa":Rect2(80,80,16,16),"barril":Rect2(192,80,16,16),"urna":Rect2(208,80,16,16),"bau":Rect2(144,16,32,16),"estante":Rect2(64,80,16,32)}
+	var recortes := {"caixa":Rect2(80,80,16,16),"barril":Rect2(192,80,16,16),"urna":Rect2(208,80,16,16),"bau":Rect2(144,16,32,16),"estante":Rect2(64,80,16,32),"coluna":Rect2(0,0,16,32),"cama":Rect2(0,144,32,48)}
 	var r: Rect2 = recortes[tipo]
 	var no := Node2D.new()
 	no.name = tipo.capitalize()+"_%02d"%pai.get_child_count()
@@ -119,11 +119,57 @@ func objeto(tipo: String, ponto: Vector2, pai: Node) -> void:
 	sombra.color = Color(0.02,0.02,0.04,0.28)
 	anexar(sombra,no)
 	var sprite := Sprite2D.new()
-	sprite.texture = atlas("Objects.png",r)
-	sprite.scale = Vector2.ONE*1.5
-	sprite.position.y = -r.size.y*0.75+3
+	if tipo in ["cama","coluna"]:
+		var t := AtlasTexture.new()
+		t.atlas = load("res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/tileset_bed.png" if tipo == "cama" else "res://assets/Dungeon Gathering Free Version/Structure.png")
+		t.region = r
+		sprite.texture = t
+	else:
+		sprite.texture = atlas("Objects.png",r)
+	var escala := 1.0 if tipo == "cama" else 1.5
+	sprite.scale = Vector2.ONE*escala
+	sprite.position.y = -r.size.y*escala/2+3
 	anexar(sprite,no)
 	corpo("Apoio",Rect2(-8,-4,16,8),no)
+
+func grade(nome: String, regiao: Rect2i) -> void:
+	var grupo := Node2D.new()
+	grupo.name = nome
+	anexar(grupo)
+	for p: Vector2i in celulas([regiao]):
+		var parte := load("res://cenas/objects/non-interactable/fence.tscn").instantiate() as Node2D
+		parte.position = centro(p)
+		if regiao.size.y > regiao.size.x:
+			parte.rotation = PI/2
+		anexar(parte,grupo)
+
+func roda(ponto: Vector2i) -> void:
+	var no := Node2D.new()
+	no.name = "MecanismoNico"
+	no.position = centro(ponto)
+	no.set_script(load("res://scripts/areas/trava_puzzle.gd"))
+	anexar(no)
+	var apoio := Sprite2D.new()
+	apoio.texture = atlas("Objects.png",Rect2(16,80,32,32))
+	apoio.scale = Vector2.ONE*0.8
+	anexar(apoio,no)
+	var imagem := Sprite2D.new()
+	imagem.name = "Imagem"
+	imagem.texture = atlas("Objects.png",Rect2(96,112,16,16))
+	imagem.position.y = -12
+	imagem.scale = Vector2.ONE*1.5
+	anexar(imagem,no)
+	var area := Area2D.new()
+	area.collision_layer = 16
+	area.collision_mask = 0
+	area.position.y = -8
+	anexar(area,no)
+	var shape := CollisionShape2D.new()
+	var circulo := CircleShape2D.new()
+	circulo.radius = 18
+	shape.shape = circulo
+	anexar(shape,area)
+	etiqueta("NICO · F",centro(ponto)+Vector2(-22,16))
 
 func animacao_fogo(p: Vector2) -> void:
 	var chama := AnimatedSprite2D.new()
@@ -143,6 +189,9 @@ func animacao_fogo(p: Vector2) -> void:
 	apoio.position = p+Vector2(0,5)
 	apoio.z_index = 1
 	anexar(apoio)
+	criar_luz(p,0.4)
+
+func criar_luz(p: Vector2, energia: float) -> PointLight2D:
 	var grad := Gradient.new()
 	grad.set_color(0,Color(1,1,1,0.55))
 	grad.set_color(1,Color(1,1,1,0))
@@ -157,8 +206,9 @@ func animacao_fogo(p: Vector2) -> void:
 	luz.texture = luz_tex
 	luz.position = p
 	luz.color = Color("#ffd589")
-	luz.energy = 0.4
+	luz.energy = energia
 	anexar(luz)
+	return luz
 
 func placa(nome: String, p: Vector2, pai: Node = null) -> Node2D:
 	var no := load("res://cenas/objects/interactables/button.tscn").instantiate() as Node2D
@@ -221,7 +271,11 @@ func construir(numero: int) -> void:
 	todos.merge(agua)
 	var chao := camada("Piso",-4)
 	chao.modulate = Color.WHITE.lerp(dados.tom,0.18)
+	var pedra_material := ShaderMaterial.new()
+	pedra_material.shader = load("res://recursos/pedra_puzzles.gdshader")
+	chao.material = pedra_material
 	var paredes := camada("Paredes",0)
+	var coroamento := camada("Coroamento",-1)
 	var aguas := camada("Reservatorios",-5)
 	aguas.modulate = Color(0.42,0.59,0.70)
 	for p: Vector2i in pisos:
@@ -233,7 +287,7 @@ func construir(numero: int) -> void:
 		elif agua.has(p+Vector2i.UP): coordenada = Vector2i(2,7)
 		elif agua.has(p+Vector2i.DOWN): coordenada = Vector2i(2,9)
 		if coordenada == Vector2i(2,8):
-			chao.set_cell(p,3,Vector2i(12+posmod(p.x*7+p.y*11,5),13+posmod(p.x+p.y*3,3)))
+			chao.set_cell(p,3,Vector2i(12+posmod(p.x,4),13+posmod(p.y,3)))
 		else:
 			chao.set_cell(p,0,coordenada)
 	for r: Rect2i in dados.tapetes:
@@ -255,6 +309,11 @@ func construir(numero: int) -> void:
 		elif todos.has(p+Vector2i.RIGHT): tile = Vector2i(5,2)
 		elif todos.has(p+Vector2i.LEFT): tile = Vector2i(7,2)
 		paredes.set_cell(p,1,tile)
+		if pisos.has(p+Vector2i.DOWN) and not todos.has(p+Vector2i.UP):
+			var cap := Vector2i(6,1)
+			if not pisos.has(p+Vector2i(-1,1)): cap = Vector2i(5,1)
+			elif not pisos.has(p+Vector2i(1,1)): cap = Vector2i(7,1)
+			coroamento.set_cell(p+Vector2i.UP,0,cap)
 	var props := Node2D.new()
 	props.name = "Objetos"
 	props.y_sort_enabled = true
@@ -263,16 +322,30 @@ func construir(numero: int) -> void:
 		objeto(item[2],centro(Vector2i(item[0],item[1])),props)
 	for p: Vector2i in dados.tochas:
 		animacao_fogo(centro(p))
+	# Cada célula de água bloqueia os heróis, exceto o leito da ponte móvel.
+	var bloqueadas := agua.duplicate()
+	if numero == 2:
+		for p: Vector2i in celulas([dados.ponte]):
+			bloqueadas.erase(p)
+	# Mescla horizontalmente: poucas formas físicas, mantendo os contornos dos tanques.
+	for y in dados.tamanho.y:
+		var x := 0
+		while x < dados.tamanho.x:
+			if not bloqueadas.has(Vector2i(x,y)):
+				x += 1
+				continue
+			var inicio := x
+			while bloqueadas.has(Vector2i(x,y)):
+				x += 1
+			corpo("Agua_%d_%d"%[inicio,y],Rect2(inicio*24,y*24,(x-inicio)*24,24))
 	for r: Rect2i in dados.agua:
-		if numero == 2:
-			corpo("AguaNorte",Rect2(Vector2(r.position)*24,Vector2(r.size.x*24,6*24)))
-			corpo("AguaSul",Rect2(Vector2(r.position.x*24,11*24),Vector2(r.size.x*24,9*24)))
-		else:
-			corpo("AguaSolida",Rect2(Vector2(r.position)*24,Vector2(r.size)*24))
+		if r.size.x < 2 or r.size.y < 2:
+			continue
 		var onda := AnimatedSprite2D.new()
 		onda.position = (Vector2(r.position)+Vector2(r.size)/2)*24
-		if numero == 2:
-			onda.position.y = 132
+		onda.scale = Vector2.ONE*0.65
+		if numero == 2 and Rect2(Vector2(dados.ponte.position)*24,Vector2(dados.ponte.size)*24).grow(20).has_point(onda.position):
+			onda.position = Vector2(r.position)*24+Vector2(24,24)
 		onda.z_index = -3
 		var frames := SpriteFrames.new()
 		frames.set_animation_speed("default",4)
@@ -281,17 +354,35 @@ func construir(numero: int) -> void:
 		onda.sprite_frames = frames
 		onda.autoplay = "default"
 		anexar(onda)
-	placa("PlacaNico",centro(dados.placa))
-	etiqueta("NICO",centro(dados.placa)+Vector2(-15,13))
+	if numero != 2:
+		placa("PlacaNico",centro(dados.placa))
+		etiqueta("NICO",centro(dados.placa)+Vector2(-15,13))
+	if numero == 1:
+		placa("PlacaOtto",centro(dados.placa_otto))
+		etiqueta("OTTO",centro(dados.placa_otto)+Vector2(-15,13),null,Color("#93d9de"))
+		grade("GradeFinal",dados.grade_final)
+	roda(dados.mecanismo)
 	var alvos := Node2D.new()
 	alvos.name = "Alvos"
 	anexar(alvos)
 	for i in dados.alvos.size():
 		criar_alvo(i,dados.alvos[i],alvos)
 		if numero == 2:
-			etiqueta(str(i+1),centro(dados.alvos[i])+Vector2(-3,15))
+			etiqueta(["○","△","□"][i],centro(dados.alvos[i])+Vector2(-5,15))
 	if numero == 2:
-		etiqueta("PISTA: 2  →  1  →  3",centro(Vector2i(4,12)))
+		var pistas := Node2D.new()
+		pistas.name = "Pistas"
+		anexar(pistas)
+		for i in 3:
+			var p: Vector2 = centro(dados.pistas[i])
+			var pedra := Sprite2D.new()
+			pedra.texture = atlas("Objects.png",Rect2(16,80,32,32))
+			pedra.position = p
+			pedra.scale = Vector2.ONE*0.9
+			anexar(pedra,pistas)
+			var l := etiqueta(["1 · △","2 · ○","3 · □"][i],p+Vector2(-17,-21),pistas)
+			l.name = "Pista%d"%i
+			l.modulate.a = 0.35
 		var ponte := camada("Ponte",-3)
 		ponte.hide()
 		for p: Vector2i in celulas([dados.ponte]):
@@ -305,27 +396,18 @@ func construir(numero: int) -> void:
 		anexar(sombra_ponte,ponte)
 		corpo("BloqueioPonte",Rect2(Vector2(dados.ponte.position)*24,Vector2(dados.ponte.size)*24))
 	else:
-		var grade := Node2D.new()
-		grade.name = "Grade"
-		anexar(grade)
-		var regiao: Rect2i = dados.grade
-		for p: Vector2i in celulas([regiao]):
-			var parte := load("res://cenas/objects/non-interactable/fence.tscn").instantiate() as Node2D
-			parte.position = centro(p)
-			if regiao.size.y > regiao.size.x:
-				parte.rotation = PI/2
-			anexar(parte,grade)
+		grade("Grade",dados.grade)
 	if numero == 4:
 		var finais := Node2D.new()
 		finais.name = "PlacasFinais"
 		anexar(finais)
 		for i in 2:
 			placa("Amigo%d"%i,centro(dados.placas_finais[i]),finais)
-		etiqueta("UMA PEDRA PARA CADA AMIGO",centro(Vector2i(11,3)))
+		etiqueta("JUNTOS",centro(Vector2i(17,4)))
 		var espelho := corpo("Espelho",Rect2(Vector2(-24,-4),Vector2(48,8)))
 		espelho.set_script(load("res://scripts/areas/espelho_puzzle.gd"))
 		espelho.position = centro(dados.espelho)
-		espelho.rotation = -PI/4
+		espelho.rotation = 0
 		var reflexo := Sprite2D.new()
 		reflexo.texture = atlas("Objects.png",Rect2(96,112,16,16))
 		reflexo.scale = Vector2(3,0.5)
@@ -344,6 +426,9 @@ func construir(numero: int) -> void:
 	porta.sprite_frames = porta_frames
 	porta.animation = "abrir"
 	anexar(porta)
+	var luz_saida := criar_luz(centro(dados.saida),0)
+	luz_saida.name = "LuzSaida"
+	luz_saida.texture_scale = 2
 	var personagens := Node2D.new()
 	personagens.name = "Personagens"
 	personagens.y_sort_enabled = true
@@ -351,16 +436,17 @@ func construir(numero: int) -> void:
 	for i in 2:
 		var heroi := load("res://cenas/personagens/player%d.tscn"%(i+1)).instantiate() as Node2D
 		heroi.name = "Nico" if i == 0 else "Otto"
-		heroi.position = centro(dados.inicio)+Vector2(-24 if i == 0 else 24,0)
+		heroi.position = centro(dados.inicios[i]) if dados.has("inicios") else centro(dados.inicio)+Vector2(-24 if i == 0 else 24,0)
 		heroi.nome_personagem = heroi.name
 		anexar(heroi,personagens)
-	var spawn := load("res://cenas/objects/respawn/level_spawn.tscn").instantiate() as Node2D
-	spawn.position = centro(dados.inicio)
-	spawn.team_spacing = 48
-	anexar(spawn)
+	if not dados.has("inicios"):
+		var spawn := load("res://cenas/objects/respawn/level_spawn.tscn").instantiate() as Node2D
+		spawn.position = centro(dados.inicio)
+		spawn.team_spacing = 48
+		anexar(spawn)
 	var camera := Camera2D.new()
 	camera.name = "Camera"
-	camera.position = Vector2(384,264)
+	camera.position = centro(dados.inicio)
 	anexar(camera)
 	var saida := load("res://cenas/objects/level_specifics/level_end.tscn").instantiate() as Area2D
 	saida.name = "Saida"
