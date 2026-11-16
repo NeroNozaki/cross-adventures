@@ -1,5 +1,17 @@
 # Cross Adventures — referência do projeto
 
+## Acabamento gráfico e transições — 16/11/2026
+
+As quatro fases recebem `scripts/areas/acabamento_masmorra.gd` pela BaseArea. O componente conserva TileMapLayers, geometria, colisões e sprites originais. Acrescenta luz ambiente fria legível, pulsação suave das tochas, brasas, sombras de contato dos heróis, poeira apenas por deslocamento real e brilho por estado dos cristais. A fase 3 recebe até nove chamas CraftPix somente sobre piso seco apoiado por parede e distante de mecanismos. As novas luzes não usam sombras dinâmicas pesadas.
+
+Os reservatórios das fases 1/2/4 usam `recursos/agua_masmorra.gdshader`, com margens sombreadas, profundidade azul-petróleo e reflexos em pixels animados. Ondas/chamas continuam aproveitando os atlas CraftPix existentes. Os pingos visuais acompanham o evento sonoro de AmbienteMasmorra e não aparecem sobre a ponte aberta. A fase 3 continua com abismos, não água. Uma vinheta discreta fica abaixo do HUD, sem interceptar cliques. Partículas temporárias são limitadas a 96, ondulações a 12 e respeitam a pausa.
+
+Placas, trava, cristais confirmados, lajes da ponte e porta de saída emitem pequenas partículas de confirmação; nada altera as áreas físicas dos mecanismos. O gerador continua válido: BaseArea aplica o acabamento em tempo de execução, sem regravar as cenas ou a area_3 colaborativa.
+
+FluxoTela agora troca cenas com uma íris em forma de cristal, em degraus de pixels, de 0,28 s de fechamento e 0,36 s de abertura, adaptada ao viewport e sem flashes. A camada 200 cobre também HUD e diálogos. Cliques repetidos são bloqueados e a árvore é liberada após carregar. A pausa usa moldura ThemeMetal3, botões botao_reliquia e entrada suave. Como jogar mostra os sprites proporcionais e os ícones de teclado/mouse existentes do Ninja Adventure; o menu principal reutiliza esse guia e devolve foco ao botão ao fechar. Os controles reais foram preservados.
+
+Validação: capturas reais das quatro fases, cristais ativos/confirmados, pausa, guia e mosaico, em OpenGL Compatibility/Intel UHD. Testes: acabamento 57, pausa 21, fim de fase 15, ambiente sonoro 99 e campanha 61 verificações. O teste de pausa foi atualizado para carregar a cena real; o teste de saída fixa a direção dos jogadores antes da sobreposição para evitar que o mouse de Otto altere o resultado durante sua preparação. A alteração local anterior em recursos/fases/01_jardim.json continua preservada fora desta entrega.
+
 ## Ambientação sonora da masmorra — 16/11/2026
 
 As quatro fases agora recebem `scripts/audio/ambiente_masmorra.gd` pela BaseArea. O componente concentra a música que antes era criada individualmente em sala_puzzle: uma única trilha por fase, vento filtrado, água próxima das regiões reais do mapa, gotas espaciais em intervalos e tons variados e rangidos suaves ocasionais. Na fase 3, os abismos não recebem som de rio; há apenas infiltrações pontuais. Os três buses ArMasmorra/AmbMasmorra/MusicaMasmorra são reutilizados, com filtro de graves/agudos no vento e reverberação discreta no ambiente. As ações dos puzzles e as falas continuam fora dessa reverberação.

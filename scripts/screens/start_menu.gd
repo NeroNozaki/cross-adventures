@@ -125,14 +125,13 @@ func _on_play_pressed() -> void:
 	FluxoTela.trocar(abertura.resource_path)
 
 func _ajuda() -> void:
-	var janela := AcceptDialog.new()
-	janela.title = "Como jogar"
-	janela.dialog_text = "Nico: W A S D para andar, F para atacar e G para defender.\nOtto: setas para andar, mouse para mirar e clique esquerdo para disparar.\nAjudem um ao outro para encontrar a saída!"
-	janela.min_size = Vector2i(420,140)
-	add_child(janela)
-	janela.confirmed.connect(janela.queue_free)
-	janela.canceled.connect(janela.queue_free)
-	janela.popup_centered()
+	if has_node("GuiaControles"):
+		return
+	var guia := load("res://cenas/screens/pause_menu.tscn").instantiate() as Control
+	guia.name = "GuiaControles"
+	add_child(guia)
+	guia.tree_exited.connect(func(): menu.get_child(1).grab_focus())
+	guia.abrir_guia_solitario()
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()

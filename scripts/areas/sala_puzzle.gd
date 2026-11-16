@@ -1,4 +1,5 @@
 extends BaseArea
+signal efeito_puzzle(ponto: Vector2, tipo: StringName)
 const MAPAS = preload("res://recursos/mapas_puzzle.gd")
 @export var mapa_id := 1
 var dados: Dictionary
@@ -158,6 +159,8 @@ func _marcar_placa(pedra: Node, pressionada: bool) -> void:
 	pedra.bodies_on_button = 1 if pressionada else 0
 	if pressionada: pedra._press()
 	else: pedra._release()
+	if pressionada:
+		efeito_puzzle.emit(pedra.position, &"placa")
 	_som("res://assets/SONS/INTERFACE/CLIQUES/KENNEY_INTERFACE_SOUNDS/click_002.ogg")
 
 func pode_acionar_roda() -> bool:
@@ -168,6 +171,7 @@ func pode_acionar_roda() -> bool:
 
 func acionar_roda() -> void:
 	roda_ativa = true
+	efeito_puzzle.emit($MecanismoNico.position, &"mecanismo")
 	ocioso = 0
 	dica_dada = false
 	_som("res://assets/SONS/CENARIO/PONTE/ponte_mecanismo.wav")
@@ -286,6 +290,7 @@ func _erguer_ponte() -> void:
 		t.tween_property(laje,"position:y",0.0,0.28).set_trans(Tween.TRANS_BACK)
 		t.tween_property(laje,"modulate:a",1.0,0.28).from(0.25)
 		await t.finished
+		efeito_puzzle.emit(Vector2(x * 24 + 12, r.get_center().y * 24), &"ponte")
 	ponte.show()
 	for laje in lajes:
 		laje.queue_free()
@@ -294,6 +299,7 @@ func _preparar_saida() -> void:
 	if pronta or animando:
 		return
 	pronta = true
+	efeito_puzzle.emit($Porta.position, &"saida")
 	_atualizar_objetivo()
 	var luz := create_tween()
 	luz.tween_property($LuzSaida,"energy",1.0,1.1)

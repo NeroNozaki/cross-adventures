@@ -42,6 +42,10 @@ func rodar() -> void:
 	await quadros()
 	conferir(not fim.foi_iniciado(), "one hero alone does not finish the level")
 
+	# Fixar a direção do teste antes da sobreposição; a mira do mouse de Otto
+	# atualiza frente a cada frame enquanto o controle permanece habilitado.
+	player1.set_physics_process(false)
+	player2.set_physics_process(false)
 	player1.frente = Vector2.RIGHT
 	player1.direcao = "right"
 	player2.frente = Vector2.UP

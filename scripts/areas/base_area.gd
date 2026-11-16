@@ -3,6 +3,7 @@ class_name BaseArea
 
 const CENA_PAUSA: PackedScene = preload("res://cenas/screens/pause_menu.tscn")
 const AMBIENTE = preload("res://scripts/audio/ambiente_masmorra.gd")
+const ACABAMENTO = preload("res://scripts/areas/acabamento_masmorra.gd")
 ## Capítulo narrativo desta sala; configurar 1..4 nas futuras fases.
 @export_range(1,4) var fase_historia: int = 1
 
@@ -14,6 +15,10 @@ func _ready() -> void:
 	ambiente.name = "AmbienteMasmorra"
 	ambiente.set_script(AMBIENTE)
 	add_child(ambiente)
+	var acabamento := Node2D.new()
+	acabamento.name = "AcabamentoMasmorra"
+	acabamento.set_script(ACABAMENTO)
+	add_child(acabamento)
 	var camada := CanvasLayer.new()
 	camada.name = "CamadaPausa"
 	camada.layer = 90
