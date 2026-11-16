@@ -16,10 +16,12 @@ func _input(_event: InputEvent) -> void:
 func _process(_delta: float) -> void:
  if em_transicao: cortina.queue_redraw()
 func _desenhar() -> void:
+ var tamanho := get_viewport().get_visible_rect().size
+ var coluna := tamanho.x / 20.0
  for x in range(20):
-  var h: float=ceilf(clampf(progresso*1.35-float(x)*0.018,0.0,1.0)*25.0)*16
-  cortina.draw_rect(Rect2(x*32,0,32,h),Color("111b2b"))
-  if h>0 and h<400: cortina.draw_rect(Rect2(x*32,h-2,32,2),Color("586578"))
+  var h: float=ceilf(clampf(progresso*1.35-float(x)*0.018,0.0,1.0)*25.0)*tamanho.y/25.0
+  cortina.draw_rect(Rect2(floorf(x*coluna),0,ceilf(coluna)+1,h),Color("111b2b"))
+  if h>0 and h<tamanho.y: cortina.draw_rect(Rect2(floorf(x*coluna),h-2,ceilf(coluna)+1,2),Color("586578"))
 func trocar(caminho: String) -> void:
  if em_transicao: return
  em_transicao=true

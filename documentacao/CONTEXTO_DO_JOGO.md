@@ -1,5 +1,13 @@
 # Cross Adventures — referência do projeto
 
+## Abertura animada e janela — 16/11/2026
+
+A pasta ativa é `C:\Users\finan\OneDrive\Documentos\cross-adventures`, branch `dev/new-player1`. O jogo abre em janela maximizada com barra de título, sem fullscreen; canvas_items/expand preenche diferentes proporções. A cortina de FluxoTela agora cobre o tamanho real do viewport. A alteração local preexistente em `recursos/fases/01_jardim.json` foi preservada e não faz parte desta entrega.
+
+Jogar leva a `cenas/screens/entrada_aventura.tscn`, antes da primeira fase. É uma vinheta de convite animada no Godot, não arquivo de vídeo: cenário exclusivo `assets/INTERFACE/entrada_masmorra.png`, caminhada com os SpriteFrames de Nico/Otto, capa, sombras de contato, luzes, partículas, música 1 - Adventure Begin, passos e escrita sonora. A frase é “Preparados para esta aventura?”, com leitura livre e botão “Vamos juntos!”; depois os dois caminham para a porta e a primeira fase começa. “Pular abertura” ou Esc abre a fase imediatamente. M preserva o silêncio global. O destino exportado pelo menu continua sendo respeitado, com proteção contra cliques repetidos. A história nas celas continua sendo o despertar da dupla: a vinheta é um convite visual ao jogador.
+
+Os pequenos sprites que passeavam sobre a capa foram transferidos para a abertura, deixando a ilustração e o letreiro do menu livres. Arte gerada com ferramenta de imagens; prompt e origem em `assets/INTERFACE/entrada_masmorra_fonte.txt`. Validação do fluxo real menu → abertura → fase, caminhar/parar, continuar, pular, cliques repetidos e capturas em 1280×800 e 1600×900: 13 verificações aprovadas, sem erros na execução completa.
+
 ## Direção narrativa atual — 16/11/2026
 
 O pedido atual substitui o enredo antigo de Lucas buscando ruínas: Nico (esqueleto, Player 1) e Otto acordam juntos dentro de uma masmorra, não sabem como chegaram e precisam cooperar para escapar. No início se desentendem; a amizade cresce ao longo de quatro fases de puzzles, criadas pelos colaboradores. Não restaurar o Bosque ou mapas revertidos sem novo pedido. O nome do jogo continua Cross Adventures.
