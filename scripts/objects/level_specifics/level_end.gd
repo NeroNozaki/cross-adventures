@@ -74,6 +74,9 @@ func _todos_os_jogadores_dentro() -> bool:
 
 func _iniciar_saida() -> void:
 	_iniciado = true
+	var sala := get_tree().current_scene as BaseArea
+	if sala:
+		await HistoriaDupla.concluir_fase(sala.fase_historia)
 	_jogadores = _jogadores_dentro.duplicate()
 	_direcoes.clear()
 	for jogador in _jogadores:
