@@ -1,5 +1,11 @@
 # Cross Adventures — referência do projeto
 
+## Controle físico ESP32 para Nico — 16/11/2026
+
+O usuário confirmou ESP32 DevKit / ESP32-WROOM-32. Código Arduino e guia em hardware/controle_nico (hardware/.gdignore exclui esses arquivos da importação Godot). Montagem proposta: joystick passivo em 3V3/GND, VRx GPIO34, VRy GPIO35; botão azul GPIO25–GND (X/golpe/F) e vermelho GPIO26–GND (B/escudo/G), com pull-ups internos. SW do joystick sem ligação. Bluetooth BLE com perfil XInputSeriesX da ESP32-BLE-Gamepad 0.8.0 e NimBLE-Arduino; USB apenas para gravar/alimentar nesta solução. Analógico proporcional, calibração de centro ao ligar, média das amostras, zona morta e debounce dos botões. Otto permanece independente. O projeto Godot não foi modificado para esse controle: reaproveita o InputMap existente. Não foram adicionados salto, interação, pausa ou confirmação aos botões físicos.
+
+Pinos/API/mapeamento conferidos nas fontes oficiais e no código do jogo. Ainda não compilado com toolchain ESP32, gravado ou testado em hardware; não afirmar funcionamento físico confirmado. Conferir montagem, direção dos eixos, pareamento Windows e resposta no jogo ao montar. Alimentar o analógico em 3,3 V e não aplicar 5 V aos sinais. Guia contém instalação, ligações, referências e solução de problemas.
+
 ## Encerramento animado da dupla — 16/11/2026
 
 Após os dois atravessarem o último portão da fase 4, `fim_aventura.tscn` agora mostra Nico e Otto saindo da masmorra na paisagem externa de `assets/INTERFACE/entrada_masmorra.png`. É uma vinheta renderizada no Godot, não um arquivo de vídeo. A caminhada utiliza os SpriteFrames reais, com pés alinhados, sombras de contato e a capa de Nico. A dupla para no chão da ponte, dá três pulinhos de alegria, troca balões curtos (“Conseguimos!” / “Bip-bip! Amigos!”) e lança até 72 confetes temporários. A pose de braços erguidos vem de Skeleton/SeparateAnim/Item.png; os sprites e recursos compartilhados originais não são alterados.
