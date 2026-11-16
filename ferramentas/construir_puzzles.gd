@@ -160,7 +160,7 @@ func roda(ponto: Vector2i) -> void:
 	circulo.radius = 18
 	shape.shape = circulo
 	anexar(shape,area)
-	etiqueta("NICO · F",centro(ponto)+Vector2(-22,16))
+	etiqueta("NICO · F/X",centro(ponto)+Vector2(-28,16))
 
 func animacao_fogo(p: Vector2) -> void:
 	var chama := AnimatedSprite2D.new()

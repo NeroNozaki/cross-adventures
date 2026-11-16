@@ -39,6 +39,14 @@ static func trava() -> AtlasTexture:
 	atlas.filter_clip = true
 	return atlas
 
+static func parte_alavanca(base: bool) -> AtlasTexture:
+	var atlas := AtlasTexture.new()
+	atlas.atlas = OBJETOS
+	# A base ocupa as linhas 117..121; a haste fica nas linhas 112..116.
+	atlas.region = Rect2(144,117 if base else 112,16,5)
+	atlas.filter_clip = true
+	return atlas
+
 static func espelho() -> NinePatchRect:
 	var painel := NinePatchRect.new()
 	painel.name = "MolduraEspelho"

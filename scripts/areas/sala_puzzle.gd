@@ -120,7 +120,7 @@ func _physics_process(delta: float) -> void:
 			ajuda_otto = sobre_otto
 			_marcar_placa($PlacaOtto,sobre_otto)
 			if resolvida and not roda_ativa:
-				avisar("Otto segura a pedra! Nico, golpeie a trava com F." if sobre_otto else "Otto pode voltar à pedra para ajudar Nico.")
+				avisar("Otto segura a pedra! Nico, use F ou X azul na alavanca." if sobre_otto else "Otto pode voltar à pedra para ajudar Nico.")
 	if mapa_id == 2:
 		for i in 3:
 			if not pistas_lidas.has(i) and nico.position.distance_to(Vector2(dados.pistas[i])*24+Vector2(12,12)) < 48:
@@ -190,12 +190,12 @@ func acionar_roda() -> void:
 
 func _dica_atual() -> String:
 	if mapa_id == 1 and resolvida:
-		return "Otto, a pedra da sala é sua vez de ajudar! Nico usa F na trava."
+		return "Otto, segure a pedra! Nico usa F ou X azul na alavanca."
 	if mapa_id == 2:
-		if not roda_ativa: return "Nico, procure a trava no centro da cisterna. Use F perto dela."
+		if not roda_ativa: return "Nico, procure a alavanca no centro. Use F ou X azul perto dela."
 		return ["Procurem a primeira pista na alcova da esquerda: triângulo.","A segunda pista fica na galeria de cima: círculo.","A última pista fica na ponta da galeria: quadrado."][mini(progresso,2)]
 	if mapa_id == 4 and not roda_ativa:
-		return "Nico, a trava fica na sala acima da sua pedra. Use F para virar o espelho."
+		return "Nico, a alavanca fica na sala acima da pedra. F ou X azul prepara o espelho."
 	return dados.dica
 
 func _alvos_liberados() -> bool:
@@ -239,7 +239,7 @@ func _atualizar_objetivo() -> void:
 		status = "Pistas: %s · %d / 3"%[" → ".join(marcas),progresso]
 	if resolvida:
 		status = "Uma pedra para cada amigo" if mapa_id == 4 else "Abrindo a passagem..."
-		if mapa_id == 1 and not roda_ativa: status = "Otto na pedra · Nico na trava (F)"
+		if mapa_id == 1 and not roda_ativa: status = "Otto na pedra · Nico na alavanca (F / X)"
 	elif mapa_id == 4 and not roda_ativa:
 		status = "Nico: preparar o espelho na ala esquerda"
 	if pronta:

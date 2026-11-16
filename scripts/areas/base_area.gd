@@ -32,7 +32,7 @@ func _ready() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if _pause_menu == null or _pause_menu.visible:
 		return
-	if event.is_action_pressed("ui_cancel"):
+	if event.is_action_pressed("pausar_jogo"):
 		pausar()
 		get_viewport().set_input_as_handled()
 

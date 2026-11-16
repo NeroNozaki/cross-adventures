@@ -1,5 +1,15 @@
 # Cross Adventures — referência do projeto
 
+## Alavanca sem giro e gamepad de Nico — 16/11/2026
+
+Nas fases 1/2/4, a alavanca não gira mais como um objeto inteiro. `trava_puzzle.gd` separa os pixels CraftPix da base (144,117,16,5) e da haste (144,112,16,5). O apoio e a base ficam imóveis; a haste muda de lado no próprio encaixe em três poses curtas, ao longo de 0,14 s. Não há Tween de rotação nem efeito de mola. A condição cooperativa é verificada antes de aceitar o golpe; a sala recebe a ativação ao terminar o encaixe, uma única vez. Os PNGs e a colisão original não foram alterados.
+
+Nico agora aceita o analógico esquerdo do controle, com zona morta 0,24, velocidade proporcional e diagonal limitada. X azul equivale a F (golpe), B vermelho equivale a G (escudo enquanto pressionado). WASD/F/G continuam ativos. Otto permanece independente nas setas e mouse. Salto e interação conservam os comandos anteriores; não foram atribuídos novos botões para essas ações neste pedido.
+
+A ação pausar_jogo usa Esc e Start; a partida não usa mais ui_cancel como comando de pausa, evitando que B, normalmente associado a Voltar, erga o escudo e pause ao mesmo tempo. Nos menus, B continua disponível para voltar. O guia compartilhado do menu/pausa mostra o analógico esquerdo e os ícones azuis/vermelhos ButtonX/Idle e ButtonB/Idle existentes no Ninja Adventure. Dicas e etiquetas da alavanca incluem F/X.
+
+Validação: verificar_gamepad_nico.gd (15 verificações com eventos de controle simulados), verificar_alavanca.gd (55, nas três fases), verificar_pausa.gd (21) e campanha (61). Capturas reais do guia e da alavanca antes/depois. Não afirmar teste com um controle físico: os comandos foram injetados no Input do Godot. A mudança local anterior de recursos/fases/01_jardim.json continua preservada fora desta entrega.
+
 ## Recortes completos e câmera mais aberta — 16/11/2026
 
 O atlas CraftPix Objects.png é 384×144 e contém peças de alturas variadas, não uma grade uniforme de sprites completos de 16×16. Nas fases 1/2/4 foram corrigidos 53 objetos decorativos: caixa (80,80,16,24), barril (192,80,16,24), urna (208,80,16,24), baú (144,16,32,32) e caixas empilhadas nos antigos pontos internos “estante” (132,80,28,32). Colunas e camas usam seus arquivos existentes completos. Os pixels visíveis ficam apoiados em y=3, com filtro nearest/filter_clip, sem modificar os PNGs originais. Objetos são ordenados pelo ponto dos pés; a ordenação interna pelo centro do sprite foi desligada para impedir sobreposições incorretas com personagens.

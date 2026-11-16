@@ -83,8 +83,8 @@ func _mostrar_guia() -> void:
 	_guia.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
 	_guia.offset_left = -228
 	_guia.offset_right = 228
-	_guia.offset_top = -162
-	_guia.offset_bottom = 162
+	_guia.offset_top = -174
+	_guia.offset_bottom = 174
 	_guia.add_theme_stylebox_override("panel", _painel.get_theme_stylebox("panel"))
 	add_child(_guia)
 	var margem := MarginContainer.new()
@@ -102,7 +102,7 @@ func _mostrar_guia() -> void:
 	titulo.add_theme_font_size_override("font_size", 18)
 	titulo.add_theme_color_override("font_color", Color("f4d494"))
 	coluna.add_child(titulo)
-	for dados in [["Nico", "player1_fixed", "W A S D: andar · F: golpe · G: escudo"], ["Otto", "player2", "Setas: andar · Mouse: mirar\nClique esquerdo: disparar\nSegure o clique: carregar a esfera"]]:
+	for dados in [["Nico", "player1_fixed", "W A S D ou analógico esquerdo: andar\nF / X azul: golpe · G / B vermelho: escudo"], ["Otto", "player2", "Setas: andar · Mouse: mirar\nClique esquerdo: disparar\nSegure o clique: carregar a esfera"]]:
 		var linha := HBoxContainer.new()
 		linha.add_theme_constant_override("separation", 16)
 		coluna.add_child(linha)
@@ -138,6 +138,19 @@ func _mostrar_guia() -> void:
 			icone.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 			icone.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 			teclas.add_child(icone)
+		if dados[0] == "Nico":
+			var alternativa := Label.new()
+			alternativa.text = " ou "
+			alternativa.add_theme_font_size_override("font_size",11)
+			teclas.add_child(alternativa)
+			for arquivo in ["JoystickLeft", "ButtonX/Idle", "ButtonB/Idle"]:
+				var icone := TextureRect.new()
+				icone.texture = load("res://assets/Ninja Adventure - Asset Pack/Ui/Input/Gamepad/%s.png" % arquivo)
+				icone.custom_minimum_size = Vector2(22,22)
+				icone.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+				icone.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+				icone.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+				teclas.add_child(icone)
 	var voltar := Button.new()
 	voltar.text = "Entendi!"
 	voltar.custom_minimum_size.y = 30
@@ -185,7 +198,7 @@ func fechar() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if not visible or _saindo:
 		return
-	if event.is_action_pressed("ui_cancel"):
+	if event.is_action_pressed("ui_cancel") or event.is_action_pressed("pausar_jogo"):
 		get_viewport().set_input_as_handled()
 		if is_instance_valid(_guia):
 			_fechar_guia()
