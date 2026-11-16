@@ -85,6 +85,9 @@ func executar() -> void:
 	await scene_changed
 	current_scene._on_play_pressed()
 	await esperar(1.4)
+	conferir(current_scene.scene_file_path.ends_with("entrada_aventura.tscn"),"Jogar abre a apresentação animada")
+	current_scene.pular.pressed.emit()
+	await esperar(1.0)
 	conferir(current_scene.scene_file_path.ends_with("puzzle_01.tscn"),"Jogar abre as celas")
 	for dados: Dictionary in preload("res://recursos/mapas_puzzle.gd").FASES.values():
 		var moveis_secos := true

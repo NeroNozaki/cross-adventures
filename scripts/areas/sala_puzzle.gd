@@ -17,7 +17,6 @@ var dica_dada := false
 var achados: Dictionary = {}
 var aviso: Label
 var objetivo: Label
-var musica: AudioStreamPlayer
 var som: AudioStreamPlayer
 @onready var nico: Heroi = $Personagens/Nico
 @onready var otto: Heroi = $Personagens/Otto
@@ -68,12 +67,6 @@ func _ready() -> void:
 	som = AudioStreamPlayer.new()
 	som.volume_db = -18
 	add_child(som)
-	musica = AudioStreamPlayer.new()
-	musica.stream = load("res://assets/Ninja Adventure - Asset Pack/Audio/Musics/21 - Dungeon.ogg")
-	musica.set("parameters/looping",1)
-	musica.volume_db = -27
-	add_child(musica)
-	musica.play()
 	get_viewport().size_changed.connect(_ajustar_camera)
 	_ajustar_camera()
 	_atualizar_objetivo()
@@ -113,7 +106,6 @@ func _physics_process(delta: float) -> void:
 	_atualizar_camera(delta)
 	tempo_aviso = maxf(0,tempo_aviso-delta)
 	aviso.modulate.a = clampf(tempo_aviso/0.5,0,1)
-	musica.stream_paused = HistoriaDupla.silenciado
 	if has_node("PlacaNico"):
 		var sobre: bool = _sobre(nico,$PlacaNico)
 		if sobre != placa_ativa:
@@ -309,8 +301,3 @@ func _preparar_saida() -> void:
 	await $Porta.animation_finished
 	$Saida.set_deferred("monitoring",true)
 	avisar("A porta abriu! Cheguem juntos ao círculo de saída.")
-
-func _unhandled_input(event: InputEvent) -> void:
-	super._unhandled_input(event)
-	if event.is_action_pressed("alternar_audio"):
-		HistoriaDupla.silenciado = not HistoriaDupla.silenciado

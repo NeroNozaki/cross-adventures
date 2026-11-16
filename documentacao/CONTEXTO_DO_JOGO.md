@@ -1,5 +1,15 @@
 # Cross Adventures — referência do projeto
 
+## Ambientação sonora da masmorra — 16/11/2026
+
+As quatro fases agora recebem `scripts/audio/ambiente_masmorra.gd` pela BaseArea. O componente concentra a música que antes era criada individualmente em sala_puzzle: uma única trilha por fase, vento filtrado, água próxima das regiões reais do mapa, gotas espaciais em intervalos e tons variados e rangidos suaves ocasionais. Na fase 3, os abismos não recebem som de rio; há apenas infiltrações pontuais. Os três buses ArMasmorra/AmbMasmorra/MusicaMasmorra são reutilizados, com filtro de graves/agudos no vento e reverberação discreta no ambiente. As ações dos puzzles e as falas continuam fora dessa reverberação.
+
+M tem um único responsável nas áreas, funciona também na fase 3 e durante a pausa e sincroniza ambiente, música e SFX com HistoriaDupla.silenciado. A pausa congela as camadas/agendamento; os diálogos abaixam música e ambiente e suspendem eventos aleatórios. Entrada sonora gradual, três vozes de pingos no máximo, nenhum susto ou ruído alto. Loops são aplicados somente a cópias locais dos streams; os assets originais permanecem intactos. Os nós de áudio são liberados ao sair da fase.
+
+Arquivos existentes utilizados: Ninja Adventure Audio/Musics/21 - Dungeon.ogg, Sounds/Ambient/Wind2.wav, River.wav, Sounds/Elemental/WaterDrop.wav; Kenney RPG Audio creak1/2/3.ogg em assets/SONS/AMBIENTE/PORTAS_E_RANGIDOS. Nenhum download ou novo áudio sintetizado.
+
+Validação: `testes/verificar_ambiente_masmorra.gd` passou em 99 verificações nas quatro fases; `testes/verificar_campanha_puzzles.gd` passou em 61 após atualizar o fluxo para pular a apresentação antes das celas. O teste legado `verificar_audio.gd` não executa nesta branch porque depende de cenas/testes/arena_teste.tscn e dos antigos vilões, que não estão presentes; não foram restaurados para o jogo de puzzles. O teste novo cobre música, loops, fontes reais de água, eventos, pausa, tecla M, reuso dos buses e limpeza na saída.
+
 ## Abertura animada e janela — 16/11/2026
 
 A pasta ativa é `C:\Users\finan\OneDrive\Documentos\cross-adventures`, branch `dev/new-player1`. O jogo abre em janela maximizada com barra de título, sem fullscreen; canvas_items/expand preenche diferentes proporções. A cortina de FluxoTela agora cobre o tamanho real do viewport. A alteração local preexistente em `recursos/fases/01_jardim.json` foi preservada e não faz parte desta entrega.
