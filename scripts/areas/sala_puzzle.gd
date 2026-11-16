@@ -120,7 +120,7 @@ func _physics_process(delta: float) -> void:
 			placa_ativa = sobre
 			_marcar_placa($PlacaNico,sobre)
 			if not resolvida and (mapa_id == 1 or roda_ativa):
-				avisar("O alvo apareceu! Otto, é sua vez." if sobre else "O alvo guardou. Nico pode voltar para a pedra.")
+				avisar("O cristal acendeu! Otto, é sua vez." if sobre else "O cristal desativou. Nico pode voltar para a pedra.")
 	if mapa_id == 1:
 		var sobre_otto := _sobre(otto,$PlacaOtto)
 		if sobre_otto != ajuda_otto:

@@ -12,6 +12,8 @@ Detalhes e soluções: documentacao/CAMPANHA_QUATRO_PUZZLES.md. Os três mapas n
 
 Fonte principal de design: `documentacao/SGDD - Cross Adventures.pdf`, 1 página, por Protetores da Juventude. O usuário entregou o documento e o definiu como referência para as próximas instruções em 21/10/2026. O conteúdo descreve o produto; o checklist do PDF não autoriza executar automaticamente todas as funcionalidades.
 
+A pedido do usuário, os alvos de Otto nas fases 1, 2 e 4 seguem o cristal da fase 3: coluna de Set 1.png (128,288,16,32), escala 1,5 e cristal da cena switch.tscn em escala 1,3. O cristal fica visível nos estados vermelho, azul e dourado; a base CraftPix anterior e os círculos de mira grandes foram retirados. A área de acerto e as regras dos puzzles permanecem iguais.
+
 ## Conceito e enredo do SGDD
 
 - Aventura breve, cooperativa local para dois jogadores, com visão de cima, voltada para crianças.

@@ -227,15 +227,20 @@ func criar_alvo(id: int, p: Vector2i, pai: Node) -> void:
 	alvo.position = centro(p)
 	anexar(alvo,pai)
 	var base := Sprite2D.new()
-	base.texture = atlas("Objects.png",Rect2(16,80,32,32))
-	base.scale = Vector2.ONE*0.65
-	base.position.y = 0
+	base.name = "Coluna"
+	var pedra := AtlasTexture.new()
+	# Mesmas duas peças que sustentam os cristais na Object map layer da area_3.
+	pedra.atlas = load("res://assets/Dungeon Gathering Free Version/Set 1.png")
+	pedra.region = Rect2(128,288,16,32)
+	base.texture = pedra
+	base.scale = Vector2.ONE*1.5
+	base.position.y = 12
 	anexar(base,alvo)
 	var sprite := AnimatedSprite2D.new()
 	sprite.name = "Imagem"
 	sprite.sprite_frames = original.get_node("animation").sprite_frames
-	sprite.scale = Vector2.ONE*1.5
-	sprite.position.y = -12
+	sprite.scale = Vector2.ONE*1.3
+	sprite.position.y = -10.4
 	anexar(sprite,alvo)
 	original.free()
 	var area := Area2D.new()

@@ -10,9 +10,8 @@ var aviso_restante := 0.0
 func _process(delta: float) -> void:
 	tempo += delta
 	aviso_restante = maxf(0,aviso_restante-delta)
-	var revelado := ativo or confirmado
-	imagem.position.y = lerpf(imagem.position.y,(-12.0 if revelado else 1.0),minf(1,delta*10))+sin(tempo*2.2+indice)*0.1
-	imagem.modulate.a = move_toward(imagem.modulate.a,1.0 if revelado else 0.15,delta*4)
+	# Cristal e coluna originais da fase 3; o estado muda a cor, sem esconder a peça.
+	imagem.modulate.a = move_toward(imagem.modulate.a,1.0 if ativo or confirmado else 0.85,delta*4)
 	imagem.play("gold" if confirmado else ("blue" if ativo else "red"))
 	queue_redraw()
 
@@ -33,7 +32,9 @@ func receber_projetil(tiro: Node) -> String:
 
 func _draw() -> void:
 	if ativo or confirmado:
-		var cor := Color(0.4,0.9,1,0.3) if not confirmado else Color(1,0.8,0.3,0.45)
-		draw_arc(Vector2(0,-12),19,0,TAU,24,cor,1)
-		draw_line(Vector2(-23,-12),Vector2(-19,-12),cor,2)
-		draw_line(Vector2(19,-12),Vector2(23,-12),cor,2)
+		var cor := Color(0.4,0.9,1,0.25) if not confirmado else Color(1,0.8,0.3,0.3)
+		cor.a *= 0.75+sin(tempo*2.2+indice)*0.25
+		# Brilho discreto em pixels, sem moldura de mira ao redor do cristal.
+		for lado in [-1,1]:
+			draw_rect(Rect2(lado*13-1,-14,2,2),cor)
+			draw_rect(Rect2(lado*10-1,-22,2,2),cor)
