@@ -4,7 +4,7 @@
 
 O pedido atual substitui o enredo antigo de Lucas buscando ruínas: Nico (esqueleto, Player 1) e Otto acordam juntos dentro de uma masmorra, não sabem como chegaram e precisam cooperar para escapar. No início se desentendem; a amizade cresce ao longo de quatro fases de puzzles, criadas pelos colaboradores. Não restaurar o Bosque ou mapas revertidos sem novo pedido. O nome do jogo continua Cross Adventures.
 
-A branch dev/new-player1 contém apenas a troca visual/nome de Nico. Capa e história ficam separadas em dev/nico-menu-story, baseada na main atual após a reversão. O menu usa capa_nico_otto.png e mantém o letreiro anterior como camada independente. A animação é em tempo real: câmera discreta, partículas e pulsação luminosa; não é vídeo nem animação de membros dos personagens.
+A pedido do usuário, a branch dev/new-player1 agora reúne a troca visual/nome de Nico, a nova capa e a história. A branch dev/nico-menu-story foi usada inicialmente para separar o trabalho, mas a integração atual deve usar dev/new-player1. O menu usa capa_nico_otto.png e mantém o letreiro anterior como camada independente. A animação é em tempo real: câmera discreta, partículas e pulsação luminosa; não é vídeo nem animação de membros dos personagens.
 
 HistoriaDupla usa recursos/historia_dupla.gd com quatro pares de conversas (entrada e conclusão), de desconfiança a amizade. BaseArea exporta fase_historia (1..4): configurar nas fases futuras; a única área jogável atual, area_3, usa 1 como ponto de entrada provisório da história. LevelEnd aguarda a conversa de conclusão antes da transição. As quatro fases não foram construídas nesta alteração. Continuar completa a digitação e depois avança; Pular tudo encerra a conversa atual e restaura a pausa anterior.
 
