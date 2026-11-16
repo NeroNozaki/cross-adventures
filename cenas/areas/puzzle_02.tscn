@@ -26,114 +26,130 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2j03j"]
 shader = ExtResource("2_wbbbm")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k8ttt"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mxau"]
 atlas = ExtResource("4_hbpqx")
 region = Rect2(0, 0, 16, 32)
+filter_clip = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kufdj"]
 size = Vector2(16, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sh1go"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbbbm"]
 atlas = ExtResource("4_hbpqx")
 region = Rect2(0, 0, 16, 32)
+filter_clip = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lf0gl"]
 size = Vector2(16, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5lsmc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5yew6"]
 atlas = ExtResource("5_s5sgn")
-region = Rect2(208, 80, 16, 16)
+region = Rect2(208, 80, 16, 24)
+filter_clip = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dbcxb"]
 size = Vector2(16, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x16x6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbpqx"]
 atlas = ExtResource("5_s5sgn")
-region = Rect2(64, 80, 16, 32)
+region = Rect2(132, 80, 28, 32)
+filter_clip = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vo52m"]
 size = Vector2(16, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pwi2k"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5sgn"]
 atlas = ExtResource("5_s5sgn")
-region = Rect2(192, 80, 16, 16)
+region = Rect2(192, 80, 16, 24)
+filter_clip = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t7n2a"]
 size = Vector2(16, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1okd2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v64o"]
 atlas = ExtResource("5_s5sgn")
-region = Rect2(80, 80, 16, 16)
+region = Rect2(80, 80, 16, 24)
+filter_clip = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ty41"]
 size = Vector2(16, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_okv50"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8eaat"]
 atlas = ExtResource("5_s5sgn")
-region = Rect2(64, 80, 16, 32)
+region = Rect2(132, 80, 28, 32)
+filter_clip = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wbh3w"]
 size = Vector2(16, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_y13pk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubpkn"]
 atlas = ExtResource("4_hbpqx")
 region = Rect2(0, 0, 16, 32)
+filter_clip = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5abn4"]
 size = Vector2(16, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6v835"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_wi2nc"]
 atlas = ExtResource("4_hbpqx")
 region = Rect2(0, 0, 16, 32)
+filter_clip = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wpn15"]
 size = Vector2(16, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_w1cb1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvvb3"]
 atlas = ExtResource("4_hbpqx")
 region = Rect2(0, 0, 16, 32)
+filter_clip = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v5eya"]
 size = Vector2(16, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_w15f4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qonjp"]
 atlas = ExtResource("4_hbpqx")
 region = Rect2(0, 0, 16, 32)
+filter_clip = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1c2bw"]
 size = Vector2(16, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_talc0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_18533"]
 atlas = ExtResource("4_hbpqx")
 region = Rect2(0, 0, 16, 32)
+filter_clip = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q5b46"]
 size = Vector2(16, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_66oph"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfvm4"]
 atlas = ExtResource("4_hbpqx")
 region = Rect2(0, 0, 16, 32)
+filter_clip = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_325ip"]
 size = Vector2(16, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f4tou"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8u1ok"]
 atlas = ExtResource("5_s5sgn")
-region = Rect2(144, 16, 32, 16)
+region = Rect2(144, 16, 32, 32)
+filter_clip = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trmal"]
 size = Vector2(16, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5f1ov"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_wbv4l"]
 atlas = ExtResource("5_s5sgn")
-region = Rect2(208, 80, 16, 16)
+region = Rect2(208, 80, 16, 24)
+filter_clip = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jqlse"]
 size = Vector2(16, 8)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_330hh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfon4"]
 atlas = ExtResource("5_s5sgn")
-region = Rect2(64, 80, 16, 32)
+region = Rect2(132, 80, 28, 32)
+filter_clip = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3x5g6"]
 size = Vector2(16, 8)
@@ -187,10 +203,6 @@ animations = [{
 "name": &"default",
 "speed": 7.0
 }]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hnfp8"]
-atlas = ExtResource("5_s5sgn")
-region = Rect2(16, 80, 16, 32)
 
 [sub_resource type="Gradient" id="Gradient_lbyvj"]
 colors = PackedColorArray(1, 1, 1, 0.55, 1, 1, 1, 0)
@@ -253,10 +265,6 @@ animations = [{
 "speed": 7.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fc4xa"]
-atlas = ExtResource("5_s5sgn")
-region = Rect2(16, 80, 16, 32)
-
 [sub_resource type="Gradient" id="Gradient_6d8k2"]
 colors = PackedColorArray(1, 1, 1, 0.55, 1, 1, 1, 0)
 
@@ -317,10 +325,6 @@ animations = [{
 "name": &"default",
 "speed": 7.0
 }]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_t7c3s"]
-atlas = ExtResource("5_s5sgn")
-region = Rect2(16, 80, 16, 32)
 
 [sub_resource type="Gradient" id="Gradient_87xak"]
 colors = PackedColorArray(1, 1, 1, 0.55, 1, 1, 1, 0)
@@ -383,10 +387,6 @@ animations = [{
 "speed": 7.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n4k2j"]
-atlas = ExtResource("5_s5sgn")
-region = Rect2(16, 80, 16, 32)
-
 [sub_resource type="Gradient" id="Gradient_bc168"]
 colors = PackedColorArray(1, 1, 1, 0.55, 1, 1, 1, 0)
 
@@ -448,10 +448,6 @@ animations = [{
 "speed": 7.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ioyw8"]
-atlas = ExtResource("5_s5sgn")
-region = Rect2(16, 80, 16, 32)
-
 [sub_resource type="Gradient" id="Gradient_avck4"]
 colors = PackedColorArray(1, 1, 1, 0.55, 1, 1, 1, 0)
 
@@ -512,10 +508,6 @@ animations = [{
 "name": &"default",
 "speed": 7.0
 }]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wmqby"]
-atlas = ExtResource("5_s5sgn")
-region = Rect2(16, 80, 16, 32)
 
 [sub_resource type="Gradient" id="Gradient_mrmb5"]
 colors = PackedColorArray(1, 1, 1, 0.55, 1, 1, 1, 0)
@@ -762,9 +754,10 @@ animations = [{
 atlas = ExtResource("5_s5sgn")
 region = Rect2(16, 80, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_g4xwx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfxkp"]
 atlas = ExtResource("5_s5sgn")
-region = Rect2(96, 112, 16, 16)
+region = Rect2(144, 112, 16, 16)
+filter_clip = true
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sgpws"]
 radius = 18.0
@@ -945,7 +938,6 @@ tile_set = ExtResource("3_5yew6")
 y_sort_enabled = true
 
 [node name="Coluna_00" type="Node2D" parent="Objetos" unique_id=1677304560]
-y_sort_enabled = true
 position = Vector2(108, 132)
 
 [node name="Polygon2D_00" type="Polygon2D" parent="Objetos/Coluna_00" unique_id=1803928242]
@@ -953,9 +945,10 @@ color = Color(0.02, 0.02, 0.04, 0.28)
 polygon = PackedVector2Array(-11, -3, 11, -3, 14, 2, 8, 5, -10, 4)
 
 [node name="Sprite2D_01" type="Sprite2D" parent="Objetos/Coluna_00" unique_id=584811712]
+texture_filter = 1
 position = Vector2(0, -21)
 scale = Vector2(1.5, 1.5)
-texture = SubResource("AtlasTexture_k8ttt")
+texture = SubResource("AtlasTexture_0mxau")
 
 [node name="Apoio" type="StaticBody2D" parent="Objetos/Coluna_00" unique_id=967016270]
 collision_mask = 0
@@ -964,7 +957,6 @@ collision_mask = 0
 shape = SubResource("RectangleShape2D_kufdj")
 
 [node name="Coluna_01" type="Node2D" parent="Objetos" unique_id=30088593]
-y_sort_enabled = true
 position = Vector2(204, 132)
 
 [node name="Polygon2D_00" type="Polygon2D" parent="Objetos/Coluna_01" unique_id=1188353462]
@@ -972,9 +964,10 @@ color = Color(0.02, 0.02, 0.04, 0.28)
 polygon = PackedVector2Array(-11, -3, 11, -3, 14, 2, 8, 5, -10, 4)
 
 [node name="Sprite2D_01" type="Sprite2D" parent="Objetos/Coluna_01" unique_id=1007272016]
+texture_filter = 1
 position = Vector2(0, -21)
 scale = Vector2(1.5, 1.5)
-texture = SubResource("AtlasTexture_sh1go")
+texture = SubResource("AtlasTexture_wbbbm")
 
 [node name="Apoio" type="StaticBody2D" parent="Objetos/Coluna_01" unique_id=2077980507]
 collision_mask = 0
@@ -983,7 +976,6 @@ collision_mask = 0
 shape = SubResource("RectangleShape2D_lf0gl")
 
 [node name="Urna_02" type="Node2D" parent="Objetos" unique_id=1729025377]
-y_sort_enabled = true
 position = Vector2(108, 204)
 
 [node name="Polygon2D_00" type="Polygon2D" parent="Objetos/Urna_02" unique_id=1852259078]
@@ -991,9 +983,10 @@ color = Color(0.02, 0.02, 0.04, 0.28)
 polygon = PackedVector2Array(-11, -3, 11, -3, 14, 2, 8, 5, -10, 4)
 
 [node name="Sprite2D_01" type="Sprite2D" parent="Objetos/Urna_02" unique_id=1563066907]
-position = Vector2(0, -9)
+texture_filter = 1
+position = Vector2(0, -7.5)
 scale = Vector2(1.5, 1.5)
-texture = SubResource("AtlasTexture_5lsmc")
+texture = SubResource("AtlasTexture_5yew6")
 
 [node name="Apoio" type="StaticBody2D" parent="Objetos/Urna_02" unique_id=1204505218]
 collision_mask = 0
@@ -1002,7 +995,6 @@ collision_mask = 0
 shape = SubResource("RectangleShape2D_dbcxb")
 
 [node name="Estante_03" type="Node2D" parent="Objetos" unique_id=2047397997]
-y_sort_enabled = true
 position = Vector2(108, 444)
 
 [node name="Polygon2D_00" type="Polygon2D" parent="Objetos/Estante_03" unique_id=1249580526]
@@ -1010,9 +1002,10 @@ color = Color(0.02, 0.02, 0.04, 0.28)
 polygon = PackedVector2Array(-11, -3, 11, -3, 14, 2, 8, 5, -10, 4)
 
 [node name="Sprite2D_01" type="Sprite2D" parent="Objetos/Estante_03" unique_id=2093906028]
-position = Vector2(0, -21)
+texture_filter = 1
+position = Vector2(3, -21)
 scale = Vector2(1.5, 1.5)
-texture = SubResource("AtlasTexture_x16x6")
+texture = SubResource("AtlasTexture_hbpqx")
 
 [node name="Apoio" type="StaticBody2D" parent="Objetos/Estante_03" unique_id=1811881024]
 collision_mask = 0
@@ -1021,7 +1014,6 @@ collision_mask = 0
 shape = SubResource("RectangleShape2D_vo52m")
 
 [node name="Barril_04" type="Node2D" parent="Objetos" unique_id=870779708]
-y_sort_enabled = true
 position = Vector2(108, 540)
 
 [node name="Polygon2D_00" type="Polygon2D" parent="Objetos/Barril_04" unique_id=1138136532]
@@ -1029,9 +1021,10 @@ color = Color(0.02, 0.02, 0.04, 0.28)
 polygon = PackedVector2Array(-11, -3, 11, -3, 14, 2, 8, 5, -10, 4)
 
 [node name="Sprite2D_01" type="Sprite2D" parent="Objetos/Barril_04" unique_id=1629866649]
-position = Vector2(0, -9)
+texture_filter = 1
+position = Vector2(0, -15)
 scale = Vector2(1.5, 1.5)
-texture = SubResource("AtlasTexture_pwi2k")
+texture = SubResource("AtlasTexture_s5sgn")
 
 [node name="Apoio" type="StaticBody2D" parent="Objetos/Barril_04" unique_id=1880741545]
 collision_mask = 0
@@ -1040,7 +1033,6 @@ collision_mask = 0
 shape = SubResource("RectangleShape2D_t7n2a")
 
 [node name="Caixa_05" type="Node2D" parent="Objetos" unique_id=324022018]
-y_sort_enabled = true
 position = Vector2(276, 540)
 
 [node name="Polygon2D_00" type="Polygon2D" parent="Objetos/Caixa_05" unique_id=45999770]
@@ -1048,9 +1040,10 @@ color = Color(0.02, 0.02, 0.04, 0.28)
 polygon = PackedVector2Array(-11, -3, 11, -3, 14, 2, 8, 5, -10, 4)
 
 [node name="Sprite2D_01" type="Sprite2D" parent="Objetos/Caixa_05" unique_id=1480169090]
-position = Vector2(0, -9)
+texture_filter = 1
+position = Vector2(0, -10.5)
 scale = Vector2(1.5, 1.5)
-texture = SubResource("AtlasTexture_1okd2")
+texture = SubResource("AtlasTexture_3v64o")
 
 [node name="Apoio" type="StaticBody2D" parent="Objetos/Caixa_05" unique_id=522693761]
 collision_mask = 0
@@ -1059,7 +1052,6 @@ collision_mask = 0
 shape = SubResource("RectangleShape2D_0ty41")
 
 [node name="Estante_06" type="Node2D" parent="Objetos" unique_id=1284716077]
-y_sort_enabled = true
 position = Vector2(228, 108)
 
 [node name="Polygon2D_00" type="Polygon2D" parent="Objetos/Estante_06" unique_id=116032894]
@@ -1067,9 +1059,10 @@ color = Color(0.02, 0.02, 0.04, 0.28)
 polygon = PackedVector2Array(-11, -3, 11, -3, 14, 2, 8, 5, -10, 4)
 
 [node name="Sprite2D_01" type="Sprite2D" parent="Objetos/Estante_06" unique_id=805954456]
-position = Vector2(0, -21)
+texture_filter = 1
+position = Vector2(3, -21)
 scale = Vector2(1.5, 1.5)
-texture = SubResource("AtlasTexture_okv50")
+texture = SubResource("AtlasTexture_8eaat")
 
 [node name="Apoio" type="StaticBody2D" parent="Objetos/Estante_06" unique_id=734360265]
 collision_mask = 0
@@ -1078,7 +1071,6 @@ collision_mask = 0
 shape = SubResource("RectangleShape2D_wbh3w")
 
 [node name="Coluna_07" type="Node2D" parent="Objetos" unique_id=826883553]
-y_sort_enabled = true
 position = Vector2(372, 108)
 
 [node name="Polygon2D_00" type="Polygon2D" parent="Objetos/Coluna_07" unique_id=1230929613]
@@ -1086,9 +1078,10 @@ color = Color(0.02, 0.02, 0.04, 0.28)
 polygon = PackedVector2Array(-11, -3, 11, -3, 14, 2, 8, 5, -10, 4)
 
 [node name="Sprite2D_01" type="Sprite2D" parent="Objetos/Coluna_07" unique_id=844271241]
+texture_filter = 1
 position = Vector2(0, -21)
 scale = Vector2(1.5, 1.5)
-texture = SubResource("AtlasTexture_y13pk")
+texture = SubResource("AtlasTexture_ubpkn")
 
 [node name="Apoio" type="StaticBody2D" parent="Objetos/Coluna_07" unique_id=711848691]
 collision_mask = 0
@@ -1097,7 +1090,6 @@ collision_mask = 0
 shape = SubResource("RectangleShape2D_5abn4")
 
 [node name="Coluna_08" type="Node2D" parent="Objetos" unique_id=2073284050]
-y_sort_enabled = true
 position = Vector2(564, 108)
 
 [node name="Polygon2D_00" type="Polygon2D" parent="Objetos/Coluna_08" unique_id=994523947]
@@ -1105,9 +1097,10 @@ color = Color(0.02, 0.02, 0.04, 0.28)
 polygon = PackedVector2Array(-11, -3, 11, -3, 14, 2, 8, 5, -10, 4)
 
 [node name="Sprite2D_01" type="Sprite2D" parent="Objetos/Coluna_08" unique_id=144679188]
+texture_filter = 1
 position = Vector2(0, -21)
 scale = Vector2(1.5, 1.5)
-texture = SubResource("AtlasTexture_6v835")
+texture = SubResource("AtlasTexture_wi2nc")
 
 [node name="Apoio" type="StaticBody2D" parent="Objetos/Coluna_08" unique_id=1909836221]
 collision_mask = 0
@@ -1116,7 +1109,6 @@ collision_mask = 0
 shape = SubResource("RectangleShape2D_wpn15")
 
 [node name="Coluna_09" type="Node2D" parent="Objetos" unique_id=2052639712]
-y_sort_enabled = true
 position = Vector2(348, 252)
 
 [node name="Polygon2D_00" type="Polygon2D" parent="Objetos/Coluna_09" unique_id=2035869030]
@@ -1124,9 +1116,10 @@ color = Color(0.02, 0.02, 0.04, 0.28)
 polygon = PackedVector2Array(-11, -3, 11, -3, 14, 2, 8, 5, -10, 4)
 
 [node name="Sprite2D_01" type="Sprite2D" parent="Objetos/Coluna_09" unique_id=1701969956]
+texture_filter = 1
 position = Vector2(0, -21)
 scale = Vector2(1.5, 1.5)
-texture = SubResource("AtlasTexture_w1cb1")
+texture = SubResource("AtlasTexture_hvvb3")
 
 [node name="Apoio" type="StaticBody2D" parent="Objetos/Coluna_09" unique_id=1781735992]
 collision_mask = 0
@@ -1135,7 +1128,6 @@ collision_mask = 0
 shape = SubResource("RectangleShape2D_v5eya")
 
 [node name="Coluna_10" type="Node2D" parent="Objetos" unique_id=622996334]
-y_sort_enabled = true
 position = Vector2(492, 252)
 
 [node name="Polygon2D_00" type="Polygon2D" parent="Objetos/Coluna_10" unique_id=1430008737]
@@ -1143,9 +1135,10 @@ color = Color(0.02, 0.02, 0.04, 0.28)
 polygon = PackedVector2Array(-11, -3, 11, -3, 14, 2, 8, 5, -10, 4)
 
 [node name="Sprite2D_01" type="Sprite2D" parent="Objetos/Coluna_10" unique_id=473423493]
+texture_filter = 1
 position = Vector2(0, -21)
 scale = Vector2(1.5, 1.5)
-texture = SubResource("AtlasTexture_w15f4")
+texture = SubResource("AtlasTexture_qonjp")
 
 [node name="Apoio" type="StaticBody2D" parent="Objetos/Coluna_10" unique_id=1761697096]
 collision_mask = 0
@@ -1154,7 +1147,6 @@ collision_mask = 0
 shape = SubResource("RectangleShape2D_1c2bw")
 
 [node name="Coluna_11" type="Node2D" parent="Objetos" unique_id=584434856]
-y_sort_enabled = true
 position = Vector2(612, 132)
 
 [node name="Polygon2D_00" type="Polygon2D" parent="Objetos/Coluna_11" unique_id=1487711408]
@@ -1162,9 +1154,10 @@ color = Color(0.02, 0.02, 0.04, 0.28)
 polygon = PackedVector2Array(-11, -3, 11, -3, 14, 2, 8, 5, -10, 4)
 
 [node name="Sprite2D_01" type="Sprite2D" parent="Objetos/Coluna_11" unique_id=393969714]
+texture_filter = 1
 position = Vector2(0, -21)
 scale = Vector2(1.5, 1.5)
-texture = SubResource("AtlasTexture_talc0")
+texture = SubResource("AtlasTexture_18533")
 
 [node name="Apoio" type="StaticBody2D" parent="Objetos/Coluna_11" unique_id=183386791]
 collision_mask = 0
@@ -1173,7 +1166,6 @@ collision_mask = 0
 shape = SubResource("RectangleShape2D_q5b46")
 
 [node name="Coluna_12" type="Node2D" parent="Objetos" unique_id=2105846747]
-y_sort_enabled = true
 position = Vector2(780, 132)
 
 [node name="Polygon2D_00" type="Polygon2D" parent="Objetos/Coluna_12" unique_id=2044725371]
@@ -1181,9 +1173,10 @@ color = Color(0.02, 0.02, 0.04, 0.28)
 polygon = PackedVector2Array(-11, -3, 11, -3, 14, 2, 8, 5, -10, 4)
 
 [node name="Sprite2D_01" type="Sprite2D" parent="Objetos/Coluna_12" unique_id=1458316515]
+texture_filter = 1
 position = Vector2(0, -21)
 scale = Vector2(1.5, 1.5)
-texture = SubResource("AtlasTexture_66oph")
+texture = SubResource("AtlasTexture_rfvm4")
 
 [node name="Apoio" type="StaticBody2D" parent="Objetos/Coluna_12" unique_id=187294031]
 collision_mask = 0
@@ -1192,7 +1185,6 @@ collision_mask = 0
 shape = SubResource("RectangleShape2D_325ip")
 
 [node name="Bau_13" type="Node2D" parent="Objetos" unique_id=1316446773]
-y_sort_enabled = true
 position = Vector2(756, 492)
 
 [node name="Polygon2D_00" type="Polygon2D" parent="Objetos/Bau_13" unique_id=808146750]
@@ -1200,9 +1192,10 @@ color = Color(0.02, 0.02, 0.04, 0.28)
 polygon = PackedVector2Array(-11, -3, 11, -3, 14, 2, 8, 5, -10, 4)
 
 [node name="Sprite2D_01" type="Sprite2D" parent="Objetos/Bau_13" unique_id=505083340]
-position = Vector2(0, -9)
+texture_filter = 1
+position = Vector2(0, -6)
 scale = Vector2(1.5, 1.5)
-texture = SubResource("AtlasTexture_f4tou")
+texture = SubResource("AtlasTexture_8u1ok")
 
 [node name="Apoio" type="StaticBody2D" parent="Objetos/Bau_13" unique_id=270575428]
 collision_mask = 0
@@ -1211,7 +1204,6 @@ collision_mask = 0
 shape = SubResource("RectangleShape2D_trmal")
 
 [node name="Urna_14" type="Node2D" parent="Objetos" unique_id=1727890910]
-y_sort_enabled = true
 position = Vector2(636, 516)
 
 [node name="Polygon2D_00" type="Polygon2D" parent="Objetos/Urna_14" unique_id=1407969002]
@@ -1219,9 +1211,10 @@ color = Color(0.02, 0.02, 0.04, 0.28)
 polygon = PackedVector2Array(-11, -3, 11, -3, 14, 2, 8, 5, -10, 4)
 
 [node name="Sprite2D_01" type="Sprite2D" parent="Objetos/Urna_14" unique_id=636621553]
-position = Vector2(0, -9)
+texture_filter = 1
+position = Vector2(0, -7.5)
 scale = Vector2(1.5, 1.5)
-texture = SubResource("AtlasTexture_5f1ov")
+texture = SubResource("AtlasTexture_wbv4l")
 
 [node name="Apoio" type="StaticBody2D" parent="Objetos/Urna_14" unique_id=728048009]
 collision_mask = 0
@@ -1230,7 +1223,6 @@ collision_mask = 0
 shape = SubResource("RectangleShape2D_jqlse")
 
 [node name="Estante_15" type="Node2D" parent="Objetos" unique_id=363172780]
-y_sort_enabled = true
 position = Vector2(660, 180)
 
 [node name="Polygon2D_00" type="Polygon2D" parent="Objetos/Estante_15" unique_id=201856329]
@@ -1238,9 +1230,10 @@ color = Color(0.02, 0.02, 0.04, 0.28)
 polygon = PackedVector2Array(-11, -3, 11, -3, 14, 2, 8, 5, -10, 4)
 
 [node name="Sprite2D_01" type="Sprite2D" parent="Objetos/Estante_15" unique_id=690307339]
-position = Vector2(0, -21)
+texture_filter = 1
+position = Vector2(3, -21)
 scale = Vector2(1.5, 1.5)
-texture = SubResource("AtlasTexture_330hh")
+texture = SubResource("AtlasTexture_rfon4")
 
 [node name="Apoio" type="StaticBody2D" parent="Objetos/Estante_15" unique_id=1629957488]
 collision_mask = 0
@@ -1255,11 +1248,6 @@ scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_wm4ks")
 autoplay = "default"
 
-[node name="Sprite2D_07" type="Sprite2D" parent="." unique_id=2017923964]
-z_index = 1
-position = Vector2(132, 89)
-texture = SubResource("AtlasTexture_hnfp8")
-
 [node name="PointLight2D_08" type="PointLight2D" parent="." unique_id=1766833434]
 position = Vector2(132, 84)
 color = Color(1, 0.8352941, 0.5372549, 1)
@@ -1272,11 +1260,6 @@ position = Vector2(396, 56)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_ijmjg")
 autoplay = "default"
-
-[node name="Sprite2D_10" type="Sprite2D" parent="." unique_id=414707192]
-z_index = 1
-position = Vector2(396, 65)
-texture = SubResource("AtlasTexture_fc4xa")
 
 [node name="PointLight2D_11" type="PointLight2D" parent="." unique_id=447022551]
 position = Vector2(396, 60)
@@ -1291,11 +1274,6 @@ scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_rh2rs")
 autoplay = "default"
 
-[node name="Sprite2D_13" type="Sprite2D" parent="." unique_id=620677604]
-z_index = 1
-position = Vector2(516, 65)
-texture = SubResource("AtlasTexture_t7c3s")
-
 [node name="PointLight2D_14" type="PointLight2D" parent="." unique_id=685257926]
 position = Vector2(516, 60)
 color = Color(1, 0.8352941, 0.5372549, 1)
@@ -1308,11 +1286,6 @@ position = Vector2(660, 32)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_feebt")
 autoplay = "default"
-
-[node name="Sprite2D_16" type="Sprite2D" parent="." unique_id=469907523]
-z_index = 1
-position = Vector2(660, 41)
-texture = SubResource("AtlasTexture_n4k2j")
 
 [node name="PointLight2D_17" type="PointLight2D" parent="." unique_id=54458876]
 position = Vector2(660, 36)
@@ -1327,11 +1300,6 @@ scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_33fdb")
 autoplay = "default"
 
-[node name="Sprite2D_19" type="Sprite2D" parent="." unique_id=285547233]
-z_index = 1
-position = Vector2(756, 41)
-texture = SubResource("AtlasTexture_ioyw8")
-
 [node name="PointLight2D_20" type="PointLight2D" parent="." unique_id=3373336]
 position = Vector2(756, 36)
 color = Color(1, 0.8352941, 0.5372549, 1)
@@ -1344,11 +1312,6 @@ position = Vector2(60, 488)
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_7gb6d")
 autoplay = "default"
-
-[node name="Sprite2D_22" type="Sprite2D" parent="." unique_id=2029411370]
-z_index = 1
-position = Vector2(60, 497)
-texture = SubResource("AtlasTexture_wmqby")
 
 [node name="PointLight2D_23" type="PointLight2D" parent="." unique_id=1584607878]
 position = Vector2(60, 492)
@@ -1465,7 +1428,7 @@ texture = SubResource("AtlasTexture_kj0dr")
 [node name="Imagem" type="Sprite2D" parent="MecanismoNico" unique_id=315109947]
 position = Vector2(0, -12)
 scale = Vector2(1.5, 1.5)
-texture = SubResource("AtlasTexture_g4xwx")
+texture = SubResource("AtlasTexture_dfxkp")
 
 [node name="Area2D_02" type="Area2D" parent="MecanismoNico" unique_id=1211862396]
 position = Vector2(0, -8)

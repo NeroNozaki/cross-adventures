@@ -1,6 +1,7 @@
 extends SceneTree
 ## Regenera somente as fases 01, 02 e 04; nunca regrava area_3.
 const MAPAS = preload("res://recursos/mapas_puzzle.gd")
+const OBJETOS = preload("res://recursos/arte_objetos_puzzle.gd")
 const ARTE = "res://assets/mapa/CRAFTPIX_DUNGEON/"
 var raiz: Node2D
 var tiles: TileSet
@@ -107,28 +108,18 @@ func etiqueta(texto: String, ponto: Vector2, pai: Node = null, cor: Color = Colo
 	return l
 
 func objeto(tipo: String, ponto: Vector2, pai: Node) -> void:
-	var recortes := {"caixa":Rect2(80,80,16,16),"barril":Rect2(192,80,16,16),"urna":Rect2(208,80,16,16),"bau":Rect2(144,16,32,16),"estante":Rect2(64,80,16,32),"coluna":Rect2(0,0,16,32),"cama":Rect2(0,144,32,48)}
-	var r: Rect2 = recortes[tipo]
 	var no := Node2D.new()
 	no.name = tipo.capitalize()+"_%02d"%pai.get_child_count()
 	no.position = ponto
-	no.y_sort_enabled = true
+	# O objeto inteiro é ordenado pelos pés; não pelo centro elevado da imagem.
+	no.y_sort_enabled = false
 	anexar(no,pai)
 	var sombra := Polygon2D.new()
 	sombra.polygon = PackedVector2Array([Vector2(-11,-3),Vector2(11,-3),Vector2(14,2),Vector2(8,5),Vector2(-10,4)])
 	sombra.color = Color(0.02,0.02,0.04,0.28)
 	anexar(sombra,no)
 	var sprite := Sprite2D.new()
-	if tipo in ["cama","coluna"]:
-		var t := AtlasTexture.new()
-		t.atlas = load("res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/tileset_bed.png" if tipo == "cama" else "res://assets/Dungeon Gathering Free Version/Structure.png")
-		t.region = r
-		sprite.texture = t
-	else:
-		sprite.texture = atlas("Objects.png",r)
-	var escala := 1.0 if tipo == "cama" else 1.5
-	sprite.scale = Vector2.ONE*escala
-	sprite.position.y = -r.size.y*escala/2+3
+	OBJETOS.aplicar(sprite,tipo)
 	anexar(sprite,no)
 	corpo("Apoio",Rect2(-8,-4,16,8),no)
 
@@ -155,7 +146,7 @@ func roda(ponto: Vector2i) -> void:
 	anexar(apoio,no)
 	var imagem := Sprite2D.new()
 	imagem.name = "Imagem"
-	imagem.texture = atlas("Objects.png",Rect2(96,112,16,16))
+	imagem.texture = OBJETOS.trava()
 	imagem.position.y = -12
 	imagem.scale = Vector2.ONE*1.5
 	anexar(imagem,no)
@@ -183,12 +174,7 @@ func animacao_fogo(p: Vector2) -> void:
 	chama.sprite_frames = quadros
 	chama.autoplay = "default"
 	anexar(chama)
-	var apoio := Sprite2D.new()
-	apoio.texture = atlas("Objects.png",Rect2(16,80,16,32))
-	apoio.scale = Vector2.ONE
-	apoio.position = p+Vector2(0,5)
-	apoio.z_index = 1
-	anexar(apoio)
+	# O quadro de fogo já inclui o braseiro completo; não sobrepor meia parede.
 	criar_luz(p,0.4)
 
 func criar_luz(p: Vector2, energia: float) -> PointLight2D:
@@ -413,10 +399,10 @@ func construir(numero: int) -> void:
 		espelho.set_script(load("res://scripts/areas/espelho_puzzle.gd"))
 		espelho.position = centro(dados.espelho)
 		espelho.rotation = 0
-		var reflexo := Sprite2D.new()
-		reflexo.texture = atlas("Objects.png",Rect2(96,112,16,16))
-		reflexo.scale = Vector2(3,0.5)
+		var reflexo := OBJETOS.espelho()
 		anexar(reflexo,espelho)
+		for parte in reflexo.get_children():
+			parte.owner = raiz
 		etiqueta("SEGURE O CLIQUE",centro(dados.tiro)+Vector2(-35,22),null,Color("#93d9de"))
 	var porta := AnimatedSprite2D.new()
 	porta.name = "Porta"

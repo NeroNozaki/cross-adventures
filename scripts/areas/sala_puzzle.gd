@@ -84,7 +84,7 @@ func _ajustar_camera() -> void:
 func _atualizar_camera(delta: float) -> void:
 	var janela := get_viewport_rect().size
 	var separacao := (nico.position-otto.position).abs()
-	var escala := clampf(minf(janela.x/(separacao.x+330),janela.y/(separacao.y+260)),0.65,1.25)
+	var escala := clampf(minf(janela.x/(separacao.x+390),janela.y/(separacao.y+310)),0.55,1.05)
 	$Camera.zoom = $Camera.zoom.lerp(Vector2.ONE*escala,minf(1,delta*3))
 	var foco := (nico.position+otto.position)/2
 	var metade: Vector2 = janela/$Camera.zoom/2

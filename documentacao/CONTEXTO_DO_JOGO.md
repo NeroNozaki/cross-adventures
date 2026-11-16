@@ -1,5 +1,15 @@
 # Cross Adventures — referência do projeto
 
+## Recortes completos e câmera mais aberta — 16/11/2026
+
+O atlas CraftPix Objects.png é 384×144 e contém peças de alturas variadas, não uma grade uniforme de sprites completos de 16×16. Nas fases 1/2/4 foram corrigidos 53 objetos decorativos: caixa (80,80,16,24), barril (192,80,16,24), urna (208,80,16,24), baú (144,16,32,32) e caixas empilhadas nos antigos pontos internos “estante” (132,80,28,32). Colunas e camas usam seus arquivos existentes completos. Os pixels visíveis ficam apoiados em y=3, com filtro nearest/filter_clip, sem modificar os PNGs originais. Objetos são ordenados pelo ponto dos pés; a ordenação interna pelo centro do sprite foi desligada para impedir sobreposições incorretas com personagens.
+
+A trava de Nico agora usa a alavanca CraftPix (144,112,16,16), em vez do recorte da armadura azul. O espelho usa uma moldura metálica inteira do Ninja Adventure e superfície ciano, mantendo exatamente o corpo 48×8 e a normal de ricochete. Os suportes que recortavam meia peça de parede foram retirados dos braseiros: os quadros de fire_animation já contêm o conjunto completo.
+
+Fonte única dos recortes: `recursos/arte_objetos_puzzle.gd`, usada pelo gerador e por `ferramentas/corrigir_recortes_puzzles.gd`. A ferramenta atualiza as cenas já salvas sem reconstruir os mapas, preservando posições, colisões e IDs dos nós; backups em backups/recortes, ignorados pelo Git e pelo Godot. A area_3 colaborativa recebeu somente zoom 0,667 → 0,62; as outras fases usam câmera adaptativa de 0,55 a 1,05, com margens 390×310, para mostrar um pouco mais do mapa. Nomes foram aproximados dos sprites e barras, com fonte 9 px, para não se misturarem aos itens mais acima.
+
+Validação: capturas das quatro fases e folha de inspeção dos recortes. `verificar_recortes_camera.gd`: 392 verificações de objetos, alinhamento, profundidade, posições/colisões e dupla visível; campanha: 61; câmera da area_3 no spawn: 9. A mudança local anterior em recursos/fases/01_jardim.json foi preservada e não integra esta entrega.
+
 ## Acabamento gráfico e transições — 16/11/2026
 
 As quatro fases recebem `scripts/areas/acabamento_masmorra.gd` pela BaseArea. O componente conserva TileMapLayers, geometria, colisões e sprites originais. Acrescenta luz ambiente fria legível, pulsação suave das tochas, brasas, sombras de contato dos heróis, poeira apenas por deslocamento real e brilho por estado dos cristais. A fase 3 recebe até nove chamas CraftPix somente sobre piso seco apoiado por parede e distante de mecanismos. As novas luzes não usam sombras dinâmicas pesadas.

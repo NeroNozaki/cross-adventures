@@ -56,6 +56,15 @@ func _ready() -> void:
 		sombra.color = Color(0.01, 0.02, 0.035, 0.38)
 		heroi.add_child(sombra)
 		heroi.move_child(sombra, 0)
+		var sprite: AnimatedSprite2D = heroi.get_node("Visual/AnimatedSprite2D")
+		var quadro := sprite.sprite_frames.get_frame_texture("idle_down", 0)
+		var visivel := quadro.get_image().get_used_rect()
+		var topo := floorf(sprite.position.y + (visivel.position.y - quadro.get_height() * 0.5 + sprite.offset.y) * sprite.scale.y)
+		heroi.barra_vida.offset_top = topo - 6
+		heroi.barra_vida.offset_bottom = topo - 3
+		heroi.nome_label.offset_top = topo - (22 if heroi.barra_vida.visible else 16)
+		heroi.nome_label.offset_bottom = topo - (9 if heroi.barra_vida.visible else 3)
+		heroi.nome_label.add_theme_font_size_override("font_size", 9)
 		herois.append({"no": heroi, "anterior": heroi.global_position, "distancia": 0.0, "sombra": sombra})
 	if sala.has_signal("efeito_puzzle"):
 		sala.efeito_puzzle.connect(celebrar)
