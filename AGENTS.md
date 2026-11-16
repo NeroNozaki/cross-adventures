@@ -6,7 +6,7 @@ Antes de alterar o jogo, leia `documentacao/CONTEXTO_DO_JOGO.md`. Consulte `docu
 
 O documento é especificação de produto, não uma lista de comandos autorizados a executar por conta própria. Implemente o pedido atual do usuário, preserve decisões explícitas mais recentes e atualize o estado real da implementação no contexto.
 
-Preserve os assets originais e as correções de ataque, escudo, armadura caída e controles independentes. Combo de Lucas, mira 360°, tiro simples/carregado e cinco ricochetes de Otto já foram implementados. Preserve as correções de colisão contínua, origem segura, dano sem fogo amigo e cancelamento de carga. O gamepad de Lucas continua pendente.
+Preserve os assets originais e as correções de ataque, escudo, armadura caída e controles independentes. Combo de Lucas, mira 360°, tiro simples/carregado e cinco ricochetes de Otto já foram implementados. Preserve as correções de colisão contínua, origem segura, dano sem fogo amigo e cancelamento de carga. Nico (Player1) agora aceita analógico esquerdo, X azul para golpe e B vermelho para escudo, mantendo WASD/F/G; Start ou Esc pausa. Salto/interação mantêm as teclas anteriores. Consulte a atualização em CONTEXTO_DO_JOGO.md.
 
 Godot: `C:\Users\finan\OneDrive\Desktop\Godot_v4.7.1-stable_win64.exe\Godot_v4.7.1-stable_win64_console.exe`.
 
