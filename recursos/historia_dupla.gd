@@ -19,6 +19,6 @@ const FASES = {
   "4": {
     "titulo": "Juntos até a saída",
     "inicio": [["Nico", "Olha aquela luz! Será que é a saída?"], ["Otto", "Vamos descobrir juntos. Nenhum amigo fica para trás!"]],
-    "fim": [["Otto", "Ar livre! Conseguimos escapar!"], ["Nico", "E eu ganhei um amigo. Vale mais que um baú de tesouro!"], ["Otto", "Bip-bip! Próxima aventura: escolher um lanche."], ["Nico", "Para mim, pode ser só uma boa risada!"]]
+    "fim": [["Otto", "O portão abriu! Olha a luz lá fora!"], ["Nico", "E eu ganhei um amigo. Vamos sair juntos!"]]
   }
 }

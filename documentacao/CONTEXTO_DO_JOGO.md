@@ -1,5 +1,15 @@
 # Cross Adventures — referência do projeto
 
+## Encerramento animado da dupla — 16/11/2026
+
+Após os dois atravessarem o último portão da fase 4, `fim_aventura.tscn` agora mostra Nico e Otto saindo da masmorra na paisagem externa de `assets/INTERFACE/entrada_masmorra.png`. É uma vinheta renderizada no Godot, não um arquivo de vídeo. A caminhada utiliza os SpriteFrames reais, com pés alinhados, sombras de contato e a capa de Nico. A dupla para no chão da ponte, dá três pulinhos de alegria, troca balões curtos (“Conseguimos!” / “Bip-bip! Amigos!”) e lança até 72 confetes temporários. A pose de braços erguidos vem de Skeleton/SeparateAnim/Item.png; os sprites e recursos compartilhados originais não são alterados.
+
+Depois da comemoração, o painel ThemeMetal3 revela “Vocês conseguiram!” e escreve: “Cada ideia conta. Cada amigo importa. Continuem aprendendo, tentem de novo e ajudem uns aos outros. Juntos, vocês podem ir mais longe!”. A criança tem tempo livre para ler. “FIM DA AVENTURA” identifica a conclusão; os botões botao_reliquia “Voltar ao início” e “Sair do jogo” ficam disponíveis ao terminar a escrita. “Ver mensagem” permite pular a animação preservando o comunicado completo. Não há encerramento automático nem retorno forçado antes da leitura. O botão Sair faz fade e libera os sons antes de fechar o processo.
+
+Áudio existente reaproveitado: Ninja Adventure `8 - End Theme.ogg` (cópia local em loop) e `Success3.wav`, passos Kenney `footstep_concrete_002.ogg`, e sons de interface `tick_001`, `click_002`, `select_001`. M silencia/restaura todas as camadas. A conversa final da fase 4 agora anuncia o portão aberto e o convite para sair juntos; a comemoração acontece depois da travessia, sem mudar os puzzles, o requisito dos dois jogadores ou a amizade completa.
+
+Implementação: scripts/screens/fim_aventura.gd e celebracao_dupla.gd. Validação: verificar_encerramento.gd (34 verificações de caminhada, animação, saltos, confetes limitados, mensagem gradual, leitura livre, áudio/M, foco, retorno e fechamento real pelo botão); campanha completa (61); fim de fase (15), totalizando 110 verificações sem falhas. Capturas reais da saída, comemoração e mensagem em janela maximizada, 1280×800 e 1600×900. O teste também detectou uma liberação antecipada dos botões em uma mutação temporária, restaurada antes da entrega. Originais substituídos preservados em backups/encerramento_2026-11-16, fora do Git/Godot. A alteração local anterior de recursos/fases/01_jardim.json continua fora desta entrega.
+
 ## Alavanca sem giro e gamepad de Nico — 16/11/2026
 
 Nas fases 1/2/4, a alavanca não gira mais como um objeto inteiro. `trava_puzzle.gd` separa os pixels CraftPix da base (144,117,16,5) e da haste (144,112,16,5). O apoio e a base ficam imóveis; a haste muda de lado no próprio encaixe em três poses curtas, ao longo de 0,14 s. Não há Tween de rotação nem efeito de mola. A condição cooperativa é verificada antes de aceitar o golpe; a sala recebe a ativação ao terminar o encaixe, uma única vez. Os PNGs e a colisão original não foram alterados.

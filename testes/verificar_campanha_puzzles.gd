@@ -217,4 +217,5 @@ func executar() -> void:
 	print("Campanha redesenhada: %d verificações; %d falhas"%[verificacoes,erros])
 	current_scene.queue_free()
 	await process_frame
+	await esperar(0.15)
 	quit(1 if erros > 0 else 0)
