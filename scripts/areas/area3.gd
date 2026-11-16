@@ -34,6 +34,7 @@ func _check_both_buttons(_state = null) -> void:
 
 	# Success — lock everything
 	_fences_opened = true
+	$objects/fence_set3.definir_ativado(true)
 	_lock_button(button2)
 	_lock_button(button3)
 

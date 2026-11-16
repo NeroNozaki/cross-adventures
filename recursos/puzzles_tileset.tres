@@ -1,0 +1,57 @@
+[gd_resource type="TileSet" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/mapa/CRAFTPIX_DUNGEON/walls_floor.png" id="1_4if5p"]
+[ext_resource type="Texture2D" path="res://assets/Tiny Swords (Free Pack)/Terrain/Tileset/Water Background color.png" id="2_w2yv8"]
+[ext_resource type="Texture2D" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetInteriorFloor.png" id="3_rrypc"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ymbe0"]
+texture = ExtResource("1_4if5p")
+2:7/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+2:9/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d7ot8"]
+texture = ExtResource("1_4if5p")
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:2/0 = 0
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2fm51"]
+texture = ExtResource("2_w2yv8")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6xeo8"]
+texture = ExtResource("3_rrypc")
+12:13/0 = 0
+13:13/0 = 0
+14:13/0 = 0
+15:13/0 = 0
+16:13/0 = 0
+12:14/0 = 0
+13:14/0 = 0
+14:14/0 = 0
+15:14/0 = 0
+16:14/0 = 0
+12:15/0 = 0
+13:15/0 = 0
+14:15/0 = 0
+15:15/0 = 0
+16:15/0 = 0
+
+[resource]
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 6
+sources/0 = SubResource("TileSetAtlasSource_ymbe0")
+sources/1 = SubResource("TileSetAtlasSource_d7ot8")
+sources/2 = SubResource("TileSetAtlasSource_2fm51")
+sources/3 = SubResource("TileSetAtlasSource_6xeo8")

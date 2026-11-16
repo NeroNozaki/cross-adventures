@@ -1,5 +1,5 @@
 extends Control
-@export_file("*.tscn") var proxima_cena := "res://cenas/areas/area_3.tscn"
+@export_file("*.tscn") var proxima_cena := "res://cenas/areas/puzzle_01.tscn"
 var fundo: TextureRect
 var titulo: TextureRect
 var menu: VBoxContainer
