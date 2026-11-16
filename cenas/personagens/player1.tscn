@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dc8yclherfo4k"]
 
 [ext_resource type="Script" uid="uid://5mugxlygqby7" path="res://scripts/personagens/player1.gd" id="1_script"]
-[ext_resource type="SpriteFrames" path="res://recursos/personagens/player1.tres" id="2_frames"]
+[ext_resource type="SpriteFrames" path="res://recursos/personagens/player1_fixed.tres" id="2_frames"]
 [ext_resource type="Script" uid="uid://812llsqvakdw" path="res://scripts/efeitos/efeitos_combate.gd" id="3_fx"]
 [ext_resource type="PackedScene" path="res://cenas/audio/audio_personagem.tscn" id="10_audio"]
 [ext_resource type="Resource" path="res://recursos/audio/player1.tres" id="11_profile"]
