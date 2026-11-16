@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://812llsqvakdw" path="res://scripts/efeitos/efeitos_combate.gd" id="3_fx"]
 [ext_resource type="PackedScene" path="res://cenas/audio/audio_personagem.tscn" id="10_audio"]
 [ext_resource type="Resource" path="res://recursos/audio/player1.tres" id="11_profile"]
+[ext_resource type="Texture2D" path="res://assets/Ninja Adventure - Asset Pack/Actor/Character/Skeleton/SeparateAnim/NicoCape.svg" id="12_cape"]
 
 [sub_resource type="CircleShape2D" id="Shape_body"]
 radius = 9.0
@@ -43,8 +44,15 @@ duracao_ataque = 0.65
 
 [node name="Visual" type="Node2D" parent="." unique_id=452955230]
 
+[node name="Capa" type="Sprite2D" parent="Visual" unique_id=204881263]
+texture_filter = 1
+z_index = -1
+position = Vector2(0, -6)
+scale = Vector2(1.55, 1.85)
+texture = ExtResource("12_cape")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Visual" unique_id=806481832]
-scale = Vector2(2, 2)
+scale = Vector2(1.65, 1.85)
 sprite_frames = ExtResource("2_frames")
 animation = &"idle_down"
 offset = Vector2(0, -7)
