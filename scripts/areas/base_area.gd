@@ -2,6 +2,8 @@ extends Node2D
 class_name BaseArea
 
 const CENA_PAUSA: PackedScene = preload("res://cenas/screens/pause_menu.tscn")
+## Capítulo narrativo desta sala; configurar 1..4 nas futuras fases.
+@export_range(1,4) var fase_historia: int = 1
 
 var _pause_menu: Control
 
@@ -14,6 +16,7 @@ func _ready() -> void:
 	add_child(camada)
 	_pause_menu = CENA_PAUSA.instantiate()
 	camada.add_child(_pause_menu)
+	HistoriaDupla.iniciar_fase.call_deferred(fase_historia)
 
 
 func _unhandled_input(event: InputEvent) -> void:
