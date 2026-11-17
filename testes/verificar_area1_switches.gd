@@ -47,9 +47,12 @@ func rodar() -> void:
 	var switch2: Node2D = area.get_node("objects/switch2")
 	var switch3: Node2D = area.get_node("objects/switch3")
 	var switch4: Node2D = area.get_node("objects/switch4")
+	var gate: SignalGate = area.get_node("objects/SignalGate")
 	var partes: Array = fence_set3.find_children("fence*", "", true, false)
 
 	conferir(partes.size() == 3, "fence_set3 possui tres cercas")
+	conferir(gate.entradas.size() == 3, "SignalGate do Jardim tem tres entradas")
+	conferir(not gate.esta_ativado(), "SignalGate do Jardim comeca desativado")
 	conferir(fence3.esta_fechada() and fence4.esta_fechada(), "fence3 e fence4 comecam fechadas")
 	conferir(conjunto_fechado(partes), "fence_set3 comeca fechado")
 
@@ -58,12 +61,14 @@ func rodar() -> void:
 	conferir(switch2.get_state() == &"gold", "switch2 e acionado")
 	conferir(fence3.esta_fechada() and fence4.esta_fechada(), "switch2 sozinho mantem fence3 e fence4 fechadas")
 	conferir(not conjunto_aberto(partes), "switch2 sozinho mantem fence_set3 fechado")
+	conferir(not gate.esta_ativado(), "switch2 sozinho nao ativa o SignalGate")
 
 	switch4.receber_dano(1, Vector2.ZERO)
 	await quadros()
 	conferir(switch4.get_state() == &"gold", "switch4 e acionado")
 	conferir(fence3.esta_fechada() and fence4.esta_fechada(), "switch2 e switch4 mantem fence3 e fence4 fechadas")
 	conferir(not conjunto_aberto(partes), "switch2 e switch4 mantem fence_set3 fechado")
+	conferir(not gate.esta_ativado(), "switch2 e switch4 nao ativam o SignalGate")
 
 	switch3.receber_dano(1, Vector2.ZERO)
 	await create_timer(1.5).timeout
@@ -71,6 +76,8 @@ func rodar() -> void:
 	conferir(fence3.esta_aberta(), "fence3 abre com os tres switches")
 	conferir(fence4.esta_aberta(), "fence4 abre com os tres switches")
 	conferir(conjunto_aberto(partes), "fence_set3 abre com os tres switches")
+	conferir(gate.esta_ativado(), "os tres switches ativam o SignalGate")
+	conferir(switch2.travado and switch3.travado and switch4.travado, "SignalGate single_use trava os tres switches")
 
 	area.free()
 	await create_timer(0.3).timeout

@@ -23,6 +23,8 @@
 [ext_resource type="PackedScene" uid="uid://b1app4yluftqg" path="res://cenas/objects/level_specifics/unstable_ground.tscn" id="19_6vj3d"]
 [ext_resource type="PackedScene" uid="uid://3lsr651kmjwt" path="res://cenas/objects/hazards/hole_field.tscn" id="20_holefield"]
 [ext_resource type="PackedScene" uid="uid://bfcw5kgxwknfu" path="res://cenas/objects/level_specifics/level_end.tscn" id="22_hsrb0"]
+[ext_resource type="PackedScene" path="res://cenas/signal_components/signal_gate.tscn" id="23_gate"]
+[ext_resource type="Script" uid="uid://do47hl3ofp7c0" path="res://scripts/signals/signal_gate_input.gd" id="24_gate_input"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_jxv52"]
 tile_data = PackedInt32Array(0, 327685, 1, 65536, 327685, 2, 131072, 327685, 3, 196608, 327685, 5, 1, 393221, 1, 65537, 393221, 2, 131073, 393221, 3, 196609, 393221, 5, 2, 458757, 1, 65538, 458757, 2, 131074, 458757, 3, 196610, 458757, 5)
@@ -1040,6 +1042,16 @@ sources/5 = SubResource("TileSetAtlasSource_d5osd")
 sources/0 = SubResource("TileSetAtlasSource_kxkbe")
 pattern_0 = SubResource("TileMapPattern_jxv52")
 
+[sub_resource type="Resource" id="SignalGateInput_area3_1"]
+script = ExtResource("24_gate_input")
+canal = &"button2"
+no_emissor = NodePath("../button2")
+
+[sub_resource type="Resource" id="SignalGateInput_area3_2"]
+script = ExtResource("24_gate_input")
+canal = &"button3"
+no_emissor = NodePath("../button3")
+
 [node name="area3" type="Node2D" unique_id=368229941]
 script = ExtResource("1_wulx4")
 
@@ -1092,6 +1104,11 @@ channel = &"button2"
 position = Vector2(251, 96)
 channel = &"button3"
 
+[node name="SignalGate" parent="objects" unique_id=1449982302 instance=ExtResource("23_gate")]
+entradas = Array[ExtResource("24_gate_input")]([SubResource("SignalGateInput_area3_1"), SubResource("SignalGateInput_area3_2")])
+canal_saida = &"area3_buttons_23"
+single_use = true
+
 [node name="switch2" parent="objects" unique_id=536374258 instance=ExtResource("11_qa2hc")]
 position = Vector2(468, 60.000015)
 channel = &"switch2"
@@ -1109,6 +1126,7 @@ channel = &"button1"
 
 [node name="fence_set3" parent="objects" unique_id=819051107 instance=ExtResource("13_0rkg2")]
 position = Vector2(180, 12)
+channel = &"area3_buttons_23"
 
 [node name="fence_set4" parent="objects" unique_id=452823909 instance=ExtResource("13_0rkg2")]
 position = Vector2(469, 395)

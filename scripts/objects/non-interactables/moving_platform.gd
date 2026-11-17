@@ -3,6 +3,8 @@ class_name MovingPlatform
 
 @export var move_speed: float = 96.0
 @export var carry_riders: bool = true
+@export var automatic: bool = false
+@export_range(0.0, 5.0, 0.05, "suffix:s") var automatic_pause: float = 1.0
 
 @onready var platform: Node2D = $Platform
 @onready var inactive_anchor: Marker2D = $InactiveAnchor
@@ -10,6 +12,9 @@ class_name MovingPlatform
 @onready var tilemap: TileMapLayer = $Platform/TileMapLayer
 
 var _moving: bool = false
+var _waiting: bool = false
+var _wait_remaining: float = 0.0
+var _automatic_active: bool = false
 var _move_from: Vector2 = Vector2.ZERO
 var _move_to: Vector2 = Vector2.ZERO
 var _move_elapsed: float = 0.0
@@ -25,7 +30,11 @@ func _ready() -> void:
 	platform.global_position = inicial.global_position
 	_criar_area_passageiros()
 	call_deferred("_atualizar_bloqueador")
-	set_physics_process(false)
+	if automatic and _is_activated:
+		_automatic_active = true
+		_iniciar_pausa_automatica()
+	else:
+		set_physics_process(false)
 
 
 func _exit_tree() -> void:
@@ -34,6 +43,17 @@ func _exit_tree() -> void:
 
 
 func _on_activated(activated: bool) -> void:
+	if automatic:
+		if activated == _automatic_active:
+			return
+		_automatic_active = activated
+		_waiting = false
+		if activated:
+			if not _moving:
+				_iniciar_pausa_automatica()
+		else:
+			_iniciar_movimento(inactive_anchor.global_position)
+		return
 	var destino: Marker2D = active_anchor if activated else inactive_anchor
 	_iniciar_movimento(destino.global_position)
 
@@ -41,8 +61,13 @@ func _on_activated(activated: bool) -> void:
 func _iniciar_movimento(destino: Vector2) -> void:
 	if platform.global_position.distance_squared_to(destino) < 0.01:
 		_moving = false
-		set_physics_process(false)
+		_waiting = false
+		if automatic and _automatic_active:
+			_iniciar_pausa_automatica()
+		else:
+			set_physics_process(false)
 		return
+	_waiting = false
 	_move_from = platform.global_position
 	_move_to = destino
 	_move_elapsed = 0.0
@@ -51,7 +76,26 @@ func _iniciar_movimento(destino: Vector2) -> void:
 	set_physics_process(true)
 
 
+func _iniciar_pausa_automatica() -> void:
+	_waiting = true
+	_wait_remaining = maxf(automatic_pause, 0.0)
+	set_physics_process(true)
+
+
+func _destino_automatico() -> Vector2:
+	if platform.global_position.distance_squared_to(active_anchor.global_position) < 0.01:
+		return inactive_anchor.global_position
+	return active_anchor.global_position
+
+
 func _physics_process(delta: float) -> void:
+	if _waiting:
+		_wait_remaining -= delta
+		if _wait_remaining > 0.0:
+			return
+		_waiting = false
+		_iniciar_movimento(_destino_automatico())
+		return
 	if not _moving:
 		return
 	var antes: Vector2 = platform.global_position
@@ -60,15 +104,23 @@ func _physics_process(delta: float) -> void:
 	var destino: Vector2 = _move_from.lerp(_move_to, smoothstep(0.0, 1.0, proporcao))
 	if proporcao >= 1.0:
 		destino = _move_to
-		_moving = false
-		set_physics_process(false)
 	platform.global_position = destino
 	_mover_passageiros(destino - antes)
 	_atualizar_bloqueador()
+	if proporcao >= 1.0:
+		_moving = false
+		if automatic and _automatic_active:
+			_iniciar_pausa_automatica()
+		else:
+			set_physics_process(false)
 
 
 func esta_em_movimento() -> bool:
 	return _moving
+
+
+func esta_aguardando() -> bool:
+	return _waiting
 
 
 func obter_area_passageiros() -> Area2D:

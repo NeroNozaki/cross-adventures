@@ -30,8 +30,11 @@ func rodar() -> void:
 	var button2: Node2D = area.get_node("objects/button2")
 	var button3: Node2D = area.get_node("objects/button3")
 	var fence_set3: Node2D = area.get_node("objects/fence_set3")
+	var gate: SignalGate = area.get_node("objects/SignalGate")
 	var partes: Array = fence_set3.find_children("fence*", "", true, false)
 	conferir(partes.size() == 3, "fence_set3 possui tres cercas")
+	conferir(gate.entradas.size() == 2, "SignalGate do segundo puzzle tem duas entradas")
+	conferir(not gate.esta_ativado(), "SignalGate do segundo puzzle comeca desativado")
 
 	var abertas := func() -> bool:
 		for parte in partes:
@@ -45,6 +48,7 @@ func rodar() -> void:
 	await quadros()
 	conferir(not abertas.call(), "button2 sozinho nao abre fence_set3")
 	conferir(not button2.single_use and not button3.single_use, "um botao sozinho nao trava o conjunto")
+	conferir(not gate.esta_ativado(), "button2 sozinho nao ativa o SignalGate")
 
 	button2._on_body_exited(null)
 	await quadros()
@@ -55,7 +59,9 @@ func rodar() -> void:
 	button2._on_body_entered(null)
 	await create_timer(1.2).timeout
 	conferir(abertas.call(), "os dois botoes juntos abrem fence_set3")
+	conferir(gate.esta_ativado(), "os dois botoes ativam o SignalGate")
 	conferir(button2.single_use and button3.single_use, "os dois botoes ficam travados")
+	conferir(button2.travado and button3.travado, "SignalGate single_use trava os dois botoes")
 	conferir(button2.pressed and button3.pressed, "os dois botoes permanecem pressionados")
 
 	button3._on_body_exited(null)

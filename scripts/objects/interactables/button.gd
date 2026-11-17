@@ -23,18 +23,24 @@ func _ready() -> void:
 
 
 func _on_body_entered(_body: Node2D) -> void:
+	if travado:
+		return
 	bodies_on_button += 1
 	if bodies_on_button >= 1 and not pressed:
 		_press()
 
 
 func _on_body_exited(_body: Node2D) -> void:
+	if travado:
+		return
 	bodies_on_button = maxi(0, bodies_on_button - 1)
 	if bodies_on_button == 0 and pressed:
 		_release()
 
 
 func _press() -> void:
+	if travado:
+		return
 	if bodies_on_button >= 1 and not pressed:
 		pressed = true
 		animation.play("3-pressed")
@@ -44,7 +50,7 @@ func _press() -> void:
 
 
 func _release() -> void:
-	if single_use or not pressed:
+	if travado or single_use or not pressed:
 		return
 	if bodies_on_button == 0:
 		pressed = false
@@ -52,3 +58,12 @@ func _release() -> void:
 		if has_signal("state_changed"):
 			state_changed.emit(pressed)
 		send_on_off(pressed)
+
+
+func travar_estado_atual() -> void:
+	if travado:
+		return
+	travado = true
+	single_use = true
+	bodies_on_button = 999 if pressed else 0
+	animation.play("3-pressed" if pressed else "1-not_pressed")

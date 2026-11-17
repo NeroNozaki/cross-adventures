@@ -49,22 +49,7 @@ func _on_received(value: Variant) -> void:
 
 
 func _interpret(value: Variant) -> bool:
-	match typeof(value):
-		TYPE_BOOL:
-			return value
-		TYPE_STRING, TYPE_STRING_NAME:
-			var s := str(value).strip_edges().to_lower()
-			if s in ["on", "true", "1", "open", "lower", "down", "blue", "gold", "pressed"]:
-				return true
-			if s in ["off", "false", "0", "closed", "raise", "up", "red", "unpressed"]:
-				return false
-			return false
-		TYPE_INT:
-			return value != 0
-		TYPE_FLOAT:
-			return not is_zero_approx(float(value))
-		_:
-			return false
+	return SignalValue.para_bool(value)
 
 
 func definir_ativado(ativado: bool) -> void:

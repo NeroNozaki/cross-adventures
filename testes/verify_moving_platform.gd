@@ -89,6 +89,8 @@ func run() -> void:
 	await wait_frames(6)
 
 	check(platform is NonInteractable, "plataforma herda NonInteractable")
+	check(not platform.automatic, "plataforma manual e o padrao")
+	check(is_equal_approx(platform.automatic_pause, 1.0), "pausa automatica padrao de 1 segundo")
 	var partes: Node2D = platform.get_node("Platform")
 	var inativo: Marker2D = platform.get_node("InactiveAnchor")
 	var ativo: Marker2D = platform.get_node("ActiveAnchor")
@@ -162,8 +164,63 @@ func run() -> void:
 	var ativa_iniciada: Marker2D = iniciada.get_node("ActiveAnchor")
 	check(partes_iniciada.global_position.distance_to(ativa_iniciada.global_position) < 0.1, "start_activated comeca na ancora ativa")
 
+	var auto: Node2D = scene.instantiate()
+	auto.channel = &"test.moving_platform.auto"
+	auto.automatic = true
+	auto.automatic_pause = 0.5
+	auto.move_speed = 400.0
+	world.add_child(auto)
+	auto.global_position = Vector2(1000, 6)
+	await wait_frames(5)
+	var auto_partes: Node2D = auto.get_node("Platform")
+	var auto_inativo: Marker2D = auto.get_node("InactiveAnchor")
+	var auto_ativo: Marker2D = auto.get_node("ActiveAnchor")
+	check(auto_partes.global_position.distance_to(auto_inativo.global_position) < 0.1, "automatica comeca na ancora inativa")
+	check(not auto.esta_em_movimento() and not auto.esta_aguardando(), "automatica espera o sinal sem se mover")
+
+	bus.publish(&"test.moving_platform.auto", true)
+	await create_timer(0.25).timeout
+	check(auto_partes.global_position.distance_to(auto_inativo.global_position) < 0.1 and auto.esta_aguardando(), "automatica pausa na ancora inicial antes de partir")
+	await create_timer(0.8).timeout
+	check(auto_partes.global_position.distance_to(auto_ativo.global_position) < 0.1, "automatica chega na ancora ativa")
+	check(not auto.esta_em_movimento() and auto.esta_aguardando(), "automatica pausa na ancora ativa")
+	var posicao_ativa: Vector2 = auto_partes.global_position
+	await create_timer(0.15).timeout
+	check(auto_partes.global_position.distance_to(posicao_ativa) < 0.1, "automatica respeita a pausa para embarque")
+	await create_timer(0.9).timeout
+	check(auto_partes.global_position.distance_to(auto_inativo.global_position) < 0.1, "automatica volta para a ancora inativa")
+	check(not auto.esta_em_movimento() and auto.esta_aguardando(), "automatica pausa na ancora inativa")
+	var posicao_inativa: Vector2 = auto_partes.global_position
+	await create_timer(0.15).timeout
+	check(auto_partes.global_position.distance_to(posicao_inativa) < 0.1, "automatica respeita a pausa na ancora inativa")
+	await create_timer(0.9).timeout
+	check(auto_partes.global_position.distance_to(auto_ativo.global_position) < 0.1, "automatica repete o ciclo sem novo sinal")
+
+	bus.publish(&"test.moving_platform.auto", false)
+	await create_timer(0.6).timeout
+	check(auto_partes.global_position.distance_to(auto_inativo.global_position) < 0.1, "desligar a automatica volta para a ancora inativa")
+	check(not auto.esta_em_movimento() and not auto.esta_aguardando(), "desligar a automatica encerra o ciclo")
+	var posicao_final: Vector2 = auto_partes.global_position
+	await create_timer(0.6).timeout
+	check(auto_partes.global_position.distance_to(posicao_final) < 0.1, "automatica desligada nao reinicia sozinha")
+
+	var auto_iniciada: Node2D = scene.instantiate()
+	auto_iniciada.automatic = true
+	auto_iniciada.start_activated = true
+	auto_iniciada.automatic_pause = 0.2
+	auto_iniciada.move_speed = 400.0
+	world.add_child(auto_iniciada)
+	auto_iniciada.global_position = Vector2(1400, 6)
+	await wait_frames(5)
+	var auto_iniciada_partes: Node2D = auto_iniciada.get_node("Platform")
+	var auto_iniciada_ativa: Marker2D = auto_iniciada.get_node("ActiveAnchor")
+	var auto_iniciada_inativa: Marker2D = auto_iniciada.get_node("InactiveAnchor")
+	check(auto_iniciada_partes.global_position.distance_to(auto_iniciada_ativa.global_position) < 0.1 and auto_iniciada.esta_aguardando(), "start_activated automatico comeca na ancora ativa e aguarda")
+	await create_timer(0.7).timeout
+	check(auto_iniciada_partes.global_position.distance_to(auto_iniciada_inativa.global_position) < 0.1, "start_activated automatico inicia o ciclo indo para a ancora inativa")
+
 	if failures.is_empty():
-		print("MOVING_PLATFORM_OK: %d verificacoes de ancoras, sinal, movimento suave, reversao, celulas desligadas e passageiros." % total)
+		print("MOVING_PLATFORM_OK: %d verificacoes de ancoras, sinal, movimento suave, automatico, pausa, reversao, celulas desligadas e passageiros." % total)
 		quit(0)
 	else:
 		print(failures)
