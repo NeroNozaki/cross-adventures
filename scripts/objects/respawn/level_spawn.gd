@@ -3,6 +3,13 @@ extends Node2D
 
 signal team_spawned
 
+enum Alvo {
+	TODOS,
+	PLAYER1,
+	PLAYER2,
+}
+
+@export var alvo: Alvo = Alvo.TODOS
 @export var team_spacing: float = 64.0
 @export var move_team_on_ready: bool = true
 
@@ -18,10 +25,13 @@ func ativar() -> void:
 
 func _gerenciado_pelo_master() -> bool:
 	var pai := get_parent()
-	return pai != null and pai.has_method(&"ativar_spawn_selecionado")
+	return pai != null and pai.has_method(&"ativar_spawns_selecionados")
 
 func _assign_team() -> void:
-	var heroes: Array[Node] = get_tree().get_nodes_in_group("herois")
+	var heroes: Array[Node] = []
+	for hero in get_tree().get_nodes_in_group("herois"):
+		if _hero_corresponde_ao_alvo(hero):
+			heroes.append(hero)
 	heroes.sort_custom(func(a: Node, b: Node) -> bool: return String(a.name).naturalnocasecmp_to(String(b.name)) < 0)
 	var count: int = heroes.size()
 	for index in range(count):
@@ -36,3 +46,23 @@ func _assign_team() -> void:
 		if move_team_on_ready and hero is Node2D and not hero.get("esta_morto"):
 			(hero as Node2D).global_position = point
 	team_spawned.emit()
+
+func _hero_corresponde_ao_alvo(hero: Node) -> bool:
+	match alvo:
+		Alvo.PLAYER1:
+			return _hero_eh_player(hero, "player1")
+		Alvo.PLAYER2:
+			return _hero_eh_player(hero, "player2")
+		_:
+			return true
+
+func _hero_eh_player(hero: Node, nome_player: String) -> bool:
+	var cena := String(hero.scene_file_path).get_file().get_basename()
+	if cena == nome_player:
+		return true
+	var script_hero: Script = hero.get_script() as Script
+	if script_hero != null:
+		var caminho_script := String(script_hero.resource_path).get_file().get_basename()
+		if caminho_script == nome_player:
+			return true
+	return String(hero.name).to_lower() == nome_player

@@ -1,0 +1,9 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://5dyi77tytcfp" path="res://scripts/objects/respawn/level_spawn.gd" id="1_script"]
+
+[node name="LevelSpawnPlayer2" type="Node2D"]
+script = ExtResource("1_script")
+alvo = 2
+
+[node name="RespawnPoint" type="Marker2D" parent="."]

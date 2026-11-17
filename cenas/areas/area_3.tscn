@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cq3sxhfy2q2ac" path="res://scripts/areas/area3.gd" id="1_wulx4"]
 [ext_resource type="Script" uid="uid://bfe1fx810tw0b" path="res://scripts/objects/respawn/level_spawn_master.gd" id="2_master"]
-[ext_resource type="PackedScene" uid="uid://cuunxdtlugmkd" path="res://cenas/objects/respawn/level_spawn.tscn" id="2_wulx4"]
+[ext_resource type="PackedScene" path="res://cenas/objects/respawn/level_spawn_player1.tscn" id="2_spawn_p1"]
+[ext_resource type="PackedScene" path="res://cenas/objects/respawn/level_spawn_player2.tscn" id="2_spawn_p2"]
 [ext_resource type="Texture2D" uid="uid://c3deqrxf2aib7" path="res://assets/Dungeon Gathering Free Version/Set 4.5.png" id="3_lna4w"]
 [ext_resource type="Texture2D" uid="uid://hy5qxsj1tal2" path="res://assets/CENARIOS/KENNEY_TINY_DUNGEON/Tilemap/tilemap_packed.png" id="4_jxv52"]
 [ext_resource type="Texture2D" uid="uid://bj07spwuxtn72" path="res://assets/CENARIOS/KENNEY_TINY_TOWN/Tilemap/tilemap_packed.png" id="5_6vj3d"]
@@ -1057,12 +1058,19 @@ script = ExtResource("1_wulx4")
 
 [node name="LevelSpawnMaster" type="Node2D" parent="." unique_id=2082823409]
 script = ExtResource("2_master")
-spawn_ativo = "spawn1"
+spawn_ativo_player1 = "spawn1_player1"
+spawn_ativo_player2 = "spawn1_player2"
 
-[node name="spawn1" parent="LevelSpawnMaster" unique_id=1045799053 instance=ExtResource("2_wulx4")]
+[node name="spawn1_player1" parent="LevelSpawnMaster" unique_id=1045799053 instance=ExtResource("2_spawn_p1")]
 position = Vector2(438, 503)
 
-[node name="spawn2" parent="LevelSpawnMaster" unique_id=1022907120 instance=ExtResource("2_wulx4")]
+[node name="spawn2_player1" parent="LevelSpawnMaster" unique_id=1022907120 instance=ExtResource("2_spawn_p1")]
+position = Vector2(178, -64)
+
+[node name="spawn1_player2" parent="LevelSpawnMaster" unique_id=1649263905 instance=ExtResource("2_spawn_p2")]
+position = Vector2(438, 503)
+
+[node name="spawn2_player2" parent="LevelSpawnMaster" unique_id=1649263906 instance=ExtResource("2_spawn_p2")]
 position = Vector2(178, -64)
 
 [node name="Terrain map layer" type="TileMapLayer" parent="." unique_id=671236802]
@@ -1304,7 +1312,7 @@ player2 = NodePath("../Player2")
 position = Vector2(224, 471)
 nome_personagem = "Personagem"
 vida_maxima = 100
-velocidade = 95.0
+velocidade = 120.0
 dano_ataque = 15
 defesa = 2
 alcance_ataque = 29.0
@@ -1316,7 +1324,7 @@ duracao_ataque = 0.5
 position = Vector2(313, 390)
 nome_personagem = "Personagem"
 vida_maxima = 100
-velocidade = 200.0
+velocidade = 150.0
 orientar_pelo_movimento = true
 dano_ataque = 15
 alcance_ataque = 29.0
