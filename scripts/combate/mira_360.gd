@@ -2,7 +2,10 @@ extends Node2D
 ## Coordenadas do mundo: funciona com redimensionamento da janela e Camera2D.
 
 const REGRA_PROJETIL=preload("res://scripts/combate/projetil.gd")
+const DIRECOES_ASSISTIDAS: int = 8
 @export var comprimento_maximo: float = 520.0 / 2
+@export_range(0.0, 22.5, 0.5) var assistencia_angular_graus: float = 10.0
+@export_range(0.0, 1.0, 0.05) var forca_assistencia: float = 1.0
 var travada: bool = false
 var trajeto: PackedVector2Array = PackedVector2Array()
 var consulta: ShapeCast2D
@@ -13,7 +16,7 @@ var carga: float = 0.0
 func atualizar(alvo_global: Vector2, progresso: float) -> void:
 	var ate_alvo: Vector2 = alvo_global - global_position
 	if not travada and ate_alvo.length_squared() > 0.01:
-		direcao = ate_alvo.normalized()
+		direcao = _aplicar_assistencia(ate_alvo.normalized())
 	# A linha tem alcance visual fixo; o cursor so define o angulo.
 	comprimento = maxf(comprimento_maximo, 0.0)
 	carga = clampf(progresso, 0.0, 1.0)
@@ -22,6 +25,19 @@ func atualizar(alvo_global: Vector2, progresso: float) -> void:
 	else:
 		trajeto = PackedVector2Array()
 	queue_redraw()
+
+func _aplicar_assistencia(entrada: Vector2) -> Vector2:
+	var limite: float = deg_to_rad(assistencia_angular_graus)
+	if limite <= 0.0 or forca_assistencia <= 0.0 or entrada.length_squared() <= 0.0001:
+		return entrada
+	var passo: float = TAU / float(DIRECOES_ASSISTIDAS)
+	var angulo: float = entrada.angle()
+	var alvo: float = roundf(angulo / passo) * passo
+	var diferenca: float = wrapf(alvo - angulo, -PI, PI)
+	if absf(diferenca) > limite:
+		return entrada
+	var peso: float = (1.0 - absf(diferenca) / limite) * forca_assistencia
+	return entrada.rotated(diferenca * peso)
 
 func _draw() -> void:
 	var cor: Color = Color("ffcd65") if carga >= 1.0 else Color("73e9ff")

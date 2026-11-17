@@ -10,6 +10,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0mc4a")
+proxima_cena = "uid://buerwkxxxwbyu"
 
 [node name="Label" type="Label" parent="." unique_id=1818064420]
 layout_mode = 1

@@ -17,3 +17,9 @@ O manifesto JSON registra cada caminho, tamanho e SHA-256. A pasta externa é um
 ## Validação concluída
 
 Reimportação do Godot sem erros. Aprovados os sete testes existentes: personagens (4 cenas e 80 animações), áudio, combo/mira (46), fases (75), interface (61), cenários (87) e acabamento (163). As quatro fases também foram renderizadas e inspecionadas, sem texturas ausentes. Conferência final: 289 arquivos de origem em assets, somando 1.212.732 bytes, e todos os recursos preservados presentes.
+
+## Duplicata de UIDs — 16/11/2026
+
+O editor reportava 1285 avisos `UID duplicate detected` e falhas ao carregar `Actor/Character/Skeleton/SeparateAnim/NicoCape.svg`. A causa era uma cópia não rastreada de `assets/Ninja Adventure - Asset Pack/Actor/Actor/`, com os mesmos `.import` e UIDs dos arquivos originais. A comparação SHA-256 confirmou 1366 arquivos idênticos, nenhuma diferença de conteúdo e apenas `NicoCape.svg` ausente na árvore original.
+
+A árvore duplicada foi movida para `backups/assets_duplicados_20261116_195216/Ninja Adventure - Asset Pack/Actor/Actor/`, fora do projeto e ignorada pelo Godot. O `NicoCape.svg` foi restaurado no caminho original usado por `player1.tscn` e reimportado. Depois da limpeza, o escaneamento do editor terminou sem erros ou avisos.

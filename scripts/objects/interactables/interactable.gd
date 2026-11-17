@@ -6,6 +6,7 @@ class_name Interactable
 @export var channel: StringName = &""
 @export var invert_send: bool = false
 
+var travado: bool = false
 var _emitter: Node = null
 
 
@@ -33,3 +34,7 @@ func publish_value(value: Variant) -> void:
 		return
 	if channel != &"" and has_node("/root/SignalBus"):
 		SignalBus.publish(channel, value)
+
+
+func travar_estado_atual() -> void:
+	travado = true

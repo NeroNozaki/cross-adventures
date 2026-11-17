@@ -58,6 +58,8 @@ func is_spent() -> bool:
 
 
 func _trigger() -> void:
+	if travado:
+		return
 	if single_use:
 		_spent = true
 		_is_on = !invert_send
@@ -69,6 +71,13 @@ func _trigger() -> void:
 	_is_on = !_is_on
 	_set_state(BLUE if _is_on else RED)
 	send_on_off(_is_on)
+
+
+func travar_estado_atual() -> void:
+	if travado:
+		return
+	travado = true
+	_spent = true
 
 
 func _set_state(new_state: StringName) -> void:

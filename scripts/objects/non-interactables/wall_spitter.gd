@@ -13,6 +13,7 @@ var _time_until_shot: float = 0.0
 
 
 func _ready() -> void:
+	start_activated = true
 	super._ready()
 	_time_until_shot = maxf(initial_delay, 0.0)
 	set_physics_process(_is_activated)

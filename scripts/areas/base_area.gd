@@ -5,7 +5,6 @@ const CENA_PAUSA: PackedScene = preload("res://cenas/screens/pause_menu.tscn")
 
 var _pause_menu: Control
 
-
 func _ready() -> void:
 	var camada := CanvasLayer.new()
 	camada.name = "CamadaPausa"
@@ -14,7 +13,6 @@ func _ready() -> void:
 	add_child(camada)
 	_pause_menu = CENA_PAUSA.instantiate()
 	camada.add_child(_pause_menu)
-
 
 func _unhandled_input(event: InputEvent) -> void:
 	if _pause_menu == null or _pause_menu.visible:
