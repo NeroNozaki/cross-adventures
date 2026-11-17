@@ -1058,20 +1058,20 @@ script = ExtResource("1_wulx4")
 
 [node name="LevelSpawnMaster" type="Node2D" parent="." unique_id=2082823409]
 script = ExtResource("2_master")
-spawn_ativo_player1 = "spawn1_player1"
-spawn_ativo_player2 = "spawn1_player2"
+spawn_ativo_player1 = "player1_spawn1"
+spawn_ativo_player2 = "player2_spawn1"
 
-[node name="spawn1_player1" parent="LevelSpawnMaster" unique_id=1045799053 instance=ExtResource("2_spawn_p1")]
-position = Vector2(438, 503)
+[node name="player1_spawn1" parent="LevelSpawnMaster" unique_id=1045799053 instance=ExtResource("2_spawn_p1")]
+position = Vector2(398, 503)
 
-[node name="spawn2_player1" parent="LevelSpawnMaster" unique_id=1022907120 instance=ExtResource("2_spawn_p1")]
-position = Vector2(178, -64)
+[node name="player1_spawn2" parent="LevelSpawnMaster" unique_id=1022907120 instance=ExtResource("2_spawn_p1")]
+position = Vector2(141, -64)
 
-[node name="spawn1_player2" parent="LevelSpawnMaster" unique_id=1649263905 instance=ExtResource("2_spawn_p2")]
-position = Vector2(438, 503)
+[node name="player2_spawn1" parent="LevelSpawnMaster" unique_id=1649263905 instance=ExtResource("2_spawn_p2")]
+position = Vector2(461, 503)
 
-[node name="spawn2_player2" parent="LevelSpawnMaster" unique_id=1649263906 instance=ExtResource("2_spawn_p2")]
-position = Vector2(178, -64)
+[node name="player2_spawn2" parent="LevelSpawnMaster" unique_id=1649263906 instance=ExtResource("2_spawn_p2")]
+position = Vector2(213, -64)
 
 [node name="Terrain map layer" type="TileMapLayer" parent="." unique_id=671236802]
 scale = Vector2(1.5, 1.5)

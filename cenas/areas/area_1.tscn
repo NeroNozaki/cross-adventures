@@ -410,20 +410,20 @@ script = ExtResource("1_8jyf3")
 
 [node name="LevelSpawnMaster" type="Node2D" parent="." unique_id=986563994]
 script = ExtResource("1_master")
-spawn_ativo_player1 = "spawn1_player1"
-spawn_ativo_player2 = "spawn1_player2"
+spawn_ativo_player1 = "player1_spawn1"
+spawn_ativo_player2 = "player2_spawn1"
 
-[node name="spawn1_player1" parent="LevelSpawnMaster" unique_id=1022907120 instance=ExtResource("1_spawn_p1")]
-position = Vector2(480, 542)
+[node name="player1_spawn1" parent="LevelSpawnMaster" unique_id=1022907120 instance=ExtResource("1_spawn_p1")]
+position = Vector2(437, 542)
 
-[node name="spawn2_player1" parent="LevelSpawnMaster" unique_id=911079459 instance=ExtResource("1_spawn_p1")]
-position = Vector2(489.9502, -80.68808)
+[node name="player1_spawn2" parent="LevelSpawnMaster" unique_id=911079459 instance=ExtResource("1_spawn_p1")]
+position = Vector2(530.9502, -80.68808)
 
-[node name="spawn1_player2" parent="LevelSpawnMaster" unique_id=1649263903 instance=ExtResource("1_spawn_p2")]
-position = Vector2(480, 542)
+[node name="player2_spawn1" parent="LevelSpawnMaster" unique_id=1649263903 instance=ExtResource("1_spawn_p2")]
+position = Vector2(524, 542)
 
-[node name="spawn2_player2" parent="LevelSpawnMaster" unique_id=1649263904 instance=ExtResource("1_spawn_p2")]
-position = Vector2(489.9502, -80.68808)
+[node name="player2_spawn2" parent="LevelSpawnMaster" unique_id=1649263904 instance=ExtResource("1_spawn_p2")]
+position = Vector2(481.9502, -80.68808)
 
 [node name="Terrain map layer" type="TileMapLayer" parent="." unique_id=971655483]
 scale = Vector2(1.5, 1.5)
@@ -586,11 +586,9 @@ channel = &"switch6"
 
 [node name="Player1" parent="Personagens" index="1" unique_id=1314664736]
 position = Vector2(439, 526)
-velocidade = 120.0
 
 [node name="Player2" parent="Personagens" index="2" unique_id=742595606]
 position = Vector2(523, 525)
-velocidade = 150.0
 
 [node name="unstable_ground" parent="." unique_id=1790855332 instance=ExtResource("15_net53")]
 position = Vector2(73, 324)
