@@ -28,7 +28,7 @@ O usuário pediu HUD compacto para expor o mapa: fonte 8 px na partida, caixas m
 
 Se uma captura mostrar o cenário antigo de grama com HUD grande, confira documentacao/ABRIR_PROJETO_ATUAL.md: MeuJogo é uma cópia antiga que estava registrada no gerenciador. Os atalhos na raiz de cross-adventures apontam explicitamente ao projeto atual. Não sincronizar nem sobrescrever a cópia MeuJogo sem um novo pedido do usuário.
 
-A pedido explícito do usuário, assets sem uso foram retirados do projeto em 27/10/2026 e preservados em arquivo externo. Consulte documentacao/LIMPEZA_ASSETS.md e o manifesto JSON antes de buscar arquivos dos inventários históricos. Não restaurar pacotes inteiros automaticamente. Manter só recursos necessários no projeto.
+A pedido explícito do usuário, assets sem uso foram retirados do projeto em 27/10/2026 e novamente em 17/11/2026, sempre preservados em arquivo externo. Consulte documentacao/LIMPEZA_ASSETS.md e o manifesto JSON antes de buscar arquivos dos inventários históricos. Não restaurar pacotes inteiros automaticamente. Manter só recursos necessários no projeto.
 
 Revisão de 28/10/2026: avançar fase por fase, começando pelo Jardim. Leia documentacao/REVISAO_JARDIM_2026-10-28.md. Use --fase=1 nos argumentos do gerador para reconstruir só a primeira cena. Preserve a placa na sala inferior e o cristal na sala superior, o baú de cura única, objetivos por etapa e os prompts contextuais. Validar também testes/verificar_jardim.gd (28 verificações), além das suítes pertinentes. As cenas 02/03/04 ainda aguardam sua revisão individual.
 
