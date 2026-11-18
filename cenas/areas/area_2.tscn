@@ -1,7 +1,5 @@
 [gd_scene format=4 uid="uid://dupmn2nmkpuk5"]
 
-[ext_resource type="Script" path="res://scripts/areas/base_area.gd" id="apresentacao_main"]
-
 [ext_resource type="PackedScene" uid="uid://cfa4rofxpk6tb" path="res://cenas/objects/level_specifics/level_spawn_master.tscn" id="1_2bwkl"]
 [ext_resource type="PackedScene" uid="uid://cuunxdtlugmkd" path="res://cenas/objects/respawn/level_spawn.tscn" id="2_c8vm5"]
 [ext_resource type="PackedScene" path="res://cenas/objects/respawn/level_spawn_player1.tscn" id="2_spawn_p1"]
@@ -18,6 +16,7 @@
 [ext_resource type="Script" uid="uid://csb2jua4p2gah" path="res://scripts/signals/signal_gate.gd" id="11_lfk0j"]
 [ext_resource type="Script" uid="uid://do47hl3ofp7c0" path="res://scripts/signals/signal_gate_input.gd" id="12_7fv5k"]
 [ext_resource type="PackedScene" uid="uid://cb4m783cpr5nu" path="res://cenas/objects/non-interactable/wall.tscn" id="12_uurpo"]
+[ext_resource type="Script" uid="uid://dlsnmww7ghg71" path="res://scripts/areas/base_area.gd" id="apresentacao_main"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_jxv52"]
 tile_data = PackedInt32Array(0, 327685, 1, 65536, 327685, 2, 131072, 327685, 3, 196608, 327685, 5, 1, 393221, 1, 65537, 393221, 2, 131073, 393221, 3, 196609, 393221, 5, 2, 458757, 1, 65538, 458757, 2, 131074, 458757, 3, 196610, 458757, 5)
@@ -774,8 +773,8 @@ script = ExtResource("apresentacao_main")
 fase_historia = 2
 
 [node name="LevelSpawnMaster" parent="." unique_id=1558837417 instance=ExtResource("1_2bwkl")]
-spawn_ativo_player1 = "player1_spawn2"
-spawn_ativo_player2 = "player2_spawn2"
+spawn_ativo_player1 = "player1_spawn1"
+spawn_ativo_player2 = "player2_spawn1"
 
 [node name="player1_spawn1" parent="LevelSpawnMaster" unique_id=1022907120 instance=ExtResource("2_spawn_p1")]
 position = Vector2(442.07986, 517.19415)
