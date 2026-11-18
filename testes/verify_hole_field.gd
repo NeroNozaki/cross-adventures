@@ -123,6 +123,14 @@ func run() -> void:
 		await wait_frames(3)
 		check(player1.esta_sobre_buraco(), "heroi real colide com o corpo de buraco criado em area_3")
 
+	await create_timer(0.65).timeout
+	var historia := root.get_node("HistoriaDupla")
+	if historia.ativa:
+		historia.finalizar()
+	area.queue_free()
+	world.queue_free()
+	await create_timer(0.15).timeout
+
 	if failures.is_empty():
 		print("HOLE_FIELD_OK: %d verificacoes de celulas inteiras, desligamento economico e colisao real em area_3." % total)
 		quit(0)

@@ -131,9 +131,15 @@ func _draw() -> void:
 	for i in range(1, rastro.size()):
 		var alfa: float = float(i) / float(rastro.size()) * 0.45
 		draw_line(to_local(rastro[i - 1]), to_local(rastro[i]), Color(cor, alfa), raio * 1.1, true)
-	draw_circle(Vector2.ZERO, raio * 1.7, Color(cor, 0.15))
-	draw_circle(Vector2.ZERO, raio, cor)
-	draw_circle(Vector2(-raio * 0.25, -raio * 0.25), raio * 0.45, Color("f3ffff"))
+	draw_circle(Vector2.ZERO, raio * 1.85, Color(cor, 0.14))
+	draw_circle(Vector2.ZERO, raio * 1.38, Color(cor, 0.22))
+	var gema := PackedVector2Array([Vector2(0, -raio), Vector2(raio * 0.78, -raio * 0.44),
+		Vector2(raio, 0), Vector2(raio * 0.62, raio * 0.62), Vector2(0, raio),
+		Vector2(-raio * 0.75, raio * 0.43), Vector2(-raio, 0), Vector2(-raio * 0.56, -raio * 0.64)])
+	draw_colored_polygon(gema, cor.darkened(0.34))
+	draw_colored_polygon(PackedVector2Array([gema[0], gema[1], Vector2(0, raio * 0.13), gema[7]]), cor.lightened(0.45))
+	draw_colored_polygon(PackedVector2Array([gema[7], Vector2(0, raio * 0.13), gema[4], gema[5], gema[6]]), cor)
+	draw_circle(Vector2(-raio * 0.20, -raio * 0.36), maxf(0.8, raio * 0.23), Color("f1ffff"))
 	# Os pontos indicam os contatos com parede restantes.
 	for i in range(max_ricochetes - ricochetes):
 		draw_circle(Vector2(float(i) * 3.0 - float(max_ricochetes-ricochetes-1)*1.5, raio + 4.0), 0.8, Color(cor, 0.8))

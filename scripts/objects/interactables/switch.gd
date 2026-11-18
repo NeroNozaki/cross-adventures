@@ -83,21 +83,9 @@ func travar_estado_atual() -> void:
 func _set_state(new_state: StringName) -> void:
 	state = new_state
 	animation.play(state)
-	# maintain backward compat if anything listens
-	if has_signal("state_changed"):
-		pass
-	match state:
-		RED:
-			if has_signal("turned_red"):
-				pass
-		BLUE:
-			if has_signal("turned_blue"):
-				pass
-		GOLD:
-			if has_signal("turned_gold"):
-				pass
-	# publish visual state too if someone expects old values? but we want bool - keep minimal compat
-	SignalBus.publish(channel, state) if channel != &"" else null
+	# Receptores também podem consultar o estado antes do sinal liga/desliga.
+	if channel != &"":
+		SignalBus.publish(channel, state)
 
 
 func _restore_hit_marker() -> void:

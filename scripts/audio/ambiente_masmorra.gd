@@ -8,6 +8,12 @@ const RANGIDOS: Array[AudioStream] = [
 	preload("res://assets/SONS/AMBIENTE/PORTAS_E_RANGIDOS/KENNEY_RPG_AUDIO/creak2.ogg"),
 	preload("res://assets/SONS/AMBIENTE/PORTAS_E_RANGIDOS/KENNEY_RPG_AUDIO/creak3.ogg")]
 const MUSICA = preload("res://assets/Ninja Adventure - Asset Pack/Audio/Musics/21 - Dungeon.ogg")
+const GALERIA := "res://assets/SONS/AMBIENTE/MASMORRA/galeria_das_plataformas.wav"
+const SAIDA := "res://assets/SONS/AMBIENTE/MASMORRA/caminho_da_saida.wav"
+const BRASA := "res://assets/SONS/AMBIENTE/MASMORRA/brasa_tocha.wav"
+var brasas: Array[AudioStreamPlayer2D] = []
+var posicoes_tochas := PackedVector2Array()
+var atualizar_brasas_em := 0.0
 var fase := 1
 var aleatorio := RandomNumberGenerator.new()
 var ar: AudioStreamPlayer
@@ -18,6 +24,10 @@ var fontes: Array[Vector2] = []
 var proxima_gota := 1.5
 var proximo_rangido := 14.0
 var ultima_fonte := -1
+const QUEDA_GOTA := 0.34
+var ponto_da_gota := Vector2.ZERO
+var gota_pendente: AudioStreamPlayer2D
+var impacto_em := 0.0
 var ultimo_rangido := -1
 var tempo := 0.0
 var entrada := 0.0
@@ -30,7 +40,12 @@ func _ready() -> void:
 	_localizar_fontes()
 	ar = _camada(VENTO, &"ArMasmorra")
 	ar.pitch_scale = 0.68
-	musica = _camada(MUSICA, &"MusicaMasmorra")
+	var trilha: AudioStream = MUSICA
+	if fase == 2:
+		trilha = load(GALERIA)
+	elif fase == 3:
+		trilha = load(SAIDA)
+	musica = _camada(trilha, &"MusicaMasmorra")
 	for i in 3:
 		var gota := _fonte()
 		gota.stream = GOTA
@@ -111,6 +126,34 @@ func _camada(stream: AudioStream, bus: StringName) -> AudioStreamPlayer:
 	audio.play()
 	return audio
 
+func definir_tochas(locais: PackedVector2Array) -> void:
+	posicoes_tochas = locais.duplicate()
+	if posicoes_tochas.is_empty():
+		return
+	var fogo := (load(BRASA) as AudioStreamWAV).duplicate() as AudioStreamWAV
+	fogo.loop_mode = AudioStreamWAV.LOOP_FORWARD
+	fogo.loop_end = roundi(fogo.get_length() * fogo.mix_rate)
+	for i in mini(posicoes_tochas.size(), 2):
+		var brasa := _fonte()
+		brasa.stream = fogo
+		brasa.volume_db = -19.0
+		brasa.max_distance = 330.0
+		brasa.attenuation = 0.82
+		brasa.pitch_scale = 0.92 + i * 0.10
+		brasas.append(brasa)
+		brasa.play(float(i) * 1.25)
+	_aproximar_brasas()
+
+func _aproximar_brasas() -> void:
+	var camera := get_viewport().get_camera_2d()
+	var centro := camera.get_screen_center_position() if camera else Vector2.ZERO
+	var locais: Array[Vector2] = []
+	locais.assign(Array(posicoes_tochas))
+	locais.sort_custom(func(a: Vector2, b: Vector2) -> bool:
+		return a.distance_squared_to(centro) < b.distance_squared_to(centro))
+	for i in brasas.size():
+		brasas[i].global_position = locais[i]
+
 func _fonte() -> AudioStreamPlayer2D:
 	var audio := AudioStreamPlayer2D.new()
 	audio.bus = &"AmbMasmorra"
@@ -139,32 +182,47 @@ func _process(delta: float) -> void:
 	var suspenso: bool = FluxoTela.em_transicao or (get_tree().paused and not lendo)
 	for audio in [ar, musica]:
 		audio.stream_paused = suspenso or HistoriaDupla.silenciado
+	for brasa in brasas:
+		brasa.stream_paused = suspenso or HistoriaDupla.silenciado or lendo
 	for gota in gotas:
 		gota.stream_paused = suspenso or HistoriaDupla.silenciado or lendo
 	rangido.stream_paused = suspenso or HistoriaDupla.silenciado or lendo
-	if suspenso or HistoriaDupla.silenciado:
+	if suspenso:
 		return
 	tempo += delta
 	entrada = minf(1.0, entrada + delta / 2.5)
 	var leitura_db := -8.0 if lendo else 0.0
 	var atenuacao := linear_to_db(maxf(0.001, entrada))
 	ar.volume_db = lerpf(ar.volume_db, -24.0 + sin(tempo * 0.21) * 1.3 + leitura_db + atenuacao, minf(1, delta * 2))
-	musica.volume_db = lerpf(musica.volume_db, -25.0 + leitura_db + atenuacao, minf(1, delta * 3))
+	var volume_trilha := -25.0 if fase == 1 else -17.0
+	musica.volume_db = lerpf(musica.volume_db, volume_trilha + leitura_db + atenuacao, minf(1, delta * 3))
+	atualizar_brasas_em -= delta
+	if atualizar_brasas_em <= 0.0 and not brasas.is_empty():
+		_aproximar_brasas()
+		atualizar_brasas_em = 0.50
 	if lendo:
 		return
+	if is_instance_valid(gota_pendente):
+		impacto_em -= delta
+		if impacto_em <= 0.0:
+			if not HistoriaDupla.silenciado:
+				gota_pendente.play()
+			evento_ambiente.emit(&"impacto_gota")
+			gota_pendente = null
 	proxima_gota -= delta
 	proximo_rangido -= delta
 	if proxima_gota <= 0:
 		_emitir_gota()
 		proxima_gota = aleatorio.randf_range(0.9, 3.2) if fase == 2 else aleatorio.randf_range(2.0, 5.5)
 	if proximo_rangido <= 0:
-		_emitir_rangido()
-		proximo_rangido = aleatorio.randf_range(16.0, 32.0)
+		if not HistoriaDupla.silenciado:
+			_emitir_rangido()
+		proximo_rangido = aleatorio.randf_range(13.0, 25.0) if fase != 2 else aleatorio.randf_range(24.0, 37.0)
 
 
 
 func _emitir_gota() -> void:
-	if fontes.is_empty():
+	if fontes.is_empty() or is_instance_valid(gota_pendente):
 		return
 	for gota in gotas:
 		if gota.playing:
@@ -173,10 +231,12 @@ func _emitir_gota() -> void:
 		if fontes.size() > 1 and indice == ultima_fonte:
 			indice = (indice + 1) % fontes.size()
 		ultima_fonte = indice
-		gota.position = fontes[indice] + Vector2(aleatorio.randf_range(-12, 12), 0)
+		gota.position = fontes[indice] + Vector2(aleatorio.randi_range(-10, 10), 0)
+		ponto_da_gota = gota.position
 		gota.pitch_scale = aleatorio.randf_range(0.82, 1.16)
 		gota.volume_db = aleatorio.randf_range(-17, -13)
-		gota.play()
+		gota_pendente = gota
+		impacto_em = QUEDA_GOTA
 		evento_ambiente.emit(&"gota")
 		return
 

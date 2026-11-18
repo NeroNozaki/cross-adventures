@@ -9,8 +9,10 @@ const PASSO = preload("res://assets/SONS/PASSOS/PEDRA_CONCRETO/KENNEY_IMPACT_SOU
 const CLIQUE = preload("res://assets/SONS/INTERFACE/CLIQUES/KENNEY_INTERFACE_SOUNDS/click_002.ogg")
 const SELECAO = preload("res://assets/SONS/INTERFACE/SELECAO/KENNEY_INTERFACE_SOUNDS/select_001.ogg")
 const ESCRITA = preload("res://assets/SONS/INTERFACE/OUTROS/KENNEY_INTERFACE_SOUNDS/tick_001.ogg")
-const MOLDURA = preload("res://assets/INTERFACE/botao_reliquia.svg")
-const CHAMADA := "Preparados para esta aventura?"
+const TEMA = preload("res://scripts/screens/tema_masmorra.gd")
+const CARTELA := "res://assets/INTERFACE/letreiro_abertura.svg"
+const CHAMADA := "esta aventura?"
+var letreiro: TextureRect
 var tempo := 0.0
 var tempo_saida := -1.0
 var partindo := false
@@ -56,12 +58,21 @@ func _ready() -> void:
 	capa.z_index = -1
 	capa.position = Vector2(0, -1)
 	dupla[0].add_child(capa)
-	chamada = _texto(CHAMADA, 24, Color("ffdc94"))
-	chamada.position.y = 32
+	letreiro = TextureRect.new()
+	letreiro.texture = load(CARTELA)
+	letreiro.size = Vector2(312, 128)
+	letreiro.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	letreiro.modulate.a = 0.0
+	add_child(letreiro)
+	resized.connect(_posicionar_letreiro)
+	_posicionar_letreiro()
+	var apresentacao := _texto("Preparados para", 15, TEMA.OURO, 27, 19)
+	TEMA.letra(apresentacao, 15)
+	chamada = _texto(CHAMADA, 28, Color("ffe4a5"), 45, 31)
+	TEMA.letra(chamada, 28)
 	chamada.visible_characters = 0
-	convite = _texto("Quatro desafios e muitos segredos.\nAjudem Nico e Otto a encontrar a saída!", 14, Color("f7f2df"))
-	convite.position.y = 75
-	convite.modulate.a = 0
+	convite = _texto("Ajudem Nico e Otto a atravessar três salas.", 11, Color("edf3e8"), 85, 18)
+	convite.modulate.a = 0.0
 	seguir = _botao("Vamos juntos!", _entrar)
 	seguir.set_anchors_and_offsets_preset(Control.PRESET_CENTER_BOTTOM)
 	seguir.offset_left = -103
@@ -86,34 +97,29 @@ func _ready() -> void:
 	pular.grab_focus()
 	_atualizar_cena()
 
-func _texto(conteudo: String, tamanho: int, cor: Color) -> Label:
+func _posicionar_letreiro() -> void:
+	letreiro.position = Vector2(maxf(14, size.x * 0.36 - letreiro.size.x * 0.5), 26).round()
+
+func _texto(conteudo: String, tamanho: int, cor: Color, y: float, altura: float) -> Label:
 	var label := Label.new()
 	label.text = conteudo
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	label.add_theme_font_size_override("font_size", tamanho)
 	label.add_theme_color_override("font_color", cor)
 	label.add_theme_color_override("font_shadow_color", Color(0.015, 0.04, 0.06, 0.95))
 	label.add_theme_constant_override("shadow_offset_x", 1)
 	label.add_theme_constant_override("shadow_offset_y", 2)
 	label.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	add_child(label)
+	letreiro.add_child(label)
+	label.position = Vector2(14, y)
+	label.size = Vector2(284, altura)
 	return label
 
 func _botao(rotulo: String, acao: Callable) -> Button:
 	var botao := Button.new()
 	botao.text = rotulo
-	botao.add_theme_font_size_override("font_size", 16)
-	for estado in ["normal", "hover", "focus", "pressed", "disabled"]:
-		var estilo := StyleBoxTexture.new()
-		estilo.texture = MOLDURA
-		estilo.texture_margin_left = 15
-		estilo.texture_margin_right = 15
-		estilo.texture_margin_top = 5
-		estilo.texture_margin_bottom = 5
-		estilo.set_content_margin_all(8)
-		estilo.modulate_color = Color(1.2, 1.15, 1) if estado in ["hover", "focus"] else Color.WHITE
-		botao.add_theme_stylebox_override(estado, estilo)
+	TEMA.botao(botao, rotulo in ["Vamos juntos!", "Voltar ao início"], 16, 26)
 	botao.mouse_entered.connect(func(): _som_ui(SELECAO))
 	botao.focus_entered.connect(func(): _som_ui(SELECAO))
 	botao.pressed.connect(func(): _som_ui(CLIQUE); acao.call())
@@ -163,6 +169,7 @@ func _process(delta: float) -> void:
 		return
 	tempo += delta
 	_atualizar_cena()
+	letreiro.modulate.a = smoothstep(0.05, 0.46, tempo)
 	var letras := clampi(int((tempo - 0.45) * 23.0), 0, CHAMADA.length())
 	chamada.visible_characters = letras
 	if letras != ultima_letra and letras > 0 and letras % 2 == 0 and not HistoriaDupla.silenciado:
@@ -189,9 +196,6 @@ func _atualizar_cena() -> void:
 	var arte := _retangulo_arte()
 	fundo.position = arte.position
 	fundo.size = arte.size
-	for label in [chamada, convite]:
-		label.position.x = maxf(14, size.x * 0.5 - 280)
-		label.size.x = minf(560, size.x - 28)
 	for i in dupla.size():
 		var heroi := dupla[i]
 		var andando := tempo < 4 or partindo

@@ -1,14 +1,17 @@
 extends Control
 class_name PauseMenu
 
+const TEMA = preload("res://scripts/screens/tema_masmorra.gd")
+const GUIA = preload("res://scripts/screens/guia_masmorra.gd")
+const SONS = preload("res://scripts/screens/sons_menu.gd")
 const CENA_INICIAL := "res://cenas/screens/start_menu.tscn"
 
 @onready var _resume: Button = $VBoxContainer/resume
 
 var _saindo := false
 var _painel: Panel
-var _guia: PanelContainer
-var _som: AudioStreamPlayer
+var _guia: GUIA
+var _som: SONS
 var _guia_solitario := false
 
 
@@ -29,11 +32,7 @@ func _aplicar_visual() -> void:
 	_painel.offset_right = 145
 	_painel.offset_top = -124
 	_painel.offset_bottom = 124
-	var moldura := StyleBoxTexture.new()
-	moldura.texture = load("res://assets/Ninja Adventure - Asset Pack/Ui/Theme/Wip/ThemeMetal3/nine_path_panel.png")
-	for lado in [SIDE_LEFT, SIDE_TOP, SIDE_RIGHT, SIDE_BOTTOM]:
-		moldura.set_texture_margin(lado, 5)
-	_painel.add_theme_stylebox_override("panel", moldura)
+	_painel.add_theme_stylebox_override("panel", TEMA.painel(12))
 	_painel.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	add_child(_painel)
 	move_child(_painel, 1)
@@ -44,131 +43,46 @@ func _aplicar_visual() -> void:
 	coluna.offset_bottom = 104
 	coluna.add_theme_constant_override("separation", 8)
 	$VBoxContainer/label.text = "Pausa da aventura"
-	$VBoxContainer/label.add_theme_font_size_override("font_size", 19)
+	TEMA.letra($VBoxContainer/label, 19)
 	$VBoxContainer/label.add_theme_color_override("font_color", Color("f4d494"))
-	_som = AudioStreamPlayer.new()
-	_som.volume_db = -20
+	_som = SONS.new()
 	add_child(_som)
 	var textos := {"resume": "Continuar", "controls": "Como jogar", "exit": "Sair do jogo", "menu": "Voltar ao início"}
 	for botao in coluna.get_children():
 		if not botao is Button:
 			continue
 		botao.text = textos[botao.name]
-		botao.custom_minimum_size.y = 30
-		botao.add_theme_font_size_override("font_size", 14)
-		for estado in ["normal", "hover", "pressed", "focus", "disabled"]:
-			var estilo := StyleBoxTexture.new()
-			estilo.texture = load("res://assets/INTERFACE/botao_reliquia.svg")
-			estilo.texture_margin_left = 15
-			estilo.texture_margin_right = 15
-			estilo.texture_margin_top = 5
-			estilo.texture_margin_bottom = 5
-			estilo.modulate_color = Color(1.17, 1.13, 1) if estado in ["hover", "focus"] else Color.WHITE
-			botao.add_theme_stylebox_override(estado, estilo)
-		botao.mouse_entered.connect(_som_ui.bind(false))
-		botao.focus_entered.connect(_som_ui.bind(false))
-		botao.button_down.connect(_som_ui.bind(true))
+		TEMA.botao(botao, botao == _resume, 14, 30)
+		_som.ligar(botao, &"" if botao.name == &"controls" else &"clique")
 	$VBoxContainer/controls.pressed.connect(_mostrar_guia)
-
-func _som_ui(clique: bool) -> void:
-	if HistoriaDupla.silenciado:
-		return
-	_som.stream = load("res://assets/SONS/INTERFACE/CLIQUES/KENNEY_INTERFACE_SOUNDS/click_002.ogg" if clique else "res://assets/SONS/INTERFACE/SELECAO/KENNEY_INTERFACE_SOUNDS/select_001.ogg")
-	_som.play()
 
 func _mostrar_guia() -> void:
 	if is_instance_valid(_guia):
 		return
-	_guia = PanelContainer.new()
-	_guia.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
-	_guia.offset_left = -228
-	_guia.offset_right = 228
-	_guia.offset_top = -174
-	_guia.offset_bottom = 174
-	_guia.add_theme_stylebox_override("panel", _painel.get_theme_stylebox("panel"))
+	$VBoxContainer.hide()
+	_painel.hide()
+	_guia = GUIA.new()
+	_guia.name = "Guia"
+	_guia.fechar.connect(_fechar_guia)
+	_guia.modulate.a = 0.72
 	add_child(_guia)
-	var margem := MarginContainer.new()
-	margem.add_theme_constant_override("margin_left", 20)
-	margem.add_theme_constant_override("margin_right", 20)
-	margem.add_theme_constant_override("margin_top", 18)
-	margem.add_theme_constant_override("margin_bottom", 18)
-	_guia.add_child(margem)
-	var coluna := VBoxContainer.new()
-	coluna.add_theme_constant_override("separation", 12)
-	margem.add_child(coluna)
-	var titulo := Label.new()
-	titulo.text = "Cada amigo tem um talento!"
-	titulo.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	titulo.add_theme_font_size_override("font_size", 18)
-	titulo.add_theme_color_override("font_color", Color("f4d494"))
-	coluna.add_child(titulo)
-	for dados in [["Nico", "player1_fixed", "W A S D ou analógico esquerdo: andar\nF / X azul: golpe · G / B vermelho: escudo"], ["Otto", "player2", "Setas: andar · Mouse: mirar\nClique esquerdo: disparar · Segure para carregar\nClique direito: dar um impulso"]]:
-		var linha := HBoxContainer.new()
-		linha.add_theme_constant_override("separation", 16)
-		coluna.add_child(linha)
-		var retrato := TextureRect.new()
-		var quadros: SpriteFrames = load("res://recursos/personagens/%s.tres" % dados[1])
-		var quadro := quadros.get_frame_texture("idle_down", 0)
-		var recorte := AtlasTexture.new()
-		recorte.atlas = quadro
-		recorte.region = quadro.get_image().get_used_rect()
-		retrato.texture = recorte
-		retrato.custom_minimum_size = Vector2(44, 54)
-		retrato.size_flags_vertical = Control.SIZE_SHRINK_CENTER
-		retrato.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		retrato.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-		retrato.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
-		linha.add_child(retrato)
-		var comandos := VBoxContainer.new()
-		comandos.add_theme_constant_override("separation", 6)
-		linha.add_child(comandos)
-		var texto := Label.new()
-		texto.text = "%s\n%s" % [dados[0], dados[2]]
-		texto.add_theme_font_size_override("font_size", 13)
-		comandos.add_child(texto)
-		var teclas := HBoxContainer.new()
-		teclas.add_theme_constant_override("separation", 4)
-		comandos.add_child(teclas)
-		var arquivos := ["Keyboard/KeyW", "Keyboard/KeyA", "Keyboard/KeyS", "Keyboard/KeyD", "Keyboard/KeyF", "Keyboard/KeyG"] if dados[0] == "Nico" else ["Keyboard/KeyUp", "Keyboard/KeyDown", "Keyboard/KeyLeft", "Keyboard/KeyRight", "Mouse/MouseButtonLeft"]
-		for arquivo in arquivos:
-			var icone := TextureRect.new()
-			icone.texture = load("res://assets/Ninja Adventure - Asset Pack/Ui/Input/%s.png" % arquivo)
-			icone.custom_minimum_size = Vector2(18, 18)
-			icone.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-			icone.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-			icone.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
-			teclas.add_child(icone)
-		if dados[0] == "Nico":
-			var alternativa := Label.new()
-			alternativa.text = " ou "
-			alternativa.add_theme_font_size_override("font_size",11)
-			teclas.add_child(alternativa)
-			for arquivo in ["JoystickLeft", "ButtonX/Idle", "ButtonB/Idle"]:
-				var icone := TextureRect.new()
-				icone.texture = load("res://assets/Ninja Adventure - Asset Pack/Ui/Input/Gamepad/%s.png" % arquivo)
-				icone.custom_minimum_size = Vector2(22,22)
-				icone.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-				icone.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-				icone.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
-				teclas.add_child(icone)
-	var voltar := Button.new()
-	voltar.text = "Entendi!"
-	voltar.custom_minimum_size.y = 30
-	voltar.add_theme_font_size_override("font_size", 14)
-	for estado in ["normal", "hover", "focus", "pressed"]:
-		voltar.add_theme_stylebox_override(estado, _resume.get_theme_stylebox(estado))
-	voltar.pressed.connect(_fechar_guia)
-	coluna.add_child(voltar)
-	voltar.grab_focus()
+	_guia.voltar.grab_focus()
+	_som.ligar(_guia.voltar, &"")
+	_som.tocar(&"abrir")
+	_guia.create_tween().tween_property(_guia, "modulate:a", 1.0, 0.15)
 
 func _fechar_guia() -> void:
 	if _guia_solitario:
 		queue_free()
 		return
-	if is_instance_valid(_guia):
-		_guia.queue_free()
-		_guia = null
+	if not is_instance_valid(_guia):
+		return
+	_guia.queue_free()
+	_guia = null
+	$VBoxContainer.show()
+	_painel.show()
 	$VBoxContainer/controls.grab_focus()
+	_som.tocar(&"fechar")
 
 func abrir_guia_solitario() -> void:
 	_guia_solitario = true
@@ -181,6 +95,8 @@ func abrir_guia_solitario() -> void:
 func abrir() -> void:
 	_saindo = false
 	_definir_botoes_ativos(true)
+	$VBoxContainer.show()
+	_painel.show()
 	show()
 	modulate.a = 0.0
 	create_tween().tween_property(self, "modulate:a", 1.0, 0.16)

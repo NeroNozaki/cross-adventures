@@ -1,4 +1,6 @@
-# Cross Adventures
+# Cross Adventures — registro do protótipo
+
+> Para a campanha atual, os controles e a apresentação, consulte o [README principal](README.md).
 
 Projeto real: C:\Users\finan\OneDrive\Documentos\cross-adventures.
 

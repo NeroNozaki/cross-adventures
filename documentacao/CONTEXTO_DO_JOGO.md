@@ -1,5 +1,7 @@
 # Cross Adventures — referência do projeto
 
+Para a versão jogável atual, comece pelo [README](../README.md) e pelo [roteiro de apresentação](APRESENTACAO.md). As entradas históricas abaixo registram protótipos, controles e estruturas de etapas anteriores.
+
 ## Integração dos três mapas da main — 18/11/2026
 
 A campanha em `dev/mapas-main-polidos` parte de `main` em `b07c03f`. A sequência é menu → abertura animada → `area_1` → `area_2` → `area_3` → encerramento. `area_4` é um rascunho de terreno: a campanha termina depois da terceira área. A branch `dev/new-player1` segue com a sequência própria `puzzle_01` → `puzzle_02` → `area_3` → `puzzle_04`.
@@ -15,6 +17,14 @@ As TileMapLayers, coordenadas, colisões, canais de puzzle e pontos de retorno s
 O acabamento funciona sobre os mapas carregados: paleta por área, luz de tochas em piso, foco nos cristais, sombras de contato, desgaste do chão e bordas de abismo, trilhos das plataformas e confirmação visual/sonora das placas e cristais. A câmera mantém o enquadramento vertical da main e se centra na largura do terreno. O vento, a música, os pingos de parede e os rangidos usam arquivos existentes. O sprite de Nico acompanha o passo e a capa tem movimento discreto. Os disparadores de parede agora respeitam a configuração inicial e têm um brilho breve antes de disparar. Os que já começavam ativos continuam com essa configuração no mapa.
 
 Para reproduzir a validação do fluxo, execute `godot --headless --path . --script res://testes/verificar_integracao_main.gd`. O teste aciona diretamente as duas entradas do gatilho de saída. Os testes de mecanismos exercitam separadamente os cristais, portões, plataformas, abismos, respawn, mira e armadilhas.
+
+O acabamento visual usa as molduras e os botões pixelados de `assets/INTERFACE` no menu, na pausa, no HUD e nas conversas. A capa anima a luz das tochas e do cristal, com partículas sobre a arte existente. As três salas têm sombras junto às paredes e aos personagens, detalhes de pedra no piso e luz local nos mecanismos. As placas passam pelo quadro intermediário da animação original ao mudar de estado. As conversas exibem retrato, progresso e os botões Continuar e Pular tudo em um painel curto que se posiciona longe dos personagens.
+
+O guia compartilhado apresenta Nico e Otto em dois cartões, com retratos recortados da textura da capa e ícones individuais para teclado, controle e mouse. A capa mantém o letreiro em posição fixa, com brilho na superfície, água em movimento e luz pulsante nas tochas. A abertura e o fechamento do guia têm sons próprios. Nas salas, o som da gota coincide com o respingo e a onda no piso, e o visual permanece disponível com o áudio desligado.
+
+Nico e Otto têm movimento de repouso na ilustração do menu. O sombreamento da capa anima ombros e cabeças com ritmos independentes, a ponta da capa de Nico e as luzes de Otto. A fonte Cross Inscrição, desenhada para o jogo, identifica botões, nomes e títulos curtos. Os textos de instrução e as falas usam a fonte de leitura da campanha.
+
+Na abertura, o letreiro de bronze e cristal apresenta as três salas e deixa o portal à vista. Cada área declara os encaixes de arandelas e estátuas na sua alvenaria. As coordenadas são verificadas contra as camadas do mapa antes de desenhar a peça. Musgo e rachaduras acompanham as juntas junto às paredes, e os vãos têm bordas sombreadas. Os receptores usam a pedra entalhada e a gema dos três estados. As fases mantêm o Dungeon nas celas e usam trilhas compostas para a galeria e a saída, com brasa espacial nas tochas e rangido sincronizado com as grades.
 
 Fonte principal de design: `documentacao/SGDD - Cross Adventures.pdf`, 1 página, por Protetores da Juventude. O usuário entregou o documento e o definiu como referência para as próximas instruções em 21/10/2026. O conteúdo descreve o produto; o checklist do PDF não autoriza executar automaticamente todas as funcionalidades.
 

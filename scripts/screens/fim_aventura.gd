@@ -8,7 +8,7 @@ const PASSO = preload("res://assets/SONS/PASSOS/PEDRA_CONCRETO/KENNEY_IMPACT_SOU
 const ESCRITA = preload("res://assets/SONS/INTERFACE/OUTROS/KENNEY_INTERFACE_SOUNDS/tick_001.ogg")
 const CLIQUE = preload("res://assets/SONS/INTERFACE/CLIQUES/KENNEY_INTERFACE_SOUNDS/click_002.ogg")
 const SELECAO = preload("res://assets/SONS/INTERFACE/SELECAO/KENNEY_INTERFACE_SOUNDS/select_001.ogg")
-const MOLDURA = preload("res://assets/INTERFACE/botao_reliquia.svg")
+const TEMA = preload("res://scripts/screens/tema_masmorra.gd")
 const MENSAGEM := "Cada ideia conta. Cada amigo importa.\nContinuem aprendendo, tentem de novo e ajudem uns aos outros.\nJuntos, vocês podem ir mais longe!"
 var tempo := 0.0
 var pronto := false
@@ -66,12 +66,8 @@ func _criar_mensagem() -> void:
 	painel.set_anchors_and_offsets_preset(Control.PRESET_CENTER_TOP)
 	painel.offset_top = 24
 	painel.offset_bottom = 166
-	var estilo := StyleBoxTexture.new()
-	estilo.texture = load("res://assets/Ninja Adventure - Asset Pack/Ui/Theme/Wip/ThemeMetal3/nine_path_panel.png")
-	for lado in [SIDE_LEFT,SIDE_TOP,SIDE_RIGHT,SIDE_BOTTOM]:
-		estilo.set_texture_margin(lado,5)
-		estilo.set_content_margin(lado,12)
-	painel.add_theme_stylebox_override("panel",estilo)
+	painel.add_theme_stylebox_override("panel", TEMA.painel(12))
+	painel.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	add_child(painel)
 	var coluna := VBoxContainer.new()
 	coluna.add_theme_constant_override("separation",8)
@@ -124,17 +120,7 @@ func _criar_mensagem() -> void:
 func _botao(rotulo: String, acao: Callable) -> Button:
 	var botao := Button.new()
 	botao.text = rotulo
-	botao.add_theme_font_size_override("font_size",14)
-	for estado in ["normal","hover","pressed","focus","disabled"]:
-		var estilo := StyleBoxTexture.new()
-		estilo.texture = MOLDURA
-		estilo.texture_margin_left = 15
-		estilo.texture_margin_right = 15
-		estilo.texture_margin_top = 5
-		estilo.texture_margin_bottom = 5
-		estilo.set_content_margin_all(8)
-		estilo.modulate_color = Color(1.2,1.15,1) if estado in ["hover","focus"] else Color.WHITE
-		botao.add_theme_stylebox_override(estado,estilo)
+	TEMA.botao(botao, rotulo in ["Vamos juntos!", "Voltar ao início"], 14, 26)
 	botao.mouse_entered.connect(func(): _som(SELECAO))
 	botao.focus_entered.connect(func(): _som(SELECAO))
 	botao.pressed.connect(func(): _som(CLIQUE); acao.call())

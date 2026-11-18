@@ -1,5 +1,7 @@
 extends SceneTree
 
+const ARENA_LEGADA := "res://cenas/testes/arena_teste.tscn"
+
 var failures: Array[String] = []
 var total: int = 0
 
@@ -31,6 +33,10 @@ func make_hole(parent: Node, position: Vector2, size: Vector2 = Vector2(32, 32))
 	return hole
 
 func run() -> void:
+	if not ResourceLoader.exists(ARENA_LEGADA):
+		print("IGNORADO: o teste de dash com inimigos usa uma arena de protótipo.")
+		quit(77)
+		return
 	AudioServer.set_bus_mute(0, true)
 	check(PhysicsLayers.HOLES == 7, "layer de buracos usa o indice 7")
 	check(ProjectSettings.get_setting("layer_names/2d_physics/layer_7") == "Buracos", "layer de buracos tem nome no projeto")
@@ -43,7 +49,7 @@ func run() -> void:
 	left_click.button_index = MOUSE_BUTTON_LEFT
 	check(InputMap.event_is_action(left_click, "player2_atacar") and not InputMap.event_is_action(left_click, "player2_dash"), "clique esquerdo continua apenas no tiro")
 
-	var arena: Node2D = load("res://cenas/testes/arena_teste.tscn").instantiate()
+	var arena: Node2D = load(ARENA_LEGADA).instantiate()
 	root.add_child(arena)
 	current_scene = arena
 	await wait_physics()

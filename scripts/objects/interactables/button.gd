@@ -7,6 +7,7 @@ extends Interactable
 
 var bodies_on_button: int = 0
 var pressed: bool = false
+var _encaixe: Tween
 
 signal state_changed(pressed: bool)
 
@@ -43,7 +44,7 @@ func _press() -> void:
 		return
 	if bodies_on_button >= 1 and not pressed:
 		pressed = true
-		animation.play("3-pressed")
+		_animar_placa(&"3-pressed")
 		if has_signal("state_changed"):
 			state_changed.emit(pressed)
 		send_on_off(pressed)
@@ -54,7 +55,7 @@ func _release() -> void:
 		return
 	if bodies_on_button == 0:
 		pressed = false
-		animation.play("1-not_pressed")
+		_animar_placa(&"1-not_pressed")
 		if has_signal("state_changed"):
 			state_changed.emit(pressed)
 		send_on_off(pressed)
@@ -66,4 +67,14 @@ func travar_estado_atual() -> void:
 	travado = true
 	single_use = true
 	bodies_on_button = 999 if pressed else 0
+	if _encaixe and _encaixe.is_valid():
+		_encaixe.kill()
 	animation.play("3-pressed" if pressed else "1-not_pressed")
+
+func _animar_placa(destino: StringName) -> void:
+	if _encaixe and _encaixe.is_valid():
+		_encaixe.kill()
+	animation.play(&"2-transition")
+	_encaixe = create_tween()
+	_encaixe.tween_interval(0.065)
+	_encaixe.tween_callback(animation.play.bind(destino))
