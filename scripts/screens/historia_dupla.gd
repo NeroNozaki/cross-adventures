@@ -113,7 +113,7 @@ func _ready() -> void:
 		vinculo.visible = cena != null and cena is BaseArea)
 
 func iniciar_fase(numero: int) -> void:
-	fase = clampi(numero,1,4)
+	fase = clampi(numero,1,3)
 	_atualizar_vinculo()
 	await falar("inicio_%d"%fase,DADOS.FASES[str(fase)].inicio)
 
@@ -123,10 +123,10 @@ func concluir_fase(numero: int) -> void:
 		return
 	pontos = maxi(pontos,numero)
 	_atualizar_vinculo()
-	await falar(chave,DADOS.FASES[str(clampi(numero,1,4))].fim)
+	await falar(chave,DADOS.FASES[str(clampi(numero,1,3))].fim)
 
 func _atualizar_vinculo() -> void:
-	vinculo.text = "Amizade · "+["Desconfiados","Uma ajuda","Confiança","Parceria","Amigos"][clampi(pontos,0,4)]
+	vinculo.text = "Amizade %d/3 · %s" % [pontos, ["Conhecendo","Uma ajuda","Confiança","Amigos"][clampi(pontos,0,3)]]
 
 func falar(id: String, linhas: Array) -> void:
 	while FluxoTela.em_transicao:
@@ -186,6 +186,7 @@ func finalizar() -> void:
 func _process(delta: float) -> void:
 	if not ativa:
 		return
+	voz.stream_paused = silenciado
 	tempo += delta
 	var antes := int(letras)
 	letras = minf(texto.text.length(),letras+delta*28)
@@ -207,5 +208,7 @@ func _input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 		return
 	if event.is_action_pressed("ui_accept"):
+		if get_viewport().gui_get_focus_owner() != continuar:
+			return
 		avancar()
 		get_viewport().set_input_as_handled()

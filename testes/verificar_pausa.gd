@@ -34,16 +34,18 @@ func conectado(botao: Button, metodo: String) -> bool:
 func rodar() -> void:
 	AudioServer.set_bus_mute(0, true)
 	var script_area3: Script = load("res://scripts/areas/area3.gd")
-	var area3: Node = script_area3.new()
-	conferir(area3 is BaseArea, "area3 herda BaseArea")
-	area3.free()
-
-	var area := BaseArea.new()
+	conferir(script_area3.get_base_script().resource_path == "res://scripts/areas/base_area.gd", "area3 herda BaseArea")
+	var area = load("res://cenas/areas/area_3.tscn").instantiate()
 	root.add_child(area)
+	current_scene = area
 	await process_frame
 	await physics_frame
+	var historia = root.get_node("HistoriaDupla")
+	if historia.ativa:
+		historia.finalizar()
+	paused = false
 	var camada: CanvasLayer = area.get_node("CamadaPausa")
-	var menu: PauseMenu = camada.get_child(0)
+	var menu: Control = camada.get_child(0)
 	conferir(camada.layer < 100, "pausa fica abaixo do FluxoTela")
 	conferir(menu.process_mode == Node.PROCESS_MODE_ALWAYS, "menu funciona com a arvore pausada")
 	conferir(not menu.visible and not paused, "menu comeca escondido e jogo livre")
@@ -68,7 +70,12 @@ func rodar() -> void:
 	conferir(conectado(resume, "_on_resume_pressed"), "continuar esta conectado")
 	conferir(conectado(exit, "_on_exit_pressed"), "sair esta conectado")
 	conferir(conectado(menu_inicial, "_on_menu_pressed"), "voltar ao inicio esta conectado")
-	conferir(controls.get_signal_connection_list("pressed").is_empty(), "como jogar fica sem acao")
+	conferir(not controls.get_signal_connection_list("pressed").is_empty(), "como jogar tem ação")
+	controls.pressed.emit()
+	conferir(is_instance_valid(menu._guia), "guia visual aparece na pausa")
+	conferir(paused, "ler os controles mantém a pausa")
+	menu._fechar_guia()
+	conferir(not is_instance_valid(menu._guia), "guia fecha sem encerrar a pausa")
 
 	resume.pressed.emit()
 	conferir(not paused and not menu.visible, "continuar despausa e esconde o menu")
@@ -86,11 +93,11 @@ func rodar() -> void:
 	area._unhandled_input(esc)
 	menu_inicial.pressed.emit()
 	await create_timer(1.2, true).timeout
-	conferir(current_scene != null and current_scene.scene_file_path == PauseMenu.CENA_INICIAL, "menu inicial carrega via FluxoTela")
+	conferir(current_scene != null and current_scene.scene_file_path == "res://cenas/screens/start_menu.tscn", "menu inicial carrega via FluxoTela")
 	conferir(not paused, "jogo continua despausado apos a transicao")
+	current_scene.queue_free()
+	await process_frame
 
-	menu.free()
-	area.free()
 	await create_timer(0.3, true).timeout
 
 	if falhas.is_empty():

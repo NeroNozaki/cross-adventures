@@ -42,6 +42,9 @@ func rodar() -> void:
 	await quadros()
 	conferir(not fim.foi_iniciado(), "one hero alone does not finish the level")
 
+	# A mira atualiza a direção de Otto durante _physics_process.
+	player1.set_physics_process(false)
+	player2.set_physics_process(false)
 	player1.frente = Vector2.RIGHT
 	player1.direcao = "right"
 	player2.frente = Vector2.UP

@@ -12,6 +12,28 @@ var state: State = State.LOCKED
 
 var current_anchor: float = 0.0
 var target_y: float = 0.0
+var _margens_x := Vector2.ZERO
+
+
+func configurar_enquadramento(terreno: TileMapLayer) -> void:
+	var area := terreno.get_used_rect()
+	var metade := Vector2(terreno.tile_set.tile_size) * 0.5
+	var primeiro := terreno.to_global(terreno.map_to_local(area.position) - metade)
+	var ultimo := terreno.to_global(terreno.map_to_local(area.end - Vector2i.ONE) + metade)
+	_margens_x = Vector2(primeiro.x, ultimo.x)
+	_enquadrar_x(1.0)
+
+
+func _enquadrar_x(peso: float) -> void:
+	if _margens_x.x >= _margens_x.y or not player1 or not player2:
+		return
+	var largura := get_viewport_rect().size.x / zoom.x
+	var destino := (_margens_x.x + _margens_x.y - largura) * 0.5
+	if largura < _margens_x.y - _margens_x.x:
+		var centro := (player1.global_position.x + player2.global_position.x) * 0.5
+		destino = clampf(centro - largura * 0.5, _margens_x.x, _margens_x.y - largura)
+	# A câmera das áreas usa âncora no canto superior esquerdo.
+	global_position.x = lerpf(global_position.x, destino, peso)
 
 
 func _ready() -> void:
@@ -40,6 +62,7 @@ func _snap_to_players() -> void:
 		state = State.FLOATING
 		_update_floating_target(min_y, max_y)
 	global_position.y = target_y
+	_enquadrar_x(1.0)
 
 
 func _process(delta: float) -> void:
@@ -76,6 +99,7 @@ func _process(delta: float) -> void:
 
 	# Smooth movement
 	global_position.y = lerp(global_position.y, target_y, 1.0 - exp(-smooth_speed * delta))
+	_enquadrar_x(1.0 - exp(-smooth_speed * delta))
 
 	# Hard snap when very close while locked
 	if state == State.LOCKED and abs(global_position.y - target_y) < 0.5:

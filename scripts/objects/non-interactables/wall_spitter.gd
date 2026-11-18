@@ -10,10 +10,10 @@ extends NonInteractable
 @export var projectile_knockback: float = -1.0
 
 var _time_until_shot: float = 0.0
+@onready var _arte: AnimatedSprite2D = $animation
 
 
 func _ready() -> void:
-	start_activated = true
 	super._ready()
 	_time_until_shot = maxf(initial_delay, 0.0)
 	set_physics_process(_is_activated)
@@ -23,15 +23,20 @@ func _on_activated(activated: bool) -> void:
 	if activated:
 		_time_until_shot = maxf(initial_delay, 0.0)
 	set_physics_process(activated)
+	if not activated and is_instance_valid(_arte):
+		_arte.modulate = Color.WHITE
 
 
 func _physics_process(delta: float) -> void:
 	if not _is_activated or projectile_scene == null:
 		return
 	_time_until_shot -= delta
+	var aviso := 1.0 - clampf(_time_until_shot / 0.18, 0.0, 1.0)
+	_arte.modulate = Color.WHITE.lerp(Color(1.48, 1.14, 0.76), aviso)
 	if _time_until_shot > 0.0:
 		return
 	_shoot()
+	_arte.modulate = Color.WHITE
 	_time_until_shot = maxf(shoot_interval, 0.05)
 
 

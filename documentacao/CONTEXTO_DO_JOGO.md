@@ -1,5 +1,21 @@
 # Cross Adventures — referência do projeto
 
+## Integração dos três mapas da main — 18/11/2026
+
+A campanha em `dev/mapas-main-polidos` parte de `main` em `b07c03f`. A sequência é menu → abertura animada → `area_1` → `area_2` → `area_3` → encerramento. `area_4` é um rascunho de terreno: a campanha termina depois da terceira área. A branch `dev/new-player1` segue com a sequência própria `puzzle_01` → `puzzle_02` → `area_3` → `puzzle_04`.
+
+| Fase | Main |
+| --- | --- |
+| 1 — Celas e cristais | Placas, grades e câmara de cristais comandados por canais. Três cristais atuam em conjunto. |
+| 2 — Galeria das plataformas | Travessias suspensas, plataformas móveis, placas e cristais em corredores separados. |
+| 3 — Caminho da saída | Plataformas, placas combinadas, piso instável, armadilhas de parede e abrigo. Esta é a última fase conectada. |
+
+As TileMapLayers, coordenadas, colisões, canais de puzzle e pontos de retorno são os da main. Menu, abertura, pausa, guia, transição de cristal e comemoração usam os recursos de `dev/new-player1`. As conversas de entrada e de saída foram escritas para cada área. A amizade sobe uma etapa sempre que os dois chegam à saída. O HUD mostra fase e vida e oferece F1 ou clique para abrir o guia. A dica sai da tela depois de quatro segundos.
+
+O acabamento funciona sobre os mapas carregados: paleta por área, luz de tochas em piso, foco nos cristais, sombras de contato, desgaste do chão e bordas de abismo, trilhos das plataformas e confirmação visual/sonora das placas e cristais. A câmera mantém o enquadramento vertical da main e se centra na largura do terreno. O vento, a música, os pingos de parede e os rangidos usam arquivos existentes. O sprite de Nico acompanha o passo e a capa tem movimento discreto. Os disparadores de parede agora respeitam a configuração inicial e têm um brilho breve antes de disparar. Os que já começavam ativos continuam com essa configuração no mapa.
+
+Para reproduzir a validação do fluxo, execute `godot --headless --path . --script res://testes/verificar_integracao_main.gd`. O teste aciona diretamente as duas entradas do gatilho de saída. Os testes de mecanismos exercitam separadamente os cristais, portões, plataformas, abismos, respawn, mira e armadilhas.
+
 Fonte principal de design: `documentacao/SGDD - Cross Adventures.pdf`, 1 página, por Protetores da Juventude. O usuário entregou o documento e o definiu como referência para as próximas instruções em 21/10/2026. O conteúdo descreve o produto; o checklist do PDF não autoriza executar automaticamente todas as funcionalidades.
 
 ## Conceito e enredo do SGDD

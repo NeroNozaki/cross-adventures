@@ -1055,6 +1055,7 @@ no_emissor = NodePath("../button3")
 
 [node name="area3" type="Node2D" unique_id=368229941]
 script = ExtResource("1_wulx4")
+fase_historia = 3
 
 [node name="LevelSpawnMaster" type="Node2D" parent="." unique_id=2082823409]
 script = ExtResource("2_master")
@@ -1172,74 +1173,92 @@ channel = &"button6"
 [node name="wall_spitters" type="Node2D" parent="objects" unique_id=156149399]
 
 [node name="wall_spitter" parent="objects/wall_spitters" unique_id=2140932937 instance=ExtResource("15_jxv52")]
+start_activated = true
 position = Vector2(348, -252)
 shoot_interval = 1.5
 
 [node name="wall_spitter2" parent="objects/wall_spitters" unique_id=1734147121 instance=ExtResource("15_jxv52")]
+start_activated = true
 position = Vector2(372, -252)
 shoot_interval = 1.5
 
 [node name="wall_spitter3" parent="objects/wall_spitters" unique_id=1242370446 instance=ExtResource("15_jxv52")]
+start_activated = true
 position = Vector2(396, -252)
 shoot_interval = 1.5
 
 [node name="wall_spitter4" parent="objects/wall_spitters" unique_id=98322413 instance=ExtResource("15_jxv52")]
+start_activated = true
 position = Vector2(420.00003, -252)
 shoot_interval = 1.5
 
 [node name="wall_spitter5" parent="objects/wall_spitters" unique_id=1463548986 instance=ExtResource("15_jxv52")]
+start_activated = true
 position = Vector2(444, -252)
 shoot_interval = 1.5
 
 [node name="wall_spitter6" parent="objects/wall_spitters" unique_id=1131468300 instance=ExtResource("15_jxv52")]
+start_activated = true
 position = Vector2(468.00003, -252)
 shoot_interval = 1.5
 
 [node name="wall_spitter7" parent="objects/wall_spitters" unique_id=1828660833 instance=ExtResource("15_jxv52")]
+start_activated = true
 position = Vector2(492.00003, -252)
 shoot_interval = 1.5
 
 [node name="wall_spitter8" parent="objects/wall_spitters" unique_id=677230491 instance=ExtResource("15_jxv52")]
+start_activated = true
 position = Vector2(516, -252)
 shoot_interval = 1.5
 
 [node name="wall_spitter9" parent="objects/wall_spitters" unique_id=1848691516 instance=ExtResource("15_jxv52")]
+start_activated = true
 position = Vector2(540, -252)
 shoot_interval = 1.5
 
 [node name="wall_spitter10" parent="objects/wall_spitters" unique_id=123760291 instance=ExtResource("15_jxv52")]
+start_activated = true
 position = Vector2(564, -252)
 shoot_interval = 1.5
 
 [node name="wall_spitter11" parent="objects/wall_spitters" unique_id=1724157597 instance=ExtResource("15_jxv52")]
+start_activated = true
 position = Vector2(588, -252)
 shoot_interval = 1.5
 
 [node name="wall_spitter12" parent="objects/wall_spitters" unique_id=175406365 instance=ExtResource("15_jxv52")]
+start_activated = true
 position = Vector2(612, -252)
 shoot_interval = 1.5
 
 [node name="wall_spitter13" parent="objects/wall_spitters" unique_id=644390983 instance=ExtResource("15_jxv52")]
+start_activated = true
 position = Vector2(636, -252)
 shoot_interval = 1.5
 
 [node name="wall_spitter14" parent="objects/wall_spitters" unique_id=111561138 instance=ExtResource("15_jxv52")]
+start_activated = true
 position = Vector2(660, -252)
 shoot_interval = 1.5
 
 [node name="wall_spitter15" parent="objects/wall_spitters" unique_id=1741356607 instance=ExtResource("15_jxv52")]
+start_activated = true
 position = Vector2(684, -252)
 shoot_interval = 1.5
 
 [node name="wall_spitter16" parent="objects/wall_spitters" unique_id=866353993 instance=ExtResource("15_jxv52")]
+start_activated = true
 position = Vector2(708, -252)
 shoot_interval = 1.5
 
 [node name="wall_spitter17" parent="objects/wall_spitters" unique_id=892265797 instance=ExtResource("15_jxv52")]
+start_activated = true
 position = Vector2(732, -252)
 shoot_interval = 1.5
 
 [node name="wall_spitter18" parent="objects/wall_spitters" unique_id=530730369 instance=ExtResource("15_jxv52")]
+start_activated = true
 position = Vector2(756, -252)
 shoot_interval = 1.5
 
@@ -1311,7 +1330,7 @@ player2 = NodePath("../Player2")
 
 [node name="Player1" parent="Personagens" unique_id=1968535207 instance=ExtResource("14_nrat6")]
 position = Vector2(224, 471)
-nome_personagem = "Personagem"
+nome_personagem = "Nico"
 vida_maxima = 100
 velocidade = 120.0
 dano_ataque = 15
@@ -1323,7 +1342,7 @@ duracao_ataque = 0.5
 
 [node name="Player2" parent="Personagens" unique_id=398588747 instance=ExtResource("15_fi4ie")]
 position = Vector2(313, 390)
-nome_personagem = "Personagem"
+nome_personagem = "Otto"
 vida_maxima = 100
 velocidade = 150.0
 orientar_pelo_movimento = true
@@ -1365,7 +1384,7 @@ scale = Vector2(23, 5)
 [node name="level_end" parent="." unique_id=907361801 instance=ExtResource("22_hsrb0")]
 position = Vector2(900, -599)
 scale = Vector2(3, 2)
-proxima_cena = "uid://ctl32w4thhh80"
+proxima_cena = "res://cenas/screens/fim_aventura.tscn"
 
 [editable path="objects/moving_platform"]
 [editable path="objects/moving_platform3"]

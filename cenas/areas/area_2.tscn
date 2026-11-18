@@ -1,5 +1,7 @@
 [gd_scene format=4 uid="uid://dupmn2nmkpuk5"]
 
+[ext_resource type="Script" path="res://scripts/areas/base_area.gd" id="apresentacao_main"]
+
 [ext_resource type="PackedScene" uid="uid://cfa4rofxpk6tb" path="res://cenas/objects/level_specifics/level_spawn_master.tscn" id="1_2bwkl"]
 [ext_resource type="PackedScene" uid="uid://cuunxdtlugmkd" path="res://cenas/objects/respawn/level_spawn.tscn" id="2_c8vm5"]
 [ext_resource type="PackedScene" path="res://cenas/objects/respawn/level_spawn_player1.tscn" id="2_spawn_p1"]
@@ -768,6 +770,8 @@ canal = &"button6"
 metadata/_custom_type_script = "uid://do47hl3ofp7c0"
 
 [node name="area2" type="Node2D" unique_id=388669691]
+script = ExtResource("apresentacao_main")
+fase_historia = 2
 
 [node name="LevelSpawnMaster" parent="." unique_id=1558837417 instance=ExtResource("1_2bwkl")]
 spawn_ativo_player1 = "player1_spawn2"
@@ -953,7 +957,7 @@ metadata/_custom_type_script = "uid://csb2jua4p2gah"
 [node name="level_end" parent="." unique_id=907361801 instance=ExtResource("6_xfloq")]
 position = Vector2(492, -599)
 scale = Vector2(3, 2)
-proxima_cena = "uid://ctkkskt8bxjlc"
+proxima_cena = "res://cenas/areas/area_3.tscn"
 
 [node name="Personagens" parent="." unique_id=1523534277 instance=ExtResource("4_n42cj")]
 

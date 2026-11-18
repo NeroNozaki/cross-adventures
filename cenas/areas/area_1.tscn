@@ -438,7 +438,7 @@ tile_set = SubResource("TileSet_73x48")
 [node name="level_end" parent="." unique_id=907361801 instance=ExtResource("15_l70dq")]
 position = Vector2(504, -605)
 scale = Vector2(4, 3)
-proxima_cena = "uid://dupmn2nmkpuk5"
+proxima_cena = "res://cenas/areas/area_2.tscn"
 
 [node name="HoleField" parent="." unique_id=1796797739 node_paths=PackedStringArray("tile_map_layer") instance=ExtResource("4_f0n75")]
 tile_map_layer = NodePath("../Terrain map layer")

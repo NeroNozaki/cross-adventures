@@ -6,7 +6,21 @@ extends Heroi
 var passo_combo: int = 0
 var restante_combo: float = 0.0
 var buffer_ataque: float = 0.0
+var tempo_capa: float = 0.0
 signal golpe_combo(passo: int)
+
+@onready var capa: Sprite2D = $Visual/Capa
+
+func _process(delta: float) -> void:
+	# A capa acompanha a respiração e o passo sem alterar a colisão do Nico.
+	tempo_capa += delta
+	if not is_instance_valid(capa):
+		return
+	var andando := velocidade_controle.length_squared() > 0.01 and not esta_morto and not caindo
+	var ritmo := 8.0 if andando else 3.0
+	var amplitude := 0.65 if andando else 0.3
+	capa.position.y = -6.0 + sin(tempo_capa * ritmo) * amplitude
+	capa.flip_h = direcao == "left"
 
 func _physics_process(delta: float) -> void:
 	restante_combo = maxf(0.0, restante_combo - delta)

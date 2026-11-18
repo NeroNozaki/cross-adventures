@@ -20,7 +20,7 @@ player2 = NodePath("../Player2")
 
 [node name="Player1" parent="." unique_id=1314664736 instance=ExtResource("2_kq81a")]
 position = Vector2(-44, -6)
-nome_personagem = "Personagem"
+nome_personagem = "Nico"
 vida_maxima = 100
 velocidade = 120.0
 dano_ataque = 15
@@ -32,7 +32,7 @@ duracao_ataque = 0.5
 
 [node name="Player2" parent="." unique_id=742595606 instance=ExtResource("3_fuw02")]
 position = Vector2(40, -7)
-nome_personagem = "Personagem"
+nome_personagem = "Otto"
 vida_maxima = 100
 velocidade = 150.0
 orientar_pelo_movimento = true
